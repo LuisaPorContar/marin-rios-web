@@ -29,6 +29,23 @@ ErrorDocument 404 /404.html
   RewriteRule ^asesoria-integral-contable/?$ /outsourcing-contable/ [L,R=301]
   RewriteRule ^que-is-revisoria-fiscal/?$ /que-es-revisoria-fiscal/ [L,R=301]
 
+  # Páginas del WordPress publicadas en el respaldo de ago. 2026 que no se migraron
+  RewriteRule ^home-2/?$ / [L,R=301]
+  RewriteRule ^landing-revisoria-fiscal/?$ /evaluacion-revisoria-fiscal/ [L,R=301]
+  RewriteRule ^landing-pauta-financiera/?$ /consultoria-financiera/ [L,R=301]
+  RewriteRule ^landing-pauta-outsourcing-final-facebook/?$ /outsourcing-contable-ad/ [L,R=301]
+  RewriteRule ^outsourcing-contable-ad-2/?$ /outsourcing-contable-ad/ [L,R=301]
+
+  # Archivos de WordPress (categorías, etiquetas, autores, paginación y feeds) -> blog
+  RewriteRule ^(category|tag|author)/ /blog/ [L,R=301]
+  RewriteRule ^(blog/)?page/[0-9]+/?$ /blog/ [L,R=301]
+  RewriteRule ^(comments/)?feed/?$ /blog/ [L,R=301]
+
+  # Imágenes del WordPress que salen en Google Imágenes: si existe la versión
+  # .webp con el mismo nombre en /assets/img/blog/, se redirige a ella.
+  RewriteCond %{DOCUMENT_ROOT}/assets/img/blog/$1.webp -f
+  RewriteRule ^wp-content/uploads/[0-9]{4}/[0-9]{2}/(.+)\.(jpe?g|png|webp)$ /assets/img/blog/$1.webp [L,R=301]
+
   # ---------- Herencia del WordPress ----------
   # /home/ era un duplicado de la portada y estaba indexado. Un 301 traslada su
   # autoridad a la raíz; dejarlo en noindex la habría tirado a la basura.
