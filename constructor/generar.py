@@ -40,6 +40,15 @@ def limpiar_planos():
     return borrados
 
 
+def recientes_para(p):
+    """Carrusel de últimas publicaciones antes del pie: en las páginas de la
+    web normal (portada, servicios, ciudades, nosotros, contacto y artículos).
+    No va en landings de pauta, páginas noindex ni en el propio /blog/.
+    Devuelve el slug a excluir ("" = ninguno) o None si no aplica."""
+    if p.get("landing") is not None or "noindex" in p.get("robots", "") or p["archivo"] == "blog.html":
+        return None
+    return p["archivo"][:-len(".html")]
+
 def main():
     os.makedirs(SALIDA, exist_ok=True)
     sueltos = limpiar_planos()
@@ -61,6 +70,7 @@ def main():
             fuentes_extra=p.get("fuentes_extra", ""),
             clase_body=p.get("clase_body", ""),
             landing=p.get("landing"),
+            recientes=recientes_para(p),
         )
         with open(destino(p["archivo"]), "w", encoding="utf-8") as f:
             f.write(html)

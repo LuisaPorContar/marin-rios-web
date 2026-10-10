@@ -295,6 +295,71 @@ def resenas_google(titulo="Lo que dicen las empresas que acompañamos",
   </div>
 </section>"""
 
+# ---------------------------------------------------------------- últimas publicaciones
+# Carrusel de los artículos más recientes del blog, justo antes del pie
+# (al estilo de "Últimas noticias" de Amézquita). Se arma solo desde
+# articulos_cuerpo.json: cada artículo nuevo aparece aquí sin tocar nada.
+_MESES = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+          "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+
+
+def _fecha_larga(iso):
+    try:
+        a, m, d = iso.split("-")
+        return f"{_MESES[int(m) - 1]} {int(d)}, {a}"
+    except (ValueError, IndexError):
+        return iso
+
+
+def ultimas_publicaciones(excluir="", cantidad=8):
+    import json, os
+    ruta = os.path.join(os.path.dirname(os.path.abspath(__file__)), "articulos_cuerpo.json")
+    with open(ruta, encoding="utf-8") as f:
+        articulos = json.load(f)
+    articulos = sorted((a for a in articulos if a.get("slug") != excluir),
+                       key=lambda a: a.get("publicado", ""), reverse=True)[:cantidad]
+    cal = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">'
+           '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>')
+    flecha_i = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>'
+    flecha_d = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>'
+    tarjetas = []
+    for a in articulos:
+        resumen = a.get("desc", "")
+        if len(resumen) > 120:
+            resumen = resumen[:117].rsplit(" ", 1)[0] + "…"
+        tarjetas.append(f"""<article class="reciente">
+          <a class="reciente__media" href="{a['slug']}.html" tabindex="-1" aria-hidden="true">
+            <img src="{a['portada']}" alt="" width="819" height="1024" loading="lazy">
+          </a>
+          <div class="reciente__cuerpo">
+            <p class="reciente__fecha">{cal}<time datetime="{a.get('publicado', '')}">{_fecha_larga(a.get('publicado', ''))}</time></p>
+            <h3><a href="{a['slug']}.html">{a.get('h1') or a.get('titulo_seo')}</a></h3>
+            <p class="reciente__resumen">{resumen}</p>
+            <a class="reciente__mas" href="{a['slug']}.html" aria-hidden="true" tabindex="-1">Leer más</a>
+          </div>
+        </article>""")
+    return f"""<section class="seccion recientes">
+  <div class="contenedor">
+    <div class="recientes__cabecera revelar">
+      <div>
+        <p class="eyebrow">Blog Marín Ríos</p>
+        <h2>Últimas publicaciones</h2>
+      </div>
+      <p class="recientes__intro">Impuestos, revisoría fiscal, NIIF y finanzas explicados sin lenguaje técnico, para que tomes mejores decisiones en tu empresa.</p>
+    </div>
+    <div class="carrusel recientes__carrusel revelar">
+      <div class="recientes__nav">
+        <button class="carrusel__btn" data-dir="anterior" aria-label="Publicaciones anteriores">{flecha_i}</button>
+        <button class="carrusel__btn" data-dir="siguiente" aria-label="Más publicaciones">{flecha_d}</button>
+      </div>
+      <div class="carrusel__pista recientes__pista" role="group" aria-label="Últimas publicaciones del blog">
+        {"".join(tarjetas)}
+      </div>
+    </div>
+    <p class="recientes__todo"><a class="etiqueta-enlace" href="blog.html">Ver todo el blog{ICO['flecha_fina']}</a></p>
+  </div>
+</section>"""
+
 def ruta_publica(archivo):
     """'outsourcing-contable.html' -> '/outsourcing-contable/'   ·   'index.html' -> '/'"""
     return "/" if archivo == "index.html" else "/" + archivo[:-len(".html")] + "/"
@@ -345,7 +410,8 @@ def imagenes_webp(html):
 
 def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img="equipo-ancho.jpg",
               robots="index, follow, max-snippet:-1, max-image-preview:large",
-              css_extra=(), fuentes_extra="", clase_body="", landing=None):
+              css_extra=(), fuentes_extra="", clase_body="", landing=None,
+              recientes=None):
     """Envuelve el contenido de una página con head, cabecera y pie.
 
     css_extra / fuentes_extra / clase_body permiten que una página cargue una
@@ -405,6 +471,7 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
 
 <main id="contenido">
 {cuerpo}
+{ultimas_publicaciones(recientes) if recientes is not None else ""}
 </main>
 
 {bloque_pie}
