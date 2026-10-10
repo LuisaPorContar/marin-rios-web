@@ -313,6 +313,26 @@ def enlaces_absolutos(html):
     return re.sub(r'(href|src)="(assets/)', r'\1="/\2', html)
 
 
+def versionar_recursos(html):
+    """Agrega ?v=<huella> a cada CSS y JS propio.
+
+    Hostinger le dice al navegador que guarde CSS y JS por 30 días; sin esto,
+    quien ya visitó el sitio sigue viendo los estilos viejos aunque se publique
+    una versión nueva. La huella cambia solo cuando cambia el archivo."""
+    import hashlib, os
+    raiz = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
+
+    def huella(m):
+        ruta = m.group(2)
+        try:
+            with open(os.path.join(raiz, ruta.lstrip("/")), "rb") as f:
+                h = hashlib.md5(f.read()).hexdigest()[:8]
+        except OSError:
+            return m.group(0)
+        return f'{m.group(1)}="{ruta}?v={h}"'
+    return re.sub(r'(href|src)="(/assets/(?:css|js)/[^"?]+\.(?:css|js))"', huella, html)
+
+
 def imagenes_webp(html):
     """Apunta las imágenes a su versión WebP.
 
@@ -342,7 +362,7 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
         bloque_pie = PIE_LANDING
     else:
         bloque_cabecera, bloque_pie = cabecera(activo), PIE
-    return imagenes_webp(enlaces_absolutos(f"""<!DOCTYPE html>
+    return versionar_recursos(imagenes_webp(enlaces_absolutos(f"""<!DOCTYPE html>
 <html lang="es-CO">
 <head>
 <meta charset="UTF-8">
@@ -390,7 +410,7 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
 {bloque_pie}
 </body>
 </html>
-"""))
+""")))
 
 
 # ================================================================
