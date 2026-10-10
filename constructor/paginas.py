@@ -303,6 +303,18 @@ cuerpo = f"""
   </div>
 </section>
 
+<section class="seccion--ajustada">
+  <div class="contenedor">
+    {encabezado("Cobertura", "Revisoría fiscal en Medellín y el Eje Cafetero", "Visitas presenciales y revisión remota durante todo el año.", ancho="54rem", tam="var(--paso-4)")}
+    <div class="directorio__lista revelar">
+      <a class="etiqueta-enlace" href="revisoria-fiscal-medellin.html">Medellín</a>
+      <a class="etiqueta-enlace" href="revisoria-fiscal-pereira.html">Pereira</a>
+      <a class="etiqueta-enlace" href="revisoria-fiscal-armenia.html">Armenia</a>
+      <a class="etiqueta-enlace" href="revisoria-fiscal-manizales.html">Manizales</a>
+    </div>
+  </div>
+</section>
+
 {ultimas_publicaciones(solo=GUIAS_REVISORIA, eyebrow="Guías de revisoría fiscal",
                        titulo="Todo lo que debes saber antes de contratar",
                        intro="Obligación, funciones, dictamen, honorarios y cambio de revisor, explicados con la norma en la mano.")}

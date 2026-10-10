@@ -403,7 +403,7 @@ for c in CIUDADES:
     boton="Cotizar plan",
     mensaje=f"Hola, vengo de la página de {nombre} y quiero cotizar un plan contable",
     flotante_a=("100%", "Cumplimiento DIAN"),
-    flotante_b=("Día 10", "Cierre mensual entregado")
+    flotante_b=("Mensual", "Cierre con informe")
 )}
 
 <section class="seccion oscuro degradado">
@@ -433,6 +433,12 @@ for c in CIUDADES:
         <h3>Otras ciudades</h3>
         <div class="directorio__lista">
           {"".join(f'<a class="etiqueta-enlace" href="outsourcing-contable-{o["slug"]}.html">{o["nombre"]}</a>' for o in otras)}
+        </div>
+      </div>
+      <div>
+        <h3>Revisoría fiscal en {nombre}</h3>
+        <div class="directorio__lista">
+          <a class="etiqueta-enlace" href="revisoria-fiscal-{slug}.html">Revisor fiscal en {nombre}</a>
         </div>
       </div>
     </div>

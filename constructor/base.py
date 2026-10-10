@@ -747,7 +747,7 @@ def recortar(texto, limite):
 
 
 def proposito(titulo, p1, p2, boton="Haz clic para conversar", mensaje="Hola, quiero conversar sobre outsourcing contable",
-              flotante_a=("100%", "Cumplimiento DIAN"), flotante_b=("Día 10", "Cierre mensual entregado")):
+              flotante_a=("100%", "Cumplimiento DIAN"), flotante_b=("Mensual", "Cierre con informe")):
     return f"""<section class="proposito">
   <div class="contenedor proposito__grid">
     <div class="proposito__texto">

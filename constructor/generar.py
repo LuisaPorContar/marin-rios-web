@@ -12,6 +12,7 @@ import paginas_landings   # landings de campaña y páginas de gracias
 import paginas_404        # la página de error
 import articulos_paginas  # añade una página por cada artículo del blog
 import paginas_meta       # landings de pauta en Meta (revisoría fiscal)
+import paginas_rf_ciudades  # revisoría fiscal en Medellín y el Eje Cafetero
 from paginas import PAGINAS
 
 SALIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
