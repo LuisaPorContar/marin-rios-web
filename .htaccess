@@ -25,6 +25,9 @@ ErrorDocument 404 /404.html
   # ---------- Enlaces antiguos que quedaron rotos en el WordPress ----------
   RewriteRule ^contacto/?$ /contactenos/ [L,R=301]
   RewriteRule ^costos-de-outsourcing-contable/?$ /precios-outsourcing-contable/ [L,R=301]
+  # URLs del WordPress que Google todavía muestra (Search Console, oct. 2026)
+  RewriteRule ^asesoria-integral-contable/?$ /outsourcing-contable/ [L,R=301]
+  RewriteRule ^que-is-revisoria-fiscal/?$ /que-es-revisoria-fiscal/ [L,R=301]
 
   # ---------- Herencia del WordPress ----------
   # /home/ era un duplicado de la portada y estaba indexado. Un 301 traslada su
