@@ -1,0 +1,628 @@
+/* ============================================================
+   Marín Ríos — Portada corporativa
+   Capa visual exclusiva del home (body.corp). Referencia de estilo:
+   firmas de auditoría tradicionales — navy profundo, un solo acento,
+   fotografía real, esquinas sobrias y tipografía geométrica.
+   No cambia textos ni estructura SEO: solo presentación.
+   ============================================================ */
+
+.corp {
+  /* Paleta de marca: el navy índigo y el cian vivo del logo */
+  --c-navy: #0B0733;
+  --c-navy-2: #120A47;
+  --c-azul: #2BB3EF;        /* azul vivo de la marca: rellenos, filetes, botones */
+  --c-azul-hover: #4FC4F7;
+  --c-azul-texto: #0878B8;  /* el mismo tono, más hondo, para texto pequeño sobre blanco (4,7:1) */
+  --c-cian: #2BB3EF;        /* acento sobre fondo navy, del logo */
+  --c-gris: #F3F5F9;
+  --c-linea: #DFE4EC;
+  --c-texto: #1D2433;
+  --c-suave: #5B6478;
+  --c-radio: 10px;
+  --c-titulo: var(--display);
+
+  color: var(--c-texto);
+}
+
+.corp h1, .corp h2, .corp h3, .corp h4 {
+  font-family: var(--c-titulo);
+  letter-spacing: -.028em;
+  color: var(--c-navy);
+}
+.corp h1 { font-weight: 700; line-height: 1.06; }
+.corp h2 { font-size: clamp(2rem, 1.5rem + 2.1vw, 3.1rem); font-weight: 700; line-height: 1.08; }
+.corp h3 { font-weight: 600; }
+
+/* ---------- Eyebrow: sin monoespaciada, en el acento ---------- */
+.corp .eyebrow {
+  font-family: var(--cuerpo);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: var(--c-azul-texto);
+}
+.corp .eyebrow::before { width: 32px; height: 2px; }
+
+/* ---------- Botones rectos ---------- */
+.corp .btn {
+  border-radius: 8px;
+  padding: .95rem 1.6rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+.corp .btn:hover { transform: translateY(-2px); }
+.corp .btn--primario { background: var(--c-azul); color: var(--c-navy); }
+.corp .btn--primario:hover { background: var(--c-azul-hover); color: var(--c-navy); box-shadow: none; }
+.corp .btn--contorno { border: 1.5px solid var(--c-navy); color: var(--c-navy); }
+.corp .btn--contorno:hover { background: var(--c-navy); color: #fff; }
+.corp .btn--fantasma { border: 1.5px solid rgba(255,255,255,.55); color: #fff; }
+.corp .btn--fantasma:hover { background: #fff; color: var(--c-navy); border-color: #fff; }
+
+/* ---------- Cabecera: navy sobrio (el logo original es blanco) ---------- */
+.corp .cabecera { background: var(--c-navy); border-bottom-color: rgba(255,255,255,.06); }
+.corp .cabecera .btn--primario { background: var(--c-cian); color: var(--c-navy); }
+.corp .cabecera .btn--primario:hover { background: #fff; }
+.corp .nav__enlace::after { background: var(--c-cian); }
+
+.corp-acciones { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.corp-acciones--centro { justify-content: center; }
+
+/* ============================================================
+   1. Héroe: estructura corporativa con la vida de la marca original
+   Fondo índigo profundo con brillos cian, la foto fundida en la
+   oscuridad y las cifras integradas al pie.
+   ============================================================ */
+.corp-heroe {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: clamp(620px, 88vh, 860px);
+  background:
+    radial-gradient(70% 90% at 85% 0%, rgba(43,179,239,.28) 0%, transparent 60%),
+    radial-gradient(60% 80% at 0% 100%, rgba(43,179,239,.20) 0%, transparent 60%),
+    linear-gradient(160deg, #070423 0%, #0B0733 50%, #120A47 100%);
+}
+.corp-heroe__foto {
+  position: absolute; z-index: -1;
+  top: 0; right: 0; bottom: 0;
+  width: 62%;
+}
+.corp-heroe__foto img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 75% 40%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%);
+}
+/* velo índigo sobre la foto para que se integre con el fondo */
+.corp-heroe__foto::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(0deg, #0B0733 0%, rgba(11,7,51,0) 38%),
+    linear-gradient(90deg, rgba(11,7,51,.55) 0%, rgba(11,7,51,.15) 70%);
+  mix-blend-mode: multiply;
+}
+.corp-heroe__inner { position: relative; padding-block: var(--sp-7) var(--sp-5); }
+.corp-heroe__inner > * { max-width: 38rem; }
+.corp-heroe__inner > h1 { max-width: 44rem; }
+.corp-heroe__chip {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .45rem 1rem;
+  margin-bottom: var(--sp-4);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(8px);
+  font-family: var(--mono);
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--cian-300);
+}
+.corp-heroe__chip::before {
+  content: "";
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--c-azul);
+  box-shadow: 0 0 0 4px rgba(43,179,239,.22);
+}
+.corp-heroe h1 {
+  color: #fff;
+  font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.corp-heroe h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, #8FE3FF 0%, #2BB3EF 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.corp-heroe__entrada {
+  font-size: var(--paso-2);
+  line-height: 1.5;
+  color: rgba(255,255,255,.78);
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+.corp-heroe .btn--contorno { border-color: rgba(255,255,255,.35); color: #fff; }
+.corp-heroe .btn--contorno:hover { background: #fff; border-color: #fff; color: var(--c-navy); }
+
+/* Botón que abre WhatsApp: el logo deja claro a dónde lleva */
+.corp .btn--wa svg { width: 20px; height: 20px; }
+
+/* ============================================================
+   2. Cifras integradas al pie del héroe
+   ============================================================ */
+.corp-cifras__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+.corp-cifra {
+  padding: var(--sp-4) var(--sp-3) var(--sp-5);
+  border-left: 1px solid rgba(255,255,255,.14);
+}
+.corp-cifra:first-child { border-left: 0; padding-left: 0; }
+.corp-cifra__num {
+  display: block;
+  font-family: var(--c-titulo);
+  font-size: clamp(2.2rem, 1.6rem + 2vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.03em;
+  background: linear-gradient(90deg, #8FE3FF 0%, #2BB3EF 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.corp-cifra__txt {
+  display: block;
+  margin-top: .6rem;
+  max-width: 24ch;
+  font-size: .92rem;
+  line-height: 1.4;
+  color: rgba(255,255,255,.66);
+}
+
+/* ============================================================
+   3. Clientes: tarjetas planas y sobrias
+   ============================================================ */
+.corp .marca-chip {
+  background: #fff;
+  border: 1px solid var(--c-linea);
+  border-radius: 6px;
+  color: var(--c-navy);
+}
+.corp .marca-chip:hover { transform: none; box-shadow: none; border-color: var(--c-azul); }
+.corp .marca-chip__marca { border-radius: 4px; font-family: var(--c-titulo); background: var(--c-gris); }
+
+/* ============================================================
+   Títulos de sección
+   ============================================================ */
+.corp-titulo { max-width: 52rem; margin-bottom: var(--sp-5); }
+.corp-titulo p:not(.eyebrow) { color: var(--c-suave); font-size: var(--paso-1); margin-top: var(--sp-2); }
+.corp-titulo--centro { margin-inline: auto; text-align: center; }
+.corp-titulo--centro .eyebrow { justify-content: center; }
+
+/* ============================================================
+   4. Servicios: tarjetas con foto y velo navy
+   ============================================================ */
+.corp-servicios { background: var(--c-gris); }
+.corp-cartas { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
+.corp-carta {
+  position: relative;
+  isolation: isolate;
+  min-height: 460px;
+  border-radius: var(--c-radio);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 20px 40px -28px rgba(11,7,51,.55);
+}
+.corp-carta img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(.22,.61,.36,1);
+}
+.corp-carta::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(11,7,51,.45) 0%, rgba(11,7,51,.78) 45%, rgba(11,7,51,.95) 100%);
+  transition: background 400ms ease;
+}
+.corp-carta:hover img { transform: scale(1.05); }
+.corp-carta__cuerpo { padding: var(--sp-4); color: #fff; text-align: center; width: 100%; }
+.corp-carta__num {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-cian);
+  margin-bottom: .8rem;
+}
+.corp-carta h3 {
+  color: #fff;
+  font-size: clamp(1.35rem, 1.1rem + .8vw, 1.75rem);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  margin-bottom: .8rem;
+}
+.corp-carta p { color: rgba(255,255,255,.84); font-size: 1rem; line-height: 1.55; }
+.corp-carta__cta {
+  display: inline-block;
+  margin-top: var(--sp-3);
+  padding: .8rem 1.8rem;
+  border: 1.5px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  font-size: .98rem;
+  transition: background var(--transicion), color var(--transicion);
+}
+.corp-carta__cta:hover, .corp-carta:hover .corp-carta__cta { background: #fff; color: var(--c-navy); }
+
+/* ============================================================
+   5. Propósito: foto + beneficios sobre navy
+   ============================================================ */
+.corp-proposito { background: var(--c-navy); color: #fff; overflow: hidden; }
+.corp-proposito__grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: var(--sp-6);
+  align-items: end;
+}
+.corp-proposito__media {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: var(--sp-6);
+}
+.corp-proposito__media::before {
+  content: "";
+  position: absolute;
+  left: 8%; right: 8%; bottom: 0; top: 28%;
+  background: var(--c-azul);
+  border-radius: var(--c-radio) var(--c-radio) 0 0;
+}
+.corp-proposito__foto { position: relative; width: min(100%, 420px); height: auto; }
+.corp-proposito__texto { padding-block: var(--sp-7); }
+.corp-proposito .eyebrow { color: var(--c-cian); }
+.corp-proposito h2 { color: var(--c-cian); }
+.corp-proposito__texto > p:not(.eyebrow) { color: rgba(255,255,255,.84); margin-top: var(--sp-3); max-width: 50ch; }
+.corp-garantias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: var(--sp-4) 0;
+  border-top: 1px solid rgba(255,255,255,.16);
+}
+.corp-garantias li {
+  display: flex; align-items: center; gap: .9rem;
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+  color: rgba(255,255,255,.84);
+  font-size: .98rem;
+  line-height: 1.35;
+}
+.corp-garantias strong {
+  display: block;
+  font-family: var(--c-titulo);
+  font-size: 1.35rem;
+  color: #fff;
+}
+.corp-garantias__ico { color: var(--c-cian); flex: none; }
+.corp-garantias__ico svg { width: 34px; height: 34px; }
+.corp-proposito .btn--primario { background: var(--c-cian); color: var(--c-navy); }
+.corp-proposito .btn--primario:hover { background: #fff; }
+
+/* ============================================================
+   6. Alcance: rejilla de dos columnas con índice
+   ============================================================ */
+.corp-alcance__grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: var(--sp-6);
+  align-items: start;
+}
+.corp-alcance__ancla { position: sticky; top: 120px; }
+.corp-alcance__ancla h2 { font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.6rem); }
+.corp-alcance__ancla p:not(.eyebrow) { color: var(--c-suave); margin: var(--sp-3) 0 var(--sp-4); }
+.corp-alcance__lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--sp-4);
+}
+.corp-item {
+  display: flex; gap: 1rem;
+  padding: var(--sp-3) 0;
+  border-top: 1px solid var(--c-linea);
+}
+.corp-item__idx {
+  flex: none;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 6px;
+  background: var(--c-gris);
+  color: var(--c-azul-texto);
+  font-family: var(--c-titulo);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.corp-item h3 { font-size: 1.15rem; margin-bottom: .35rem; }
+.corp-item p { color: var(--c-suave); font-size: .98rem; line-height: 1.55; }
+
+/* ============================================================
+   7. Proceso: cuatro pasos con filete superior
+   ============================================================ */
+.corp-proceso { background: var(--c-gris); }
+.corp-pasos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+}
+.corp-paso {
+  background: #fff;
+  border-top: 4px solid var(--c-azul);
+  border-radius: 0 0 var(--c-radio) var(--c-radio);
+  padding: var(--sp-4) var(--sp-3);
+  box-shadow: 0 14px 30px -24px rgba(11,7,51,.45);
+}
+.corp-paso__num {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-azul-texto);
+  margin-bottom: var(--sp-2);
+}
+.corp-paso h3 { font-size: 1.25rem; margin-bottom: .6rem; }
+.corp-paso p { color: var(--c-suave); font-size: .98rem; line-height: 1.55; }
+
+/* ============================================================
+   8. Cobertura y preguntas: módulos existentes, más sobrios
+   ============================================================ */
+.corp .claro { background: #fff; }
+.corp .caso { border-radius: var(--c-radio); }
+.corp .caso::after { background: linear-gradient(180deg, rgba(11,7,51,.1) 0%, rgba(11,7,51,.6) 55%, rgba(11,7,51,.94) 100%); }
+.corp .caso__etiqueta { font-family: var(--cuerpo); font-weight: 600; color: var(--c-cian); }
+.corp .caso h3 { color: #fff; }
+.corp .caso__redondo { border-radius: 4px; backdrop-filter: none; }
+.corp .caso:hover .caso__redondo { background: var(--c-cian); color: var(--c-navy); transform: none; }
+.corp .directorio h3 { font-family: var(--c-titulo); }
+.corp .etiqueta-enlace { border-radius: 4px; }
+.corp .etiqueta-enlace:hover { background: var(--c-navy); border-color: var(--c-navy); transform: none; }
+.corp .etiqueta-enlace--inerte:hover { background: var(--blanco); color: var(--texto-suave); border-color: var(--borde); }
+
+.corp .acordeon__idx { font-family: var(--c-titulo); font-weight: 700; color: var(--c-azul-texto); }
+.corp .acordeon__titulo { font-family: var(--c-titulo); color: var(--c-navy); }
+.corp .acordeon__btn:hover .acordeon__titulo { color: var(--c-azul-texto); }
+.corp .acordeon__btn[aria-expanded="true"] .acordeon__signo::before,
+.corp .acordeon__btn[aria-expanded="true"] .acordeon__signo::after { background: var(--c-azul); }
+
+/* ---------- Industrias: carrusel continuo ---------- */
+.corp-industrias { margin-bottom: var(--sp-5); }
+.corp-industrias h3,
+.corp .corp-ciudades h3 {
+  font-family: var(--cuerpo);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-navy);
+  padding-bottom: .8rem;
+  margin-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--c-linea);
+}
+.corp-marquesina {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.corp-marquesina__pista {
+  display: flex;
+  gap: var(--sp-3);
+  width: max-content;
+  animation: corp-desliza 28s linear infinite;
+}
+.corp-marquesina:hover .corp-marquesina__pista { animation-play-state: paused; }
+@keyframes corp-desliza {
+  to { transform: translateX(calc(-50% - var(--sp-3) / 2)); }
+}
+.corp-industria {
+  flex: none;
+  width: 300px;
+  min-height: 150px;
+  padding: var(--sp-4) var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  background: var(--c-navy);
+  border-radius: var(--c-radio);
+  color: #fff;
+  font-family: var(--c-titulo);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.corp-industria svg { width: 44px; height: 44px; color: var(--c-cian); }
+.corp-ciudades { grid-template-columns: 1fr; }
+
+/* ============================================================
+   9. Llamado final sobre fotografía
+   ============================================================ */
+.corp-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: var(--sp-7);
+  color: #fff;
+  text-align: center;
+}
+.corp-cta__foto {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.corp-cta::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: rgba(11,7,51,.88);
+}
+.corp-cta .eyebrow { color: var(--c-cian); justify-content: center; }
+.corp-cta h2 { color: #fff; max-width: 22ch; margin-inline: auto; }
+.corp-cta__inner > p:not(.eyebrow) { color: rgba(255,255,255,.84); max-width: 54ch; margin: var(--sp-3) auto var(--sp-4); }
+.corp-cta .btn--primario { background: var(--c-cian); color: var(--c-navy); }
+.corp-cta .btn--primario:hover { background: #fff; }
+.corp .cta-contacto a { font-family: var(--cuerpo); color: rgba(255,255,255,.9); }
+.corp .cta-contacto a:hover { color: var(--c-cian); }
+.corp .cta-contacto svg { color: var(--c-cian); }
+
+/* ---------- Pie a juego ---------- */
+.corp .pie { background: #070423; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 1024px) {
+  .corp-cartas { grid-template-columns: 1fr 1fr; }
+  .corp-pasos { grid-template-columns: 1fr 1fr; }
+  .corp-proposito__grid { gap: var(--sp-4); }
+  .corp-alcance__grid { grid-template-columns: 1fr; gap: var(--sp-4); }
+  .corp-alcance__ancla { position: static; }
+}
+
+@media (max-width: 860px) {
+  .corp .nav { background: var(--c-navy); }
+
+  .corp-heroe { min-height: 0; }
+  .corp-heroe__foto { width: 100%; opacity: .45; }
+  .corp-heroe__foto img {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+            mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+  }
+  .corp-heroe__inner { padding-block: var(--sp-6) var(--sp-4); }
+
+  .corp-cifras__grid { grid-template-columns: 1fr 1fr; }
+  .corp-cifra { padding: var(--sp-3) var(--sp-2) var(--sp-3) var(--sp-3); }
+  .corp-cifra:nth-child(3) { border-left: 0; padding-left: 0; }
+  .corp-cifra:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.14); }
+
+  .corp-proposito__grid { grid-template-columns: 1fr; }
+  .corp-proposito__media { order: 2; padding-top: 0; }
+  .corp-proposito__texto { padding-block: var(--sp-6) var(--sp-4); }
+}
+
+@media (max-width: 680px) {
+  .corp-industria { width: 230px; min-height: 130px; font-size: 1.15rem; }
+  .corp-cartas, .corp-pasos, .corp-alcance__lista, .corp-garantias { grid-template-columns: 1fr; }
+  .corp-carta { min-height: 400px; }
+  .corp-acciones .btn { width: 100%; justify-content: center; }
+  .corp-cifra { padding: var(--sp-3) .75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .corp-carta img { transition: none; }
+  .corp-marquesina { -webkit-mask-image: none; mask-image: none; }
+  .corp-marquesina__pista { animation: none; flex-wrap: wrap; width: auto; }
+  .corp-industria[aria-hidden="true"] { display: none; }
+}
+
+/* ============================================================
+   Capa de vida: profundidad, brillo y movimiento de la marca
+   original sobre la estructura corporativa.
+   ============================================================ */
+/* Secciones navy con los brillos cian del degradado de marca */
+.corp-proposito {
+  background:
+    radial-gradient(60% 80% at 100% 0%, rgba(43,179,239,.22) 0%, transparent 60%),
+    radial-gradient(50% 70% at 0% 100%, rgba(43,179,239,.16) 0%, transparent 60%),
+    linear-gradient(160deg, #070423 0%, #0B0733 55%, #120A47 100%);
+}
+.corp-proposito__media::before {
+  background: linear-gradient(160deg, #4FC4F7 0%, #2BB3EF 45%, #1A6FB8 100%);
+  box-shadow: 0 30px 70px -30px rgba(43,179,239,.7);
+}
+.corp-proposito h2 {
+  background: linear-gradient(90deg, #8FE3FF 0%, #2BB3EF 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Tarjetas de servicio: elevación y velo con tinte índigo */
+.corp-carta { transition: transform var(--transicion), box-shadow var(--transicion); }
+.corp-carta:hover { transform: translateY(-8px); box-shadow: 0 34px 60px -28px rgba(11,7,51,.7); }
+.corp-carta::after {
+  background:
+    radial-gradient(90% 60% at 50% 110%, rgba(43,179,239,.35) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(11,7,51,.30) 0%, rgba(11,7,51,.80) 48%, rgba(7,4,35,.96) 100%);
+}
+
+/* Pasos: filete en degradado y elevación */
+.corp-paso {
+  border-top: 0;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.corp-paso::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2BB3EF 0%, #8FE3FF 100%);
+}
+.corp-paso:hover { transform: translateY(-6px); box-shadow: 0 26px 50px -28px rgba(11,7,51,.55); }
+
+/* Alcance: índice con el azul vivo */
+.corp-item__idx { background: linear-gradient(160deg, #E6F7FE 0%, #D3EEFA 100%); }
+
+/* Industrias: tarjetas índigo con brillo */
+.corp-industria {
+  background:
+    radial-gradient(80% 90% at 100% 0%, rgba(43,179,239,.30) 0%, transparent 60%),
+    linear-gradient(160deg, #120A47 0%, #0B0733 100%);
+  border: 1px solid rgba(255,255,255,.08);
+  transition: border-color var(--transicion);
+}
+.corp-industria:hover { border-color: rgba(43,179,239,.6); }
+
+/* Llamado final: velo con degradado de marca sobre la foto */
+.corp-cta::after {
+  background:
+    radial-gradient(70% 90% at 85% 0%, rgba(43,179,239,.30) 0%, transparent 60%),
+    radial-gradient(60% 80% at 0% 100%, rgba(43,179,239,.22) 0%, transparent 60%),
+    linear-gradient(160deg, rgba(7,4,35,.94) 0%, rgba(11,7,51,.90) 50%, rgba(18,10,71,.92) 100%);
+}
+.corp-cta h2 { font-size: clamp(2.2rem, 1.6rem + 2.6vw, 3.6rem); }
+
+/* ============================================================
+   Botones de conversión: el cian brillante del logo.
+   Es el azul más luminoso de la marca, así que salta sobre el blanco
+   y sobre el navy; texto navy para contraste alto.
+   El verde WhatsApp queda solo en la cabecera y el botón flotante.
+   Va al final para ganarle a los estilos de cada sección.
+   ============================================================ */
+.corp { --c-cta: #2BB3EF; --c-cta-hover: #5CC8F5; }
+.corp .btn.btn--wa {
+  background: var(--c-cta); color: var(--c-navy); font-weight: 700;
+  box-shadow: 0 14px 30px -12px rgba(43,179,239,.85);
+}
+.corp .btn.btn--wa:hover {
+  background: var(--c-cta-hover); color: var(--c-navy);
+  box-shadow: 0 20px 38px -12px rgba(43,179,239,.95);
+}
+.corp .btn.btn--wa svg { width: 20px; height: 20px; }
+
+/* Cabecera: botón verde WhatsApp */
+.corp .cabecera .btn.btn--wa { background: #1EA952; color: #fff; box-shadow: 0 12px 26px -12px rgba(30,169,82,.8); }
+.corp .cabecera .btn.btn--wa:hover { background: #178F44; color: #fff; box-shadow: 0 16px 30px -12px rgba(30,169,82,.9); }

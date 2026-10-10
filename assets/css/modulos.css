@@ -1,0 +1,959 @@
+/* ============================================================
+   Marín Ríos Consultores — Módulos de interfaz
+   Acordeones · Carruseles · Columna fija · Duotono · Responsive
+   ============================================================ */
+
+/* ============================================================
+   1. HÉROE EDITORIAL
+   Titular grande, fotografía tratada que se funde con el navy,
+   y un riel de cifras con reglas finas al pie.
+   ============================================================ */
+.heroe {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-800);
+  color: var(--blanco);
+  isolation: isolate;
+}
+.heroe__fondo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.heroe__fondo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 72% 28%;
+}
+/* La fotografía se disuelve en el navy en lugar de quedar “pegada” */
+.heroe__fondo::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(100deg, var(--navy-800) 0%, var(--navy-800) 34%, rgba(11,7,51,.90) 50%, rgba(11,7,51,.55) 72%, rgba(11,7,51,.35) 100%),
+    linear-gradient(180deg, rgba(7,4,35,.75) 0%, transparent 30%, rgba(7,4,35,.85) 100%);
+}
+.heroe__inner {
+  position: relative;
+  padding-block: clamp(4.5rem, 9vw, 9rem) clamp(3rem, 5vw, 4.5rem);
+  max-width: 60rem;
+}
+.heroe h1 {
+  font-size: clamp(2.6rem, 1.4rem + 5.2vw, 5.4rem);
+  letter-spacing: -.038em;
+  line-height: 1.02;
+  margin-bottom: var(--sp-3);
+}
+.heroe h1 em {
+  font-style: normal;
+  color: var(--cian-300);
+}
+.heroe__entrada {
+  font-size: clamp(1.08rem, 1rem + .5vw, 1.4rem);
+  color: rgba(255,255,255,.82);
+  max-width: 48ch;
+  margin-bottom: var(--sp-4);
+}
+
+/* Riel de cifras */
+.riel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,.18);
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+.riel__dato {
+  padding: var(--sp-4) var(--sp-3) var(--sp-3) 0;
+  border-right: 1px solid rgba(255,255,255,.13);
+}
+.riel__dato:last-child { border-right: 0; }
+.riel__dato:not(:first-child) { padding-left: var(--sp-3); }
+.riel__cifra {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.5rem);
+  letter-spacing: -.04em;
+  color: var(--blanco);
+  display: block;
+  line-height: 1;
+}
+.riel__etiqueta {
+  display: block;
+  margin-top: .7rem;
+  font-size: .9rem;
+  line-height: 1.4;
+  color: rgba(255,255,255,.6);
+  max-width: 22ch;
+}
+
+/* ============================================================
+   2. MARCAS DE CONFIANZA — chips en tintes de marca
+   ============================================================ */
+.marcas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-2);
+}
+.marca-chip {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  padding: 1.05rem 1.4rem;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: -.01em;
+  color: var(--navy-800);
+  background: var(--gris-100);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.marca-chip:hover { transform: translateY(-3px); box-shadow: var(--sombra); }
+.marca-chip img { width: 34px; height: 34px; object-fit: contain; flex: none; mix-blend-mode: multiply; }
+.marca-chip__marca {
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  display: grid; place-items: center;
+  font-family: var(--mono);
+  font-size: .92rem;
+  font-weight: 700;
+  background: rgba(11,7,51,.10);
+  flex: none;
+}
+/* Tintes derivados de la paleta, no colores ajenos a la marca */
+.marca-chip--a { background: #DCF1FC; }
+.marca-chip--b { background: #E4E7F5; }
+.marca-chip--c { background: #D3EEFA; }
+.marca-chip--d { background: #EAECF7; }
+.marca-chip--e { background: #E7F6FD; }
+.marca-chip--f { background: #DFE3F2; }
+
+/* ============================================================
+   3. PROPÓSITO — módulo firma: degradado navy→cian,
+      recorte del asesor sobre forma orgánica y tarjetas flotantes
+   ============================================================ */
+.proposito {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(158deg,
+    var(--navy-900) 0%,
+    var(--navy-800) 26%,
+    #16266E 52%,
+    #2E7FC4 78%,
+    var(--cian-300) 100%);
+}
+.proposito__grid {
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  gap: var(--sp-5);
+  align-items: end;
+  min-height: 640px;
+}
+.proposito__texto { padding-block: var(--sp-7) var(--sp-6); align-self: center; }
+.proposito h2 { color: var(--blanco); font-size: var(--paso-5); }
+.proposito__texto p { color: rgba(255,255,255,.86); margin-top: var(--sp-3); max-width: 46ch; }
+
+/* Forma orgánica + recorte */
+.proposito__media {
+  position: relative;
+  align-self: end;
+  padding-top: var(--sp-6);
+  display: flex;
+  justify-content: center;
+}
+.proposito__forma {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(430px, 88%);
+  aspect-ratio: 1 / 1.12;
+  background: linear-gradient(150deg, var(--cian-300) 0%, var(--cian-500) 100%);
+  border-radius: 47% 53% 40% 60% / 55% 44% 56% 45%;
+  filter: blur(.4px);
+}
+.proposito__foto {
+  position: relative;
+  width: min(400px, 82%);
+  filter: drop-shadow(0 26px 46px rgba(7,4,35,.42));
+}
+
+/* Tarjetas flotantes sobre la fotografía */
+.flotante {
+  position: absolute;
+  z-index: 3;
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: .85rem 1.1rem;
+  box-shadow: 0 20px 42px -18px rgba(7,4,35,.55);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.flotante__valor {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.28rem;
+  color: var(--navy-800);
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+.flotante__nota { font-size: .78rem; color: var(--gris-500); line-height: 1.3; display: block; margin-top: .25rem; }
+.flotante--a { top: 16%; left: -2%; }
+.flotante--b { bottom: 16%; right: -2%; }
+.flotante__icono {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--cian-100);
+  color: var(--navy-700);
+  display: grid; place-items: center;
+  flex: none;
+}
+.flotante__icono svg { width: 19px; height: 19px; }
+
+/* Mini gráfico de barras: el cierre mensual, no un adorno */
+.barras { display: flex; align-items: flex-end; gap: 4px; height: 34px; }
+.barras span {
+  width: 7px;
+  border-radius: 2px;
+  background: var(--cian-500);
+  opacity: .45;
+}
+.barras span:nth-child(1) { height: 40%; }
+.barras span:nth-child(2) { height: 58%; }
+.barras span:nth-child(3) { height: 46%; }
+.barras span:nth-child(4) { height: 74%; }
+.barras span:nth-child(5) { height: 100%; opacity: 1; }
+
+/* ============================================================
+   4. SERVICIOS NUMERADOS — tarjetas con degradado
+   ============================================================ */
+.servicios-num { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
+.servicio-num {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+  padding: var(--sp-4);
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--blanco);
+  isolation: isolate;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.servicio-num:hover { transform: translateY(-8px); box-shadow: 0 34px 60px -28px rgba(7,4,35,.6); }
+.servicio-num::before {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(158deg, var(--navy-700) 0%, var(--navy-800) 100%);
+}
+.servicio-num--1::before { background: linear-gradient(158deg, #1B2A72 0%, #0B0733 100%); }
+.servicio-num--2::before { background: linear-gradient(158deg, #1D5A96 0%, #0F1247 100%); }
+.servicio-num--3::before { background: linear-gradient(158deg, #2585C4 0%, #0B0733 100%); }
+.servicio-num__num {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  color: var(--cian-300);
+  margin-bottom: auto;
+}
+.servicio-num h3 { color: var(--blanco); font-size: var(--paso-3); margin-bottom: .8rem; margin-top: var(--sp-4); }
+.servicio-num p { color: rgba(255,255,255,.76); font-size: 1.02rem; }
+.servicio-num__precio {
+  margin: var(--sp-3) 0;
+  padding-top: var(--sp-3);
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+.servicio-num__precio small {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.6);
+  display: block;
+  margin-bottom: .35rem;
+}
+.servicio-num__precio b {
+  font-family: var(--mono);
+  font-size: 1.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.035em;
+  color: var(--blanco);
+}
+.servicio-num__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+  padding: .85rem 1.3rem;
+  border-radius: var(--radio-pill);
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.24);
+  font-weight: 600;
+  font-size: .98rem;
+  transition: background var(--transicion), border-color var(--transicion);
+}
+.servicio-num:hover .servicio-num__cta { background: var(--cian-500); border-color: var(--cian-500); color: var(--navy-900); }
+.servicio-num__cta svg { width: 16px; height: 16px; }
+
+/* ============================================================
+   5. COLUMNA FIJA + CONTENIDO QUE SE DESPLAZA
+   ============================================================ */
+.fijo {
+  display: grid;
+  grid-template-columns: minmax(280px, .82fr) 1.18fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+.fijo__ancla {
+  position: sticky;
+  top: 116px;
+  align-self: start;
+}
+.fijo__lista { display: grid; gap: 0; }
+.fijo__fila {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: var(--sp-3);
+  padding: var(--sp-4) 0;
+  border-top: 1px solid var(--borde);
+  align-items: start;
+}
+.fijo__fila:last-child { border-bottom: 1px solid var(--borde); }
+.fijo__indice {
+  font-family: var(--mono);
+  font-size: .84rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  color: var(--cian-500);
+  padding-top: .45rem;
+}
+.fijo__fila h3 { font-size: var(--paso-2); margin-bottom: .5rem; }
+.fijo__fila p { color: var(--texto-suave); font-size: 1.02rem; }
+.oscuro .fijo__fila { border-color: rgba(255,255,255,.14); }
+.oscuro .fijo__fila p { color: rgba(255,255,255,.7); }
+
+/* ============================================================
+   6. CARRUSEL con desplazamiento por pasos y controles
+   ============================================================ */
+.carrusel { position: relative; }
+.carrusel__cabecera {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  flex-wrap: wrap;
+}
+.carrusel__pista {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(330px, 1fr);
+  gap: var(--sp-3);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
+  padding-bottom: var(--sp-2);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carrusel__pista::-webkit-scrollbar { display: none; }
+.carrusel__pista > * { scroll-snap-align: start; }
+
+.carrusel__controles { display: flex; gap: .6rem; }
+.carrusel__btn {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gris-300);
+  display: grid; place-items: center;
+  color: var(--navy-800);
+  transition: all var(--transicion);
+}
+.carrusel__btn:hover:not(:disabled) { background: var(--navy-800); border-color: var(--navy-800); color: var(--blanco); }
+.carrusel__btn:disabled { opacity: .32; cursor: not-allowed; }
+.carrusel__btn svg { width: 19px; height: 19px; }
+.oscuro .carrusel__btn { border-color: rgba(255,255,255,.3); color: var(--blanco); }
+.oscuro .carrusel__btn:hover:not(:disabled) { background: var(--cian-500); border-color: var(--cian-500); color: var(--navy-900); }
+
+/* Barra de progreso del carrusel */
+.carrusel__progreso {
+  height: 2px;
+  background: var(--borde);
+  margin-top: var(--sp-3);
+  position: relative;
+  overflow: hidden;
+}
+.carrusel__progreso i {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 30%;
+  background: var(--cian-500);
+  transition: transform 220ms ease, width 220ms ease;
+}
+.oscuro .carrusel__progreso { background: rgba(255,255,255,.16); }
+
+/* ============================================================
+   7. TARJETA DE CASO / TESTIMONIO con fotografía
+   ============================================================ */
+.caso {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--blanco);
+  isolation: isolate;
+}
+.caso img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(.22,.61,.36,1);
+}
+.caso::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(7,4,35,.15) 0%, rgba(7,4,35,.55) 52%, rgba(7,4,35,.93) 100%);
+}
+.caso:hover img { transform: scale(1.06); }
+.caso__cuerpo { padding: var(--sp-4); }
+.caso__etiqueta {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--cian-300);
+  margin-bottom: .6rem;
+  display: block;
+}
+.caso h3 { color: var(--blanco); font-size: var(--paso-2); margin-bottom: .5rem; }
+.caso p { color: rgba(255,255,255,.78); font-size: .98rem; }
+.caso__redondo {
+  position: absolute;
+  top: var(--sp-3); right: var(--sp-3);
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.3);
+  backdrop-filter: blur(8px);
+  display: grid; place-items: center;
+  color: var(--blanco);
+  transition: background var(--transicion), color var(--transicion), transform var(--transicion);
+}
+.caso:hover .caso__redondo { background: var(--cian-500); color: var(--navy-900); transform: rotate(45deg); }
+.caso__redondo svg { width: 18px; height: 18px; }
+
+/* ============================================================
+   8. ACORDEÓN — versión editorial con índice
+   ============================================================ */
+.acordeon { border-top: 1px solid var(--borde); }
+.acordeon__item { border-bottom: 1px solid var(--borde); }
+.acordeon__btn {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 58px 1fr 42px;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-4) 0;
+  text-align: left;
+  transition: color var(--transicion);
+}
+.acordeon__idx {
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .1em;
+  color: var(--cian-500);
+  align-self: start;
+  padding-top: .3rem;
+}
+.acordeon__titulo {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 1rem + .55vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -.024em;
+  line-height: 1.28;
+}
+.acordeon__btn:hover .acordeon__titulo { color: var(--navy-600); }
+.acordeon__signo {
+  position: relative;
+  width: 20px; height: 20px;
+  justify-self: end;
+}
+.acordeon__signo::before, .acordeon__signo::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 0;
+  width: 20px; height: 2px;
+  background: var(--navy-800);
+  transition: transform var(--transicion), background var(--transicion);
+}
+.acordeon__signo::after { transform: rotate(90deg); }
+.acordeon__btn[aria-expanded="true"] .acordeon__signo::after { transform: rotate(0deg); }
+.acordeon__btn[aria-expanded="true"] .acordeon__signo::before,
+.acordeon__btn[aria-expanded="true"] .acordeon__signo::after { background: var(--cian-500); }
+
+.acordeon__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 340ms cubic-bezier(.22,.61,.36,1);
+}
+.acordeon__panel[data-abierto="true"] { grid-template-rows: 1fr; }
+.acordeon__panel > div { overflow: hidden; }
+.acordeon__panel .interior {
+  padding: 0 var(--sp-6) var(--sp-4) 58px;
+  color: var(--texto-suave);
+  max-width: 72ch;
+}
+.acordeon__panel .interior p + p { margin-top: var(--sp-2); }
+.acordeon__panel .interior ul { display: grid; gap: .55rem; margin-top: var(--sp-2); }
+.acordeon__panel .interior li { display: flex; gap: .7rem; }
+.acordeon__panel .interior li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--cian-500); flex: none; margin-top: .6rem; }
+
+.oscuro .acordeon, .oscuro .acordeon__item { border-color: rgba(255,255,255,.16); }
+.oscuro .acordeon__titulo { color: var(--blanco); }
+.oscuro .acordeon__signo::before, .oscuro .acordeon__signo::after { background: var(--blanco); }
+.oscuro .acordeon__panel .interior { color: rgba(255,255,255,.72); }
+
+/* Fotografía dentro de la tarjeta de artículo */
+.articulo__media { position: relative; overflow: hidden; }
+.articulo__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(.22,.61,.36,1);
+}
+.articulo:hover .articulo__media img { transform: scale(1.05); }
+
+/* ============================================================
+   9. FRANJA DE CIUDAD (páginas locales)
+   ============================================================ */
+.franja-ciudad {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 260px;
+  display: grid;
+  align-items: center;
+  isolation: isolate;
+}
+.franja-ciudad img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: .5;
+}
+.franja-ciudad::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(100deg, var(--navy-800) 12%, rgba(11,7,51,.72) 60%, rgba(11,7,51,.35) 100%);
+}
+.franja-ciudad__cuerpo { padding: var(--sp-5); color: var(--blanco); }
+.franja-ciudad h2 { color: var(--blanco); font-size: var(--paso-4); }
+.franja-ciudad p { color: rgba(255,255,255,.8); margin-top: var(--sp-2); max-width: 52ch; }
+
+/* ============================================================
+   10. BLOQUE DE CITA
+   ============================================================ */
+.cita {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-4);
+  align-items: start;
+  padding: var(--sp-5);
+  border-radius: 20px;
+  background: var(--hueso);
+}
+.cita__marca {
+  font-family: var(--display);
+  font-size: 4.5rem;
+  line-height: .8;
+  color: var(--cian-500);
+}
+.cita blockquote {
+  font-family: var(--display);
+  font-size: var(--paso-3);
+  font-weight: 500;
+  letter-spacing: -.022em;
+  line-height: 1.35;
+  color: var(--navy-800);
+}
+.cita figcaption {
+  margin-top: var(--sp-3);
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .08em;
+  color: var(--texto-suave);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .proposito__grid { grid-template-columns: 1fr; min-height: 0; }
+  .proposito__texto { padding-block: var(--sp-6) var(--sp-4); }
+  .proposito__media { padding-top: var(--sp-3); }
+  .servicios-num { grid-template-columns: 1fr; }
+  .servicio-num { min-height: 0; }
+  .fijo { grid-template-columns: 1fr; gap: var(--sp-4); }
+  .fijo__ancla { position: static; }
+  .riel { grid-template-columns: repeat(2, 1fr); }
+  .riel__dato:nth-child(2) { border-right: 0; }
+  .riel__dato:nth-child(3), .riel__dato:nth-child(4) { border-top: 1px solid rgba(255,255,255,.13); }
+  .riel__dato:nth-child(odd) { padding-left: 0; }
+  .marcas__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 680px) {
+  .heroe__fondo img { object-position: 62% 22%; }
+  .heroe__fondo::after {
+    background:
+      linear-gradient(180deg, rgba(7,4,35,.62) 0%, rgba(11,7,51,.90) 46%, var(--navy-800) 78%);
+  }
+  .riel { grid-template-columns: 1fr; }
+  .riel__dato { border-right: 0; padding-left: 0 !important; border-top: 1px solid rgba(255,255,255,.13); }
+  .riel__dato:first-child { border-top: 0; }
+  .riel__etiqueta { max-width: none; }
+
+  .marcas__grid { grid-template-columns: 1fr; }
+  .flotante--a { top: 6%; left: -1%; }
+  .flotante--b { bottom: 6%; right: -1%; }
+  .flotante { padding: .7rem .85rem; }
+  .flotante__valor { font-size: 1.05rem; }
+
+  .acordeon__btn { grid-template-columns: 34px 1fr 30px; gap: .7rem; }
+  .acordeon__idx { font-size: .74rem; }
+  .acordeon__panel .interior { padding: 0 0 var(--sp-3) 34px; }
+  .acordeon__signo, .acordeon__signo::before, .acordeon__signo::after { width: 16px; }
+
+  .cita { grid-template-columns: 1fr; gap: var(--sp-2); padding: var(--sp-4); }
+  .cita__marca { font-size: 3rem; }
+
+  /* En móvil los carruseles muestran una tarjeta casi completa */
+  .carrusel__pista { grid-auto-columns: minmax(84%, 1fr); }
+  .carrusel__cabecera { align-items: flex-start; }
+  .carrusel__btn { width: 42px; height: 42px; }
+
+  .franja-ciudad__cuerpo { padding: var(--sp-4); }
+  .caso { min-height: 340px; }
+}
+
+/* Las rejillas fijas se vuelven carrusel táctil en móvil */
+@media (max-width: 680px) {
+  .rejilla-movil {
+    display: grid;
+    /* Sin esto, el `grid-template-columns` de .rejilla-3/.rejilla-4 gana
+       y la primera tarjeta se queda con todo el ancho explícito. */
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(82%, 1fr);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--sp-3);
+    padding-bottom: var(--sp-2);
+    scrollbar-width: none;
+  }
+  .rejilla-movil::-webkit-scrollbar { display: none; }
+  .rejilla-movil > * { scroll-snap-align: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caso img, .caso__redondo, .servicio-num { transition: none; }
+  .carrusel__pista { scroll-behavior: auto; }
+}
+
+/* ============================================================
+   Entrada de blog — cuerpo largo + tabla de contenidos
+   ============================================================ */
+.entrada {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-5);
+  align-items: start;
+}
+
+/* Sin `position: sticky` aquí: en una sola columna el índice se queda pegado
+   arriba y flota encima del texto del artículo. Solo se fija cuando hay
+   columna propia, más abajo en la consulta de 980px. */
+.entrada__toc {
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: var(--sp-3);
+  background: var(--hueso);
+}
+.entrada__toc h2 {
+  font-family: var(--display);
+  font-size: var(--paso-1);
+  margin-bottom: var(--sp-2);
+}
+.entrada__toc ol { list-style: none; display: grid; gap: .55rem; counter-reset: toc; }
+.entrada__toc li { counter-increment: toc; display: flex; gap: .7rem; line-height: 1.4; }
+.entrada__toc li::before {
+  content: counter(toc, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: .75rem;
+  color: var(--cian-500);
+  padding-top: .18rem;
+}
+.entrada__toc a { color: var(--texto); font-size: .95rem; text-decoration: none; }
+.entrada__toc a:hover { color: var(--cian-500); text-decoration: underline; }
+
+.entrada__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1) var(--sp-3);
+  align-items: center;
+  font-family: var(--mono);
+  font-size: .78rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--borde);
+  margin-bottom: var(--sp-4);
+}
+.entrada__meta strong { color: var(--cian-500); font-weight: 600; }
+.entrada__meta a.entrada__autor {
+  color: var(--cian-500);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(43,179,239,.4);
+}
+.entrada__meta a.entrada__autor:hover { border-bottom-color: var(--cian-500); }
+
+/* ---------- Sobre el autor ----------
+   Cierra cada artículo del blog. El enlace a LinkedIn no es decoración: es lo
+   que le dice a Google que detrás del texto hay una persona verificable. */
+.autor {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: var(--sp-3) var(--sp-4);
+  align-items: start;
+  padding: var(--sp-4);
+  background: var(--hueso);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+/* Gana al `.entrada__cuerpo > * + *` que separa los bloques del artículo. */
+.entrada__cuerpo > .autor { margin-top: var(--sp-5); }
+.autor__foto {
+  width: 104px; height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--blanco);
+  box-shadow: var(--sombra);
+}
+.autor__etiqueta {
+  font-family: var(--mono);
+  font-size: .74rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cian-500);
+  margin-bottom: .35rem;
+}
+/* Doble clase para ganarle a `.entrada__cuerpo p`, que fija tamaño y color. */
+.autor .autor__nombre {
+  font-family: var(--display);
+  font-size: var(--paso-2);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--texto);
+}
+.autor .autor__cargo {
+  font-family: var(--mono);
+  font-size: .8rem;
+  line-height: 1.5;
+  color: var(--texto-suave);
+  margin-top: .3rem;
+}
+.autor .autor__bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gris-700);
+  margin-top: var(--sp-2);
+}
+.autor__enlace { margin-top: var(--sp-3); }
+.autor__enlace svg:first-child { width: 18px; height: 18px; }
+
+@media (max-width: 560px) {
+  .autor { grid-template-columns: 1fr; padding: var(--sp-3); }
+  .autor__foto { width: 88px; height: 88px; }
+  .autor__enlace { width: 100%; justify-content: center; }
+}
+
+.entrada__cuerpo { max-width: 68ch; }
+.entrada__cuerpo > * + * { margin-top: var(--sp-3); }
+.entrada__cuerpo p { font-size: var(--paso-1); line-height: 1.72; color: var(--gris-700); }
+.entrada__cuerpo h2 {
+  font-family: var(--display);
+  font-size: var(--paso-3);
+  line-height: 1.18;
+  margin-top: var(--sp-5);
+  scroll-margin-top: 6rem;
+}
+.entrada__cuerpo h3 {
+  font-family: var(--display);
+  font-size: var(--paso-2);
+  margin-top: var(--sp-4);
+  scroll-margin-top: 6rem;
+}
+.entrada__cuerpo h4 {
+  font-family: var(--cuerpo);
+  font-weight: 600;
+  font-size: var(--paso-1);
+  margin-top: var(--sp-4);
+  color: var(--texto);
+  scroll-margin-top: 6rem;
+}
+.entrada__cuerpo h2 + p, .entrada__cuerpo h3 + p, .entrada__cuerpo h4 + p { margin-top: var(--sp-2); }
+.entrada__cuerpo a { color: var(--cian-500); text-underline-offset: .18em; }
+.entrada__cuerpo strong { color: var(--texto); font-weight: 600; }
+
+.entrada__cuerpo ul, .entrada__cuerpo ol { display: grid; gap: .65rem; padding-left: 0; }
+.entrada__cuerpo ul { list-style: none; }
+.entrada__cuerpo ul li { display: flex; gap: .8rem; line-height: 1.65; color: var(--gris-700); }
+.entrada__cuerpo ul li::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--cian-500);
+  flex: none;
+  margin-top: .62rem;
+}
+.entrada__cuerpo ol { list-style: decimal; padding-left: 1.4rem; }
+.entrada__cuerpo ol li { line-height: 1.65; color: var(--gris-700); padding-left: .3rem; }
+
+.entrada__cuerpo blockquote {
+  border-left: 3px solid var(--cian-500);
+  padding: var(--sp-2) 0 var(--sp-2) var(--sp-3);
+  font-size: var(--paso-2);
+  line-height: 1.5;
+  color: var(--texto);
+}
+
+.entrada__figura { margin-top: var(--sp-4); }
+/* Las piezas del blog son cuadradas: sin tope de altura ocupan la columna entera.
+   Se limitan por alto para que las apaisadas sigan ocupando todo el ancho. */
+.entrada__figura img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 30rem;
+  border-radius: var(--radio);
+  display: block;
+  margin-inline: auto;
+}
+.entrada__figura figcaption {
+  font-size: .85rem;
+  color: var(--texto-suave);
+  margin-top: var(--sp-1);
+}
+
+.entrada__tabla { overflow-x: auto; margin-top: var(--sp-4); }
+.entrada__tabla table { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 32rem; }
+.entrada__tabla th, .entrada__tabla td {
+  border: 1px solid var(--borde);
+  padding: .7rem .85rem;
+  text-align: left;
+  vertical-align: top;
+}
+.entrada__tabla th { background: var(--hueso); font-weight: 600; color: var(--texto); }
+.entrada__tabla td { color: var(--gris-700); }
+
+@media (min-width: 980px) {
+  /* Dos columnas solo si la página trae índice: sin él, el artículo
+     caía en la columna estrecha y quedaba encajonado. */
+  .entrada--con-toc { grid-template-columns: 17rem minmax(0, 1fr); gap: var(--sp-6); }
+  .entrada--con-toc .entrada__toc {
+    order: -1;
+    position: sticky;
+    top: calc(var(--sp-5) + 2rem);
+  }
+}
+
+/* La píldora de enlace lleva un icono flexible: sin tamaño fijo se come el
+   ancho y parte el texto en varias líneas dentro de tarjetas estrechas. */
+.etiqueta-enlace svg {
+  flex: none;
+  width: 1.05em;
+  height: 1.05em;
+}
+.etiqueta-enlace { max-width: 100%; }
+@media (min-width: 480px) {
+  .etiqueta-enlace { white-space: nowrap; }
+}
+
+/* ============================================================
+   Formulario de aplicación (landing /vcl/)
+   ============================================================ */
+.formulario {
+  display: grid;
+  gap: var(--sp-3);
+  max-width: 42rem;
+  margin-inline: auto;
+  padding: var(--sp-4);
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+.formulario .campo { display: grid; gap: .45rem; }
+.formulario label {
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--texto);
+  line-height: 1.4;
+}
+.formulario label span { color: var(--cian-500); }
+.formulario input,
+.formulario select {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+  padding: .7rem .9rem;
+  border: 1px solid var(--gris-300);
+  border-radius: var(--radio-sm);
+  background: var(--blanco);
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+.formulario input:focus-visible,
+.formulario select:focus-visible {
+  outline: none;
+  border-color: var(--cian-500);
+  box-shadow: 0 0 0 3px var(--cian-100);
+}
+.formulario input:user-invalid,
+.formulario select:user-invalid { border-color: #C0341D; }
+.formulario__nota {
+  font-size: .9rem;
+  color: var(--texto-suave);
+  margin-top: calc(var(--sp-1) * -1);
+}
+.formulario__error { color: #C0341D; font-size: .92rem; font-weight: 500; }
+.formulario .btn { justify-self: start; }
+
+@media (max-width: 480px) {
+  .formulario { padding: var(--sp-3); }
+  .formulario .btn { justify-self: stretch; text-align: center; }
+}
+
+/* ============================================================
+   Ajustes de móvil
+   Las etiquetas en versalita caían a 11,5 px en pantallas chicas, por debajo
+   de lo cómodo de leer. Van aquí y no en estilo.css porque este archivo carga
+   después: si no, la regla original de cada módulo le gana.
+   (Se dejan como están el «01/02» del acordeón y el «Consultores» del logo:
+   son elementos gráficos, no texto que alguien vaya a leer.)
+   ============================================================ */
+@media (max-width: 680px) {
+  .servicio-num__precio small { font-size: .8rem; }
+  .caso__etiqueta { font-size: .8rem; }
+  /* La firma del autor es un enlace: necesita área táctil, no solo texto. */
+  .entrada__meta a.entrada__autor {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+  }
+}

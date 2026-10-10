@@ -1,0 +1,91 @@
+# ============================================================
+# Marín Ríos Consultores — sitio estático
+# Hostinger usa LiteSpeed, que lee este archivo igual que Apache.
+# ============================================================
+
+# ---------- Índice de directorio ----------
+# Cada página vive en `slug/index.html`, así que la URL /slug/ se sirve sola.
+DirectoryIndex index.html
+Options -Indexes
+
+# ---------- Página de error ----------
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ---------- Dominio canónico ----------
+  # Todo termina en https:// y sin www, que es lo que declaran los canonical.
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://marinriosconsultores.com%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # ---------- Enlaces antiguos que quedaron rotos en el WordPress ----------
+  RewriteRule ^contacto/?$ /contactenos/ [L,R=301]
+  RewriteRule ^costos-de-outsourcing-contable/?$ /precios-outsourcing-contable/ [L,R=301]
+
+  # ---------- Herencia del WordPress ----------
+  # /home/ era un duplicado de la portada y estaba indexado. Un 301 traslada su
+  # autoridad a la raíz; dejarlo en noindex la habría tirado a la basura.
+  RewriteRule ^home/?$ / [L,R=301]
+
+  # Los sitemaps de Rank Math están registrados en Search Console. Sin esto
+  # devolverían 404 el día del cambio.
+  RewriteRule ^sitemap_index\.xml$ /sitemap.xml [L,R=301]
+  RewriteRule ^(post|page|category|author)-sitemap\.xml$ /sitemap.xml [L,R=301]
+
+  # ---------- Una sola forma de escribir cada URL ----------
+  # /slug  ->  /slug/   (evita que la misma página exista en dos direcciones)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+  # /slug/index.html  ->  /slug/
+  RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /%1 [L,R=301]
+</IfModule>
+
+# ---------- Compresión ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---------- Caché del navegador ----------
+# Las imágenes, la tipografía y los estilos cambian poco: se cachean largo.
+# El HTML se revalida siempre, para que un cambio de contenido se vea enseguida.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType font/woff2              "access plus 1 year"
+  ExpiresByType text/css                "access plus 1 month"
+  ExpiresByType application/javascript  "access plus 1 month"
+  ExpiresByType text/html               "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|svg|jpg|jpeg|png|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # ---------- Cabeceras de seguridad ----------
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# ---------- Tipos MIME ----------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+</IfModule>
