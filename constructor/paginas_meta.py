@@ -14,7 +14,7 @@ El formulario envía cada lead a la pestaña "Leads" del Google Sheet
 integraciones/google-sheets-leads.gs) y además abre WhatsApp con el mensaje.
 """
 
-from base import ICO, WA, acordeon
+from base import ICO, WA, acordeon, resenas_google
 from paginas import PAGINAS
 
 NOINDEX = "noindex, nofollow"
@@ -118,8 +118,9 @@ def _testimonios():
       </figure>""" for nombre, cargo, empresa, frase in TESTIMONIOS)
         contenido = f'<div class="lp-rejilla-3 revelar">{tarjetas}</div>'
     else:
-        # Sin testimonios autorizados: los clientes hablan por su logo.
-        contenido = '<ul class="lp-clientes revelar">' + "".join(_logo(n, i) for n, i in CLIENTES) + "</ul>"
+        # Reseñas reales de Google (las mismas del sitio)
+        return resenas_google("No confíes solo en lo que decimos",
+                              "Opiniones de Marín Ríos en Google", variante="oscuro")
     return f"""
 <section class="lp-seccion">
   <div class="lp-contenedor lp-centro">

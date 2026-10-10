@@ -957,3 +957,94 @@
     min-height: 34px;
   }
 }
+
+/* ============================================================
+   Reseñas de Google (carrusel al estilo del de PorContar)
+   Usa el carrusel genérico de main.js: .carrusel / __pista / __btn
+   ============================================================ */
+.resenas { background: #F4F7FC; }
+.resenas__cabecera { margin-bottom: var(--sp-4); }
+.resenas__cabecera h2 { font-size: clamp(1.8rem, 1.3rem + 2vw, 2.6rem); max-width: 26ch; }
+.resenas__resumen {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .9rem;
+  margin-top: var(--sp-3);
+  font-size: .98rem; color: var(--texto-suave);
+}
+.resenas__resumen .g-logo { width: 26px; height: 26px; }
+.resenas__resumen b { font-family: var(--display); font-size: 1.4rem; color: var(--navy-800); }
+.resenas__estrellas, .resena__estrellas { color: #F4B400; letter-spacing: .08em; }
+.resenas__resumen a { color: #1A73E8; font-weight: 600; }
+.resenas__resumen a:hover { text-decoration: underline; }
+
+.resenas__carrusel { position: relative; }
+.resenas__pista {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * var(--sp-3)) / 3);
+  gap: var(--sp-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: .5rem .25rem 1.5rem;
+  margin: 0 -.25rem;
+}
+.resenas__pista::-webkit-scrollbar { display: none; }
+.resena {
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; gap: .8rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #E6EBF4;
+  box-shadow: 0 18px 36px -26px rgba(11, 7, 51, .35);
+}
+.resena__cab { display: grid; grid-template-columns: 44px 1fr 20px; gap: .8rem; align-items: center; }
+.resena__avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  color: #fff; font-weight: 700; font-size: 1.1rem;
+}
+.resena__id strong { display: block; color: var(--navy-800); font-size: 1rem; line-height: 1.25; }
+.resena__id small { display: block; color: var(--texto-suave); font-size: .82rem; margin-top: .15rem; }
+.resena .g-logo { width: 20px; height: 20px; }
+.resena p { color: #3A4360; font-size: .98rem; line-height: 1.6; }
+
+/* Flechas sobre los bordes, como en PorContar */
+.resenas__nav {
+  position: absolute; top: 50%; z-index: 2;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--navy-800); color: #fff;
+  box-shadow: 0 10px 24px -8px rgba(11, 7, 51, .6);
+  transform: translateY(-60%);
+  transition: opacity var(--transicion), background var(--transicion);
+}
+.resenas__nav svg { width: 18px; height: 18px; }
+.resenas__nav:hover { background: var(--cian-500); color: var(--navy-900); }
+.resenas__nav:disabled { opacity: 0; pointer-events: none; }
+.resenas__nav--i { left: -22px; }
+.resenas__nav--d { right: -22px; }
+
+/* Variante oscura (landing de Meta) */
+.resenas--oscuro { background: transparent; }
+.resenas--oscuro .resenas__cabecera { text-align: center; }
+.resenas--oscuro .resenas__cabecera h2 { color: #fff; margin-inline: auto; }
+.resenas--oscuro .eyebrow { justify-content: center; }
+.resenas--oscuro .resenas__resumen { justify-content: center; color: #A3A3AB; }
+.resenas--oscuro .resenas__resumen b { color: #fff; }
+.resenas--oscuro .resenas__resumen a { color: #8FE3FF; }
+.resenas--oscuro .resena { background: #0E0E10; border-color: #1E1E22; box-shadow: none; }
+.resenas--oscuro .resena__id strong { color: #fff; }
+.resenas--oscuro .resena__id small { color: #A3A3AB; }
+.resenas--oscuro .resena p { color: #E0E0E5; }
+.resenas--oscuro .resenas__nav { background: #2BB3EF; color: #000; }
+
+@media (max-width: 900px) {
+  .resenas__pista { grid-auto-columns: calc((100% - var(--sp-3)) / 2); }
+}
+@media (max-width: 640px) {
+  /* En móvil: una tarjeta y se asoma la siguiente para invitar a deslizar */
+  .resenas__pista { grid-auto-columns: 84%; gap: .9rem; }
+  .resenas__nav { display: none; }
+  .resena { padding: 1.25rem; }
+}

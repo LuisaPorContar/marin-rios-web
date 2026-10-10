@@ -177,6 +177,12 @@ PIE = f"""<footer class="pie">
   {ICO['wa']}
 </a>
 
+<!-- Barra de acción fija, solo en celular (reemplaza el botón flotante) -->
+<nav class="barra-movil" aria-label="Contacto rápido">
+  <a class="barra-movil__tel" href="tel:{TEL_URI}">{ICO['tel']}<span>Llamar</span></a>
+  <a class="barra-movil__wa" href="{wa('Hola, vengo de su sitio web y quiero agendar una asesoría contable')}" target="_blank" rel="noopener">{ICO['wa']}<span>Agenda tu asesoría</span></a>
+</nav>
+
 <script src="assets/js/main.js"></script>"""
 
 
@@ -210,7 +216,84 @@ PIE_LANDING = f"""<footer class="pie pie--landing">
   {ICO['wa']}
 </a>
 
+<nav class="barra-movil barra-movil--landing" aria-label="Acción rápida">
+  <a class="barra-movil__wa" href="{wa('Hola, vengo de la página de revisoría fiscal y tengo una pregunta')}" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">{ICO['wa']}</a>
+  <a class="barra-movil__cta" href="#agendar"><span>Agendar evaluación gratuita</span></a>
+</nav>
+
 <script src="assets/js/main.js"></script>"""
+
+
+# ---------------------------------------------------------------- reseñas de Google
+# Reseñas reales del perfil de Google de la firma, copiadas tal cual.
+# estrellas: número de 1 a 5, o None si no se ha confirmado (no se inventan).
+RESENAS = [
+    dict(nombre="Jorge Mario Rojas", detalle="6 opiniones en Google", estrellas=None,
+         texto="Agradezco enormemente sus servicios, me han brindado soluciones a todos los inconvenientes contanbles con los que una empresa se puede encontrar. Nada más agradable que sentir un aliado estratégico de confianza."),
+    dict(nombre="Sol Yaneth Castrillon Jimenez", detalle="Local Guide · 8 opiniones", estrellas=None,
+         texto="Es una empresa seria y comprometida, sus profesionales son excelentes, aparte de conocimiento tienen calidad humana y gran sentido de pertenencia."),
+    dict(nombre="Andres Tette", detalle="3 opiniones en Google", estrellas=None,
+         texto="Muy eficiente y claro."),
+]
+# Resumen del perfil. None = no se muestra hasta confirmarlo en Google.
+GOOGLE_NOTA = None        # p. ej. "5.0"
+GOOGLE_TOTAL = None       # p. ej. 12
+GOOGLE_URL = "https://www.google.com/maps/search/?api=1&query=Mar%C3%ADn%20R%C3%ADos%20Consultores%20Medell%C3%ADn"
+
+G_LOGO = ('<svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true">'
+          '<path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/>'
+          '<path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>'
+          '<path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0124 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>'
+          '<path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 01-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>')
+
+_AVATAR = ["#1A73E8", "#0F9D58", "#DB4437", "#7B1FA2", "#F4B400", "#00897B"]
+
+
+def resenas_google(titulo="Lo que dicen las empresas que acompañamos",
+                   kicker="Opiniones de Marín Ríos en Google", variante=""):
+    """Carrusel de reseñas de Google, al estilo del de PorContar.
+    Usa el carrusel genérico de main.js (.carrusel). variante="oscuro" para
+    fondos negros (landing de Meta)."""
+    def estrellas(n):
+        if not n:
+            return ""
+        return f'<span class="resena__estrellas" aria-label="{n} de 5 estrellas">{"★" * n}{"☆" * (5 - n)}</span>'
+    tarjetas = []
+    for i, r in enumerate(RESENAS):
+        ini = r["nombre"][0].upper()
+        tarjetas.append(f"""<article class="resena">
+          <div class="resena__cab">
+            <span class="resena__avatar" style="background:{_AVATAR[i % len(_AVATAR)]}" aria-hidden="true">{ini}</span>
+            <div class="resena__id"><strong>{r["nombre"]}</strong><small>{r["detalle"]}</small></div>
+            {G_LOGO}
+          </div>
+          {estrellas(r["estrellas"])}
+          <p>{r["texto"]}</p>
+        </article>""")
+    resumen = []
+    if GOOGLE_NOTA:
+        resumen.append(f'<b>{GOOGLE_NOTA}</b><span class="resenas__estrellas" aria-hidden="true">★★★★★</span>')
+    resumen.append(f'<span>{GOOGLE_TOTAL} reseñas en Google</span>' if GOOGLE_TOTAL
+                   else '<span>Reseñas verificadas en Google</span>')
+    flecha_i = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>'
+    flecha_d = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>'
+    clase = f"resenas resenas--{variante}" if variante else "resenas"
+    return f"""<section class="seccion {clase}">
+  <div class="contenedor">
+    <div class="resenas__cabecera revelar">
+      <p class="eyebrow">{kicker}</p>
+      <h2>{titulo}</h2>
+      <div class="resenas__resumen">{G_LOGO}{"".join(resumen)}<a href="{GOOGLE_URL}" target="_blank" rel="noopener">Ver en Google →</a></div>
+    </div>
+    <div class="carrusel resenas__carrusel revelar">
+      <button class="carrusel__btn resenas__nav resenas__nav--i" data-dir="anterior" aria-label="Reseña anterior">{flecha_i}</button>
+      <div class="carrusel__pista resenas__pista" role="group" aria-label="Reseñas de Google">
+        {"".join(tarjetas)}
+      </div>
+      <button class="carrusel__btn resenas__nav resenas__nav--d" data-dir="siguiente" aria-label="Reseña siguiente">{flecha_d}</button>
+    </div>
+  </div>
+</section>"""
 
 def ruta_publica(archivo):
     """'outsourcing-contable.html' -> '/outsourcing-contable/'   ·   'index.html' -> '/'"""
@@ -285,7 +368,8 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/estilo.css">
-<link rel="stylesheet" href="assets/css/modulos.css">{bloque_fuentes}{bloque_css}{bloque_schema}
+<link rel="stylesheet" href="assets/css/modulos.css">{bloque_fuentes}{bloque_css}
+<link rel="stylesheet" href="assets/css/movil.css">{bloque_schema}
 
 {GTM_HEAD}
 </head>

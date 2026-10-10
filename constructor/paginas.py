@@ -3,7 +3,8 @@
 
 from base import (ICO, wa, plantilla, heroe, encabezado, servicios_num, fijo,
                   carrusel, acordeon, tarjetas_item, ciudades_grid, directorio,
-                  cta_final, proposito, marcas, TEL, TEL_URI, EMAIL)
+                  cta_final, proposito, marcas, TEL, TEL_URI, EMAIL,
+                  resenas_google)
 
 import json
 
@@ -156,6 +157,8 @@ cuerpo = f"""
   </div>
 </section>
 
+{resenas_google()}
+
 {cta_final(
     "¿Listo para dejar de perseguir tu contabilidad?",
     "Cuéntanos en qué estado está hoy y te decimos con claridad qué necesita tu empresa y cuánto costaría.",
@@ -284,6 +287,8 @@ cuerpo = f"""
   </div>
 </section>
 
+{resenas_google()}
+
 {cta_final(
     "Obtén tu asesoría con un experto especializado",
     "Cuéntanos el tamaño de tu sociedad y te decimos si estás obligado a tener revisor fiscal y qué alcance necesitas.",
@@ -411,6 +416,8 @@ cuerpo = f"""
     {servicios_num(TRIO)}
   </div>
 </section>
+
+{resenas_google()}
 
 {cta_final(
     "Pide una lectura financiera de tu empresa",

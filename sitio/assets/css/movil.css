@@ -1,0 +1,138 @@
+/* ============================================================
+   Marín Ríos — capa móvil
+   Se carga al final de todas las páginas. Corrige y ordena la
+   experiencia en celular sin tocar el escritorio (salvo el arreglo
+   de listas de artículos, que estaba roto en todos los tamaños).
+   ============================================================ */
+
+/* ---------- Listas de artículos (todos los tamaños) ----------
+   Con display:flex, un <strong> al inicio del ítem se volvía una
+   columna aparte ("Grupo 1, las grandes:" | texto). */
+.entrada__cuerpo ul li { display: block; position: relative; padding-left: 1.3rem; }
+.entrada__cuerpo ul li::before { position: absolute; left: 0; top: .62em; margin-top: 0; }
+
+/* ---------- Barra de acción fija: oculta en escritorio ---------- */
+.barra-movil { display: none; }
+
+/* Títulos del pie: en la portada corporativa quedaban azul oscuro sobre oscuro */
+.corp .pie h4 { color: var(--cian-300); }
+
+@media (max-width: 680px) {
+
+  /* ---------- Ritmo vertical: secciones menos largas ---------- */
+  :root { --sp-7: 3.75rem; --sp-6: 2.75rem; --sp-5: 2.25rem; }
+  .contenedor { width: min(100% - 2.5rem, var(--ancho)); }
+  h2 { text-wrap: balance; }
+
+  /* ---------- Barra de acción fija abajo ---------- */
+  .wa-flotante { display: none; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  .barra-movil {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .6rem;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+    padding: .6rem .9rem calc(.6rem + env(safe-area-inset-bottom));
+    background: rgba(7, 4, 35, .94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 -10px 30px -12px rgba(0, 0, 0, .6);
+  }
+  .barra-movil a {
+    display: flex; align-items: center; justify-content: center; gap: .55rem;
+    min-height: 50px;
+    border-radius: 12px;
+    font-weight: 700; font-size: 1rem;
+  }
+  .barra-movil svg { width: 21px; height: 21px; flex: none; }
+  .barra-movil__tel {
+    padding-inline: 1.1rem;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .25);
+  }
+  .barra-movil__wa { background: #1EA952; color: #fff; padding-inline: 1rem; }
+  .barra-movil--landing { background: rgba(0, 0, 0, .94); }
+  .barra-movil--landing .barra-movil__wa { width: 50px; padding: 0; }
+  .barra-movil__cta { background: #2BB3EF; color: #000; }
+  /* el pie legal no queda tapado por la barra */
+  .pie { padding-bottom: var(--sp-4); }
+
+  /* ---------- Héroes ---------- */
+  .heroe h1, .corp-heroe h1 { font-size: clamp(2rem, 1.4rem + 4.6vw, 2.6rem); line-height: 1.07; }
+  .heroe__entrada, .corp-heroe__entrada { font-size: 1.05rem; }
+  .migas { font-size: .74rem; }
+  .migas a, .migas > span { min-height: 40px; }
+  .chip, .corp-heroe__chip { font-size: .7rem; }
+
+  /* Cifras del héroe: 2×2 en lugar de una columna larga */
+  .riel { grid-template-columns: 1fr 1fr; }
+  .riel__dato { border-top: 1px solid rgba(255, 255, 255, .13); padding: var(--sp-2) var(--sp-2) var(--sp-2) 0 !important; }
+  .riel__dato:nth-child(odd) { border-right: 1px solid rgba(255, 255, 255, .13); }
+  .riel__dato:nth-child(even) { padding-left: var(--sp-2) !important; }
+  .riel__dato:nth-child(-n+2) { border-top: 0; }
+  .riel__cifra { font-size: 1.55rem; }
+  .riel__etiqueta { font-size: .8rem; line-height: 1.35; }
+
+  .corp-cifra__num { font-size: 1.9rem; }
+  .corp-cifra__txt { font-size: .82rem; }
+
+  /* ---------- Clientes: rejilla de 2, compacta ---------- */
+  .marcas__grid { grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .marca-chip { padding: .75rem .8rem; gap: .55rem; font-size: .88rem; line-height: 1.25; }
+  .marca-chip img, .marca-chip__marca { width: 28px; height: 28px; }
+  .marca-chip__marca { font-size: .75rem; }
+
+  /* ---------- Botones: ancho completo y altura táctil ---------- */
+  .btn { min-height: 50px; justify-content: center; }
+  .fijo__ancla .btn, .proposito__texto .btn, .corp-proposito__texto .btn, .corp-alcance__ancla .btn { width: 100%; }
+  .etiqueta-enlace { min-height: 42px; display: inline-flex; align-items: center; }
+  .resenas__resumen a { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* ---------- Acordeón: más aire para tocar ---------- */
+  .acordeon__btn { padding: var(--sp-3) 0; }
+  .acordeon__titulo { font-size: 1.05rem; }
+
+  /* ---------- Pie: enlaces en dos columnas ---------- */
+  .pie__grid { grid-template-columns: 1fr 1fr; gap: var(--sp-3) var(--sp-3); }
+  .pie__grid > :first-child, .pie__grid > :last-child { grid-column: 1 / -1; }
+  .pie h4 { margin-bottom: .2rem; }
+  .pie ul a { min-height: 40px; font-size: .95rem; }
+  .pie__legal { flex-direction: column; align-items: flex-start; gap: .2rem; font-size: .85rem; }
+
+  /* ---------- Artículos del blog ---------- */
+  .entrada__cuerpo p.entrada__meta, .entrada__meta { font-size: .7rem; line-height: 1.5; gap: .1rem .9rem; letter-spacing: .03em; }
+  .entrada__cuerpo p, .entrada__cuerpo li { font-size: 1.02rem; }
+  .entrada__toc a { display: block; padding-block: .3rem; }
+
+  /* Tablas: cada fila se vuelve una tarjeta (la etiqueta sale del
+     encabezado; main.js la copia a data-label) */
+  .entrada__tabla table { min-width: 0; border: 0; font-size: .95rem; }
+  .entrada__tabla thead, .entrada__tabla tr:first-child:has(th) { display: none; }
+  .entrada__tabla tr {
+    display: block;
+    margin-bottom: var(--sp-2);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .entrada__tabla td { display: block; border: 0; border-top: 1px solid var(--borde); padding: .7rem .9rem; }
+  .entrada__tabla td:first-child { border-top: 0; background: var(--hueso); font-weight: 600; color: var(--texto); }
+  .entrada__tabla td[data-label]:not(:first-child)::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: .2rem;
+    font-size: .72rem; font-weight: 700;
+    letter-spacing: .06em; text-transform: uppercase;
+    color: var(--cian-500);
+  }
+
+  /* ---------- Contacto rápido del cierre ---------- */
+  .cta-contacto a { font-size: .9rem; }
+}
+
+@media (max-width: 380px) {
+  .marcas__grid { grid-template-columns: 1fr; }
+  .barra-movil__tel span { display: none; }
+}

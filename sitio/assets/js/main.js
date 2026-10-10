@@ -164,6 +164,20 @@
     });
   }
 
+  /* ---- Tablas de artículos: etiqueta de columna para la vista móvil ----
+     movil.css convierte cada fila en una tarjeta y muestra data-label. */
+  document.querySelectorAll('.entrada__tabla table').forEach(function (tabla) {
+    var cab = tabla.querySelector('tr');
+    if (!cab || !cab.querySelector('th')) return;
+    var etiquetas = [].map.call(cab.children, function (c) { return c.textContent.trim(); });
+    [].forEach.call(tabla.querySelectorAll('tr'), function (fila) {
+      if (fila === cab) return;
+      [].forEach.call(fila.children, function (celda, i) {
+        if (etiquetas[i]) celda.setAttribute('data-label', etiquetas[i]);
+      });
+    });
+  });
+
   /* ---- Año en el pie ---- */
   var anio = document.querySelector('[data-anio]');
   if (anio) anio.textContent = new Date().getFullYear();

@@ -14,6 +14,7 @@ que en el resto de páginas.
 """
 
 from paginas import PAGINAS
+from base import resenas_google
 
 TITULO = 'Outsourcing Contable para Empresas en Colombia | Marín Ríos'
 DESCRIPCION = 'Outsourcing contable, revisoría fiscal y consultoría financiera para pymes en Colombia. Cotización a la medida. Más de 50 empresas confían en nosotros.'
@@ -454,7 +455,9 @@ PAGINAS.append(dict(
     activo="",
     og_img=OG_IMG,
     schema=SCHEMA,
-    cuerpo=CUERPO,
+    # Las reseñas de Google van antes de Cobertura
+    cuerpo=CUERPO.replace("<!-- ===================== COBERTURA",
+                          resenas_google() + "\n\n<!-- ===================== COBERTURA", 1),
     # Capa visual corporativa, solo para la portada. No toca textos ni SEO.
     clase_body="corp",
     css_extra=("assets/css/home-corp.css",),
