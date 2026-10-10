@@ -1,0 +1,27 @@
+# Mantiene la rama `publicar` con SOLO el contenido de sitio/ en la raíz.
+# Hostinger (hPanel → Avanzado → GIT) despliega esa rama en public_html,
+# así el código del generador nunca queda expuesto en la web.
+name: Actualizar rama publicar
+
+on:
+  push:
+    branches: [main]
+    paths: ['sitio/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Separar sitio/ en la rama publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git subtree split --prefix sitio -b publicar
+          git push -f origin publicar
