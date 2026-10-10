@@ -679,21 +679,46 @@ def proposito(titulo, p1, p2, boton="Haz clic para conversar", mensaje="Hola, qu
 </section>"""
 
 
+# Clientes: logo recortado y sin fondo (originales-img/logo-cliente-*.png).
+# Las empresas sin logo disponible se muestran como nombre tipográfico.
+CLIENTES = [
+    ("Etelvina SAS", "logo-cliente-etelvina.png", 128, 144),
+    ("Axcel", "logo-cliente-axl.png", 126, 72),
+    ("Rocketfy", "logo-cliente-rocketfy.png", 226, 62),
+    ("Corporación María Inmaculada", "logo-cliente-maria-inmaculada.png", 114, 172),
+    ("Labor Diésel", None, 0, 0),
+    ("Logística y Abastecimiento", None, 0, 0),
+]
+
+
+def carrusel_clientes(variante=""):
+    """Logos grandes, sin recuadro, en carrusel continuo.
+    La lista va dos veces para que el desplazamiento no tenga corte; la
+    segunda copia se oculta a lectores de pantalla."""
+    def item(nombre, img, w, h, eco):
+        oculto = ' aria-hidden="true"' if eco else ""
+        if img:
+            alt = "" if eco else nombre
+            marca = f'<img src="assets/img/{img}" alt="{alt}" width="{w}" height="{h}" loading="lazy">'
+        else:
+            marca = f'<span class="clientes-logos__texto">{nombre}</span>'
+        return f'<li class="clientes-logos__item"{oculto}>{marca}</li>'
+    fila = "".join(item(*c, False) for c in CLIENTES)
+    eco = "".join(item(*c, True) for c in CLIENTES)
+    clase = f"clientes-logos clientes-logos--{variante}" if variante else "clientes-logos"
+    return f"""<div class="{clase}">
+      <ul class="clientes-logos__pista" aria-label="Empresas que confían en nosotros">{fila}{eco}</ul>
+    </div>"""
+
+
 def marcas():
-    return """<section class="seccion--ajustada">
-  <div class="contenedor clientes__grid revelar">
-    <div>
+    return f"""<section class="seccion--ajustada clientes">
+  <div class="contenedor revelar">
+    <div class="clientes__cabecera">
       <p class="eyebrow">Confían en nosotros</p>
       <h2 style="font-size:var(--paso-3)">Ellos han tercerizado sus procesos con nosotros</h2>
       <p style="color:var(--texto-suave);margin-top:.7rem">Más de 50 empresas se orientaron por sus objetivos más estratégicos.</p>
     </div>
-    <div class="marcas__grid">
-      <span class="marca-chip marca-chip--a"><img src="assets/img/cliente-etelvina.png" alt="" width="34" height="34">Etelvina SAS</span>
-      <span class="marca-chip marca-chip--b"><img src="assets/img/cliente-axl.png" alt="" width="34" height="34">AXL</span>
-      <span class="marca-chip marca-chip--c"><img src="assets/img/cliente-rocketfy.png" alt="" width="34" height="34">Rocketfy</span>
-      <span class="marca-chip marca-chip--d"><img src="assets/img/cliente-maria-inmaculada.png" alt="" width="34" height="34">María Inmaculada</span>
-      <span class="marca-chip marca-chip--e"><span class="marca-chip__marca">LD</span>Labor Diésel</span>
-      <span class="marca-chip marca-chip--f"><span class="marca-chip__marca">LA</span>Logística y Abastecimiento</span>
-    </div>
   </div>
+  {carrusel_clientes()}
 </section>"""

@@ -14,7 +14,7 @@ que en el resto de páginas.
 """
 
 from paginas import PAGINAS
-from base import resenas_google
+from base import resenas_google, marcas
 
 TITULO = 'Outsourcing Contable para Empresas en Colombia | Marín Ríos'
 DESCRIPCION = 'Outsourcing contable, revisoría fiscal y consultoría financiera para pymes en Colombia. Cotización a la medida. Más de 50 empresas confían en nosotros.'
@@ -111,23 +111,7 @@ CUERPO = """<!-- ===================== HÉROE ===================== -->
 </section>
 
 <!-- ===================== MARCAS ===================== -->
-<section class="seccion--ajustada">
-  <div class="contenedor clientes__grid revelar">
-    <div>
-      <p class="eyebrow">Confían en nosotros</p>
-      <h2 style="font-size:var(--paso-3)">Ellos han tercerizado sus procesos con nosotros</h2>
-      <p style="color:var(--texto-suave);margin-top:.7rem">Más de 50 empresas se orientaron por sus objetivos más estratégicos.</p>
-    </div>
-    <div class="marcas__grid">
-      <span class="marca-chip marca-chip--a"><img src="/assets/img/cliente-etelvina.png" alt="" width="34" height="34">Etelvina SAS</span>
-      <span class="marca-chip marca-chip--b"><img src="/assets/img/cliente-axl.png" alt="" width="34" height="34">AXL</span>
-      <span class="marca-chip marca-chip--c"><img src="/assets/img/cliente-rocketfy.png" alt="" width="34" height="34">Rocketfy</span>
-      <span class="marca-chip marca-chip--d"><img src="/assets/img/cliente-maria-inmaculada.png" alt="" width="34" height="34">María Inmaculada</span>
-      <span class="marca-chip marca-chip--e"><span class="marca-chip__marca">LD</span>Labor Diésel</span>
-      <span class="marca-chip marca-chip--f"><span class="marca-chip__marca">LA</span>Logística y Abastecimiento</span>
-    </div>
-  </div>
-</section>
+{{MARCAS}}
 
 <!-- ===================== SERVICIOS ===================== -->
 <section class="seccion corp-servicios">
@@ -456,7 +440,7 @@ PAGINAS.append(dict(
     og_img=OG_IMG,
     schema=SCHEMA,
     # Las reseñas de Google van antes de Cobertura
-    cuerpo=CUERPO.replace("<!-- ===================== COBERTURA",
+    cuerpo=CUERPO.replace("{{MARCAS}}", marcas()).replace("<!-- ===================== COBERTURA",
                           resenas_google() + "\n\n<!-- ===================== COBERTURA", 1),
     # Capa visual corporativa, solo para la portada. No toca textos ni SEO.
     clase_body="corp",

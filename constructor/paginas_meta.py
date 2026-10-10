@@ -14,7 +14,7 @@ El formulario envía cada lead a la pestaña "Leads" del Google Sheet
 integraciones/google-sheets-leads.gs) y además abre WhatsApp con el mensaje.
 """
 
-from base import ICO, WA, acordeon, resenas_google
+from base import ICO, WA, acordeon, resenas_google, carrusel_clientes
 from paginas import PAGINAS
 
 NOINDEX = "noindex, nofollow"
@@ -187,7 +187,7 @@ cuerpo = f"""
 <!-- ===================== 2. LOGOS ===================== -->
 <section class="lp-logos">
   <p class="lp-logos__titulo">Empresas que ya confían en nosotros</p>
-  {_carrusel_logos()}
+  {carrusel_clientes("oscuro")}
 </section>
 
 <!-- ===================== 3. VIDEO ===================== -->
