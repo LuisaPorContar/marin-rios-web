@@ -1,0 +1,25 @@
+# --- Privado: nunca al repositorio (es público) ---
+# Copia del WordPress anterior: incluye la base de datos con usuarios
+Sitio Web Viejo/
+# Copias de seguridad locales y paquetes para Hostinger
+respaldos/
+*.zip
+# Investigación interna de competencia
+investigacion/
+# Capturas y registros de pruebas del navegador
+.playwright-mcp/
+
+# --- Archivos sueltos de trabajo (los originales viven en originales-img/) ---
+/*.png
+/*.jpg
+/*.xlsx
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Sistema ---
+desktop.ini
+Thumbs.db
+.DS_Store
+sitio/_prueba/

@@ -1,0 +1,503 @@
+/* ============================================================
+   Landing Meta · Evaluación de revisoría fiscal 2027
+   Lenguaje visual de la landing de 30X: fondo negro plano, columna
+   centrada, titular en color de acento, tarjetas gris carbón con borde
+   fino y un botón compacto al cierre de cada sección.
+   El acento es el cian vivo de Marín Ríos (en 30X es verde lima).
+   ============================================================ */
+
+.lp {
+  --l-negro: #000;
+  --l-tarjeta: #0E0E10;
+  --l-tarjeta-2: #141416;
+  --l-borde: #222226;
+  --l-acento: #2BB3EF;
+  --l-acento-claro: #8FE3FF;
+  --l-texto: #F2F2F2;
+  --l-suave: #A3A3AB;
+  --l-radio: 14px;
+  --l-ancho: 1040px;
+
+  background: var(--l-negro);
+  color: var(--l-texto);
+}
+.lp main { background: var(--l-negro); }
+
+/* ---------- Tipografía ---------- */
+.lp h1, .lp h2, .lp h3 { color: #fff; letter-spacing: -.025em; }
+.lp-titulo {
+  font-size: clamp(1.8rem, 1.3rem + 2vw, 2.6rem);
+  line-height: 1.12;
+  max-width: 22ch;
+  margin-inline: auto;
+}
+.lp-titulo--acento { color: var(--l-acento) !important; }
+.lp-texto {
+  color: #D9D9DE;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  max-width: 60ch;
+  margin: var(--sp-2) auto 0;
+}
+.lp-texto--cierre { margin-top: var(--sp-4); }
+.lp-acento { color: var(--l-acento); }
+.lp strong { color: #fff; }
+.lp strong.lp-acento { color: var(--l-acento); }
+
+/* ---------- Estructura ---------- */
+.lp-contenedor { width: min(100% - 2.5rem, var(--l-ancho)); margin-inline: auto; }
+.lp-angosto { max-width: 760px; }
+.lp-centro { text-align: center; }
+.lp-seccion { padding-block: clamp(3.5rem, 2.8rem + 3vw, 5.5rem); }
+.lp-seccion--corta { padding-block: clamp(2.5rem, 2rem + 2vw, 4rem); }
+
+/* ---------- Botón compacto, como en 30X ---------- */
+.lp-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  margin-top: var(--sp-4);
+  padding: .8rem 1.4rem;
+  border-radius: 8px;
+  background: var(--l-acento);
+  color: #000;
+  font-weight: 700;
+  font-size: .98rem;
+  letter-spacing: -.01em;
+  transition: background var(--transicion), transform var(--transicion), box-shadow var(--transicion);
+}
+.lp-btn svg { width: 17px; height: 17px; flex: none; }
+.lp-btn:hover { background: var(--l-acento-claro); transform: translateY(-1px); box-shadow: 0 10px 30px -10px rgba(43,179,239,.7); }
+.lp-btn--bloque { width: 100%; padding-block: 1rem; font-size: 1.05rem; }
+.lp-btn--contorno { background: transparent; color: #fff; border: 1px solid #3A3A40; }
+.lp-btn--contorno:hover { background: #fff; color: #000; box-shadow: none; }
+.lp-acciones { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+
+/* ---------- Íconos en cuadro, como los de "Día 1/2/3" ---------- */
+.lp-ico {
+  display: grid; place-items: center; flex: none;
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  background: #0F1A20;
+  border: 1px solid rgba(43,179,239,.22);
+  color: var(--l-acento);
+}
+.lp-ico svg { width: 24px; height: 24px; }
+.lp-ico--grande { width: 64px; height: 64px; border-radius: 12px; }
+.lp-ico--grande svg { width: 32px; height: 32px; }
+
+/* ============================================================
+   1. Héroe
+   ============================================================ */
+.lp-heroe { padding-block: var(--sp-5) var(--sp-5); }
+.lp-heroe__logo { height: 64px; width: auto; margin: 0 auto var(--sp-4); }
+.lp-etiqueta {
+  display: inline-block;
+  padding: .55rem 1.2rem;
+  border-radius: 999px;
+  background: #0F1A20;
+  border: 1px solid rgba(43,179,239,.25);
+  color: var(--l-acento);
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-4);
+}
+.lp-heroe h1 {
+  color: var(--l-acento);
+  font-size: clamp(2rem, 1.3rem + 3vw, 3.4rem);
+  line-height: 1.08;
+  max-width: 24ch;
+  margin-inline: auto;
+}
+.lp-heroe__sub {
+  max-width: 62ch;
+  margin: var(--sp-3) auto 0;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: #fff;
+}
+.lp-heroe__media {
+  width: min(100%, 680px);
+  margin: var(--sp-4) auto 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--l-borde);
+}
+.lp-heroe__media img { width: 100%; height: 100%; object-fit: cover; }
+.lp-cifras {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.4rem;
+  margin-top: var(--sp-4);
+}
+.lp-cifras li { display: flex; align-items: center; gap: .55rem; }
+.lp-cifras strong { color: var(--l-acento); font-family: var(--display); font-size: 1.25rem; font-weight: 800; }
+.lp-cifras span {
+  padding: .25rem .7rem;
+  border-radius: 999px;
+  background: #1C1C20;
+  color: #E6E6EA;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   2. Logos en carrusel continuo
+   ============================================================ */
+.lp-logos { padding-block: var(--sp-3) var(--sp-5); }
+.lp-logos__titulo { text-align: center; color: #fff; font-size: 1.05rem; margin-bottom: var(--sp-3); }
+.lp-marquesina {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.lp-marquesina__pista {
+  display: flex; gap: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  width: max-content;
+  animation: lp-desliza 32s linear infinite;
+}
+.lp-marquesina:hover .lp-marquesina__pista { animation-play-state: paused; }
+@keyframes lp-desliza { to { transform: translateX(calc(-50% - clamp(2rem, 1.5rem + 2vw, 3.5rem) / 2)); } }
+.lp-logo {
+  flex: none;
+  display: flex; align-items: center; gap: .6rem;
+  color: #fff;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  opacity: .9;
+}
+.lp-logo img {
+  width: 30px; height: 30px; object-fit: contain;
+  border-radius: 6px; background: #fff; padding: 2px;
+}
+.lp-logo__ini {
+  width: 30px; height: 30px; border-radius: 6px;
+  display: grid; place-items: center;
+  border: 1px solid #fff; color: #fff;
+  font-size: .72rem; font-weight: 800;
+}
+
+/* ============================================================
+   3. Video
+   ============================================================ */
+.lp-video {
+  position: relative; display: block;
+  width: min(100%, 720px); aspect-ratio: 16 / 9;
+  margin: var(--sp-4) auto 0;
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--l-borde);
+}
+.lp-video img { width: 100%; height: 100%; object-fit: cover; }
+.lp-video__play {
+  position: absolute; inset: 0; margin: auto;
+  width: 68px; height: 48px; border-radius: 12px;
+  display: grid; place-items: center;
+  background: rgba(0,0,0,.75); color: #fff;
+}
+.lp-video__play svg { width: 26px; height: 26px; }
+.lp-video__marco {
+  display: block; width: min(100%, 720px); aspect-ratio: 16 / 9;
+  margin: var(--sp-4) auto 0; border: 0; border-radius: 10px;
+}
+
+/* ============================================================
+   Tarjetas
+   ============================================================ */
+.lp-rejilla-2, .lp-rejilla-3 {
+  display: grid; gap: var(--sp-3);
+  margin-top: var(--sp-5);
+  text-align: left;
+}
+.lp-rejilla-2 { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-inline: auto; }
+.lp-rejilla-3 { grid-template-columns: repeat(3, 1fr); }
+.lp-tarjeta {
+  padding: var(--sp-4) var(--sp-3);
+  border-radius: var(--l-radio);
+  background: var(--l-tarjeta);
+  border: 1px solid #18181B;
+}
+.lp-tarjeta .lp-ico { margin-bottom: var(--sp-3); }
+.lp-tarjeta p { color: #E6E6EA; font-size: 1.05rem; line-height: 1.5; }
+.lp-tarjeta--fila { display: flex; gap: var(--sp-3); align-items: flex-start; }
+.lp-tarjeta--fila .lp-ico { margin-bottom: 0; }
+.lp-tarjeta--fila h3 { font-size: 1.15rem; margin-bottom: .35rem; }
+.lp-tarjeta--fila p { color: var(--l-suave); font-size: .98rem; }
+
+/* ============================================================
+   5. Tarjetas con foto (como "Los que cambiaron Latinoamérica")
+   ============================================================ */
+.lp-fotos {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3);
+  margin-top: var(--sp-5);
+  text-align: left;
+}
+.lp-foto {
+  position: relative; isolation: isolate;
+  aspect-ratio: 1 / 1.05;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex; align-items: flex-end;
+}
+.lp-foto img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 700ms cubic-bezier(.22,.61,.36,1);
+}
+.lp-foto::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.35) 40%, rgba(0,0,0,.92) 100%);
+}
+.lp-foto:hover img { transform: scale(1.05); }
+.lp-foto__cuerpo { padding: var(--sp-3); }
+.lp-foto__eti { display: block; color: var(--l-acento); font-family: var(--display); font-weight: 800; font-size: .95rem; margin-bottom: .3rem; }
+.lp-foto h3 { font-size: 1.35rem; margin-bottom: .4rem; }
+.lp-foto p { color: #E0E0E5; font-size: .95rem; line-height: 1.45; }
+
+/* ============================================================
+   6. Las tres partes (como "El sistema de 3 días")
+   ============================================================ */
+.lp-partes {
+  max-width: 760px;
+  margin: var(--sp-5) auto 0;
+  border: 1px solid #18181B;
+  border-radius: 6px;
+  text-align: left;
+}
+.lp-partes li {
+  display: flex; gap: var(--sp-3); align-items: flex-start;
+  padding: var(--sp-3);
+}
+.lp-partes li + li { border-top: 1px solid #18181B; }
+.lp-partes h3 { font-size: clamp(1.35rem, 1.15rem + .8vw, 1.75rem); line-height: 1.15; }
+.lp-partes__bajada { color: #fff; font-weight: 700; font-size: .95rem; margin-top: .3rem; }
+.lp-partes p:not(.lp-partes__bajada) { color: #CFCFD5; font-size: .95rem; line-height: 1.5; margin-top: .2rem; }
+
+/* ============================================================
+   7. Resumen (como "Resumen rápido" con barra HOY)
+   ============================================================ */
+.lp-resumen {
+  max-width: 440px;
+  margin: var(--sp-5) auto 0;
+  padding: var(--sp-4) var(--sp-3) var(--sp-3);
+  border-radius: 12px;
+  background: var(--l-tarjeta);
+  border: 1px solid #18181B;
+  text-align: left;
+}
+.lp-resumen__cab {
+  display: flex; align-items: center; justify-content: center; gap: .8rem;
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid #3A3A40;
+  font-family: var(--display); font-weight: 800; font-size: .85rem; line-height: 1.15;
+  text-transform: uppercase; color: var(--l-acento);
+}
+.lp-resumen__cab img { height: 40px; width: auto; padding-right: .8rem; border-right: 1px solid #3A3A40; }
+.lp-resumen__lista { display: grid; gap: .9rem; padding: var(--sp-3) 0; border-bottom: 1px solid #3A3A40; }
+.lp-resumen__lista li { display: flex; gap: .6rem; align-items: flex-start; }
+.lp-resumen__lista svg { width: 16px; height: 16px; color: var(--l-acento); flex: none; margin-top: .25rem; }
+.lp-resumen__lista strong { display: block; font-size: .92rem; font-weight: 600; line-height: 1.35; }
+.lp-resumen__lista span { display: block; color: var(--l-suave); font-size: .84rem; line-height: 1.35; margin-top: .15rem; }
+.lp-resumen__total { text-align: center; color: #E6E6EA; font-size: .95rem; margin: var(--sp-3) 0 var(--sp-2); }
+.lp-resumen__hoy {
+  display: block; text-align: center;
+  padding: .9rem;
+  border-radius: 6px;
+  background: var(--l-acento);
+  color: #000;
+  font-family: var(--display); font-size: 1.5rem; font-weight: 700;
+  transition: background var(--transicion);
+}
+.lp-resumen__hoy:hover { background: var(--l-acento-claro); }
+
+/* ============================================================
+   8. Carta (como "¿Por qué hago esto?")
+   ============================================================ */
+.lp-carta__foto {
+  position: relative;
+  margin: var(--sp-4) auto 0;
+  width: min(100%, 520px);
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  background:
+    radial-gradient(70% 90% at 50% 100%, rgba(43,179,239,.45) 0%, transparent 70%),
+    linear-gradient(160deg, #0F1A20 0%, #071018 100%);
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.lp-carta__foto img { height: 100%; width: auto; object-fit: contain; object-position: bottom; }
+.lp-carta__texto { margin-top: var(--sp-4); }
+.lp-carta__texto p { color: #E6E6EA; font-size: 1rem; line-height: 1.6; max-width: 56ch; margin-inline: auto; }
+.lp-carta__texto p + p { margin-top: var(--sp-2); }
+.lp-carta__firma { color: var(--l-suave) !important; }
+.lp-datos {
+  display: grid; grid-template-columns: 1fr 1fr;
+  margin: var(--sp-4) auto 0;
+  max-width: 520px;
+  border: 1px solid #18181B;
+}
+.lp-datos div { padding: var(--sp-3); }
+.lp-datos div + div { border-left: 1px solid #18181B; }
+.lp-datos strong { display: block; font-family: var(--display); font-size: 1.6rem; font-weight: 700; }
+.lp-datos span { color: #CFCFD5; font-size: .88rem; }
+
+/* ============================================================
+   10. Testimonios / clientes
+   ============================================================ */
+.lp-clientes {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+.lp-clientes .lp-logo {
+  justify-content: center;
+  padding: var(--sp-4) var(--sp-3);
+  border-radius: var(--l-radio);
+  background: var(--l-tarjeta);
+  border: 1px solid #18181B;
+  white-space: normal;
+}
+.lp-testimonio {
+  padding: var(--sp-4) var(--sp-3);
+  border-radius: var(--l-radio);
+  background: var(--l-tarjeta);
+  border: 1px solid #18181B;
+  text-align: left;
+}
+.lp-testimonio blockquote { font-size: 1.05rem; line-height: 1.5; color: #fff; }
+.lp-testimonio figcaption { margin-top: var(--sp-3); font-size: .9rem; color: var(--l-suave); }
+.lp-testimonio figcaption strong { display: block; }
+
+/* ============================================================
+   11. WhatsApp (panel con luz de reflector)
+   ============================================================ */
+.lp-wa {
+  position: relative; overflow: hidden;
+  padding: var(--sp-6) var(--sp-3);
+  text-align: center;
+  background:
+    conic-gradient(from 200deg at 15% -10%, transparent 0deg, rgba(43,179,239,.16) 20deg, transparent 40deg),
+    conic-gradient(from 140deg at 85% -10%, transparent 0deg, rgba(43,179,239,.16) 20deg, transparent 40deg),
+    radial-gradient(60% 50% at 50% 100%, rgba(43,179,239,.18) 0%, transparent 70%),
+    #050608;
+  border-block: 1px solid #111;
+}
+.lp-wa::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 40%;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 24px);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000);
+          mask-image: linear-gradient(180deg, transparent, #000);
+  pointer-events: none;
+}
+.lp-wa > * { position: relative; z-index: 1; }
+
+/* ============================================================
+   12. Preguntas (filas con caja y flecha)
+   ============================================================ */
+.lp-faq { max-width: 780px; margin: var(--sp-4) auto 0; text-align: left; }
+.lp .lp-faq .acordeon { border: 0; display: grid; gap: .55rem; }
+.lp .lp-faq .acordeon__item {
+  border: 1px solid #1A1A1E;
+  border-radius: 6px;
+  background: var(--l-tarjeta-2);
+}
+.lp .lp-faq .acordeon__btn { grid-template-columns: 1fr 20px; padding: .9rem 1rem; gap: 1rem; }
+.lp .lp-faq .acordeon__idx { display: none; }
+.lp .lp-faq .acordeon__titulo { color: #fff; font-family: var(--cuerpo); font-weight: 600; font-size: 1rem; letter-spacing: 0; }
+.lp .lp-faq .acordeon__btn:hover .acordeon__titulo { color: var(--l-acento); }
+/* el signo + se vuelve flecha */
+.lp .lp-faq .acordeon__signo { width: 12px; height: 12px; }
+.lp .lp-faq .acordeon__signo::before { display: none; }
+.lp .lp-faq .acordeon__signo::after {
+  width: 8px; height: 8px; top: 0; left: 2px;
+  background: transparent !important;
+  border-right: 2px solid #fff; border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.lp .lp-faq .acordeon__btn[aria-expanded="true"] .acordeon__signo::after { transform: rotate(-135deg); top: 4px; border-color: var(--l-acento); }
+.lp .lp-faq .acordeon__panel .interior { padding: 0 1rem 1rem; }
+.lp .lp-faq .acordeon__panel p { color: var(--l-suave); }
+
+/* ============================================================
+   13. Formulario
+   ============================================================ */
+.lp-form-caja {
+  max-width: 720px; margin-inline: auto;
+  padding: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+  border-radius: 16px;
+  background: var(--l-tarjeta);
+  border: 1px solid rgba(43,179,239,.25);
+  box-shadow: 0 40px 100px -50px rgba(43,179,239,.5);
+  text-align: left;
+}
+.lp-form-caja .lp-titulo, .lp-form-caja .lp-texto { text-align: center; }
+.lp-form__campos {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3);
+  margin: var(--sp-4) 0 var(--sp-1);
+}
+.lp-campo { display: grid; gap: .4rem; }
+.lp-campo--ancho { grid-column: 1 / -1; }
+.lp-campo label { font-weight: 600; font-size: .92rem; color: #E6E6EA; }
+.lp-campo input, .lp-campo select {
+  width: 100%;
+  font: inherit; font-size: 1rem;
+  padding: .85rem 1rem;
+  border: 1px solid #2A2A30;
+  border-radius: 8px;
+  background: #050506;
+  color: #fff;
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+.lp-campo input::placeholder { color: #66666E; }
+.lp-campo select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; background-size: 16px; padding-right: 2.6rem; }
+.lp-campo select option { background: #111; color: #fff; }
+.lp-campo input:focus, .lp-campo select:focus {
+  outline: none;
+  border-color: var(--l-acento);
+  box-shadow: 0 0 0 3px rgba(43,179,239,.22);
+}
+.lp-campo input:user-invalid, .lp-campo select:user-invalid { border-color: #E05252; }
+.lp-trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.lp-form .lp-btn { margin-top: var(--sp-3); }
+.lp-form .lp-btn:disabled { opacity: .7; cursor: progress; transform: none; }
+.lp-form__error { margin-top: var(--sp-2); color: #FF7A7A; font-weight: 600; text-align: center; }
+.lp-form__legal { margin-top: var(--sp-2); font-size: .84rem; color: var(--l-suave); text-align: center; }
+.lp-form__legal a { color: #fff; text-decoration: underline; }
+
+/* 14. Pantallas de gracias */
+.lp-gracias { text-align: center; padding-block: var(--sp-3); outline: none; }
+.lp-gracias__ico {
+  display: inline-grid; place-items: center;
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--l-acento); color: #000;
+  margin-bottom: var(--sp-3);
+}
+.lp-gracias__ico svg { width: 30px; height: 30px; }
+
+/* ============================================================
+   15. Cierre y pie
+   ============================================================ */
+.lp-final { border-top: 1px solid #111; }
+.lp .pie--landing { background: #000; border-top: 1px solid #111; padding-block: var(--sp-3); }
+.lp .pie--landing .pie__legal { margin: 0; padding: 0; border: 0; color: #6E6E76; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 900px) {
+  .lp-rejilla-3, .lp-fotos, .lp-clientes { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
+  .lp-rejilla-2 { grid-template-columns: 1fr; }
+  .lp-foto { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 600px) {
+  .lp-form__campos { grid-template-columns: 1fr; }
+  .lp-partes li { flex-direction: column; gap: var(--sp-2); }
+  .lp-heroe__sub { font-size: 1.02rem; }
+  .lp-datos strong { font-size: 1.35rem; }
+  .lp-acciones .lp-btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-marquesina { -webkit-mask-image: none; mask-image: none; }
+  .lp-marquesina__pista { animation: none; flex-wrap: wrap; justify-content: center; width: auto; }
+  .lp-logo[aria-hidden="true"] { display: none; }
+  .lp-foto img { transition: none; }
+}
