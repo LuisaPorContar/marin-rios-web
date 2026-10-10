@@ -311,13 +311,20 @@ def _fecha_larga(iso):
         return iso
 
 
-def ultimas_publicaciones(excluir="", cantidad=8):
+def ultimas_publicaciones(excluir="", cantidad=8, solo=None, eyebrow="Blog Marín Ríos",
+                          titulo="Últimas publicaciones",
+                          intro="Impuestos, revisoría fiscal, NIIF y finanzas explicados sin lenguaje técnico, para que tomes mejores decisiones en tu empresa."):
+    """Carrusel de artículos. Con `solo` (lista de slugs) muestra esos, en ese orden."""
     import json, os
     ruta = os.path.join(os.path.dirname(os.path.abspath(__file__)), "articulos_cuerpo.json")
     with open(ruta, encoding="utf-8") as f:
         articulos = json.load(f)
-    articulos = sorted((a for a in articulos if a.get("slug") != excluir),
-                       key=lambda a: a.get("publicado", ""), reverse=True)[:cantidad]
+    if solo:
+        por_slug = {a["slug"]: a for a in articulos}
+        articulos = [por_slug[s] for s in solo if s in por_slug]
+    else:
+        articulos = sorted((a for a in articulos if a.get("slug") != excluir),
+                           key=lambda a: a.get("publicado", ""), reverse=True)[:cantidad]
     cal = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">'
            '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>')
     flecha_i = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>'
@@ -342,17 +349,17 @@ def ultimas_publicaciones(excluir="", cantidad=8):
   <div class="contenedor">
     <div class="recientes__cabecera revelar">
       <div>
-        <p class="eyebrow">Blog Marín Ríos</p>
-        <h2>Últimas publicaciones</h2>
+        <p class="eyebrow">{eyebrow}</p>
+        <h2>{titulo}</h2>
       </div>
-      <p class="recientes__intro">Impuestos, revisoría fiscal, NIIF y finanzas explicados sin lenguaje técnico, para que tomes mejores decisiones en tu empresa.</p>
+      <p class="recientes__intro">{intro}</p>
     </div>
     <div class="carrusel recientes__carrusel revelar">
       <div class="recientes__nav">
         <button class="carrusel__btn" data-dir="anterior" aria-label="Publicaciones anteriores">{flecha_i}</button>
         <button class="carrusel__btn" data-dir="siguiente" aria-label="Más publicaciones">{flecha_d}</button>
       </div>
-      <div class="carrusel__pista recientes__pista" role="group" aria-label="Últimas publicaciones del blog">
+      <div class="carrusel__pista recientes__pista" role="group" aria-label="{titulo}">
         {"".join(tarjetas)}
       </div>
     </div>

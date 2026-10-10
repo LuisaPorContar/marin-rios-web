@@ -4,9 +4,18 @@
 from base import (ICO, wa, plantilla, heroe, encabezado, servicios_num, fijo,
                   carrusel, acordeon, tarjetas_item, ciudades_grid, directorio,
                   cta_final, proposito, marcas, TEL, TEL_URI, EMAIL,
-                  resenas_google)
+                  resenas_google, ultimas_publicaciones)
 
 import json
+
+# Clúster de revisoría fiscal: orden en que se muestran en la página pilar.
+GUIAS_REVISORIA = [
+    "empresas-obligadas-revisor-fiscal", "revisor-fiscal-sas", "funciones-revisor-fiscal-colombia",
+    "cuanto-cobra-un-revisor-fiscal-en-colombia", "como-elegir-firma-revisoria-fiscal",
+    "cambiar-revisor-fiscal", "dictamen-revisor-fiscal", "informe-revisor-fiscal-asamblea",
+    "revisor-fiscal-cierre-contable", "revisor-fiscal-esal-fundaciones", "que-es-revisoria-fiscal",
+    "responsabilidad-representante-legal-revisor-fiscal", "revisoria-fiscal-dian",
+]
 
 TRIO = [
     ("01 — Contable", "Gestión contable",
@@ -188,7 +197,7 @@ faq_rev = [
     ("¿Quiénes pueden ejercer como revisores fiscales en Colombia?",
      "Únicamente contadores públicos con tarjeta profesional vigente expedida por la Junta Central de Contadores, que no estén incursos en las inhabilidades e incompatibilidades del artículo 205 del Código de Comercio. También pueden ejercer las firmas de contadores debidamente inscritas."),
     ("¿Qué empresas están obligadas a tener revisor fiscal?",
-     "Las sociedades por acciones y las sucursales de sociedades extranjeras siempre. Las demás sociedades cuando al 31 de diciembre del año anterior sus activos brutos superen 5.000 SMMLV o sus ingresos brutos superen 3.000 SMMLV. También aplica por mandato estatutario o de la asamblea."),
+     "Las sociedades anónimas, en comandita por acciones y las sucursales de sociedades extranjeras siempre. Las demás, incluidas las SAS, cuando al 31 de diciembre del año anterior sus activos brutos sean iguales o superiores a 5.000 SMMLV o sus ingresos brutos a 3.000 SMMLV. Para 2027 eso equivale a $8.754.525.000 en activos o $5.252.715.000 en ingresos. También aplica por mandato estatutario o de la asamblea."),
     ("¿Cuáles son las funciones y responsabilidades de un revisor fiscal?",
      "Dictaminar los estados financieros, verificar que las operaciones se ajusten a los estatutos y a las decisiones de la asamblea y la junta directiva, velar por la conservación de los bienes sociales, colaborar con las entidades de vigilancia y control, y dar cuenta oportuna de las irregularidades que encuentre."),
     ("¿Cómo se elige a un revisor fiscal en una empresa?",
@@ -225,6 +234,19 @@ cuerpo = f"""
         ("escudo", "Necesitas dar confianza", "Quieres brindar mayor seguridad a tus socios, inversionistas o entidades financieras."),
         ("documento", "Superaste los topes", "Cumples con los requisitos de activos o ingresos que te obligan legalmente a tener revisor fiscal."),
     ])}
+  </div>
+</section>
+
+<section class="seccion" id="obligados-2027">
+  <div class="contenedor">
+    {encabezado("Topes 2027", "¿Tu empresa está obligada a tener revisor fiscal en 2027?", "Se mide con las cifras al 31 de diciembre de 2026. Basta con superar uno de los dos topes.")}
+    {tarjetas_item([
+        ("documento", "Activos desde $8.754 millones", "Activos brutos iguales o superiores a 5.000 salarios mínimos: $8.754.525.000 con el salario mínimo de 2026."),
+        ("lupa", "Ingresos desde $5.252 millones", "Ingresos brutos del año iguales o superiores a 3.000 salarios mínimos: $5.252.715.000. Incluye ingresos financieros y extraordinarios."),
+        ("escudo", "Sociedades anónimas, siempre", 'Las anónimas y las sucursales de sociedades extranjeras lo necesitan sin importar su tamaño. Las <a href="revisor-fiscal-sas.html">SAS</a> solo cuando superan los topes.'),
+    ])}
+    <p class="centrado revelar" style="margin-top:2rem"><a class="btn btn--primario" href="evaluacion-revisoria-fiscal.html">Evalúa si tu empresa está obligada{ICO["flecha"]}</a></p>
+    <p class="centrado revelar" style="margin-top:1rem"><a class="etiqueta-enlace" href="empresas-obligadas-revisor-fiscal.html">Ver la guía completa de topes{ICO['flecha_fina']}</a></p>
   </div>
 </section>
 
@@ -269,6 +291,22 @@ cuerpo = f"""
     flotante_b=("Anual", "Plan de trabajo documentado")
 )}
 
+<section class="seccion claro" id="cambiar-revisor">
+  <div class="contenedor">
+    {encabezado("Cambio de revisor fiscal", "¿Tu revisor fiscal solo aparece al cierre?", "Cambiarlo es más sencillo de lo que parece. El mejor momento es la asamblea ordinaria del primer trimestre, con propuestas comparadas desde octubre o noviembre.")}
+    {tarjetas_item([
+        ("lupa", "No avisa a tiempo", "Te enteras de los problemas al mismo tiempo que la DIAN o la superintendencia, cuando ya no hay margen para corregir."),
+        ("documento", "Informes que nadie usa", "Documentos genéricos, iguales cada año, sin hallazgos ni recomendaciones priorizadas."),
+        ("escudo", "Tu empresa creció y él no", "Llegaron NIIF plenas, SAGRILAFT, operaciones con el exterior o un crédito grande, y el acompañamiento sigue igual."),
+    ])}
+    <p class="centrado revelar" style="margin-top:2rem"><a class="etiqueta-enlace" href="cambiar-revisor-fiscal.html">Cómo cambiar de revisor fiscal paso a paso{ICO['flecha_fina']}</a></p>
+  </div>
+</section>
+
+{ultimas_publicaciones(solo=GUIAS_REVISORIA, eyebrow="Guías de revisoría fiscal",
+                       titulo="Todo lo que debes saber antes de contratar",
+                       intro="Obligación, funciones, dictamen, honorarios y cambio de revisor, explicados con la norma en la mano.")}
+
 <section class="seccion">
   <div class="contenedor">
     <div class="fijo">
@@ -299,8 +337,8 @@ cuerpo = f"""
 
 PAGINAS.append(dict(
     archivo="revisoria-fiscal.html",
-    titulo="Servicio de Revisoría Fiscal en Colombia | Marín Ríos",
-    descripcion=f"Firma de revisoría fiscal en Colombia. Dictamen independiente bajo NIA, cumplimiento del Código de Comercio y reportes confiables. Cotización a la medida.",
+    titulo="Servicio de Revisoría Fiscal en Medellín y Colombia | Marín Ríos",
+    descripcion=f"Firma de revisoría fiscal en Medellín y Colombia. ¿Tu empresa está obligada en 2027? Dictamen independiente bajo NIA, informes útiles y propuesta a la medida.",
     activo="servicios",
     og_img="reunion-duotono.jpg",
     schema=schema_servicio("Revisoría fiscal",

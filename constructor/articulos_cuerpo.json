@@ -7633,11 +7633,11 @@
   "h1": "Contador, auditor o revisor fiscal: ¿cuál necesita?",
   "desc": "Revisor fiscal, contador y auditor manejan números pero no son lo mismo. Te explicamos las diferencias y cuál necesita tu empresa",
   "publicado": "2026-05-04",
-  "modificado": "2026-06-04",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/pauta-cuadradomarin-10-819x1024.jpg",
   "toc": true,
-  "palabras": 1366,
+  "palabras": 1274,
   "bloques": [
    {
     "t": "p",
@@ -7666,6 +7666,11 @@
     "t": "img",
     "src": "assets/img/blog/pauta-cuadradomarin-10-819x1024.jpg",
     "alt": "Contador, auditor y revisor fiscal: en qué se diferencian"
+   },
+   {
+    "t": "p",
+    "texto": "Si después de leer esto concluye que necesita revisor fiscal, conozca cómo trabajamos en nuestro servicio de revisoría fiscal.",
+    "html": "Si después de leer esto concluye que necesita revisor fiscal, conozca cómo trabajamos en nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
    },
    {
     "t": "h2",
@@ -8519,15 +8524,15 @@
  },
  {
   "slug": "cuanto-cobra-un-revisor-fiscal-en-colombia",
-  "titulo_seo": "¿Cuánto cobra un revisor fiscal en Colombia?",
+  "titulo_seo": "¿Cuánto cobra un revisor fiscal en Colombia en 2026?",
   "h1": "¿Cuánto cuesta contratar un revisor fiscal en Colombia?",
-  "desc": "Cuánto cuesta contratar un revisor fiscal en Colombia, qué variables mueven la tarifa, cuándo es obligatorio por ley y qué hace exactamente.",
+  "desc": "Cuánto cobra un revisor fiscal en Colombia: rangos de mercado, referencia del CTCP, qué mueve la tarifa y por qué un precio muy bajo es una señal de riesgo.",
   "publicado": "2025-06-18",
-  "modificado": "2025-06-18",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/guia-prompts-3-1-1024x1024.jpg",
   "toc": true,
-  "palabras": 789,
+  "palabras": 966,
   "bloques": [
    {
     "t": "p",
@@ -8584,8 +8589,27 @@
    },
    {
     "t": "h2",
+    "texto": "¿Hay una tarifa oficial para el revisor fiscal?",
+    "ancla": "hay-una-tarifa-oficial-para-el-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "No. La Ley 43 de 1990 deja los honorarios al acuerdo entre la empresa y el revisor, por escrito. Lo que existe son referencias: el Consejo Técnico de la Contaduría Pública ha publicado una orientación que ubica la revisoría fiscal sin dedicación exclusiva alrededor de 3 SMMLV mensuales, y las convocatorias públicas de cooperativas y entidades muestran valores muy distintos según las horas que exigen."
+   },
+   {
+    "t": "p",
+    "texto": "La conclusión práctica: el precio depende de cuántas horas necesita su empresa al mes y de qué tan compleja es su operación. Desconfíe de un honorario muy por debajo del mercado, porque la revisoría implica responsabilidad legal y un revisor que cobra poco suele dedicar pocas horas.",
+    "html": "La conclusión práctica: el precio depende de cuántas horas necesita su empresa al mes y de qué tan compleja es su operación. Desconfíe de un honorario muy por debajo del mercado, porque la revisoría implica responsabilidad legal y un revisor que cobra poco suele dedicar pocas horas. En nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a> entregamos el valor por escrito, con el alcance y las horas detrás de cada cifra."
+   },
+   {
+    "t": "h2",
     "texto": "¿Cómo saber si estoy obligado a tener revisor fiscal?",
     "ancla": "como-saber-si-estoy-obligado-a-tener-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "Para 2027 los topes suben con el salario mínimo de 2026: activos desde $8.754.525.000 o ingresos desde $5.252.715.000. Los detalles están en nuestra guía de empresas obligadas a tener revisor fiscal.",
+    "html": "Para 2027 los topes suben con el salario mínimo de 2026: activos desde $8.754.525.000 o ingresos desde $5.252.715.000. Los detalles están en nuestra guía de <a href=\"empresas-obligadas-revisor-fiscal.html\">empresas obligadas a tener revisor fiscal</a>."
    },
    {
     "t": "p",
@@ -9094,15 +9118,15 @@
  },
  {
   "slug": "empresas-obligadas-revisor-fiscal",
-  "titulo_seo": "Empresas que deben tener revisor fiscal en 2026",
-  "h1": "Empresas que deben tener revisor fiscal en 2026 [Guía]",
-  "desc": "¿Tu empresa necesita revisor fiscal en 2026? Conoce los topes de ingresos, activos y empleados que exige la normativa colombiana.",
+  "titulo_seo": "Obligados a tener revisor fiscal en 2026 y 2027: topes",
+  "h1": "¿Quiénes están obligados a tener revisor fiscal en 2026 y 2027? Topes y fechas",
+  "desc": "Topes para tener revisor fiscal: en 2027 aplica a empresas con activos desde $8.754 millones o ingresos desde $5.252 millones. Revise si su empresa está obligada.",
   "publicado": "2026-03-10",
-  "modificado": "2026-06-03",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/pauta-cuadradomarin-2-819x1024.jpg",
   "toc": true,
-  "palabras": 1585,
+  "palabras": 1812,
   "bloques": [
    {
     "t": "p",
@@ -9239,6 +9263,96 @@
     "texto": "Como los topes se ajustan cada año con el salario mínimo, conviene revisar cada enero si sus activos o ingresos alcanzaron los límites."
    },
    {
+    "t": "h2",
+    "texto": "¿Cuáles son los topes para tener revisor fiscal en 2027?",
+    "ancla": "topes-para-tener-revisor-fiscal-en-2027"
+   },
+   {
+    "t": "p",
+    "texto": "La obligación de 2027 se mide con las cifras al 31 de diciembre de 2026 y con el salario mínimo de 2026, que quedó en $1.750.905. Con ese valor, los topes suben a:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Por activos brutos: 5.000 SMMLV, equivalentes a $8.754.525.000.",
+      "html": "<strong>Por activos brutos:</strong> 5.000 SMMLV, equivalentes a <strong>$8.754.525.000</strong>."
+     },
+     {
+      "texto": "Por ingresos brutos: 3.000 SMMLV, equivalentes a $5.252.715.000.",
+      "html": "<strong>Por ingresos brutos:</strong> 3.000 SMMLV, equivalentes a <strong>$5.252.715.000</strong>."
+     }
+    ]
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Obligación"
+      },
+      {
+       "th": true,
+       "texto": "Salario mínimo base"
+      },
+      {
+       "th": true,
+       "texto": "Tope de activos"
+      },
+      {
+       "th": true,
+       "texto": "Tope de ingresos"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "2026 (cifras a dic. 2025)"
+      },
+      {
+       "th": false,
+       "texto": "$1.423.500"
+      },
+      {
+       "th": false,
+       "texto": "$7.117.500.000"
+      },
+      {
+       "th": false,
+       "texto": "$4.270.500.000"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "2027 (cifras a dic. 2026)"
+      },
+      {
+       "th": false,
+       "texto": "$1.750.905"
+      },
+      {
+       "th": false,
+       "texto": "$8.754.525.000"
+      },
+      {
+       "th": false,
+       "texto": "$5.252.715.000"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "El salario mínimo subió cerca del 23 %, así que los topes también. Una empresa que estaba justo por encima del límite en 2026 puede quedar por debajo en 2027, y una que creció rápido puede cruzarlo por primera vez. Por eso conviene hacer la cuenta con el balance de cierre de 2026 en la mano, antes de la asamblea ordinaria."
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa queda obligada, la asamblea debe nombrar al revisor fiscal en la reunión ordinaria del primer trimestre de 2027 e inscribir el nombramiento en la Cámara de Comercio. Llegar a esa reunión con propuestas comparables evita elegir a la carrera.",
+    "html": "Si su empresa queda obligada, la asamblea debe nombrar al revisor fiscal en la reunión ordinaria del primer trimestre de 2027 e inscribir el nombramiento en la Cámara de Comercio. Llegar a esa reunión con propuestas comparables evita elegir a la carrera. Si quiere confirmarlo con sus cifras, en nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a> lo revisamos sin costo."
+   },
+   {
     "t": "h3",
     "texto": "Cómo se calculan estos topes",
     "deWidget": true,
@@ -9360,7 +9474,8 @@
    },
    {
     "t": "p",
-    "texto": "En Marín Ríos Consultores, ofrecemos servicios especializados de revisoría fiscal en Medellín y Pereira, garantizando que tu empresa cumpla con las normativas y asegurando la transparencia en tus operaciones financieras."
+    "texto": "En Marín Ríos Consultores prestamos el servicio de revisoría fiscal a empresas de Medellín, Pereira, Armenia y Manizales.",
+    "html": "En Marín Ríos Consultores prestamos el <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a> a empresas de Medellín, Pereira, Armenia y Manizales, con un responsable con nombre propio que conoce su operación."
    },
    {
     "t": "p",
@@ -9368,7 +9483,7 @@
    },
    {
     "t": "p",
-    "texto": "Contáctanos para recibir una asesoría y cumplir con las exigencias de revisoría fiscal en 2026."
+    "texto": "Contáctanos para recibir una asesoría y cumplir con las exigencias de revisoría fiscal en 2026 y 2027."
    },
    {
     "t": "faq",
@@ -9378,9 +9493,8 @@
    },
    {
     "t": "faq",
-    "pregunta": "¿Cuáles son los topes para tener revisor fiscal en 2026?",
-    "respuesta": "5.000 SMMLV en activos brutos, equivalentes a $7.117.500.000, y 3.000 SMMLV en ingresos brutos, equivalentes a $4.270.500.000. Ambos se calculan con el salario mínimo de 2025 ($1.423.500) y se miden al cierre del 31 de diciembre de 2025.",
-    "html": "<p>5.000 SMMLV en activos brutos, equivalentes a $7.117.500.000, y 3.000 SMMLV en ingresos brutos, equivalentes a $4.270.500.000. Ambos se calculan con el salario mínimo de 2025 ($1.423.500) y se miden al cierre del 31 de diciembre de 2025.</p>"
+    "pregunta": "¿Cuáles son los topes para tener revisor fiscal en 2026 y 2027?",
+    "respuesta": "Para 2026: 5.000 SMMLV en activos ($7.117.500.000) o 3.000 SMMLV en ingresos ($4.270.500.000), medidos al 31 de diciembre de 2025 con el salario mínimo de 2025. Para 2027: $8.754.525.000 en activos o $5.252.715.000 en ingresos, medidos al 31 de diciembre de 2026 con el salario mínimo de 2026 ($1.750.905)."
    },
    {
     "t": "faq",
@@ -9428,14 +9542,8 @@
    },
    {
     "t": "p",
-    "texto": "Haz clic aquí",
-    "html": "<a href=\"precios-outsourcing-contable.html\"> Haz clic aquí </a>",
-    "enlaces": [
-     {
-      "href": "precios-outsourcing-contable.html",
-      "texto": "Haz clic aquí"
-     }
-    ]
+    "texto": "Conoce nuestro servicio de revisoría fiscal",
+    "html": "<a href=\"revisoria-fiscal.html\">Conoce nuestro servicio de revisoría fiscal</a>"
    }
   ]
  },
@@ -11400,15 +11508,15 @@
  },
  {
   "slug": "funciones-revisor-fiscal-colombia",
-  "titulo_seo": "¿Qué es un revisor fiscal? Funciones y obligaciones en Colombia",
-  "h1": "¿Qué es un revisor fiscal? Funciones y obligaciones en Colombia",
-  "desc": "Descubre qué es y qué hace un revisor fiscal, cuándo es obligatorio tener uno en Colombia, y las diferencias con un contador.",
+  "titulo_seo": "Funciones del revisor fiscal en Colombia (art. 207)",
+  "h1": "Funciones del revisor fiscal en Colombia: qué hace y qué debe exigirle su empresa",
+  "desc": "Las funciones del revisor fiscal según el artículo 207 del Código de Comercio, explicadas para gerentes: qué hace, qué firma y qué debe exigirle su empresa.",
   "publicado": "2024-12-27",
-  "modificado": "2024-12-28",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/guia-prompts-3-1-1024x1024.jpg",
   "toc": true,
-  "palabras": 1442,
+  "palabras": 1756,
   "bloques": [
    {
     "t": "p",
@@ -11424,6 +11532,11 @@
     "t": "img",
     "src": "assets/img/blog/guia-prompts-3-1-1024x1024.jpg",
     "alt": "¿Qué es un Revisor Fiscal? Funciones y Obligaciones en Colombia"
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa ya está obligada, o está por estarlo, aquí verá qué debe esperar de su revisor. Y si está evaluando a quién contratar, puede conocer cómo trabajamos en nuestro servicio de revisoría fiscal.",
+    "html": "Si su empresa ya está obligada, o está por estarlo, aquí verá qué debe esperar de su revisor. Y si está evaluando a quién contratar, puede conocer cómo trabajamos en nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
    },
    {
     "t": "h2",
@@ -11517,6 +11630,55 @@
    },
    {
     "t": "h2",
+    "texto": "Las funciones del revisor fiscal según el artículo 207 del Código de Comercio",
+    "ancla": "funciones-del-revisor-fiscal-segun-el-articulo-207"
+   },
+   {
+    "t": "p",
+    "texto": "La ley enumera de forma expresa lo que corresponde al revisor fiscal. En la práctica, esto es lo que su empresa puede exigirle:"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Cerciorarse de que las operaciones de la sociedad se ajusten a los estatutos y a las decisiones de la asamblea y de la junta directiva."
+     },
+     {
+      "texto": "Dar cuenta oportuna y por escrito a la asamblea, a la junta directiva o al gerente de las irregularidades que encuentre."
+     },
+     {
+      "texto": "Colaborar con las entidades de inspección, vigilancia y control, y rendirles los informes a que haya lugar."
+     },
+     {
+      "texto": "Velar por que se lleven regularmente la contabilidad, las actas de las reuniones, el libro de accionistas y los comprobantes de las cuentas."
+     },
+     {
+      "texto": "Inspeccionar los bienes de la sociedad y procurar que se tomen a tiempo las medidas para conservarlos."
+     },
+     {
+      "texto": "Impartir instrucciones, practicar inspecciones y pedir los informes necesarios para un control permanente sobre los valores sociales."
+     },
+     {
+      "texto": "Autorizar con su firma los estados financieros, con su dictamen o informe."
+     },
+     {
+      "texto": "Convocar a la asamblea a reuniones extraordinarias cuando lo juzgue necesario."
+     },
+     {
+      "texto": "Reportar a la UIAF las operaciones sospechosas de lavado de activos que detecte, función que agregó la Ley 1762 de 2015."
+     },
+     {
+      "texto": "Cumplir las demás atribuciones que le señalen la ley o los estatutos y que sean compatibles con las anteriores."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si su revisor solo aparece al final del año para firmar, está cumpliendo una parte mínima de esta lista. Las funciones 2, 5 y 6 exigen presencia durante todo el ejercicio.",
+    "html": "Si su revisor solo aparece al final del año para firmar, está cumpliendo una parte mínima de esta lista. Las funciones 2, 5 y 6 exigen presencia durante todo el ejercicio. Si está pensando en reemplazarlo, revise <a href=\"cambiar-revisor-fiscal.html\">cómo hacer el cambio de revisor fiscal</a> sin dejar informes pendientes."
+   },
+   {
+    "t": "h2",
     "texto": "Responsabilidades y sanciones de un revisor fiscal",
     "ancla": "responsabilidades-y-sanciones-de-un-revisor-fiscal"
    },
@@ -11594,6 +11756,11 @@
    {
     "t": "p",
     "texto": "Además, algunas empresas que no cumplen los requisitos designan un revisor fiscal de forma voluntaria, para asegurar la transparencia de su gestión y ganar credibilidad ante socios, inversionistas y entidades financieras."
+   },
+   {
+    "t": "p",
+    "texto": "La responsabilidad del revisor no reemplaza la de la administración. Lo explicamos en detalle en qué pasa con el representante legal si falla el revisor.",
+    "html": "La responsabilidad del revisor no reemplaza la de la administración. Lo explicamos en detalle en <a href=\"responsabilidad-representante-legal-revisor-fiscal.html\">qué pasa con el representante legal si falla el revisor</a>."
    },
    {
     "t": "h2",
@@ -13939,7 +14106,7 @@
  },
  {
   "slug": "optimizar-impuestos-negocio",
-  "titulo_seo": "¿Como Optimizar los impuestos de tu negocio eficientemente?",
+  "titulo_seo": "¿Cómo optimizar los impuestos de tu negocio?",
   "h1": "¿Cómo optimizar los impuestos de tu negocio con eficiencia?",
   "desc": "Mejora el control tributario de tu empresa con una planificación estratégica, facturación electrónica y un enfoque inteligente ante la DIAN.",
   "publicado": "2026-03-25",
@@ -15522,15 +15689,15 @@
  },
  {
   "slug": "proyecto-ley-507",
-  "titulo_seo": "¿Qué es el proyecto de ley 507 y Comó te ayuda a ahorrar?",
+  "titulo_seo": "¿Qué es el proyecto de ley 507 y cómo te ayuda a ahorrar?",
   "h1": "¿Qué es el Proyecto de Ley 507 y para qué fue creado?",
   "desc": "Conoce los aspectos más importantes del proyecto de ley 507 de 2025 y descubre cómo te puede ayudar a optimizar los impuestos de tu empresa",
   "publicado": "2025-08-13",
-  "modificado": "2025-09-24",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/blogs-marin-rios-1-1024x1024.jpg",
   "toc": true,
-  "palabras": 1400,
+  "palabras": 1408,
   "bloques": [
    {
     "t": "p",
@@ -16623,15 +16790,15 @@
  },
  {
   "slug": "que-es-revisoria-fiscal",
-  "titulo_seo": "Revisoría fiscal: ¿cuáles son sus obligaciones?",
-  "h1": "¿Qué es la revisoría fiscal y cuáles son sus obligaciones?",
-  "desc": "Qué es la revisoría fiscal, cuáles son sus obligaciones, qué empresas en Colombia deben tenerla y en qué se diferencia del control interno.",
+  "titulo_seo": "Qué es la revisoría fiscal en Colombia y para qué sirve",
+  "h1": "¿Qué es la revisoría fiscal en Colombia y para qué le sirve a su empresa?",
+  "desc": "Qué es la revisoría fiscal, quién la ejerce, qué empresas deben tenerla y en qué se diferencia de la auditoría externa y del control interno.",
   "publicado": "2024-12-25",
-  "modificado": "2024-12-28",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/guia-prompts-5-1024x1024.jpg",
   "toc": true,
-  "palabras": 1389,
+  "palabras": 1437,
   "bloques": [
    {
     "t": "p",
@@ -16645,6 +16812,11 @@
     "t": "img",
     "src": "assets/img/blog/guia-prompts-5-1024x1024.jpg",
     "alt": "¿Qué es la Revisoría Fiscal y Cuáles Son sus Obligaciones?"
+   },
+   {
+    "t": "p",
+    "texto": "Si lo que busca es la lista detallada de tareas del revisor, la encontrará en nuestra guía de funciones del revisor fiscal. Aquí nos concentramos en qué es la figura y para qué le sirve a su empresa.",
+    "html": "Si lo que busca es la lista detallada de tareas del revisor, la encontrará en nuestra guía de <a href=\"funciones-revisor-fiscal-colombia.html\">funciones del revisor fiscal</a>. Aquí nos concentramos en qué es la figura y para qué le sirve a su empresa."
    },
    {
     "t": "h2",
@@ -16869,8 +17041,13 @@
    },
    {
     "t": "h3",
-    "texto": "¿Buscas un servicio de revisoría fiscal en Medellín o Pereira?",
-    "ancla": "buscas-un-servicio-de-revisoria-fiscal-en-medellin-o-pereira"
+    "texto": "¿Busca un servicio de revisoría fiscal en Medellín o el Eje Cafetero?",
+    "ancla": "busca-un-servicio-de-revisoria-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "Atendemos empresas en Medellín, Pereira, Armenia y Manizales.",
+    "html": "Conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>: atendemos empresas en Medellín, Pereira, Armenia y Manizales."
    },
    {
     "t": "p",
@@ -18221,11 +18398,11 @@
   "h1": "¿Debe responder el representante legal si falla el revisor fiscal?",
   "desc": "El representante legal puede responder solidariamente con el revisor fiscal ante la DIAN. Te explicamos por qué pasa esto",
   "publicado": "2026-05-28",
-  "modificado": "2026-06-04",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/pauta-cuadradomarin-12-819x1024.jpg",
   "toc": true,
-  "palabras": 1106,
+  "palabras": 1126,
   "bloques": [
    {
     "t": "p",
@@ -18254,6 +18431,11 @@
     "t": "img",
     "src": "assets/img/blog/pauta-cuadradomarin-12-819x1024.jpg",
     "alt": "Responsabilidad del representante legal frente al revisor fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "Elegir bien al revisor es la primera forma de protegerse. Si está evaluando opciones, conozca nuestro servicio de revisoría fiscal.",
+    "html": "Elegir bien al revisor es la primera forma de protegerse. Si está evaluando opciones, conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
    },
    {
     "t": "h2",
@@ -18479,11 +18661,11 @@
   "h1": "Revisor fiscal y crédito empresarial: ¿por qué el banco te lo pide antes de prestarte?",
   "desc": "El banco exige estados financieros dictaminados por un revisor fiscal para darte crédito. Te explicamos por qué y qué hacer.",
   "publicado": "2026-04-20",
-  "modificado": "2026-06-04",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/pauta-cuadradomarin-8-819x1024.jpg",
   "toc": true,
-  "palabras": 1094,
+  "palabras": 1047,
   "bloques": [
    {
     "t": "p",
@@ -18507,6 +18689,11 @@
     "t": "img",
     "src": "assets/img/blog/pauta-cuadradomarin-8-819x1024.jpg",
     "alt": "Empresario presentando estados financieros dictaminados en el banco"
+   },
+   {
+    "t": "p",
+    "texto": "Si su banco le está pidiendo estados financieros dictaminados, en nuestro servicio de revisoría fiscal le explicamos qué alcance necesita.",
+    "html": "Si su banco le está pidiendo estados financieros dictaminados, en nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a> le explicamos qué alcance necesita."
    },
    {
     "t": "h2",
@@ -18809,11 +18996,11 @@
   "h1": "¿Cómo usar la revisoría fiscal para no sufrir con la DIAN en 2026?",
   "desc": "Descubre por qué la Revisoría Fiscal en 2026 deja de ser gasto y se vuelve clave para evitar sanciones y mejorar el control financiero empresarial.",
   "publicado": "2025-11-30",
-  "modificado": "2025-12-09",
+  "modificado": "2026-10-10",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/como-generar-presupuesto-de-sgsst-4-2-1024x1024.jpg",
   "toc": true,
-  "palabras": 1167,
+  "palabras": 1128,
   "bloques": [
    {
     "t": "p",
@@ -18851,6 +19038,11 @@
    {
     "t": "p",
     "texto": "En este artículo te mostramos por qué la revisoría fiscal no es un mal necesario, sino la primera barrera de protección frente a sanciones, auditorías y ajustes tributarios que en 2026 serán cada vez más automáticos."
+   },
+   {
+    "t": "p",
+    "texto": "Si quiere un revisor que le avise antes de que la DIAN encuentre algo, conozca nuestro servicio de revisoría fiscal.",
+    "html": "Si quiere un revisor que le avise antes de que la DIAN encuentre algo, conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
    },
    {
     "t": "h2",
@@ -20086,6 +20278,2408 @@
     "t": "p",
     "texto": "Si sientes que este escenario te toca, podemos acompañarte a revisar tus procesos contables y financieros para que tengas control, calma y un camino claro para avanzar; separa tu asesoria hoy mismo.",
     "html": "Si sientes que este escenario te toca, podemos acompañarte a revisar tus procesos contables y financieros para que tengas control, calma y un camino claro para avanzar; <b>separa tu asesoria hoy mismo.</b>"
+   }
+  ]
+ },
+ {
+  "slug": "cambiar-revisor-fiscal",
+  "titulo_seo": "Cambio de revisor fiscal: cuándo y cómo hacerlo bien",
+  "h1": "Cambio de revisor fiscal: cuándo hacerlo, cómo se nombra el nuevo y qué pasa con los informes",
+  "desc": "Cómo cambiar de revisor fiscal sin dejar informes pendientes: quién lo decide, cuándo conviene, el registro en la Cámara de Comercio y el empalme con el nuevo.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Revisoría fiscal",
+  "portada": "assets/img/blog/cambiar-revisor-fiscal.png",
+  "toc": true,
+  "palabras": 1436,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "\"Mi revisor aparece una vez al año, firma y se va.\" Si esa frase le suena, no es el único. Muchas empresas siguen con el mismo revisor fiscal por costumbre, aunque sientan que no les aporta, porque creen que cambiarlo es un trámite largo o que genera roces con los socios."
+   },
+   {
+    "t": "p",
+    "texto": "No lo es, si se hace en el momento correcto y con un empalme ordenado. En esta guía le explicamos quién decide el cambio, cuándo conviene hacerlo, qué hay que registrar y cómo evitar que queden informes o declaraciones en el aire."
+   },
+   {
+    "t": "p",
+    "texto": "Si ya está evaluando a quién contratar, puede ver cómo trabajamos en nuestro servicio de revisoría fiscal.",
+    "html": "Si ya está evaluando a quién contratar, puede ver cómo trabajamos en nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Señales de que es momento de cambiar de revisor fiscal",
+    "ancla": "senales-de-que-es-momento-de-cambiar-de-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "No hace falta un escándalo para cambiar de revisor. Estas son las razones más comunes que escuchamos de gerentes y socios:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Solo aparece al cierre. Las funciones del revisor exigen presencia durante todo el año: inspeccionar bienes, revisar el control interno y avisar a tiempo de las irregularidades.",
+      "html": "<strong>Solo aparece al cierre.</strong> Las funciones del revisor exigen presencia durante todo el año: inspeccionar bienes, revisar el control interno y avisar a tiempo de las irregularidades."
+     },
+     {
+      "texto": "No avisa antes de que pase algo. Se entera de los problemas al mismo tiempo que la DIAN o la Superintendencia de Sociedades.",
+      "html": "<strong>No avisa antes de que pase algo.</strong> Se entera de los problemas al mismo tiempo que la DIAN o la Superintendencia de Sociedades."
+     },
+     {
+      "texto": "Sus informes no sirven para decidir. Son documentos genéricos que nadie en la junta lee ni entiende.",
+      "html": "<strong>Sus informes no sirven para decidir.</strong> Son documentos genéricos que nadie en la junta lee ni entiende."
+     },
+     {
+      "texto": "La empresa creció y él no. Llegaron NIIF plenas, operaciones con el exterior, SAGRILAFT o un crédito grande, y el revisor no tiene el equipo para acompañar ese nivel.",
+      "html": "<strong>La empresa creció y él no.</strong> Llegaron NIIF plenas, operaciones con el exterior, SAGRILAFT o un crédito grande, y el revisor no tiene el equipo para acompañar ese nivel."
+     },
+     {
+      "texto": "Hay dudas sobre su independencia. Tiene vínculos con la administración, lleva también la contabilidad o depende económicamente de la empresa.",
+      "html": "<strong>Hay dudas sobre su independencia.</strong> Tiene vínculos con la administración, lleva también la contabilidad o depende económicamente de la empresa."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si se identifica con dos o más, vale la pena comparar propuestas antes de la próxima asamblea. Repase también las funciones que la ley le asigna al revisor fiscal, para saber qué debería estar recibiendo.",
+    "html": "Si se identifica con dos o más, vale la pena comparar propuestas antes de la próxima asamblea. Repase también <a href=\"funciones-revisor-fiscal-colombia.html\">las funciones que la ley le asigna al revisor fiscal</a>, para saber qué debería estar recibiendo."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Quién decide el cambio de revisor fiscal?",
+    "ancla": "quien-decide-el-cambio-de-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "El revisor fiscal lo elige el máximo órgano social: la asamblea general de accionistas en las sociedades por acciones o la junta de socios en las limitadas. El mismo órgano que lo nombra es el único que puede removerlo."
+   },
+   {
+    "t": "p",
+    "texto": "El gerente o la junta directiva no pueden destituirlo por su cuenta. Lo que sí pueden hacer es preparar la propuesta: pedir cotizaciones a varias firmas, compararlas con el mismo criterio y llevar una recomendación a la asamblea."
+   },
+   {
+    "t": "p",
+    "texto": "El Código de Comercio permite remover al revisor en cualquier momento, con la mayoría que exijan la ley y los estatutos. No hace falta esperar a que termine su periodo ni demostrar una falta grave."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Cuándo es el mejor momento para cambiarlo?",
+    "ancla": "cuando-es-el-mejor-momento-para-cambiarlo"
+   },
+   {
+    "t": "p",
+    "texto": "El momento natural es la asamblea ordinaria, que se reúne dentro de los tres primeros meses del año para aprobar los estados financieros del ejercicio anterior. Ahí se nombra o se ratifica al revisor del periodo que comienza.",
+    "html": "El momento natural es la <strong>asamblea ordinaria</strong>, que se reúne dentro de los tres primeros meses del año para aprobar los estados financieros del ejercicio anterior. Ahí se nombra o se ratifica al revisor del periodo que comienza."
+   },
+   {
+    "t": "p",
+    "texto": "Cambiar en esa reunión tiene tres ventajas:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "El revisor saliente termina su trabajo: dictamina los estados financieros del año que auditó."
+     },
+     {
+      "texto": "El nuevo arranca con un ejercicio completo, desde el primer día."
+     },
+     {
+      "texto": "No hace falta convocar una asamblea extraordinaria solo para este tema."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si el problema es grave, no tiene que esperar. Se puede convocar una reunión extraordinaria en cualquier momento del año, pero conviene coordinar con cuidado quién dictamina el ejercicio en curso."
+   },
+   {
+    "t": "blockquote",
+    "texto": "Recomendación práctica: pida las propuestas en octubre o noviembre. Así la junta tiene tiempo de compararlas y la asamblea de marzo decide con información, no a la carrera."
+   },
+   {
+    "t": "h2",
+    "texto": "Paso a paso para cambiar de revisor fiscal",
+    "ancla": "paso-a-paso-para-cambiar-de-revisor-fiscal"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Revise los estatutos. Confirme el periodo del revisor, la mayoría necesaria para elegirlo y si debe tener suplente.",
+      "html": "<strong>Revise los estatutos.</strong> Confirme el periodo del revisor, la mayoría necesaria para elegirlo y si debe tener suplente."
+     },
+     {
+      "texto": "Pida propuestas comparables. Solicite a cada firma el mismo dato: alcance, horas al mes, equipo asignado, responsable con nombre propio y honorarios por escrito.",
+      "html": "<strong>Pida propuestas comparables.</strong> Solicite a cada firma el mismo dato: alcance, horas al mes, equipo asignado, responsable con nombre propio y honorarios por escrito."
+     },
+     {
+      "texto": "Verifique al candidato. Tarjeta profesional vigente, certificado de antecedentes de la Junta Central de Contadores y ausencia de inhabilidades frente a la empresa.",
+      "html": "<strong>Verifique al candidato.</strong> Tarjeta profesional vigente, certificado de antecedentes de la Junta Central de Contadores y ausencia de inhabilidades frente a la empresa."
+     },
+     {
+      "texto": "Incluya el punto en el orden del día. Si es asamblea extraordinaria, la convocatoria debe mencionar expresamente la remoción y la nueva elección.",
+      "html": "<strong>Incluya el punto en el orden del día.</strong> Si es asamblea extraordinaria, la convocatoria debe mencionar expresamente la remoción y la nueva elección."
+     },
+     {
+      "texto": "Vote y deje constancia en el acta. El acta debe registrar la remoción del anterior, la elección del nuevo, su suplente si aplica y la aceptación del cargo.",
+      "html": "<strong>Vote y deje constancia en el acta.</strong> El acta debe registrar la remoción del anterior, la elección del nuevo, su suplente si aplica y la aceptación del cargo."
+     },
+     {
+      "texto": "Inscriba el nombramiento en la Cámara de Comercio. Este paso es el que más se olvida y el que más problemas trae.",
+      "html": "<strong>Inscriba el nombramiento en la Cámara de Comercio.</strong> Este paso es el que más se olvida y el que más problemas trae."
+     },
+     {
+      "texto": "Haga el empalme. Reúna al revisor saliente, al entrante y a la administración para entregar el estado de los asuntos abiertos.",
+      "html": "<strong>Haga el empalme.</strong> Reúna al revisor saliente, al entrante y a la administración para entregar el estado de los asuntos abiertos."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "El registro en la Cámara de Comercio: no lo deje para después",
+    "ancla": "el-registro-en-la-camara-de-comercio-no-lo-deje-para-despues"
+   },
+   {
+    "t": "p",
+    "texto": "El nombramiento del revisor fiscal se inscribe en el registro mercantil. Mientras el nuevo nombramiento no quede inscrito, para terceros sigue figurando el anterior."
+   },
+   {
+    "t": "p",
+    "texto": "Eso tiene efectos concretos. Bancos, proveedores y entidades públicas consultan el certificado de existencia y representación legal. Si el certificado muestra a un revisor que ya no trabaja con la empresa, cualquier documento que el nuevo firme puede ser cuestionado."
+   },
+   {
+    "t": "p",
+    "texto": "Además, las declaraciones tributarias de las empresas obligadas a tener revisor fiscal deben ir firmadas por él. Si la declaración de renta sale con la firma de alguien que no figura en el registro, se expone a discusiones con la DIAN."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Y si el revisor fiscal renuncia?",
+    "ancla": "y-si-el-revisor-fiscal-renuncia"
+   },
+   {
+    "t": "p",
+    "texto": "También pasa al revés: el revisor puede renunciar. En ese caso lo que corresponde es que la asamblea nombre un reemplazo pronto y lo inscriba."
+   },
+   {
+    "t": "p",
+    "texto": "Si la empresa no actúa, el revisor que renunció puede pedir a la Cámara de Comercio que cancele su inscripción, de modo que la sociedad puede quedarse sin revisor inscrito. Para una empresa obligada, eso significa no poder presentar declaraciones con la firma que exige la ley. Por eso conviene que el estatuto prevea un revisor fiscal suplente, que cubre las faltas del principal mientras se nombra uno nuevo.",
+    "html": "Si la empresa no actúa, el revisor que renunció puede pedir a la Cámara de Comercio que cancele su inscripción, de modo que la sociedad puede quedarse sin revisor inscrito. Para una empresa obligada, eso significa no poder presentar declaraciones con la firma que exige la ley. Por eso conviene que el estatuto prevea un <strong>revisor fiscal suplente</strong>, que cubre las faltas del principal mientras se nombra uno nuevo."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué debe quedar claro en el empalme",
+    "ancla": "que-debe-quedar-claro-en-el-empalme"
+   },
+   {
+    "t": "p",
+    "texto": "Un buen cambio de revisor no deja cabos sueltos. En la reunión de empalme conviene revisar:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "El último dictamen y los informes emitidos, con sus salvedades o recomendaciones pendientes."
+     },
+     {
+      "texto": "Los hallazgos de control interno que estaban en seguimiento."
+     },
+     {
+      "texto": "Requerimientos abiertos de la DIAN, la Superintendencia de Sociedades u otras entidades."
+     },
+     {
+      "texto": "Las declaraciones tributarias por presentar en los próximos meses y quién las firma."
+     },
+     {
+      "texto": "Las actas, los libros oficiales y la correspondencia que la empresa debe conservar."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Los papeles de trabajo del revisor saliente son suyos, pero los informes, dictámenes y comunicaciones que entregó a la empresa le pertenecen a la sociedad. Pida que todo quede archivado antes de cerrar la relación."
+   },
+   {
+    "t": "h2",
+    "texto": "Cambiar de revisor no es cambiar de contador",
+    "ancla": "cambiar-de-revisor-no-es-cambiar-de-contador"
+   },
+   {
+    "t": "p",
+    "texto": "Una confusión frecuente: el revisor fiscal no lleva la contabilidad. El contador registra y prepara la información; el revisor la verifica de forma independiente. Por eso la misma firma no puede ser su contador y su revisor al mismo tiempo."
+   },
+   {
+    "t": "p",
+    "texto": "Si su inconformidad es con quien lleva los libros, el cambio que necesita es otro. Le explicamos las diferencias en contador, auditor o revisor fiscal: cuál necesita.",
+    "html": "Si su inconformidad es con quien lleva los libros, el cambio que necesita es otro. Le explicamos las diferencias en <a href=\"contador-auditor-revisor-fiscal-cual-necesita.html\">contador, auditor o revisor fiscal: cuál necesita</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Prepare el cambio antes de la asamblea",
+    "ancla": "prepare-el-cambio-antes-de-la-asamblea"
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa está obligada a tener revisor fiscal en 2027, o quiere reemplazar al que tiene, la mejor forma de llegar a marzo es con una propuesta escrita y comparable."
+   },
+   {
+    "t": "p",
+    "texto": "En nuestra evaluación de revisoría fiscal 2027 revisamos si está obligada, qué riesgos tiene hoy frente a la DIAN y le entregamos una propuesta con alcance, horas y honorarios, lista para presentar a sus socios. Si todavía no sabe si le aplica, empiece por los topes para tener revisor fiscal.",
+    "html": "En nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a> revisamos si está obligada, qué riesgos tiene hoy frente a la DIAN y le entregamos una propuesta con alcance, horas y honorarios, lista para presentar a sus socios. Si todavía no sabe si le aplica, empiece por <a href=\"empresas-obligadas-revisor-fiscal.html\">los topes para tener revisor fiscal</a>."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Quién puede remover al revisor fiscal?",
+    "respuesta": "Solo el órgano que lo eligió: la asamblea general de accionistas o la junta de socios. Puede hacerlo en cualquier momento, con la mayoría que exijan la ley y los estatutos, sin esperar a que termine el periodo."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuándo conviene cambiar de revisor fiscal?",
+    "respuesta": "En la asamblea ordinaria del primer trimestre del año. El revisor saliente dictamina el ejercicio que auditó y el nuevo arranca con un año completo. Si hay un problema grave, se puede convocar una asamblea extraordinaria."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Hay que registrar el cambio de revisor fiscal?",
+    "respuesta": "Sí. El nombramiento se inscribe en el registro mercantil de la Cámara de Comercio. Mientras no se inscriba, para terceros sigue figurando el revisor anterior."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué pasa si el revisor fiscal renuncia y no se nombra otro?",
+    "respuesta": "La empresa puede quedar sin revisor inscrito y, si está obligada a tenerlo, sin la firma que exige la ley para sus declaraciones tributarias. Por eso conviene tener un suplente y nombrar al reemplazo cuanto antes."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿El contador de la empresa puede ser el nuevo revisor fiscal?",
+    "respuesta": "No. El revisor fiscal debe ser independiente de la administración y de quien produce la información contable. Una misma persona o firma no puede llevar la contabilidad y ser revisor fiscal de la misma empresa."
+   }
+  ]
+ },
+ {
+  "slug": "revisor-fiscal-sas",
+  "titulo_seo": "¿Una SAS debe tener revisor fiscal? Topes 2026 y 2027",
+  "h1": "¿Una SAS está obligada a tener revisor fiscal? Cuándo aplica y cómo nombrarlo",
+  "desc": "Las SAS no están obligadas a tener revisor fiscal por su tipo, pero sí cuando superan los topes de activos o ingresos. Cuándo aplica en 2026 y 2027 y cómo nombrarlo.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Revisoría fiscal",
+  "portada": "assets/img/blog/revisor-fiscal-sas.png",
+  "toc": true,
+  "palabras": 1033,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "La sociedad por acciones simplificada es el tipo de empresa más común en Colombia, y también el que más dudas genera sobre el revisor fiscal. El nombre dice \"por acciones\", y las sociedades por acciones siempre deben tener revisor. ¿Aplica entonces a todas las SAS?"
+   },
+   {
+    "t": "p",
+    "texto": "La respuesta corta es no. Una SAS no está obligada a tener revisor fiscal por el solo hecho de ser SAS, pero sí lo está cuando su tamaño supera los topes que fija la ley. En esta guía le explicamos cuándo aplica, cómo calcularlo y qué hacer si su empresa cruza el límite.",
+    "html": "La respuesta corta es no. Una SAS <strong>no está obligada a tener revisor fiscal por el solo hecho de ser SAS</strong>, pero sí lo está cuando su tamaño supera los topes que fija la ley. En esta guía le explicamos cuándo aplica, cómo calcularlo y qué hacer si su empresa cruza el límite."
+   },
+   {
+    "t": "p",
+    "texto": "Si ya sabe que lo necesita, puede conocer nuestro servicio de revisoría fiscal para empresas.",
+    "html": "Si ya sabe que lo necesita, puede conocer nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal para empresas</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "La regla general: la SAS no está obligada por su tipo",
+    "ancla": "la-regla-general-la-sas-no-esta-obligada-por-su-tipo"
+   },
+   {
+    "t": "p",
+    "texto": "La Ley 1258 de 2008, que creó las SAS, estableció que estas sociedades no están obligadas a tener revisor fiscal solo por su naturaleza. Es una diferencia importante frente a la sociedad anónima, que debe tenerlo siempre, sin importar su tamaño."
+   },
+   {
+    "t": "p",
+    "texto": "Esa excepción tiene un límite claro: no aplica cuando otra norma exige el revisor. Y la norma que más SAS alcanza es la de los topes de activos e ingresos."
+   },
+   {
+    "t": "h2",
+    "texto": "Cuándo una SAS sí debe tener revisor fiscal",
+    "ancla": "cuando-una-sas-si-debe-tener-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "Una SAS debe nombrar revisor fiscal en cualquiera de estos casos:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Cuando supera los topes de la Ley 43 de 1990. Activos brutos al 31 de diciembre del año anterior iguales o superiores a 5.000 salarios mínimos, o ingresos brutos del año anterior iguales o superiores a 3.000 salarios mínimos. El Decreto 2020 de 2009 confirmó que esta regla aplica a las SAS.",
+      "html": "<strong>Cuando supera los topes de la Ley 43 de 1990.</strong> Activos brutos al 31 de diciembre del año anterior iguales o superiores a 5.000 salarios mínimos, o ingresos brutos del año anterior iguales o superiores a 3.000 salarios mínimos. El Decreto 2020 de 2009 confirmó que esta regla aplica a las SAS."
+     },
+     {
+      "texto": "Cuando sus estatutos lo exigen. Muchos estatutos incluyen la figura aunque la ley no la imponga.",
+      "html": "<strong>Cuando sus estatutos lo exigen.</strong> Muchos estatutos incluyen la figura aunque la ley no la imponga."
+     },
+     {
+      "texto": "Cuando una norma especial lo pide. Por ejemplo, por el sector en que opera o por la entidad que la vigila.",
+      "html": "<strong>Cuando una norma especial lo pide.</strong> Por ejemplo, por el sector en que opera o por la entidad que la vigila."
+     },
+     {
+      "texto": "Cuando la asamblea decide tenerlo, aunque no esté obligada, para dar confianza a socios, bancos o inversionistas.",
+      "html": "<strong>Cuando la asamblea decide tenerlo</strong>, aunque no esté obligada, para dar confianza a socios, bancos o inversionistas."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Los topes para una SAS en 2026 y 2027",
+    "ancla": "los-topes-para-una-sas-en-2026-y-2027"
+   },
+   {
+    "t": "p",
+    "texto": "Los topes se calculan con el salario mínimo vigente al cierre del año que se mide. Así quedan:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Obligación"
+      },
+      {
+       "th": true,
+       "texto": "Cifras al cierre de"
+      },
+      {
+       "th": true,
+       "texto": "Tope de activos"
+      },
+      {
+       "th": true,
+       "texto": "Tope de ingresos"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "2026"
+      },
+      {
+       "th": false,
+       "texto": "diciembre de 2025"
+      },
+      {
+       "th": false,
+       "texto": "$7.117.500.000"
+      },
+      {
+       "th": false,
+       "texto": "$4.270.500.000"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "2027"
+      },
+      {
+       "th": false,
+       "texto": "diciembre de 2026"
+      },
+      {
+       "th": false,
+       "texto": "$8.754.525.000"
+      },
+      {
+       "th": false,
+       "texto": "$5.252.715.000"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Basta con superar uno de los dos topes. Una SAS con ingresos de $6.000 millones en 2026 queda obligada en 2027 aunque sus activos sean bajos.",
+    "html": "Basta con superar <strong>uno</strong> de los dos topes. Una SAS con ingresos de $6.000 millones en 2026 queda obligada en 2027 aunque sus activos sean bajos."
+   },
+   {
+    "t": "p",
+    "texto": "Para calcular los ingresos se suman todos los ingresos brutos del año, no solo las ventas: también los financieros y los extraordinarios. Para los activos se toma el valor bruto, antes de restar depreciaciones o deterioros."
+   },
+   {
+    "t": "p",
+    "texto": "El detalle completo de los topes, con ejemplos, está en nuestra guía de empresas obligadas a tener revisor fiscal.",
+    "html": "El detalle completo de los topes, con ejemplos, está en nuestra guía de <a href=\"empresas-obligadas-revisor-fiscal.html\">empresas obligadas a tener revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué cambia en 2027 para muchas SAS",
+    "ancla": "que-cambia-en-2027-para-muchas-sas"
+   },
+   {
+    "t": "p",
+    "texto": "El salario mínimo de 2026 subió cerca del 23 %, y con él los topes. Esto tiene dos efectos:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Una SAS que estaba justo por encima del límite en 2026 puede quedar por debajo en 2027 si no creció al mismo ritmo."
+     },
+     {
+      "texto": "Una SAS que creció rápido puede cruzar el tope por primera vez y estar obligada desde la asamblea de marzo de 2027."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Por eso conviene hacer la cuenta con el balance de cierre de 2026 apenas esté listo, antes de convocar la asamblea."
+   },
+   {
+    "t": "h2",
+    "texto": "Cómo se nombra el revisor fiscal en una SAS",
+    "ancla": "como-se-nombra-el-revisor-fiscal-en-una-sas"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Confirme la obligación con las cifras al 31 de diciembre del año anterior.",
+      "html": "<strong>Confirme la obligación</strong> con las cifras al 31 de diciembre del año anterior."
+     },
+     {
+      "texto": "Revise los estatutos. Si no mencionan la figura, no hace falta reformarlos: la obligación viene de la ley.",
+      "html": "<strong>Revise los estatutos.</strong> Si no mencionan la figura, no hace falta reformarlos: la obligación viene de la ley."
+     },
+     {
+      "texto": "Convoque a la asamblea de accionistas, o deje constancia de la decisión del accionista único si la SAS tiene uno solo.",
+      "html": "<strong>Convoque a la asamblea de accionistas</strong>, o deje constancia de la decisión del accionista único si la SAS tiene uno solo."
+     },
+     {
+      "texto": "Elija al revisor y a su suplente, si aplica, y deje la aceptación del cargo en el acta.",
+      "html": "<strong>Elija al revisor y a su suplente, si aplica</strong>, y deje la aceptación del cargo en el acta."
+     },
+     {
+      "texto": "Inscriba el nombramiento en la Cámara de Comercio con copia del acta.",
+      "html": "<strong>Inscriba el nombramiento en la Cámara de Comercio</strong> con copia del acta."
+     },
+     {
+      "texto": "Coordine con el contador para que el revisor reciba la información desde el inicio del ejercicio.",
+      "html": "<strong>Coordine con el contador</strong> para que el revisor reciba la información desde el inicio del ejercicio."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Qué pasa si una SAS obligada no tiene revisor fiscal",
+    "ancla": "que-pasa-si-una-sas-obligada-no-tiene-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "No tener revisor estando obligado trae consecuencias concretas:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Declaraciones tributarias que se tienen por no presentadas. El Estatuto Tributario exige la firma del revisor fiscal en las declaraciones de las empresas obligadas a tenerlo. Si solo firma el contador, la DIAN puede darlas por no presentadas, con las sanciones por extemporaneidad que eso implica.",
+      "html": "<strong>Declaraciones tributarias que se tienen por no presentadas.</strong> El Estatuto Tributario exige la firma del revisor fiscal en las declaraciones de las empresas obligadas a tenerlo. Si solo firma el contador, la DIAN puede darlas por no presentadas, con las sanciones por extemporaneidad que eso implica."
+     },
+     {
+      "texto": "Multas de la Superintendencia de Sociedades, que pueden llegar hasta 200 salarios mínimos.",
+      "html": "<strong>Multas de la Superintendencia de Sociedades</strong>, que pueden llegar hasta 200 salarios mínimos."
+     },
+     {
+      "texto": "Estados financieros sin dictamen, que bancos, inversionistas y entidades públicas no aceptan para créditos o licitaciones.",
+      "html": "<strong>Estados financieros sin dictamen</strong>, que bancos, inversionistas y entidades públicas no aceptan para créditos o licitaciones."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Vale la pena tener revisor fiscal sin estar obligado?",
+    "ancla": "vale-la-pena-tener-revisor-fiscal-sin-estar-obligado"
+   },
+   {
+    "t": "p",
+    "texto": "Para una SAS en crecimiento, a veces sí. Si va a pedir un crédito grande, recibir un inversionista o presentarse a licitaciones, un dictamen independiente da credibilidad a sus cifras. Le explicamos por qué los bancos lo piden en revisor fiscal y crédito empresarial.",
+    "html": "Para una SAS en crecimiento, a veces sí. Si va a pedir un crédito grande, recibir un inversionista o presentarse a licitaciones, un dictamen independiente da credibilidad a sus cifras. Le explicamos por qué los bancos lo piden en <a href=\"revisor-fiscal-credito-empresarial.html\">revisor fiscal y crédito empresarial</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Su SAS cruza el tope en 2027?",
+    "ancla": "su-sas-cruza-el-tope-en-2027"
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa está cerca del límite y no sabe si le aplica, lo resolvemos en nuestra evaluación de revisoría fiscal 2027: revisamos sus ingresos y activos, le decimos si está obligada y, si lo está, le entregamos una propuesta lista para la asamblea.",
+    "html": "Si su empresa está cerca del límite y no sabe si le aplica, lo resolvemos en nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a>: revisamos sus ingresos y activos, le decimos si está obligada y, si lo está, le entregamos una propuesta lista para la asamblea."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Todas las SAS deben tener revisor fiscal?",
+    "respuesta": "No. Las SAS no están obligadas por su tipo de sociedad. Solo deben tenerlo cuando superan los topes de activos o ingresos, cuando sus estatutos lo exigen o cuando una norma especial lo impone."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuáles son los topes para que una SAS tenga revisor fiscal en 2027?",
+    "respuesta": "Activos brutos iguales o superiores a $8.754.525.000 o ingresos brutos iguales o superiores a $5.252.715.000, medidos al 31 de diciembre de 2026. Basta con superar uno de los dos."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Una SAS con un solo accionista puede nombrar revisor fiscal?",
+    "respuesta": "Sí. El accionista único toma la decisión y la deja por escrito, como lo haría la asamblea. El nombramiento se inscribe igual en la Cámara de Comercio."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Hay que reformar los estatutos de la SAS para nombrar revisor fiscal?",
+    "respuesta": "No cuando la obligación viene de la ley por superar los topes. Basta con la decisión de la asamblea y su inscripción en el registro mercantil."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué pasa si una SAS obligada presenta la renta sin firma del revisor fiscal?",
+    "respuesta": "La DIAN puede tener la declaración por no presentada, lo que genera sanciones por extemporaneidad e intereses. Por eso conviene nombrar al revisor antes de la temporada de renta."
+   }
+  ]
+ },
+ {
+  "slug": "revisor-fiscal-cierre-contable",
+  "titulo_seo": "El revisor fiscal en el cierre contable: qué revisa",
+  "h1": "El revisor fiscal en el cierre contable: qué revisa y cómo prepararse",
+  "desc": "Qué revisa el revisor fiscal en el cierre contable de fin de año: inventarios, cartera, bancos, estimaciones e impuestos. Y qué debe tener listo su empresa.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Revisoría fiscal",
+  "portada": "assets/img/blog/revisor-fiscal-cierre-contable.png",
+  "toc": true,
+  "palabras": 1013,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "El cierre de año es el momento en que el trabajo del revisor fiscal se vuelve más visible. Lo que haga, o deje de hacer, entre diciembre y febrero define si su empresa llega a la asamblea con un dictamen limpio o con salvedades que los socios y el banco van a preguntar."
+   },
+   {
+    "t": "p",
+    "texto": "En esta guía le explicamos qué revisa el revisor fiscal en el cierre contable, qué documentos va a pedir y cómo preparar a su equipo para que el proceso no se convierta en una carrera de última hora."
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa está buscando revisor para el próximo ejercicio, conozca nuestro servicio de revisoría fiscal.",
+    "html": "Si su empresa está buscando revisor para el próximo ejercicio, conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Por qué el cierre importa tanto en la revisoría",
+    "ancla": "por-que-el-cierre-importa-tanto-en-la-revisoria"
+   },
+   {
+    "t": "p",
+    "texto": "Durante el año, el revisor hace seguimiento al control interno, a las decisiones de la asamblea y al cumplimiento de la ley. En el cierre, su trabajo tiene un producto concreto: el dictamen sobre los estados financieros de fin de ejercicio, que se presenta a la asamblea ordinaria del primer trimestre.",
+    "html": "Durante el año, el revisor hace seguimiento al control interno, a las decisiones de la asamblea y al cumplimiento de la ley. En el cierre, su trabajo tiene un producto concreto: el <strong>dictamen sobre los estados financieros</strong> de fin de ejercicio, que se presenta a la asamblea ordinaria del primer trimestre."
+   },
+   {
+    "t": "p",
+    "texto": "Para emitir esa opinión necesita evidencia suficiente de que las cifras del 31 de diciembre son razonables. Si la evidencia no existe o llega tarde, el resultado puede ser un dictamen con salvedades. Le explicamos qué significa cada tipo en el dictamen del revisor fiscal.",
+    "html": "Para emitir esa opinión necesita evidencia suficiente de que las cifras del 31 de diciembre son razonables. Si la evidencia no existe o llega tarde, el resultado puede ser un dictamen con salvedades. Le explicamos qué significa cada tipo en <a href=\"dictamen-revisor-fiscal.html\">el dictamen del revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué revisa el revisor fiscal en el cierre contable",
+    "ancla": "que-revisa-el-revisor-fiscal-en-el-cierre-contable"
+   },
+   {
+    "t": "h3",
+    "texto": "Inventarios",
+    "ancla": "inventarios"
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa maneja inventarios, el revisor querrá presenciar el conteo físico de fin de año, o una muestra de él. Compara lo que existe en bodega con lo que dice la contabilidad y revisa si hay mercancía obsoleta o dañada que deba ajustarse."
+   },
+   {
+    "t": "h3",
+    "texto": "Cartera y proveedores",
+    "ancla": "cartera-y-proveedores"
+   },
+   {
+    "t": "p",
+    "texto": "Envía cartas de confirmación, lo que se conoce como circularización, a una muestra de clientes y proveedores para verificar los saldos con terceros independientes. También revisa la antigüedad de la cartera y si el deterioro registrado es suficiente."
+   },
+   {
+    "t": "h3",
+    "texto": "Bancos e inversiones",
+    "ancla": "bancos-e-inversiones"
+   },
+   {
+    "t": "p",
+    "texto": "Confirma los saldos directamente con los bancos y revisa las conciliaciones bancarias del cierre. Las partidas conciliatorias viejas o sin explicación son una alerta frecuente."
+   },
+   {
+    "t": "h3",
+    "texto": "Corte de documentos",
+    "ancla": "corte-de-documentos"
+   },
+   {
+    "t": "p",
+    "texto": "Verifica que las ventas, compras y gastos queden en el año que corresponde. Las facturas de diciembre que se registran en enero, o al revés, son uno de los errores más comunes del cierre."
+   },
+   {
+    "t": "h3",
+    "texto": "Estimaciones y provisiones",
+    "ancla": "estimaciones-y-provisiones"
+   },
+   {
+    "t": "p",
+    "texto": "Revisa la depreciación de los activos fijos, el deterioro de cartera e inventarios, las provisiones por litigios y los pasivos laborales. Son cifras que dependen del criterio de la administración, y el revisor debe confirmar que ese criterio es razonable."
+   },
+   {
+    "t": "h3",
+    "texto": "Impuestos",
+    "ancla": "impuestos"
+   },
+   {
+    "t": "p",
+    "texto": "Revisa la provisión del impuesto de renta, el impuesto diferido, los saldos de IVA y retenciones y la conciliación entre la contabilidad y las declaraciones. Las empresas obligadas a tener revisor fiscal deben presentar sus declaraciones con su firma."
+   },
+   {
+    "t": "h3",
+    "texto": "Hechos posteriores",
+    "ancla": "hechos-posteriores"
+   },
+   {
+    "t": "p",
+    "texto": "Analiza lo que pasó entre el 31 de diciembre y la fecha del dictamen: una demanda, la pérdida de un cliente grande, un requerimiento de la DIAN. Algunos de esos hechos deben revelarse o ajustarse en los estados financieros."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué debe tener lista su empresa",
+    "ancla": "que-debe-tener-lista-su-empresa"
+   },
+   {
+    "t": "p",
+    "texto": "Esta es la lista que más tiempo ahorra. Si la tiene antes de la segunda semana de enero, el revisor trabaja sobre cifras estables:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Conciliaciones bancarias de todas las cuentas a diciembre."
+     },
+     {
+      "texto": "Inventario físico tomado y cruzado con la contabilidad."
+     },
+     {
+      "texto": "Auxiliares de cartera y proveedores por tercero y por antigüedad."
+     },
+     {
+      "texto": "Cálculo del deterioro de cartera y de inventarios."
+     },
+     {
+      "texto": "Cuadro de activos fijos con su depreciación."
+     },
+     {
+      "texto": "Consolidado de nómina y prestaciones sociales a diciembre."
+     },
+     {
+      "texto": "Provisión del impuesto de renta y conciliación fiscal."
+     },
+     {
+      "texto": "Actas de asamblea y junta del año y los contratos importantes."
+     },
+     {
+      "texto": "Relación de procesos judiciales y requerimientos de entidades."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si su contabilidad llega tarde a esta etapa, el problema está antes del revisor. Repase cómo preparar el cierre contable 2026 con un calendario semana a semana.",
+    "html": "Si su contabilidad llega tarde a esta etapa, el problema está antes del revisor. Repase <a href=\"preparar-cierre-contable-2026.html\">cómo preparar el cierre contable 2026</a> con un calendario semana a semana."
+   },
+   {
+    "t": "h2",
+    "texto": "Los plazos que no se pueden mover",
+    "ancla": "los-plazos-que-no-se-pueden-mover"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "31 de diciembre: corte del ejercicio.",
+      "html": "<strong>31 de diciembre:</strong> corte del ejercicio."
+     },
+     {
+      "texto": "Enero y febrero: el revisor completa sus pruebas y la administración prepara los estados financieros y las notas.",
+      "html": "<strong>Enero y febrero:</strong> el revisor completa sus pruebas y la administración prepara los estados financieros y las notas."
+     },
+     {
+      "texto": "Antes de la asamblea: los estados financieros, con el dictamen del revisor y el informe de gestión, deben quedar a disposición de los accionistas durante los quince días hábiles previos a la reunión, para que ejerzan su derecho de inspección.",
+      "html": "<strong>Antes de la asamblea:</strong> los estados financieros, con el dictamen del revisor y el informe de gestión, deben quedar a disposición de los accionistas durante los quince días hábiles previos a la reunión, para que ejerzan su derecho de inspección."
+     },
+     {
+      "texto": "Primer trimestre: la asamblea ordinaria aprueba los estados financieros. En esa misma reunión se nombra o se ratifica al revisor para el año que empieza.",
+      "html": "<strong>Primer trimestre:</strong> la asamblea ordinaria aprueba los estados financieros. En esa misma reunión se nombra o se ratifica al revisor para el año que empieza."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Cuando el revisor solo llega en enero",
+    "ancla": "cuando-el-revisor-solo-llega-en-enero"
+   },
+   {
+    "t": "p",
+    "texto": "Si su revisor aparece por primera vez en el cierre, lo más probable es que encuentre sorpresas que ya no se pueden corregir a tiempo. Un revisor que trabaja durante todo el año detecta los problemas en junio, cuando todavía hay margen para resolverlos."
+   },
+   {
+    "t": "p",
+    "texto": "Esa es la diferencia que buscan muchas empresas cuando deciden cambiar de revisor fiscal: pasar de una firma al final del año a un acompañamiento con alertas durante el ejercicio.",
+    "html": "Esa es la diferencia que buscan muchas empresas cuando deciden <a href=\"cambiar-revisor-fiscal.html\">cambiar de revisor fiscal</a>: pasar de una firma al final del año a un acompañamiento con alertas durante el ejercicio."
+   },
+   {
+    "t": "h2",
+    "texto": "Llegue a la asamblea con la propuesta lista",
+    "ancla": "llegue-a-la-asamblea-con-la-propuesta-lista"
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa estará obligada a tener revisor fiscal en 2027, o quiere cambiar el que tiene, este es el momento de comparar propuestas. En nuestra evaluación de revisoría fiscal 2027 revisamos sus cifras, le mostramos los riesgos que vería primero la DIAN y le entregamos una propuesta escrita para la asamblea.",
+    "html": "Si su empresa estará obligada a tener revisor fiscal en 2027, o quiere cambiar el que tiene, este es el momento de comparar propuestas. En nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a> revisamos sus cifras, le mostramos los riesgos que vería primero la DIAN y le entregamos una propuesta escrita para la asamblea."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué revisa el revisor fiscal en el cierre de año?",
+    "respuesta": "Inventarios, cartera y proveedores, bancos, corte de documentos, estimaciones como depreciación y deterioro, impuestos y los hechos ocurridos después del 31 de diciembre. Con esa evidencia emite su dictamen sobre los estados financieros."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿El revisor fiscal hace el cierre contable?",
+    "respuesta": "No. El cierre lo hacen la administración y el contador. El revisor verifica de forma independiente que las cifras del cierre sean razonables y emite su opinión."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuándo debe estar listo el dictamen del revisor fiscal?",
+    "respuesta": "Antes de la asamblea ordinaria. Los estados financieros con el dictamen deben estar a disposición de los accionistas durante los quince días hábiles anteriores a la reunión."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué pasa si el revisor no obtiene la información a tiempo?",
+    "respuesta": "Puede emitir un dictamen con salvedades o abstenerse de opinar sobre algunas partidas. Eso genera preguntas de socios, bancos y entidades de control."
+   }
+  ]
+ },
+ {
+  "slug": "preparar-cierre-contable-2026",
+  "titulo_seo": "Cómo preparar el cierre contable 2026: lista por meses",
+  "h1": "Cómo preparar el cierre contable 2026: lista de tareas de octubre a marzo",
+  "desc": "Lista práctica para preparar el cierre contable 2026 en Colombia: qué hacer en octubre, noviembre, diciembre y el primer trimestre de 2027, con UVT y topes vigentes.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Outsourcing contable",
+  "portada": "assets/img/blog/preparar-cierre-contable-2026.png",
+  "toc": true,
+  "palabras": 864,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "El cierre contable no empieza el 31 de diciembre. Las empresas que llegan tranquilas a la asamblea de marzo son las que empezaron a ordenar sus cifras en octubre. Las que lo dejan para enero terminan corrigiendo errores con la declaración de renta encima."
+   },
+   {
+    "t": "p",
+    "texto": "Esta es una lista de tareas para el cierre del año gravable 2026, organizada por meses. Si busca la explicación de qué es el cierre y por qué importa, la encuentra en nuestra guía de cierre contable para empresas. Aquí vamos directo al calendario.",
+    "html": "Esta es una lista de tareas para el cierre del año gravable 2026, organizada por meses. Si busca la explicación de qué es el cierre y por qué importa, la encuentra en nuestra guía de <a href=\"cierre-contable-empresas.html\">cierre contable para empresas</a>. Aquí vamos directo al calendario."
+   },
+   {
+    "t": "h2",
+    "texto": "Cifras de referencia para el cierre 2026",
+    "ancla": "cifras-de-referencia-para-el-cierre-2026"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Concepto"
+      },
+      {
+       "th": true,
+       "texto": "Valor"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "UVT 2026"
+      },
+      {
+       "th": false,
+       "texto": "$52.374"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Salario mínimo 2026"
+      },
+      {
+       "th": false,
+       "texto": "$1.750.905"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Tope de activos para revisor fiscal en 2027"
+      },
+      {
+       "th": false,
+       "texto": "$8.754.525.000"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Tope de ingresos para revisor fiscal en 2027"
+      },
+      {
+       "th": false,
+       "texto": "$5.252.715.000"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Los topes de la tabla se miden con las cifras al 31 de diciembre de 2026. Si su empresa supera cualquiera de los dos, deberá tener revisor fiscal desde 2027. Lo explicamos con ejemplos en empresas obligadas a tener revisor fiscal.",
+    "html": "Los topes de la tabla se miden con las cifras al 31 de diciembre de 2026. Si su empresa supera cualquiera de los dos, deberá tener revisor fiscal desde 2027. Lo explicamos con ejemplos en <a href=\"empresas-obligadas-revisor-fiscal.html\">empresas obligadas a tener revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Octubre: ordenar la casa",
+    "ancla": "octubre-ordenar-la-casa"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Concilie bancos al día. Las partidas sin identificar de meses atrás se resuelven ahora, no en enero.",
+      "html": "<strong>Concilie bancos al día.</strong> Las partidas sin identificar de meses atrás se resuelven ahora, no en enero."
+     },
+     {
+      "texto": "Depure la cartera. Identifique los clientes que no van a pagar y documente la gestión de cobro. Sin soportes, el deterioro no se puede justificar.",
+      "html": "<strong>Depure la cartera.</strong> Identifique los clientes que no van a pagar y documente la gestión de cobro. Sin soportes, el deterioro no se puede justificar."
+     },
+     {
+      "texto": "Revise los terceros. NIT, nombres y direcciones correctos en la contabilidad ahorran semanas cuando llegue la información exógena.",
+      "html": "<strong>Revise los terceros.</strong> NIT, nombres y direcciones correctos en la contabilidad ahorran semanas cuando llegue la información exógena."
+     },
+     {
+      "texto": "Haga una proyección de renta. Con las cifras de septiembre puede estimar el impuesto del año y decidir con tiempo, en lugar de enterarse en abril.",
+      "html": "<strong>Haga una proyección de renta.</strong> Con las cifras de septiembre puede estimar el impuesto del año y decidir con tiempo, en lugar de enterarse en abril."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Noviembre: planear antes de que se cierre la ventana",
+    "ancla": "noviembre-planear-antes-de-que-se-cierre-la-ventana"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Planee las compras y gastos del año. Los gastos deducibles deben estar causados y soportados en factura electrónica dentro del año.",
+      "html": "<strong>Planee las compras y gastos del año.</strong> Los gastos deducibles deben estar causados y soportados en factura electrónica dentro del año."
+     },
+     {
+      "texto": "Revise los activos fijos. Confirme que existen, que están depreciados correctamente y dé de baja los que ya no usa.",
+      "html": "<strong>Revise los activos fijos.</strong> Confirme que existen, que están depreciados correctamente y dé de baja los que ya no usa."
+     },
+     {
+      "texto": "Programe el inventario físico. Defina fecha, responsables y método de conteo. Si tiene revisor fiscal, avísele para que pueda presenciarlo.",
+      "html": "<strong>Programe el inventario físico.</strong> Defina fecha, responsables y método de conteo. Si tiene revisor fiscal, avísele para que pueda presenciarlo."
+     },
+     {
+      "texto": "Calcule si cruza el tope de revisor fiscal. Si va a quedar obligada en 2027, este es el momento de pedir propuestas. Puede hacerlo en nuestra evaluación de revisoría fiscal 2027.",
+      "html": "<strong>Calcule si cruza el tope de revisor fiscal.</strong> Si va a quedar obligada en 2027, este es el momento de pedir propuestas. Puede hacerlo en nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a>."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Diciembre: cerrar el periodo",
+    "ancla": "diciembre-cerrar-el-periodo"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Haga el inventario físico y ajuste las diferencias.",
+      "html": "<strong>Haga el inventario físico</strong> y ajuste las diferencias."
+     },
+     {
+      "texto": "Cause todo lo del año: facturas de proveedores, servicios públicos, honorarios y arrendamientos de diciembre.",
+      "html": "<strong>Cause todo lo del año:</strong> facturas de proveedores, servicios públicos, honorarios y arrendamientos de diciembre."
+     },
+     {
+      "texto": "Verifique el corte de facturación. Las ventas de diciembre deben quedar en diciembre.",
+      "html": "<strong>Verifique el corte de facturación.</strong> Las ventas de diciembre deben quedar en diciembre."
+     },
+     {
+      "texto": "Liquide la prima de diciembre, que vence el 20 de diciembre, y deje calculadas las cesantías y sus intereses.",
+      "html": "<strong>Liquide la prima de diciembre</strong>, que vence el 20 de diciembre, y deje calculadas las cesantías y sus intereses."
+     },
+     {
+      "texto": "Confirme que la nómina electrónica de todo el año fue transmitida.",
+      "html": "<strong>Confirme que la nómina electrónica</strong> de todo el año fue transmitida."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Enero: consolidar las cifras",
+    "ancla": "enero-consolidar-las-cifras"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Pague los intereses sobre cesantías a los trabajadores antes del 31 de enero.",
+      "html": "<strong>Pague los intereses sobre cesantías</strong> a los trabajadores antes del 31 de enero."
+     },
+     {
+      "texto": "Cierre las cuentas de resultado y prepare el balance de prueba definitivo.",
+      "html": "<strong>Cierre las cuentas de resultado</strong> y prepare el balance de prueba definitivo."
+     },
+     {
+      "texto": "Calcule el deterioro de cartera e inventarios y el impuesto de renta y diferido.",
+      "html": "<strong>Calcule el deterioro de cartera e inventarios</strong> y el impuesto de renta y diferido."
+     },
+     {
+      "texto": "Entregue la información al revisor fiscal. Le explicamos qué va a pedir en el revisor fiscal en el cierre contable.",
+      "html": "<strong>Entregue la información al revisor fiscal.</strong> Le explicamos qué va a pedir en <a href=\"revisor-fiscal-cierre-contable.html\">el revisor fiscal en el cierre contable</a>."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Febrero y marzo: estados financieros y asamblea",
+    "ancla": "febrero-y-marzo-estados-financieros-y-asamblea"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Consigne las cesantías en el fondo de cada trabajador antes del 14 de febrero.",
+      "html": "<strong>Consigne las cesantías</strong> en el fondo de cada trabajador antes del 14 de febrero."
+     },
+     {
+      "texto": "Prepare los estados financieros y sus notas bajo NIIF para pymes o el marco que le aplique.",
+      "html": "<strong>Prepare los estados financieros y sus notas</strong> bajo NIIF para pymes o el marco que le aplique."
+     },
+     {
+      "texto": "Prepare la información exógena según el calendario que publique la DIAN para el año gravable 2026. Repase qué es la información exógena y quién debe presentarla.",
+      "html": "<strong>Prepare la información exógena</strong> según el calendario que publique la DIAN para el año gravable 2026. Repase <a href=\"exogena.html\">qué es la información exógena</a> y quién debe presentarla."
+     },
+     {
+      "texto": "Convoque la asamblea ordinaria con la antelación que exigen los estatutos, y deje los estados financieros a disposición de los socios durante los quince días hábiles anteriores.",
+      "html": "<strong>Convoque la asamblea ordinaria</strong> con la antelación que exigen los estatutos, y deje los estados financieros a disposición de los socios durante los quince días hábiles anteriores."
+     },
+     {
+      "texto": "Defina el revisor fiscal de 2027 en la misma asamblea, si está obligada o si quiere cambiar el actual. Vea cómo cambiar de revisor fiscal.",
+      "html": "<strong>Defina el revisor fiscal de 2027</strong> en la misma asamblea, si está obligada o si quiere cambiar el actual. Vea <a href=\"cambiar-revisor-fiscal.html\">cómo cambiar de revisor fiscal</a>."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Los errores que más vemos en el cierre",
+    "ancla": "los-errores-que-mas-vemos-en-el-cierre"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Facturas de diciembre registradas en enero, que alteran la renta de los dos años."
+     },
+     {
+      "texto": "Cartera vieja sin deterioro y sin soportes de cobro."
+     },
+     {
+      "texto": "Activos que ya no existen y siguen en el balance."
+     },
+     {
+      "texto": "Diferencias entre la nómina contable y la nómina electrónica transmitida."
+     },
+     {
+      "texto": "Saldos de IVA y retenciones que no cuadran con las declaraciones presentadas."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Cada uno de estos errores es más fácil de corregir en octubre que en marzo. Por eso el calendario empieza ahora."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Necesita apoyo con el cierre?",
+    "ancla": "necesita-apoyo-con-el-cierre"
+   },
+   {
+    "t": "p",
+    "texto": "Si su equipo contable no da abasto, nuestro outsourcing contable se encarga del cierre completo: conciliaciones, ajustes, estados financieros y declaraciones. Y si su empresa ya debe tener revisor fiscal, lo acompañamos con nuestro servicio de revisoría fiscal.",
+    "html": "Si su equipo contable no da abasto, nuestro <a href=\"outsourcing-contable.html\">outsourcing contable</a> se encarga del cierre completo: conciliaciones, ajustes, estados financieros y declaraciones. Y si su empresa ya debe tener revisor fiscal, lo acompañamos con nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuándo se debe empezar a preparar el cierre contable?",
+    "respuesta": "Lo ideal es en octubre, con conciliaciones, depuración de cartera y una proyección de renta. Así queda tiempo para corregir errores y planear antes de que termine el año gravable."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuál es el valor de la UVT en 2026?",
+    "respuesta": "$52.374. Es la unidad que se usa para calcular sanciones, topes de declarantes y otros valores tributarios del año gravable 2026."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué fechas laborales hay que tener en cuenta en el cierre?",
+    "respuesta": "La prima de diciembre se paga a más tardar el 20 de diciembre, los intereses sobre cesantías antes del 31 de enero y las cesantías se consignan en el fondo antes del 14 de febrero."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿El cierre 2026 define si necesito revisor fiscal en 2027?",
+    "respuesta": "Sí. Si a 31 de diciembre de 2026 sus activos brutos superan $8.754.525.000 o sus ingresos brutos del año superan $5.252.715.000, su empresa debe tener revisor fiscal en 2027."
+   }
+  ]
+ },
+ {
+  "slug": "flujo-caja-pymes-colombia",
+  "titulo_seo": "Flujo de caja para pymes en Colombia: cómo hacerlo",
+  "h1": "Flujo de caja para pymes en Colombia: cómo proyectarlo y evitar quedarse sin liquidez",
+  "desc": "Cómo hacer un flujo de caja para su pyme en Colombia: estructura, los meses de más presión por primas, cesantías e impuestos, y cómo usarlo para decidir.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Outsourcing contable",
+  "portada": "assets/img/blog/flujo-caja-pymes-colombia.png",
+  "toc": true,
+  "palabras": 849,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "\"Vendemos bien, pero nunca hay plata.\" Es una de las frases que más escuchamos de gerentes de pymes. La empresa da utilidad en el estado de resultados, pero a fin de mes no alcanza para la nómina o para pagarle a la DIAN."
+   },
+   {
+    "t": "p",
+    "texto": "La explicación casi siempre está en el flujo de caja. La utilidad mide lo que la empresa gana; el flujo de caja mide cuándo entra y cuándo sale el dinero. Una pyme puede ser rentable y quedarse sin liquidez al mismo tiempo."
+   },
+   {
+    "t": "p",
+    "texto": "En esta guía le mostramos cómo armar un flujo de caja sencillo, cuáles son los meses de más presión en Colombia y cómo usarlo para tomar decisiones."
+   },
+   {
+    "t": "h2",
+    "texto": "Utilidad no es caja",
+    "ancla": "utilidad-no-es-caja"
+   },
+   {
+    "t": "p",
+    "texto": "Tres situaciones típicas explican la diferencia:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Vende a crédito. La factura cuenta como ingreso hoy, pero el dinero llega en 60 o 90 días.",
+      "html": "<strong>Vende a crédito.</strong> La factura cuenta como ingreso hoy, pero el dinero llega en 60 o 90 días."
+     },
+     {
+      "texto": "Compra inventario. El dinero sale hoy, pero el costo se reconoce cuando vende la mercancía.",
+      "html": "<strong>Compra inventario.</strong> El dinero sale hoy, pero el costo se reconoce cuando vende la mercancía."
+     },
+     {
+      "texto": "Paga cuotas de crédito. El capital de la cuota sale de la caja, pero no es un gasto en el estado de resultados.",
+      "html": "<strong>Paga cuotas de crédito.</strong> El capital de la cuota sale de la caja, pero no es un gasto en el estado de resultados."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Por eso no basta con mirar el estado de resultados. Si quiere entender cómo se conectan los informes, repase cómo leer un balance general.",
+    "html": "Por eso no basta con mirar el estado de resultados. Si quiere entender cómo se conectan los informes, repase <a href=\"como-leer-un-balance-general.html\">cómo leer un balance general</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Cómo armar un flujo de caja en cinco pasos",
+    "ancla": "como-armar-un-flujo-de-caja-en-cinco-pasos"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Parta del saldo real en bancos al inicio del mes.",
+      "html": "<strong>Parta del saldo real en bancos</strong> al inicio del mes."
+     },
+     {
+      "texto": "Proyecte las entradas por fecha de cobro, no por fecha de factura. Use el comportamiento real de pago de sus clientes.",
+      "html": "<strong>Proyecte las entradas por fecha de cobro</strong>, no por fecha de factura. Use el comportamiento real de pago de sus clientes."
+     },
+     {
+      "texto": "Proyecte las salidas por fecha de pago: nómina, proveedores, arriendo, servicios, cuotas de crédito e impuestos.",
+      "html": "<strong>Proyecte las salidas por fecha de pago:</strong> nómina, proveedores, arriendo, servicios, cuotas de crédito e impuestos."
+     },
+     {
+      "texto": "Calcule el saldo final de cada mes y compárelo con un mínimo de seguridad, por ejemplo un mes de gastos fijos.",
+      "html": "<strong>Calcule el saldo final de cada mes</strong> y compárelo con un mínimo de seguridad, por ejemplo un mes de gastos fijos."
+     },
+     {
+      "texto": "Actualícelo cada semana o cada mes con lo que realmente pasó. Un flujo que no se actualiza deja de servir.",
+      "html": "<strong>Actualícelo cada semana o cada mes</strong> con lo que realmente pasó. Un flujo que no se actualiza deja de servir."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Lo recomendable es proyectar al menos doce meses, con más detalle en los tres primeros."
+   },
+   {
+    "t": "h2",
+    "texto": "Estructura básica",
+    "ancla": "estructura-basica"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Concepto"
+      },
+      {
+       "th": true,
+       "texto": "Qué incluye"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Saldo inicial"
+      },
+      {
+       "th": false,
+       "texto": "Dinero disponible en bancos y caja"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Entradas operativas"
+      },
+      {
+       "th": false,
+       "texto": "Recaudo de cartera y ventas de contado"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Salidas operativas"
+      },
+      {
+       "th": false,
+       "texto": "Nómina, proveedores, arriendo, servicios, impuestos"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Flujo de inversión"
+      },
+      {
+       "th": false,
+       "texto": "Compra o venta de equipos y activos"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Flujo de financiación"
+      },
+      {
+       "th": false,
+       "texto": "Créditos recibidos, cuotas pagadas, aportes de socios"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Saldo final"
+      },
+      {
+       "th": false,
+       "texto": "Saldo inicial más entradas menos salidas"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Los meses de más presión en Colombia",
+    "ancla": "los-meses-de-mas-presion-en-colombia"
+   },
+   {
+    "t": "p",
+    "texto": "Hay fechas que se repiten cada año y que una pyme debe tener marcadas en su flujo:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Enero: intereses sobre cesantías, que se pagan a los trabajadores antes del 31 de enero. Además, suele ser un mes de ventas bajas en muchos sectores.",
+      "html": "<strong>Enero:</strong> intereses sobre cesantías, que se pagan a los trabajadores antes del 31 de enero. Además, suele ser un mes de ventas bajas en muchos sectores."
+     },
+     {
+      "texto": "Febrero: consignación de las cesantías en los fondos, antes del 14 de febrero.",
+      "html": "<strong>Febrero:</strong> consignación de las cesantías en los fondos, antes del 14 de febrero."
+     },
+     {
+      "texto": "Abril y mayo: cuotas del impuesto de renta de las personas jurídicas, según el calendario tributario.",
+      "html": "<strong>Abril y mayo:</strong> cuotas del impuesto de renta de las personas jurídicas, según el calendario tributario."
+     },
+     {
+      "texto": "Junio: prima de servicios, que se paga a más tardar el 30 de junio.",
+      "html": "<strong>Junio:</strong> prima de servicios, que se paga a más tardar el 30 de junio."
+     },
+     {
+      "texto": "Diciembre: la segunda prima, a más tardar el 20 de diciembre, junto con vacaciones colectivas en muchas empresas.",
+      "html": "<strong>Diciembre:</strong> la segunda prima, a más tardar el 20 de diciembre, junto con vacaciones colectivas en muchas empresas."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "A esto se suman las declaraciones bimestrales o cuatrimestrales de IVA y las retenciones mensuales. Revise las fechas exactas de su NIT en el calendario tributario.",
+    "html": "A esto se suman las declaraciones bimestrales o cuatrimestrales de IVA y las retenciones mensuales. Revise las fechas exactas de su NIT en el <a href=\"calendario-tributario-actualizado.html\">calendario tributario</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Cómo mejorar el flujo de caja de su pyme",
+    "ancla": "como-mejorar-el-flujo-de-caja-de-su-pyme"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Acorte los plazos de cobro. Ofrezca descuento por pronto pago o facture por anticipado cuando el cliente lo acepte.",
+      "html": "<strong>Acorte los plazos de cobro.</strong> Ofrezca descuento por pronto pago o facture por anticipado cuando el cliente lo acepte."
+     },
+     {
+      "texto": "Negocie con proveedores plazos parecidos a los que les da a sus clientes.",
+      "html": "<strong>Negocie con proveedores</strong> plazos parecidos a los que les da a sus clientes."
+     },
+     {
+      "texto": "Provisione cada mes las primas, cesantías e impuestos, en lugar de esperar al mes en que vencen.",
+      "html": "<strong>Provisione cada mes</strong> las primas, cesantías e impuestos, en lugar de esperar al mes en que vencen."
+     },
+     {
+      "texto": "Revise el inventario. Mercancía quieta es dinero quieto.",
+      "html": "<strong>Revise el inventario.</strong> Mercancía quieta es dinero quieto."
+     },
+     {
+      "texto": "Use financiación de corto plazo con criterio. El factoring y el crédito a corto plazo sirven para cubrir un desfase puntual, no un problema permanente.",
+      "html": "<strong>Use financiación de corto plazo con criterio.</strong> El <a href=\"factoring-credito-termino.html\">factoring y el crédito a corto plazo</a> sirven para cubrir un desfase puntual, no un problema permanente."
+     },
+     {
+      "texto": "Detecte las fugas. Gastos pequeños y repetidos que nadie revisa suman mucho al año. Le contamos cómo encontrarlos en fugas financieras.",
+      "html": "<strong>Detecte las fugas.</strong> Gastos pequeños y repetidos que nadie revisa suman mucho al año. Le contamos cómo encontrarlos en <a href=\"fugas-financieras.html\">fugas financieras</a>."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "El flujo de caja como herramienta para decidir",
+    "ancla": "el-flujo-de-caja-como-herramienta-para-decidir"
+   },
+   {
+    "t": "p",
+    "texto": "Un buen flujo de caja responde preguntas concretas: si puede contratar a una persona más, si conviene tomar un crédito, si puede repartir utilidades o si debe frenar una compra grande. Combinado con un presupuesto empresarial, le permite anticiparse en lugar de reaccionar.",
+    "html": "Un buen flujo de caja responde preguntas concretas: si puede contratar a una persona más, si conviene tomar un crédito, si puede repartir utilidades o si debe frenar una compra grande. Combinado con un <a href=\"presupuesto-empresarial.html\">presupuesto empresarial</a>, le permite anticiparse en lugar de reaccionar."
+   },
+   {
+    "t": "p",
+    "texto": "Los bancos también lo piden. Cuando una empresa solicita un crédito, el flujo proyectado muestra si podrá pagar las cuotas."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Quiere un flujo de caja hecho a la medida?",
+    "ancla": "quiere-un-flujo-de-caja-hecho-a-la-medida"
+   },
+   {
+    "t": "p",
+    "texto": "En nuestra consultoría financiera construimos con usted el flujo de caja de su empresa, conectado a su contabilidad real, y lo revisamos cada mes para que las decisiones se tomen con cifras. Si además necesita que la contabilidad llegue al día, nuestro outsourcing contable se encarga.",
+    "html": "En nuestra <a href=\"consultoria-financiera.html\">consultoría financiera</a> construimos con usted el flujo de caja de su empresa, conectado a su contabilidad real, y lo revisamos cada mes para que las decisiones se tomen con cifras. Si además necesita que la contabilidad llegue al día, nuestro <a href=\"outsourcing-contable.html\">outsourcing contable</a> se encarga."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué es el flujo de caja de una empresa?",
+    "respuesta": "Es el registro y la proyección de las entradas y salidas de dinero en un periodo. A diferencia del estado de resultados, mide cuándo se mueve el dinero, no cuándo se gana o se causa."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Por qué una empresa con utilidad puede quedarse sin dinero?",
+    "respuesta": "Porque vende a crédito, compra inventario o paga deudas antes de recibir el dinero de sus ventas. La utilidad aparece en el estado de resultados, pero la caja todavía no la recibe."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cada cuánto se debe actualizar el flujo de caja?",
+    "respuesta": "Al menos una vez al mes, y semanalmente cuando la liquidez está ajustada. Cada actualización compara lo proyectado con lo real."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuáles son los meses de más presión de caja para una pyme en Colombia?",
+    "respuesta": "Enero, febrero, junio y diciembre por las prestaciones sociales, y abril y mayo por las cuotas del impuesto de renta. También pesan las declaraciones de IVA y retenciones."
+   }
+  ]
+ },
+ {
+  "slug": "como-elegir-firma-revisoria-fiscal",
+  "titulo_seo": "Cómo elegir una firma de revisoría fiscal: 8 criterios",
+  "h1": "Cómo elegir una firma de revisoría fiscal: 8 criterios para comparar propuestas",
+  "desc": "Qué revisar antes de contratar una firma de revisoría fiscal en Colombia: independencia, equipo, horas, experiencia sectorial, informes y honorarios por escrito.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Revisoría fiscal",
+  "portada": "assets/img/reunion-cuadro.jpg",
+  "toc": true,
+  "palabras": 852,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "Cuando una empresa queda obligada a tener revisor fiscal, o decide cambiar el que tiene, suele recibir tres o cuatro propuestas que no se pueden comparar: una habla de horas, otra de visitas, otra solo de honorarios. Al final se elige por precio, y el precio más bajo casi nunca es el más barato."
+   },
+   {
+    "t": "p",
+    "texto": "Estos son los ocho criterios que le recomendamos revisar antes de llevar una propuesta a la asamblea. Puede usarlos también para evaluar al revisor que tiene hoy."
+   },
+   {
+    "t": "p",
+    "texto": "Si quiere ver cómo respondemos nosotros a cada uno, conozca nuestro servicio de revisoría fiscal.",
+    "html": "Si quiere ver cómo respondemos nosotros a cada uno, conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "1. Independencia real",
+    "ancla": "1-independencia-real"
+   },
+   {
+    "t": "p",
+    "texto": "El Código de Comercio prohíbe que el revisor fiscal tenga vínculos de parentesco con los administradores, que sea socio de la empresa o que desempeñe otro cargo en ella. Tampoco puede llevar su contabilidad."
+   },
+   {
+    "t": "p",
+    "texto": "Pregunte directamente si la firma o alguno de sus profesionales presta otros servicios a la empresa o a sus socios. Un revisor que depende de otros contratos con la administración difícilmente va a señalar sus errores."
+   },
+   {
+    "t": "h2",
+    "texto": "2. Un responsable con nombre propio",
+    "ancla": "2-un-responsable-con-nombre-propio"
+   },
+   {
+    "t": "p",
+    "texto": "Muchas firmas venden la propuesta con un socio senior y luego envían a un asistente. Pida que la propuesta indique quién firmará como revisor principal, quién será el suplente y quién hará el trabajo de campo, con su experiencia."
+   },
+   {
+    "t": "p",
+    "texto": "Verifique que el revisor tenga tarjeta profesional vigente y pida el certificado de antecedentes de la Junta Central de Contadores."
+   },
+   {
+    "t": "h2",
+    "texto": "3. Horas y presencia durante el año",
+    "ancla": "3-horas-y-presencia-durante-el-ano"
+   },
+   {
+    "t": "p",
+    "texto": "Las funciones del revisor fiscal exigen un trabajo permanente: revisar el control interno, inspeccionar bienes, asistir a reuniones y avisar a tiempo de las irregularidades. Eso no se cumple con una visita en enero.",
+    "html": "Las <a href=\"funciones-revisor-fiscal-colombia.html\">funciones del revisor fiscal</a> exigen un trabajo permanente: revisar el control interno, inspeccionar bienes, asistir a reuniones y avisar a tiempo de las irregularidades. Eso no se cumple con una visita en enero."
+   },
+   {
+    "t": "p",
+    "texto": "Pida que la propuesta indique cuántas horas al mes dedicará el equipo y cómo se distribuyen entre visitas, revisión remota y cierre."
+   },
+   {
+    "t": "h2",
+    "texto": "4. Experiencia en su sector",
+    "ancla": "4-experiencia-en-su-sector"
+   },
+   {
+    "t": "p",
+    "texto": "Una constructora, una IPS, una cooperativa y una comercializadora tienen riesgos distintos. Pregunte en qué empresas de su sector ha trabajado la firma y qué temas especiales conoce: contratos de obra, glosas, inventarios, régimen cooperativo, operaciones con el exterior."
+   },
+   {
+    "t": "h2",
+    "texto": "5. Metodología y normas que aplica",
+    "ancla": "5-metodologia-y-normas-que-aplica"
+   },
+   {
+    "t": "p",
+    "texto": "El revisor debe trabajar con las normas de aseguramiento vigentes en Colombia. Pida que le expliquen, en lenguaje claro, cómo planean el trabajo, cómo evalúan los riesgos y qué pruebas hacen. Le explicamos qué contiene el producto final en el dictamen del revisor fiscal.",
+    "html": "El revisor debe trabajar con las normas de aseguramiento vigentes en Colombia. Pida que le expliquen, en lenguaje claro, cómo planean el trabajo, cómo evalúan los riesgos y qué pruebas hacen. Le explicamos qué contiene el producto final en <a href=\"dictamen-revisor-fiscal.html\">el dictamen del revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "6. Informes que sirvan para decidir",
+    "ancla": "6-informes-que-sirvan-para-decidir"
+   },
+   {
+    "t": "p",
+    "texto": "Pida un ejemplo de los informes que entrega durante el año, con los datos del cliente ocultos. Un buen informe dice qué encontró, qué riesgo representa y qué recomienda, priorizado. Uno malo es una lista de normas copiadas."
+   },
+   {
+    "t": "p",
+    "texto": "Pregunte también con qué frecuencia los entrega y a quién: gerencia, junta directiva y asamblea. Vea qué debe contener el informe del revisor fiscal a la asamblea.",
+    "html": "Pregunte también con qué frecuencia los entrega y a quién: gerencia, junta directiva y asamblea. Vea qué debe contener <a href=\"informe-revisor-fiscal-asamblea.html\">el informe del revisor fiscal a la asamblea</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "7. Respuesta ante la DIAN y las superintendencias",
+    "ancla": "7-respuesta-ante-la-dian-y-las-superintendencias"
+   },
+   {
+    "t": "p",
+    "texto": "Cuando llega un requerimiento, el revisor tiene un papel clave. Pregunte cómo acompañan a la empresa en una fiscalización y si tienen experiencia con la DIAN y con la Superintendencia de Sociedades. Repase lo que implica en revisoría fiscal ante la DIAN.",
+    "html": "Cuando llega un requerimiento, el revisor tiene un papel clave. Pregunte cómo acompañan a la empresa en una fiscalización y si tienen experiencia con la DIAN y con la Superintendencia de Sociedades. Repase lo que implica en <a href=\"revisoria-fiscal-dian.html\">revisoría fiscal ante la DIAN</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "8. Honorarios claros y por escrito",
+    "ancla": "8-honorarios-claros-y-por-escrito"
+   },
+   {
+    "t": "p",
+    "texto": "Pida que los honorarios queden por escrito, con lo que incluyen y lo que no: certificaciones adicionales, informes especiales, asistencia a asambleas extraordinarias. Compare el valor por hora, no solo el total."
+   },
+   {
+    "t": "p",
+    "texto": "Desconfíe de una tarifa muy por debajo del mercado. Para cumplir con las funciones legales se necesitan horas, y las horas tienen un costo. Le explicamos de qué depende el precio en cuánto cobra un revisor fiscal en Colombia.",
+    "html": "Desconfíe de una tarifa muy por debajo del mercado. Para cumplir con las funciones legales se necesitan horas, y las horas tienen un costo. Le explicamos de qué depende el precio en <a href=\"cuanto-cobra-un-revisor-fiscal-en-colombia.html\">cuánto cobra un revisor fiscal en Colombia</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Tabla para comparar propuestas",
+    "ancla": "tabla-para-comparar-propuestas"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Criterio"
+      },
+      {
+       "th": true,
+       "texto": "Qué pedir por escrito"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Independencia"
+      },
+      {
+       "th": false,
+       "texto": "Declaración de no tener otros vínculos con la empresa o sus socios"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Responsable"
+      },
+      {
+       "th": false,
+       "texto": "Nombre del revisor principal, del suplente y del equipo de campo"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Horas"
+      },
+      {
+       "th": false,
+       "texto": "Horas al mes y calendario de visitas"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Sector"
+      },
+      {
+       "th": false,
+       "texto": "Clientes similares atendidos"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Metodología"
+      },
+      {
+       "th": false,
+       "texto": "Plan de trabajo y normas que aplica"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Informes"
+      },
+      {
+       "th": false,
+       "texto": "Ejemplo de informe y frecuencia de entrega"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Entidades de control"
+      },
+      {
+       "th": false,
+       "texto": "Experiencia en requerimientos de la DIAN y superintendencias"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Honorarios"
+      },
+      {
+       "th": false,
+       "texto": "Valor, forma de pago y servicios excluidos"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Errores comunes al contratar",
+    "ancla": "errores-comunes-al-contratar"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Elegir solo por precio, sin comparar horas ni equipo."
+     },
+     {
+      "texto": "Contratar al revisor que recomendó el contador, lo que compromete la independencia."
+     },
+     {
+      "texto": "Dejar la decisión para la semana de la asamblea."
+     },
+     {
+      "texto": "No inscribir el nombramiento en la Cámara de Comercio. Le explicamos el paso a paso en cómo cambiar de revisor fiscal.",
+      "html": "No inscribir el nombramiento en la Cámara de Comercio. Le explicamos el paso a paso en <a href=\"cambiar-revisor-fiscal.html\">cómo cambiar de revisor fiscal</a>."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Compare con una propuesta real",
+    "ancla": "compare-con-una-propuesta-real"
+   },
+   {
+    "t": "p",
+    "texto": "En nuestra evaluación de revisoría fiscal 2027 revisamos si su empresa está obligada, qué riesgos tiene hoy y le entregamos una propuesta escrita con responsable, horas, informes y honorarios, lista para comparar con las demás y presentar a sus socios.",
+    "html": "En nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a> revisamos si su empresa está obligada, qué riesgos tiene hoy y le entregamos una propuesta escrita con responsable, horas, informes y honorarios, lista para comparar con las demás y presentar a sus socios."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué debe tener en cuenta al elegir un revisor fiscal?",
+    "respuesta": "Independencia frente a la administración, un responsable con nombre propio, horas de dedicación durante todo el año, experiencia en su sector, informes útiles, respaldo ante la DIAN y honorarios claros por escrito."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿El revisor fiscal puede ser recomendado por el contador de la empresa?",
+    "respuesta": "Puede serlo, pero conviene revisar con cuidado que no exista una relación que afecte su independencia. El revisor debe verificar el trabajo del contador, no depender de él."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Es mejor una persona natural o una firma de revisoría fiscal?",
+    "respuesta": "Depende del tamaño y la complejidad de la empresa. Una firma suele tener equipo de apoyo, suplente y continuidad si el revisor principal se ausenta; una persona natural puede funcionar en empresas pequeñas."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Quién elige al revisor fiscal?",
+    "respuesta": "La asamblea general de accionistas o la junta de socios. La gerencia puede comparar las propuestas y presentar una recomendación, pero la decisión es del máximo órgano social."
+   }
+  ]
+ },
+ {
+  "slug": "dictamen-revisor-fiscal",
+  "titulo_seo": "Dictamen del revisor fiscal: qué es y qué significa",
+  "h1": "Dictamen del revisor fiscal: qué es, qué contiene y qué significa cada tipo de opinión",
+  "desc": "Qué es el dictamen del revisor fiscal sobre los estados financieros, qué debe contener según el Código de Comercio y qué significan una opinión limpia, con salvedades o adversa.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Revisoría fiscal",
+  "portada": "assets/img/detalle-documentos.jpg",
+  "toc": true,
+  "palabras": 1002,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "Cada año, antes de la asamblea ordinaria, el revisor fiscal entrega un documento que los socios, los bancos y la DIAN leen con atención: el dictamen sobre los estados financieros. En pocas páginas dice si las cifras de la empresa son confiables o no."
+   },
+   {
+    "t": "p",
+    "texto": "En esta guía le explicamos qué es el dictamen, qué debe contener según la ley, qué tipos de opinión existen y qué hacer si el suyo trae salvedades."
+   },
+   {
+    "t": "p",
+    "texto": "Si necesita un revisor que lo acompañe durante el año, no solo al cierre, conozca nuestro servicio de revisoría fiscal.",
+    "html": "Si necesita un revisor que lo acompañe durante el año, no solo al cierre, conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué es el dictamen del revisor fiscal?",
+    "ancla": "que-es-el-dictamen-del-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "Es la opinión profesional e independiente del revisor sobre si los estados financieros de la empresa presentan razonablemente su situación financiera y sus resultados, de acuerdo con el marco contable que le aplica."
+   },
+   {
+    "t": "p",
+    "texto": "No es una certificación de que no hay ningún error. Es una opinión basada en evidencia, que el revisor obtiene con pruebas sobre las cifras y el control interno a lo largo del año."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Quién lo recibe y cuándo?",
+    "ancla": "quien-lo-recibe-y-cuando"
+   },
+   {
+    "t": "p",
+    "texto": "El dictamen acompaña a los estados financieros de fin de ejercicio que se presentan a la asamblea ordinaria, en el primer trimestre del año. Debe quedar a disposición de los socios, junto con los estados financieros, durante los quince días hábiles anteriores a la reunión."
+   },
+   {
+    "t": "p",
+    "texto": "Después lo piden los bancos para estudiar créditos, las entidades públicas en las licitaciones y, cuando la empresa está vigilada, la superintendencia correspondiente."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué debe contener según el Código de Comercio",
+    "ancla": "que-debe-contener-segun-el-codigo-de-comercio"
+   },
+   {
+    "t": "p",
+    "texto": "El artículo 208 del Código de Comercio establece que el dictamen debe expresar, por lo menos:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Si el revisor obtuvo la información necesaria para cumplir sus funciones."
+     },
+     {
+      "texto": "Si en el curso de su revisión siguió los procedimientos aconsejados por la técnica de la interventoría de cuentas."
+     },
+     {
+      "texto": "Si en su concepto la contabilidad se lleva conforme a las normas legales y a la técnica contable, y si las operaciones registradas se ajustan a los estatutos y a las decisiones de la asamblea o junta directiva."
+     },
+     {
+      "texto": "Si el balance y el estado de resultados han sido tomados fielmente de los libros, y si en su opinión presentan en forma fidedigna la situación financiera y el resultado de las operaciones."
+     },
+     {
+      "texto": "Las reservas o salvedades que tenga sobre la fidelidad de los estados financieros."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Las normas de aseguramiento que lo regulan",
+    "ancla": "las-normas-de-aseguramiento-que-lo-regulan"
+   },
+   {
+    "t": "p",
+    "texto": "Además del Código de Comercio, el revisor aplica las normas de aseguramiento de la información adoptadas en Colombia, basadas en las Normas Internacionales de Auditoría. Las más relevantes para el dictamen son:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Norma"
+      },
+      {
+       "th": true,
+       "texto": "De qué trata"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "NIA 700"
+      },
+      {
+       "th": false,
+       "texto": "Formación de la opinión y contenido del informe"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "NIA 705"
+      },
+      {
+       "th": false,
+       "texto": "Opiniones modificadas: con salvedades, desfavorable o abstención"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "NIA 706"
+      },
+      {
+       "th": false,
+       "texto": "Párrafos de énfasis y de otras cuestiones"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "NIA 570"
+      },
+      {
+       "th": false,
+       "texto": "Empresa en funcionamiento"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Los tipos de opinión",
+    "ancla": "los-tipos-de-opinion"
+   },
+   {
+    "t": "h3",
+    "texto": "Opinión sin salvedades",
+    "ancla": "opinion-sin-salvedades"
+   },
+   {
+    "t": "p",
+    "texto": "Es la que toda empresa busca. Significa que los estados financieros presentan razonablemente, en todos los aspectos materiales, la situación de la empresa. A veces se le llama dictamen limpio."
+   },
+   {
+    "t": "h3",
+    "texto": "Opinión con salvedades",
+    "ancla": "opinion-con-salvedades"
+   },
+   {
+    "t": "p",
+    "texto": "El revisor encontró errores materiales en una parte específica de los estados financieros, o no pudo obtener evidencia suficiente sobre ella, pero el problema no afecta al conjunto. El dictamen explica cuál es la partida y por qué."
+   },
+   {
+    "t": "h3",
+    "texto": "Opinión desfavorable o adversa",
+    "ancla": "opinion-desfavorable-o-adversa"
+   },
+   {
+    "t": "p",
+    "texto": "Los errores son materiales y generalizados: los estados financieros, en su conjunto, no presentan razonablemente la situación de la empresa."
+   },
+   {
+    "t": "h3",
+    "texto": "Abstención de opinión",
+    "ancla": "abstencion-de-opinion"
+   },
+   {
+    "t": "p",
+    "texto": "El revisor no pudo obtener evidencia suficiente para formarse una opinión, y el efecto posible es generalizado. Pasa, por ejemplo, cuando la contabilidad está muy atrasada o falta información esencial."
+   },
+   {
+    "t": "h2",
+    "texto": "Párrafos de énfasis y empresa en funcionamiento",
+    "ancla": "parrafos-de-enfasis-y-empresa-en-funcionamiento"
+   },
+   {
+    "t": "p",
+    "texto": "Un dictamen sin salvedades puede incluir un párrafo de énfasis. No modifica la opinión, pero llama la atención sobre un asunto importante: un litigio grande, un cambio de política contable o una incertidumbre sobre la capacidad de la empresa para seguir operando."
+   },
+   {
+    "t": "p",
+    "texto": "Este último punto es delicado. Si el revisor tiene dudas sobre la continuidad de la empresa, debe decirlo, y los bancos lo leen con mucho cuidado."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué hacer si su dictamen trae salvedades",
+    "ancla": "que-hacer-si-su-dictamen-trae-salvedades"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Entienda la causa. Pida al revisor que le explique exactamente qué partida la origina y qué evidencia falta.",
+      "html": "<strong>Entienda la causa.</strong> Pida al revisor que le explique exactamente qué partida la origina y qué evidencia falta."
+     },
+     {
+      "texto": "Corrija lo que se pueda antes de la asamblea. Algunas salvedades se resuelven con un ajuste o un soporte.",
+      "html": "<strong>Corrija lo que se pueda antes de la asamblea.</strong> Algunas salvedades se resuelven con un ajuste o un soporte."
+     },
+     {
+      "texto": "Haga un plan para el año siguiente. Si la causa es de control interno, se corrige durante el ejercicio, no al cierre.",
+      "html": "<strong>Haga un plan para el año siguiente.</strong> Si la causa es de control interno, se corrige durante el ejercicio, no al cierre."
+     },
+     {
+      "texto": "Prepare la explicación para socios y bancos. Una salvedad explicada y con plan de acción genera menos desconfianza que una ignorada.",
+      "html": "<strong>Prepare la explicación para socios y bancos.</strong> Una salvedad explicada y con plan de acción genera menos desconfianza que una ignorada."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "La mayoría de las salvedades se originan en un cierre desordenado. Revise qué revisa el revisor fiscal en el cierre contable para prepararse.",
+    "html": "La mayoría de las salvedades se originan en un cierre desordenado. Revise <a href=\"revisor-fiscal-cierre-contable.html\">qué revisa el revisor fiscal en el cierre contable</a> para prepararse."
+   },
+   {
+    "t": "h2",
+    "texto": "Dictamen e informe a la asamblea no son lo mismo",
+    "ancla": "dictamen-e-informe-a-la-asamblea-no-son-lo-mismo"
+   },
+   {
+    "t": "p",
+    "texto": "El dictamen opina sobre los estados financieros. El informe a la asamblea va más allá: cubre el cumplimiento de la ley y los estatutos, el control interno y otros asuntos. Le explicamos su contenido en el informe del revisor fiscal a la asamblea.",
+    "html": "El dictamen opina sobre los estados financieros. El informe a la asamblea va más allá: cubre el cumplimiento de la ley y los estatutos, el control interno y otros asuntos. Le explicamos su contenido en <a href=\"informe-revisor-fiscal-asamblea.html\">el informe del revisor fiscal a la asamblea</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Su empresa necesita un dictamen para 2027?",
+    "ancla": "su-empresa-necesita-un-dictamen-para-2027"
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa estará obligada a tener revisor fiscal en 2027, o un banco le está pidiendo estados financieros dictaminados, lo ayudamos a prepararse. Empiece por nuestra evaluación de revisoría fiscal 2027.",
+    "html": "Si su empresa estará obligada a tener revisor fiscal en 2027, o un banco le está pidiendo estados financieros dictaminados, lo ayudamos a prepararse. Empiece por nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a>."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué es el dictamen del revisor fiscal?",
+    "respuesta": "Es la opinión independiente del revisor sobre si los estados financieros presentan razonablemente la situación financiera y los resultados de la empresa, según el marco contable aplicable."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué norma regula el dictamen del revisor fiscal?",
+    "respuesta": "El artículo 208 del Código de Comercio fija su contenido mínimo, y las normas de aseguramiento adoptadas en Colombia, basadas en las NIA 700, 705, 706 y 570, regulan cómo se forma y presenta la opinión."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué significa un dictamen con salvedades?",
+    "respuesta": "Que el revisor encontró errores materiales en una parte específica de los estados financieros, o no obtuvo evidencia suficiente sobre ella, sin que el problema afecte al conjunto."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuándo debe estar listo el dictamen?",
+    "respuesta": "Antes de la asamblea ordinaria, con tiempo para que quede a disposición de los socios durante los quince días hábiles previos a la reunión."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Un dictamen con salvedades afecta un crédito bancario?",
+    "respuesta": "Puede afectarlo. Los bancos revisan el dictamen y una salvedad sin explicación genera dudas. Conviene entender su causa y presentar un plan de acción."
+   }
+  ]
+ },
+ {
+  "slug": "informe-revisor-fiscal-asamblea",
+  "titulo_seo": "Informe del revisor fiscal a la asamblea: qué incluye",
+  "h1": "Informe del revisor fiscal a la asamblea: qué debe incluir y cómo leerlo",
+  "desc": "Qué contiene el informe del revisor fiscal a la asamblea de accionistas según el artículo 209 del Código de Comercio, cuándo se presenta y qué preguntas hacerle.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Revisoría fiscal",
+  "portada": "assets/img/reunion.jpg",
+  "toc": true,
+  "palabras": 809,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "En la asamblea ordinaria, el revisor fiscal no solo entrega su dictamen sobre los estados financieros. También presenta un informe sobre cómo se manejó la empresa durante el año: si se cumplieron la ley y los estatutos, si se cuidaron los bienes y si el control interno funciona."
+   },
+   {
+    "t": "p",
+    "texto": "Muchos socios lo escuchan sin hacer preguntas. Es un error: es la única voz independiente que les rinde cuentas sobre la administración. En esta guía le explicamos qué debe contener ese informe y cómo sacarle provecho."
+   },
+   {
+    "t": "p",
+    "texto": "Si busca un revisor que entregue informes útiles durante todo el año, conozca nuestro servicio de revisoría fiscal.",
+    "html": "Si busca un revisor que entregue informes útiles durante todo el año, conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué dice la ley sobre el informe a la asamblea",
+    "ancla": "que-dice-la-ley-sobre-el-informe-a-la-asamblea"
+   },
+   {
+    "t": "p",
+    "texto": "El artículo 209 del Código de Comercio establece que el informe del revisor fiscal a la asamblea o junta de socios debe expresar:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Si los actos de los administradores de la sociedad se ajustan a los estatutos y a las órdenes o instrucciones de la asamblea o junta de socios."
+     },
+     {
+      "texto": "Si la correspondencia, los comprobantes de las cuentas y los libros de actas y de registro de acciones se llevan y se conservan debidamente."
+     },
+     {
+      "texto": "Si hay y son adecuadas las medidas de control interno, de conservación y custodia de los bienes de la sociedad o de terceros que estén en su poder."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Cómo se relaciona con el dictamen",
+    "ancla": "como-se-relaciona-con-el-dictamen"
+   },
+   {
+    "t": "p",
+    "texto": "En la práctica, el dictamen y el informe suelen presentarse en un mismo documento, con secciones separadas. Pero cumplen funciones distintas:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Documento"
+      },
+      {
+       "th": true,
+       "texto": "Norma"
+      },
+      {
+       "th": true,
+       "texto": "Sobre qué opina"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Dictamen"
+      },
+      {
+       "th": false,
+       "texto": "Artículo 208 del Código de Comercio"
+      },
+      {
+       "th": false,
+       "texto": "Si los estados financieros presentan razonablemente la situación de la empresa"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Informe a la asamblea"
+      },
+      {
+       "th": false,
+       "texto": "Artículo 209 del Código de Comercio"
+      },
+      {
+       "th": false,
+       "texto": "Si la administración cumplió la ley, los estatutos y las decisiones de la asamblea, y si el control interno es adecuado"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Le explicamos los tipos de opinión en el dictamen del revisor fiscal.",
+    "html": "Le explicamos los tipos de opinión en <a href=\"dictamen-revisor-fiscal.html\">el dictamen del revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Cuándo se presenta",
+    "ancla": "cuando-se-presenta"
+   },
+   {
+    "t": "p",
+    "texto": "Se presenta en la asamblea ordinaria, que se reúne dentro de los tres primeros meses del año. La Ley 222 de 1995 exige que los estados financieros de fin de ejercicio, junto con el informe de gestión de los administradores y el dictamen del revisor, se presenten a esa reunión y queden a disposición de los socios durante los quince días hábiles anteriores."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué debería encontrar en un buen informe",
+    "ancla": "que-deberia-encontrar-en-un-buen-informe"
+   },
+   {
+    "t": "p",
+    "texto": "Más allá del mínimo legal, un informe útil para los socios incluye:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Hallazgos concretos de control interno, con su nivel de riesgo.",
+      "html": "<strong>Hallazgos concretos</strong> de control interno, con su nivel de riesgo."
+     },
+     {
+      "texto": "Recomendaciones priorizadas, con responsables y fechas sugeridas.",
+      "html": "<strong>Recomendaciones priorizadas</strong>, con responsables y fechas sugeridas."
+     },
+     {
+      "texto": "Seguimiento a las recomendaciones del año anterior: cuáles se cumplieron y cuáles siguen pendientes.",
+      "html": "<strong>Seguimiento a las recomendaciones del año anterior</strong>: cuáles se cumplieron y cuáles siguen pendientes."
+     },
+     {
+      "texto": "Cumplimiento tributario y laboral, con las contingencias identificadas.",
+      "html": "<strong>Cumplimiento tributario y laboral</strong>, con las contingencias identificadas."
+     },
+     {
+      "texto": "Cumplimiento de obligaciones especiales que apliquen a la empresa, como SAGRILAFT o PTEE.",
+      "html": "<strong>Cumplimiento de obligaciones especiales</strong> que apliquen a la empresa, como SAGRILAFT o PTEE."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si el informe de su revisor es igual todos los años, con frases genéricas y sin hallazgos, es una señal de alerta. Revise las señales para cambiar de revisor fiscal.",
+    "html": "Si el informe de su revisor es igual todos los años, con frases genéricas y sin hallazgos, es una señal de alerta. Revise las <a href=\"cambiar-revisor-fiscal.html\">señales para cambiar de revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Preguntas que los socios deberían hacer",
+    "ancla": "preguntas-que-los-socios-deberian-hacer"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "¿Cuáles fueron los tres riesgos más importantes que encontró este año?"
+     },
+     {
+      "texto": "¿Qué recomendaciones del año pasado no se han cumplido?"
+     },
+     {
+      "texto": "¿Hubo alguna limitación para acceder a la información?"
+     },
+     {
+      "texto": "¿Hay contingencias tributarias o laborales que no estén en los estados financieros?"
+     },
+     {
+      "texto": "¿Qué tan expuesta está la empresa frente a la DIAN?"
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Los informes durante el año",
+    "ancla": "los-informes-durante-el-ano"
+   },
+   {
+    "t": "p",
+    "texto": "El informe a la asamblea es el resumen anual, pero no debería ser la primera vez que la administración escucha los hallazgos. El artículo 207 del Código de Comercio obliga al revisor a dar cuenta oportuna, por escrito, de las irregularidades que encuentre. Por eso un buen revisor entrega informes periódicos a la gerencia y la junta directiva."
+   },
+   {
+    "t": "p",
+    "texto": "Repase todas las funciones del revisor fiscal para saber qué debería estar recibiendo.",
+    "html": "Repase todas <a href=\"funciones-revisor-fiscal-colombia.html\">las funciones del revisor fiscal</a> para saber qué debería estar recibiendo."
+   },
+   {
+    "t": "h2",
+    "texto": "La responsabilidad del representante legal",
+    "ancla": "la-responsabilidad-del-representante-legal"
+   },
+   {
+    "t": "p",
+    "texto": "El informe del revisor también protege a los administradores: deja constancia de lo que se revisó y de lo que se recomendó. Le explicamos cómo se reparten las responsabilidades en representante legal y revisor fiscal.",
+    "html": "El informe del revisor también protege a los administradores: deja constancia de lo que se revisó y de lo que se recomendó. Le explicamos cómo se reparten las responsabilidades en <a href=\"responsabilidad-representante-legal-revisor-fiscal.html\">representante legal y revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Llegue a la próxima asamblea con un revisor que informe de verdad",
+    "ancla": "llegue-a-la-proxima-asamblea-con-un-revisor-que-informe-de-v"
+   },
+   {
+    "t": "p",
+    "texto": "Si quiere comparar su revisor actual con una propuesta que incluya informes periódicos y seguimiento, empiece por nuestra evaluación de revisoría fiscal 2027. Y si va a contratar por primera vez, repase cómo elegir una firma de revisoría fiscal.",
+    "html": "Si quiere comparar su revisor actual con una propuesta que incluya informes periódicos y seguimiento, empiece por nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a>. Y si va a contratar por primera vez, repase <a href=\"como-elegir-firma-revisoria-fiscal.html\">cómo elegir una firma de revisoría fiscal</a>."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué debe contener el informe del revisor fiscal a la asamblea?",
+    "respuesta": "Según el artículo 209 del Código de Comercio, si los actos de los administradores se ajustan a los estatutos y a las decisiones de la asamblea, si los libros y comprobantes se llevan y conservan debidamente, y si el control interno es adecuado."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuál es la diferencia entre el dictamen y el informe del revisor fiscal?",
+    "respuesta": "El dictamen opina sobre los estados financieros (artículo 208). El informe a la asamblea opina sobre la gestión de los administradores y el control interno (artículo 209). Suelen presentarse juntos."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuándo presenta el revisor fiscal su informe?",
+    "respuesta": "En la asamblea ordinaria del primer trimestre. Los documentos deben estar a disposición de los socios durante los quince días hábiles previos a la reunión."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿El revisor fiscal solo informa una vez al año?",
+    "respuesta": "No. Debe informar por escrito y de forma oportuna las irregularidades que encuentre durante el año, a la asamblea, la junta directiva o el gerente, según el caso."
+   }
+  ]
+ },
+ {
+  "slug": "revisor-fiscal-esal-fundaciones",
+  "titulo_seo": "¿Fundaciones y ESAL deben tener revisor fiscal?",
+  "h1": "¿Las fundaciones, cooperativas y demás ESAL deben tener revisor fiscal?",
+  "desc": "Cuándo una fundación, asociación, cooperativa o fondo de empleados debe tener revisor fiscal en Colombia: lo que dice la ley, los estatutos y el régimen tributario especial.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-10",
+  "seccion": "Revisoría fiscal",
+  "portada": "assets/img/equipo.jpg",
+  "toc": true,
+  "palabras": 838,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "Las entidades sin ánimo de lucro (ESAL) generan muchas dudas sobre la revisoría fiscal. Una fundación pequeña no tiene la misma obligación que una cooperativa de ahorro, y una asociación puede necesitar revisor por sus estatutos aunque la ley no se lo exija."
+   },
+   {
+    "t": "p",
+    "texto": "En esta guía le explicamos, por tipo de entidad, cuándo es obligatorio tener revisor fiscal y en qué casos conviene tenerlo aunque no lo sea."
+   },
+   {
+    "t": "p",
+    "texto": "Si su entidad necesita revisor, conozca nuestro servicio de revisoría fiscal.",
+    "html": "Si su entidad necesita revisor, conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "La regla general para las ESAL",
+    "ancla": "la-regla-general-para-las-esal"
+   },
+   {
+    "t": "p",
+    "texto": "No existe una norma única que obligue a todas las ESAL a tener revisor fiscal. La obligación depende de tres fuentes:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "La ley especial que regula ese tipo de entidad, como pasa con cooperativas y fondos de empleados.",
+      "html": "<strong>La ley especial</strong> que regula ese tipo de entidad, como pasa con cooperativas y fondos de empleados."
+     },
+     {
+      "texto": "Los estatutos de la entidad. Muchas fundaciones y asociaciones incluyen la figura desde su constitución.",
+      "html": "<strong>Los estatutos</strong> de la entidad. Muchas fundaciones y asociaciones incluyen la figura desde su constitución."
+     },
+     {
+      "texto": "La entidad que la vigila, que puede exigirla para ciertos sectores, por ejemplo salud o educación.",
+      "html": "<strong>La entidad que la vigila</strong>, que puede exigirla para ciertos sectores, por ejemplo salud o educación."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Además, la Ley 43 de 1990 obliga a tener revisor fiscal a todas las sociedades comerciales que superen ciertos topes de activos o ingresos. Esa regla aplica a las sociedades; para las ESAL, la obligación debe revisarse caso por caso. Si su organización es una sociedad, consulte los topes para tener revisor fiscal.",
+    "html": "Además, la Ley 43 de 1990 obliga a tener revisor fiscal a todas las sociedades comerciales que superen ciertos topes de activos o ingresos. Esa regla aplica a las sociedades; para las ESAL, la obligación debe revisarse caso por caso. Si su organización es una sociedad, consulte los <a href=\"empresas-obligadas-revisor-fiscal.html\">topes para tener revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Cooperativas",
+    "ancla": "cooperativas"
+   },
+   {
+    "t": "p",
+    "texto": "Las cooperativas deben tener revisor fiscal. La Ley 79 de 1988 lo establece como órgano de fiscalización, junto con la junta de vigilancia. Lo elige la asamblea general y, en las cooperativas vigiladas por la Superintendencia de la Economía Solidaria, debe cumplir los requisitos que ella fija."
+   },
+   {
+    "t": "h2",
+    "texto": "Fondos de empleados",
+    "ancla": "fondos-de-empleados"
+   },
+   {
+    "t": "p",
+    "texto": "El Decreto Ley 1481 de 1989 también establece la revisoría fiscal como órgano de control de los fondos de empleados, elegido por la asamblea. Como en las cooperativas, las exigencias se ajustan según el nivel de supervisión de la Superintendencia de la Economía Solidaria."
+   },
+   {
+    "t": "h2",
+    "texto": "Fundaciones y asociaciones",
+    "ancla": "fundaciones-y-asociaciones"
+   },
+   {
+    "t": "p",
+    "texto": "Para las fundaciones, corporaciones y asociaciones civiles, la ley no impone el revisor fiscal de forma general. La obligación surge si:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Sus estatutos lo exigen. Es la causa más frecuente. Revise el capítulo de órganos de control.",
+      "html": "<strong>Sus estatutos lo exigen.</strong> Es la causa más frecuente. Revise el capítulo de órganos de control."
+     },
+     {
+      "texto": "Una norma especial lo pide por el sector en que operan o por la entidad que las vigila.",
+      "html": "<strong>Una norma especial lo pide</strong> por el sector en que operan o por la entidad que las vigila."
+     },
+     {
+      "texto": "Un financiador o cooperante lo exige como condición para entregar recursos, aunque en ese caso es una obligación contractual.",
+      "html": "<strong>Un financiador o cooperante lo exige</strong> como condición para entregar recursos, aunque en ese caso es una obligación contractual."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Cuando los estatutos lo exigen, la entidad debe nombrarlo e inscribirlo en la Cámara de Comercio, igual que una sociedad."
+   },
+   {
+    "t": "h2",
+    "texto": "Régimen tributario especial",
+    "ancla": "regimen-tributario-especial"
+   },
+   {
+    "t": "p",
+    "texto": "Las ESAL que quieren pertenecer o mantenerse en el régimen tributario especial del impuesto de renta deben cumplir el proceso de calificación o actualización ante la DIAN. Dentro de la información que se reporta está la identificación de los órganos de dirección y control, y algunas certificaciones requieren la firma del revisor fiscal cuando la entidad lo tiene."
+   },
+   {
+    "t": "p",
+    "texto": "Además, si la ESAL tiene revisor fiscal, sus declaraciones tributarias deben ir firmadas por él. Le explicamos el papel del revisor frente a la DIAN en revisoría fiscal y la DIAN.",
+    "html": "Además, si la ESAL tiene revisor fiscal, sus declaraciones tributarias deben ir firmadas por él. Le explicamos el papel del revisor frente a la DIAN en <a href=\"revisoria-fiscal-dian.html\">revisoría fiscal y la DIAN</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Resumen por tipo de entidad",
+    "ancla": "resumen-por-tipo-de-entidad"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Tipo de entidad"
+      },
+      {
+       "th": true,
+       "texto": "¿Debe tener revisor fiscal?"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Cooperativa"
+      },
+      {
+       "th": false,
+       "texto": "Sí, por la Ley 79 de 1988"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Fondo de empleados"
+      },
+      {
+       "th": false,
+       "texto": "Sí, por el Decreto Ley 1481 de 1989"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Fundación o asociación"
+      },
+      {
+       "th": false,
+       "texto": "Solo si lo exigen sus estatutos, una norma especial o la entidad que la vigila"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "ESAL del sector salud o educación"
+      },
+      {
+       "th": false,
+       "texto": "Revise las exigencias de la superintendencia o secretaría que la vigila"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Conviene tener revisor fiscal aunque no sea obligatorio?",
+    "ancla": "conviene-tener-revisor-fiscal-aunque-no-sea-obligatorio"
+   },
+   {
+    "t": "p",
+    "texto": "En muchas ESAL, sí. Las entidades que reciben donaciones, recursos de cooperación internacional o contratos con el Estado necesitan demostrar que manejan los recursos con transparencia. Un revisor fiscal independiente da esa confianza a donantes, financiadores y entidades públicas."
+   },
+   {
+    "t": "p",
+    "texto": "Si la entidad está decidiendo entre un auditor externo y un revisor fiscal, repase las diferencias en contador, auditor o revisor fiscal: cuál necesita.",
+    "html": "Si la entidad está decidiendo entre un auditor externo y un revisor fiscal, repase las diferencias en <a href=\"contador-auditor-revisor-fiscal-cual-necesita.html\">contador, auditor o revisor fiscal: cuál necesita</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Qué revisa el revisor fiscal en una ESAL",
+    "ancla": "que-revisa-el-revisor-fiscal-en-una-esal"
+   },
+   {
+    "t": "p",
+    "texto": "Además de las funciones generales del revisor fiscal, en una ESAL revisa con especial cuidado:",
+    "html": "Además de las <a href=\"funciones-revisor-fiscal-colombia.html\">funciones generales del revisor fiscal</a>, en una ESAL revisa con especial cuidado:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Que los recursos se destinen al objeto social y no se distribuyan excedentes."
+     },
+     {
+      "texto": "El manejo de donaciones y su soporte."
+     },
+     {
+      "texto": "Los contratos con miembros de los órganos de dirección y sus familiares."
+     },
+     {
+      "texto": "El cumplimiento de los requisitos del régimen tributario especial."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Su entidad necesita revisor fiscal?",
+    "ancla": "su-entidad-necesita-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "Si no tiene claro si su fundación, asociación o cooperativa está obligada, revisamos sus estatutos y su situación y le decimos qué aplica. Escríbanos desde nuestro servicio de revisoría fiscal o vea cómo elegir una firma de revisoría fiscal.",
+    "html": "Si no tiene claro si su fundación, asociación o cooperativa está obligada, revisamos sus estatutos y su situación y le decimos qué aplica. Escríbanos desde nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a> o vea <a href=\"como-elegir-firma-revisoria-fiscal.html\">cómo elegir una firma de revisoría fiscal</a>."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Las fundaciones están obligadas a tener revisor fiscal?",
+    "respuesta": "No de forma general. Una fundación debe tener revisor fiscal si sus estatutos lo exigen, si una norma especial lo impone por su sector o si lo pide la entidad que la vigila."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Las cooperativas deben tener revisor fiscal?",
+    "respuesta": "Sí. La Ley 79 de 1988 establece la revisoría fiscal como órgano de control de las cooperativas, elegido por la asamblea general."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Los fondos de empleados deben tener revisor fiscal?",
+    "respuesta": "Sí. El Decreto Ley 1481 de 1989 lo establece como órgano de control, elegido por la asamblea."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Una ESAL del régimen tributario especial necesita revisor fiscal?",
+    "respuesta": "No siempre. Pero si la entidad lo tiene, sus declaraciones tributarias deben ir firmadas por él, y algunas certificaciones del proceso ante la DIAN requieren su firma."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Vale la pena que una fundación pequeña tenga revisor fiscal?",
+    "respuesta": "Si recibe donaciones, recursos de cooperación o contratos con el Estado, suele valer la pena porque da confianza a quienes aportan los recursos."
    }
   ]
  }
