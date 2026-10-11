@@ -33,7 +33,7 @@ var PESTANA_CONTROL = 'Meta_CRM';
 var ZONA_HORARIA = 'America/Bogota';
 
 var META_PIXEL_ID = '4029344540722147';
-var META_VERSION = 'v21.0';
+var META_VERSION = 'v25.0';   // cada versión dura unos 2 años; revisar cuando Meta avise
 
 // Nombre con el que Meta verá la etapa de un lead que aún no tiene estado
 var ETAPA_INICIAL = 'Lead nuevo';

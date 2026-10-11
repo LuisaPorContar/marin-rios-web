@@ -77,7 +77,8 @@
   var qs = new URLSearchParams(window.location.search);
   var utm = {};
   ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'].forEach(function (k) {
-    utm[k] = (qs.get(k) || '').slice(0, 200);
+    // fbclid se envía completo y sin modificar: Meta lo exige tal cual llega
+    utm[k] = k === 'fbclid' ? (qs.get(k) || '') : (qs.get(k) || '').slice(0, 200);
   });
 
   function galleta(nombre) {

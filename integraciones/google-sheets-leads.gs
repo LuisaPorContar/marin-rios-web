@@ -71,7 +71,7 @@ var FIRMA_CARGO = 'Directora Administrativa';
 //   META_TOKEN      = token de acceso de la API de conversiones
 //   META_TEST_CODE  = código de "Probar eventos" (solo mientras se prueba; luego se borra)
 var META_PIXEL = '4029344540722147';
-var META_API = 'v21.0';
+var META_API = 'v25.0';   // cada versión dura unos 2 años; revisar cuando Meta avise
 
 var MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
              'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
