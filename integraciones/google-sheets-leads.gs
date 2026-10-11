@@ -106,7 +106,7 @@ function doGet() {
  * Columnas que llena: Mes, Fecha, Nombre, Teléfono, Correo, Empresa,
  * Tipo de persona, Rango de ventas, Conjunto de anuncios, Formulario,
  * Estado del lead (vacío) y Notas. La facturación va en "Rango de ventas"
- * y el tipo de persona siempre es "Persona jurídica (empresa)".
+ * y el tipo de persona es "Persona jurídica (empresa)" o "Persona natural".
  * Escribe por NOMBRE de columna, no por posición; una columna que no exista
  * en la hoja simplemente no se llena (no se crea).
  */
@@ -133,7 +133,7 @@ function guardarLead(p, ahora) {
     'Teléfono': p.whatsapp,
     'Correo': p.correo || '',
     'Empresa': p.empresa || '',
-    'Tipo de persona': 'Persona jurídica (empresa)',
+    'Tipo de persona': tipoDePersona(p),
     'Rango de ventas': p.ingresos || '',
     'Conjunto de anuncios': p.utm_campaign || p.utm_source || 'Directo / orgánico',
     'Formulario': p.formulario || 'Landing',
@@ -146,6 +146,15 @@ function guardarLead(p, ahora) {
   hoja.appendRow(encabezados.map(function (h) {
     return h in valores ? limpiar(valores[h]) : '';
   }));
+}
+
+// "Persona jurídica (empresa)" si el lead trae empresa; "Persona natural" si no.
+// Un formulario también puede enviarlo explícito en el campo tipo_persona.
+function tipoDePersona(p) {
+  var t = sinTildes(p.tipo_persona || '');
+  if (t.indexOf('natural') !== -1) return 'Persona natural';
+  if (t.indexOf('juridica') !== -1 || t.indexOf('empresa') !== -1) return 'Persona jurídica (empresa)';
+  return String(p.empresa || '').trim() ? 'Persona jurídica (empresa)' : 'Persona natural';
 }
 
 
@@ -175,6 +184,7 @@ function avisarAlEquipo(p, ahora) {
   var filas = [
     ['Nombre', p.nombre],
     ['Empresa', p.empresa],
+    ['Tipo de persona', tipoDePersona(p)],
     ['WhatsApp', p.whatsapp],
     ['Correo', p.correo],
     ['Ciudad', p.ciudad],
