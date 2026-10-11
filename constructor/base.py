@@ -51,7 +51,7 @@ GTM_HEAD_DIFERIDO = f"""<!-- Google Tag Manager (diferido) -->
 w[l].push({{'gtm.start':new Date().getTime(),event:'gtm.js'}});var j=d.createElement('script');j.async=true;
 j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j);}}
 ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){{w.addEventListener(e,cargar,{{once:true,passive:true}});}});
-w.addEventListener('load',function(){{setTimeout(cargar,1800);}});
+w.addEventListener('load',function(){{setTimeout(cargar,2500);}});
 }})(window,document,'dataLayer','{GTM_ID}');</script>
 <!-- End Google Tag Manager -->"""
 
@@ -418,10 +418,11 @@ def versionar_recursos(html):
 
 
 def paquete_css(nombre, hojas):
-    """Une y compacta varias hojas en /assets/css/paquete-<nombre>.css.
+    """Une y compacta varias hojas y devuelve el CSS como texto.
 
-    Las landings de pauta cargan una sola hoja en vez de cuatro: en una red
-    móvil lenta cada archivo extra retrasa el primer pintado."""
+    Las landings de pauta llevan los estilos incrustados en la página: en una
+    red móvil lenta cada archivo extra retrasa el primer pintado, y quien
+    llega desde un anuncio casi nunca tiene nada en caché."""
     import os
     raiz = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
     partes = []
@@ -432,11 +433,7 @@ def paquete_css(nombre, hojas):
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
     css = re.sub(r"\s+", " ", css)
     css = re.sub(r"\s*([{};,>])\s*", r"\1", css)
-    css = re.sub(r";}", "}", css).strip()
-    destino = f"assets/css/paquete-{nombre}.css"
-    with open(os.path.join(raiz, destino), "w", encoding="utf-8", newline="\n") as f:
-        f.write(css)
-    return destino
+    return re.sub(r";}", "}", css).strip()
 
 
 def imagenes_webp(html):
@@ -468,13 +465,13 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
     if landing is not None:
         bloque_cabecera = cabecera_landing(*landing) if landing else ""
         bloque_pie = PIE_LANDING
-        # Carga rápida: una sola hoja compacta, fuentes sin bloquear y GTM diferido
+        # Carga rápida: estilos incrustados, fuentes sin bloquear y GTM diferido
         hoja = paquete_css(archivo[:-len(".html")],
                            ["assets/css/estilo.css", "assets/css/modulos.css", *css_extra, "assets/css/movil.css"])
         bloque_estilos = (f'<link rel="preload" as="style" href="{FUENTES}">\n'
                           f'<link rel="stylesheet" href="{FUENTES}" media="print" onload="this.media=\'all\'">\n'
                           f'<noscript><link rel="stylesheet" href="{FUENTES}"></noscript>\n'
-                          f'<link rel="stylesheet" href="{hoja}">{bloque_schema}')
+                          f'<style>{hoja}</style>{bloque_schema}')
         gtm_head = GTM_HEAD_DIFERIDO
     else:
         bloque_cabecera, bloque_pie = cabecera(activo), PIE
