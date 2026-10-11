@@ -105,7 +105,8 @@ function doGet() {
  * NO cambia la estructura de la hoja: solo agrega una fila al final.
  * Columnas que llena: Mes, Fecha, Nombre, Teléfono, Correo, Empresa,
  * Tipo de persona, Rango de ventas, Conjunto de anuncios, Formulario,
- * Estado del lead (vacío) y Notas (con la facturación del cliente).
+ * Estado del lead (vacío) y Notas. La facturación va en "Rango de ventas"
+ * y el tipo de persona siempre es "Persona jurídica (empresa)".
  * Escribe por NOMBRE de columna, no por posición; una columna que no exista
  * en la hoja simplemente no se llena (no se crea).
  */
@@ -118,9 +119,8 @@ function guardarLead(p, ahora) {
             Utilities.formatDate(ahora, ZONA, 'yyyy');
 
   var fuente = [p.utm_source, p.utm_medium, p.utm_content].filter(Boolean).join(' / ');
-  // Notas: primero la facturación del cliente, luego ciudad, si califica y la fuente
+  // Notas: ciudad, si califica y la fuente (la facturación va en "Rango de ventas")
   var notas = [
-    'Facturación: ' + (p.ingresos || 'sin dato'),
     p.ciudad ? 'Ciudad: ' + p.ciudad : '',
     'Califica: ' + (p.calificado || ''),
     fuente ? 'Fuente: ' + fuente : ''
