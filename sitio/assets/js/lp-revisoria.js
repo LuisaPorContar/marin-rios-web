@@ -106,14 +106,14 @@
   function enviarAlSheet(datos) {
     if (!URL_SHEETS) return;
     var cuerpo = new URLSearchParams(datos);
-    // no-cors: Apps Script no devuelve encabezados CORS; la respuesta es
-    // opaca, pero la fila se escribe igual. keepalive asegura el envío
-    // aunque el navegador cambie de pestaña al abrir WhatsApp.
-    // Si fetch falla (bloqueador, red), se reintenta con sendBeacon.
-    var respaldo = function () { try { if (navigator.sendBeacon) navigator.sendBeacon(URL_SHEETS, cuerpo); } catch (e2) {} };
-    try {
-      fetch(URL_SHEETS, { method: 'POST', mode: 'no-cors', body: cuerpo, keepalive: true }).catch(respaldo);
-    } catch (e) { respaldo(); }
+    // Un solo envío. sendBeacon está hecho para esto: el navegador lo entrega
+    // aunque la página cambie enseguida. Solo si no existe o no lo acepta se
+    // usa fetch. (Enviar por los dos caminos duplicaba el lead.)
+    var entregado = false;
+    try { entregado = !!(navigator.sendBeacon && navigator.sendBeacon(URL_SHEETS, cuerpo)); } catch (e) {}
+    if (!entregado) {
+      try { fetch(URL_SHEETS, { method: 'POST', mode: 'no-cors', body: cuerpo, keepalive: true }).catch(function () {}); } catch (e2) {}
+    }
   }
 
   function mostrar(id) {

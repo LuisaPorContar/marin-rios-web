@@ -91,6 +91,13 @@ function doPost(e) {
   var bloqueo = LockService.getScriptLock();
   bloqueo.waitLock(20000);
   try {
+    // Si el mismo envío llega dos veces (doble clic, reintento del navegador),
+    // el segundo se ignora: no duplica la fila, los correos ni el aviso a Meta.
+    if (p.event_id) {
+      var memoria = CacheService.getScriptCache();
+      if (memoria.get('lead_' + p.event_id)) return respuesta({ ok: true, repetido: true });
+      memoria.put('lead_' + p.event_id, '1', 21600);   // 6 horas
+    }
     guardarLead(p, ahora);
   } finally {
     bloqueo.releaseLock();
