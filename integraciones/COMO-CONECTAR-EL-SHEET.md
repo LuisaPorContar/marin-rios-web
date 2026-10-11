@@ -92,18 +92,35 @@ propiedades del script.
   Así la columna *Conjunto de anuncios* se llena sola.
 - Optimiza la campaña por el evento **Lead** (Cliente potencial).
 
-## Correo de bienvenida
+## Correos que envía el script
 
-Al recibir un formulario con correo, el script envía **un solo correo** de
-bienvenida (texto distinto si la empresa califica o no). Ya no existe la
-secuencia de recuperación de día 1, 3 y 7.
+| Correo | A quién | Cuándo |
+|---|---|---|
+| Aviso de lead nuevo, con todos los datos del cliente | Al equipo (`AVISAR_A`) | Siempre, califique o no |
+| Bienvenida | Al cliente | Solo si la empresa califica |
 
-- Para ver cómo queda: ejecuta `probarBienvenida` (te llega a tu propia cuenta).
-- Para apagarlo: cambia `CORREO_ACTIVO` a `false` al inicio del script.
-- Si antes estaba la secuencia de recuperación: ejecuta **una vez**
-  `quitarTriggerRecuperacion` para borrar el disparador diario. Si no, Google
-  enviará un correo de error cada mañana.
-- La primera vez Google pedirá permiso para enviar correos en tu nombre.
+Si la empresa **no califica**, al cliente no se le envía nada: el aviso le
+llega al equipo y lo maneja el comercial.
+
+**De dónde salen:** de la cuenta de Google que publica el script (la que elige
+"Ejecutar como: Yo"). El cliente ve esa dirección como remitente, así que
+conviene publicarlo desde una cuenta de la empresa y no desde una personal.
+Las respuestas del cliente llegan a `RESPONDER_A`.
+
+Ajustes al inicio del script:
+
+- `AVISAR_A`: correo de quien recibe los avisos (varios separados por coma).
+  Vacío = le llegan a la cuenta dueña del script.
+- `RESPONDER_A`: a dónde llegan las respuestas del cliente a la bienvenida.
+- `CORREO_ACTIVO`: `false` apaga la bienvenida (el aviso al equipo sigue).
+
+Pruebas desde el editor: `probarAviso` y `probarBienvenida`.
+
+Si antes estaba la secuencia de recuperación (día 1, 3 y 7): ejecuta **una
+vez** `quitarTriggerRecuperacion` para borrar el disparador diario. Si no,
+Google enviará un correo de error cada mañana.
+
+Límite de Google: unos 100 correos al día en cuentas Gmail gratuitas.
 
 ## Si cambias el script
 

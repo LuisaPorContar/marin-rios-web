@@ -425,13 +425,12 @@ PAGINAS.append(dict(
 PAGINAS.append(dict(
     archivo=f"{GRACIAS_PEQ}.html",
     titulo="Gracias por escribirnos | Marín Ríos Consultores",
-    descripcion="Gracias por escribirnos. Te dejamos una guía para mantener tu contabilidad en orden.",
+    descripcion="Gracias por escribirnos. Un asesor te contactará.",
     activo="", og_img="oficina-atardecer.jpg", robots=NOINDEX, schema="",
     cuerpo=_pagina_gracias(
         "no-calificado",
-        "Gracias por escribirnos",
-        "Por el tamaño de tu empresa, hoy no estás obligada a tener revisor fiscal. Te dejamos una guía para mantener tu contabilidad en orden y cumplir con la DIAN. Si quieres que revisemos tu caso, también podemos hablar.",
-        f'<a class="lp-btn" href="{GUIA_PEQUENAS}">Ver la guía{ICO["flecha"]}</a>'
-        f'<a class="lp-btn lp-btn--contorno" data-wa-lead href="{_WA_GENERICO}" target="_blank" rel="noopener">Hablar por WhatsApp</a>'),
+        "Gracias, <em>ya tenemos tus datos</em>",
+        "Un asesor de nuestro equipo revisará tu caso y te contactará por WhatsApp.",
+        f'<a class="lp-btn lp-btn--contorno" data-wa-lead href="{_WA_GENERICO}" target="_blank" rel="noopener">Escribir por WhatsApp</a>'),
     clase_body="lp", css_extra=("assets/css/lp-revisoria.css",), landing=(),
 ))
