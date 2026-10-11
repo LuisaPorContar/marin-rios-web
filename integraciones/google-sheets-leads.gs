@@ -36,13 +36,13 @@ var REMITENTE = 'marketingmarinrios@gmail.com';
 // Aviso interno: a quién le llega el correo cada vez que entra un lead.
 // Varios correos separados por coma. Si se deja vacío, le llega a la cuenta
 // de Google dueña de este script.
-var AVISAR_A = '';
+var AVISAR_A = 'maribel@marinriosconsultores.com';
 
 // Correo de bienvenida al cliente (solo leads calificados)
 var CORREO_ACTIVO = true;
 // A qué correo llegan las respuestas del cliente a la bienvenida.
 // Vacío = al mismo REMITENTE.
-var RESPONDER_A = '';
+var RESPONDER_A = 'maribel@marinriosconsultores.com';
 var NUMERO_WHATSAPP = '573044176934';
 var FIRMA_NOMBRE = 'Maribel';
 var FIRMA_CARGO = 'Directora Administrativa';
