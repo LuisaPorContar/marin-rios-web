@@ -357,12 +357,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input id="lp-empresa" name="empresa" type="text" autocomplete="organization" required maxlength="120">
           </div>
           <div class="lp-campo">
-          <label for="lp-cargo">Cargo</label>
-          <select id="lp-cargo" name="cargo" required>
-            <option value="" selected disabled>Elige una opción</option>
-            <option value="Gerente general o representante legal">Gerente general o representante legal</option><option value="Socio o accionista">Socio o accionista</option><option value="Gerente financiero o administrativo">Gerente financiero o administrativo</option><option value="Contador">Contador</option><option value="Otro">Otro</option>
-          </select>
-        </div>
+            <label for="lp-correo">Correo</label>
+            <input id="lp-correo" name="correo" type="email" inputmode="email" autocomplete="email" required maxlength="120" placeholder="nombre@empresa.com">
+          </div>
+          <div class="lp-campo">
+            <label for="lp-whatsapp">WhatsApp</label>
+            <input id="lp-whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" required
+                   pattern="[0-9]{10,13}" maxlength="13" placeholder="3001234567"
+                   title="Solo números, sin espacios. Ejemplo: 3001234567">
+          </div>
           <div class="lp-campo">
           <label for="lp-ciudad">Ciudad</label>
           <select id="lp-ciudad" name="ciudad" required>
@@ -377,18 +380,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <option value="Menos de $1.000 millones">Menos de $1.000 millones</option><option value="$1.000 a $5.000 millones">$1.000 a $5.000 millones</option><option value="$5.000 a $20.000 millones">$5.000 a $20.000 millones</option><option value="Más de $20.000 millones">Más de $20.000 millones</option>
           </select>
         </div>
-          <div class="lp-campo">
-          <label for="lp-revisor">¿Tienen revisor fiscal hoy?</label>
-          <select id="lp-revisor" name="revisor" required>
-            <option value="" selected disabled>Elige una opción</option>
-            <option value="Sí, persona natural">Sí, persona natural</option><option value="Sí, una firma">Sí, una firma</option><option value="No">No</option>
-          </select>
-        </div>
-          <div class="lp-campo lp-campo--ancho">
-            <label for="lp-whatsapp">WhatsApp</label>
-            <input id="lp-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required
-                   pattern="[0-9 +()-]{7,20}" placeholder="300 123 4567">
-          </div>
           <!-- Trampa para bots: los humanos no ven este campo -->
           <div class="lp-trampa" aria-hidden="true">
             <label for="lp-web">No llenar</label>
@@ -403,7 +394,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<script src="/assets/js/lp-revisoria.js?v=e5d41e80" defer></script>
+<script src="/assets/js/lp-revisoria.js?v=c86e9189" defer></script>
 
 
 </main>
