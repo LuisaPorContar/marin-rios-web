@@ -714,3 +714,8 @@
 .lp-datos span { font-size: .96rem; }
 .lp .acordeon p, .lp-faq p { font-size: 1.05rem; }
 .lp-form__legal { font-size: .9rem; }
+
+/* Letra un poco más grande en toda la landing (esta hoja solo carga aquí).
+   Casi todos los tamaños están en rem, así que suben juntos. */
+html { font-size: 107%; }
+@media (max-width: 680px) { html { font-size: 109%; } }
