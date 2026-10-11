@@ -691,3 +691,12 @@
   .lp-heroe--cols .lp-heroe__sub, .lp-heroe--cols .lp-heroe__desc, .lp-heroe--cols .lp-heroe__prueba { margin-inline: 0; max-width: 52ch; }
   .lp-heroe--cols .lp-vvideo, .lp-heroe--cols .lp-vvideo__marco { width: 100%; margin-inline: 0; justify-self: end; }
 }
+
+/* Textos nuevos: persona a cargo, listas sin encabezado y cierre de la oferta */
+.lp-heroe--cols h1 { max-width: 19ch; }
+.lp-persona__nombre { margin-top: var(--sp-3); font-family: var(--display); font-weight: 800; font-size: 1.5rem; color: #fff; letter-spacing: -.02em; }
+.lp-persona__rol { margin-top: .3rem; color: var(--l-acento); font-weight: 600; }
+.lp-oferta__lista--sola { margin-top: 0; padding-top: 0; border-top: 0; }
+.lp-resumen .lp-oferta__lista--sola { padding-bottom: var(--sp-3); }
+.lp-resumen__hoy--texto { font-size: 1.05rem; }
+.lp-seccion .lp-heroe__media--retrato { margin-top: var(--sp-4); }

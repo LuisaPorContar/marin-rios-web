@@ -166,7 +166,7 @@ PREGUNTAS = [
     ("¿Cuánto cuesta?",
      "La evaluación no tiene costo. El valor de la revisoría depende del tamaño de tu empresa, del sector y de las horas que exija; por eso te lo entregamos por escrito después de revisarla."),
     ("¿Qué incluye la evaluación?",
-     "La confirmación de si estás obligado en 2027, un mapa de los riesgos que hoy tienes frente a la DIAN y la Supersociedades, y una propuesta con alcance, horas y honorarios lista para tu asamblea."),
+     "La confirmación de si estás obligado en 2027, un diagnóstico inicial de tu contabilidad y una propuesta con alcance, cronograma de precierre y honorarios, lista para tu asamblea."),
     ("Ya tengo revisor fiscal. ¿Puedo cambiarlo?",
      "Sí. El revisor lo nombra la asamblea, así que la reunión ordinaria es el momento natural para cambiarlo. Te ayudamos a preparar el empalme para que no quede ningún informe pendiente."),
     ("¿Qué pasa después de la evaluación?",
@@ -176,17 +176,17 @@ PREGUNTAS = [
 ]
 
 cuerpo = f"""
-<!-- ===================== 1. HÉROE =====================
+<!-- ===================== 1. GANCHO =====================
      Dos columnas en escritorio (texto · video); apilado en celular. -->
 <section class="lp-heroe lp-heroe--cols">
   <div class="lp-contenedor">
     <img class="lp-heroe__logo" src="assets/img/logo-marin-rios.png" alt="Marín Ríos Consultores" width="90" height="80">
     <div class="lp-heroe__rejilla">
       <div class="lp-heroe__texto">
-        <p class="lp-etiqueta">Empresas que facturaron más de {TOPE_INGRESOS} en 2026</p>
-        <h1>Sin revisor fiscal en 2027, <em>la DIAN da tus declaraciones por no presentadas</em></h1>
-        <p class="lp-heroe__sub">Pagas sanción por extemporaneidad, intereses y una multa de la Supersociedades que llega a {MULTA_SUPER}. Y ante tus socios, el que responde eres tú.</p>
-        <p class="lp-heroe__desc">Agenda la evaluación gratuita: en {DURACION_EVALUACION} un contador público te dice si estás obligado, qué riesgos tienes hoy frente a la DIAN y te entrega una propuesta escrita para tu asamblea de marzo.</p>
+        <p class="lp-etiqueta">Revisoría fiscal 2027</p>
+        <h1>¿Tu empresa supera este año los {TOPE_INGRESOS} en facturación?</h1>
+        <p class="lp-heroe__sub">Si la respuesta es sí, <span class="lp-acento">por ley estás obligado a nombrar un revisor fiscal para el próximo año.</span></p>
+        <p class="lp-heroe__desc">Evita sanciones por extemporaneidad con la DIAN o firmas a las carreras en marzo. Asegura un equipo de auditoría antes del cierre contable del 31 de diciembre.</p>
         {_boton()}
         <p class="lp-heroe__prueba">Con el equipo que ya acompaña a <strong>más de 50 empresas</strong>.</p>
       </div>
@@ -199,116 +199,106 @@ cuerpo = f"""
   </div>
 </section>
 
-<!-- ===================== 2. LOGOS ===================== -->
+<!-- ===================== 2. QUÉ HACEMOS ===================== -->
+<section class="lp-seccion lp-seccion--corta">
+  <div class="lp-contenedor lp-centro lp-angosto">
+    <h2 class="lp-titulo">Auditoría preventiva y dictamen legal para empresas en crecimiento</h2>
+    <p class="lp-texto">No somos una firma que aparece únicamente en marzo a firmar estados financieros sin revisar. Evaluamos tu contabilidad de manera continua durante el último trimestre para asegurar que tu cierre de año sea transparente, cumpla con la normativa de la DIAN y esté listo para la asamblea de socios.</p>
+  </div>
+</section>
+
+<!-- ===================== 3. RESPALDOS ===================== -->
 <section class="lp-logos">
-  <p class="lp-logos__titulo">Empresas de Antioquia y el Eje Cafetero que ya confían en nosotros</p>
+  <p class="lp-logos__titulo">Empresas que confían sus estados financieros en nosotros</p>
   {carrusel_clientes("oscuro")}
 </section>
 
-<!-- ===================== 3. LO QUE DICEN (video) ===================== -->
-{_video()}
-
-<!-- ===================== 4. QUIÉNES ===================== -->
+<!-- ===================== 4. QUIÉN REVISA ===================== -->
 <section class="lp-seccion">
-  <div class="lp-contenedor lp-centro">
-    <h2 class="lp-titulo">Un revisor que solo firma te deja solo cuando llega la DIAN</h2>
-    <p class="lp-texto">Aparece en marzo, firma y desaparece. El requerimiento llega en agosto y nadie te avisó. Los que revisan tu empresa con nosotros dan la cara todo el año.</p>
-    <div class="lp-rejilla-2 revelar">
-      <article class="lp-tarjeta lp-tarjeta--fila"><span class="lp-ico">{ICONO['persona']}</span><div><h3>Un responsable con nombre propio</h3><p>Se acabó perseguir a un revisor que no contesta. Hablas siempre con el mismo contador, que conoce tu empresa.</p></div></article>
-      <article class="lp-tarjeta lp-tarjeta--fila"><span class="lp-ico">{ICONO['campana']}</span><div><h3>Alertas antes de la sanción</h3><p>Te enteras del riesgo por nosotros, no por un requerimiento de la DIAN cuando ya no hay nada que corregir.</p></div></article>
-      <article class="lp-tarjeta lp-tarjeta--fila"><span class="lp-ico">{ICONO['informe']}</span><div><h3>Informes que tus socios entienden</h3><p>Nada de documentos genéricos que nadie lee. Hallazgos claros para la gerencia, la junta y el banco.</p></div></article>
-      <article class="lp-tarjeta lp-tarjeta--fila"><span class="lp-ico">{ICONO['pin']}</span><div><h3>Presencia en tu ciudad</h3><p>No una visita al año: revisión durante todo el ejercicio en Medellín, Pereira, Armenia y Manizales.</p></div></article>
+  <div class="lp-contenedor lp-centro lp-angosto">
+    <h2 class="lp-titulo">El especialista a cargo de tu revisión</h2>
+    <div class="lp-heroe__media lp-heroe__media--retrato revelar">
+      <img src="assets/img/asesor.png" alt="Juan David Marín Ríos, gerente de Marín Ríos Consultores" width="647" height="900" loading="lazy">
     </div>
+    <p class="lp-persona__nombre">Juan David Marín Ríos</p>
+    <p class="lp-persona__rol">Gerente · Contador público especialista en finanzas tributarias</p>
   </div>
 </section>
 
-<!-- ===================== 5. EL SISTEMA DE 3 PARTES ===================== -->
+<!-- ===================== 5. CRONOGRAMA ===================== -->
 <section class="lp-seccion">
   <div class="lp-contenedor lp-centro">
-    <h2 class="lp-titulo">El sistema de 3 partes para llevarte de la duda a la decisión</h2>
-    <p class="lp-texto">Hoy no sabes si estás obligado, qué vería primero la DIAN ni qué decirles a tus socios en marzo. Cada parte resuelve una de esas tres preguntas. Sin teoría y sin discurso comercial.</p>
+    <h2 class="lp-titulo">Plan de acción de 3 meses para un cierre contable sin contingencias</h2>
     <ol class="lp-partes revelar">
       <li>
         <span class="lp-ico lp-ico--grande">{ICONO['lupa']}</span>
-        <div><h3>Parte 1: ¿Estoy obligado?</h3><p class="lp-partes__bajada">Deja de suponer. Sal de la duda en la primera conversación.</p><p>Revisamos tus ingresos, tus activos y tu tipo de sociedad frente a los topes de 2027.</p></div>
+        <div><h3>Octubre y noviembre</h3><p class="lp-partes__bajada">Auditoría de precierre.</p><p>Revisamos la contabilidad acumulada del año. Detectamos inconsistencias en retenciones, IVA o facturación electrónica para corregirlas antes del 31 de diciembre.</p></div>
       </li>
       <li>
-        <span class="lp-ico lp-ico--grande">{ICONO['alerta']}</span>
-        <div><h3>Parte 2: ¿Qué riesgos tengo?</h3><p class="lp-partes__bajada">Encuentra el problema antes de que lo encuentre la DIAN.</p><p>Leemos tus estados financieros y te mostramos las inconsistencias que la DIAN detecta al cruzar factura, nómina y exógena.</p></div>
+        <span class="lp-ico lp-ico--grande">{ICONO['activos']}</span>
+        <div><h3>Diciembre</h3><p class="lp-partes__bajada">Verificación de inventarios y activos.</p><p>Validamos los saldos reales de la empresa para evitar descuadres en el balance de fin de año.</p></div>
       </li>
       <li>
         <span class="lp-ico lp-ico--grande">{ICONO['documento']}</span>
-        <div><h3>Parte 3: ¿Qué llevo a la asamblea?</h3><p class="lp-partes__bajada">No improvises frente a tus socios. Llega con la decisión tomada.</p><p>Propuesta escrita con alcance, horas y honorarios, lista para presentar a tus socios.</p></div>
+        <div><h3>Enero y febrero</h3><p class="lp-partes__bajada">Dictamen final.</p><p>Emitimos el informe legal y firmamos las declaraciones obligatorias, listas para la aprobación de la asamblea de accionistas.</p></div>
       </li>
     </ol>
-    {_boton("Agendar mi evaluación gratuita")}
+    {_boton()}
   </div>
 </section>
 
-<!-- ===================== 6. LO QUE OBTIENES ===================== -->
+<!-- ===================== 6. ENTREGABLES ===================== -->
 <section class="lp-seccion">
   <div class="lp-contenedor lp-centro">
-    <h2 class="lp-titulo">Esto es exactamente lo que obtienes cuando agendas la evaluación</h2>
+    <h2 class="lp-titulo">Lo que recibe tu empresa al contratarnos</h2>
     <div class="lp-oferta revelar">
-      <p class="lp-oferta__nombre">Evaluación de revisoría fiscal 2027</p>
-      <p class="lp-oferta__precio">Inversión de <strong>$0</strong></p>
-      <p>{DURACION_EVALUACION[0].upper() + DURACION_EVALUACION[1:]} con un contador público de la firma, sobre las cifras reales de tu empresa.</p>
-      <p>No es una llamada de ventas: es la misma revisión con la que arrancamos cualquier revisoría, aplicada a tu caso.</p>
-      <ul class="lp-oferta__lista">
-        <li>{ICONO['check']}<span>Confirmación por escrito de si estás obligado en 2027</span></li>
-        <li>{ICONO['check']}<span>Mapa de riesgos frente a la DIAN y la Supersociedades</span></li>
-        <li>{ICONO['check']}<span>Propuesta con alcance, horas y honorarios, en {DIAS_PROPUESTA}</span></li>
+      <ul class="lp-oferta__lista lp-oferta__lista--sola">
+        <li>{ICONO['check']}<span>Dictamen y firma de estados financieros con validez legal ante entes de control y bancos.</span></li>
+        <li>{ICONO['check']}<span>Informes mensuales de control interno dirigidos a la gerencia y la junta directiva.</span></li>
+        <li>{ICONO['check']}<span>Validación previa de las declaraciones tributarias antes de presentarlas a la DIAN.</span></li>
       </ul>
-    </div>
-    {_boton("Agendar mi evaluación gratuita")}
-  </div>
-</section>
-
-<!-- ===================== 7. ¿POR QUÉ HAGO ESTO? ===================== -->
-<section class="lp-seccion">
-  <div class="lp-contenedor lp-centro lp-angosto">
-    <h2 class="lp-titulo">¿Por qué hago esto?</h2>
-    <div class="lp-heroe__media lp-heroe__media--retrato revelar">
-      <img src="assets/img/asesor.png" alt="Juan David Marín, contador público y director de Marín Ríos Consultores" width="647" height="900" loading="lazy">
-    </div>
-    <div class="lp-carta__texto">
-      <p>Soy Juan David Marín, contador público y director de Marín Ríos Consultores.</p>
-      <p>Cada marzo veo lo mismo: empresas que llegan a la asamblea sin saber qué revisor necesitan. Eligen por precio o por una recomendación de última hora.</p>
-      <p>Meses después llega el requerimiento de la DIAN, el revisor no contesta y el gerente termina dando explicaciones a sus socios por una decisión que tomó en diez minutos.</p>
-      <p>Pero pasa algo: cuando un gerente ve cómo leemos sus números antes de firmar nada, casi siempre se queda. Y nos recomienda a sus socios y a otras empresas.</p>
-      <p>Mi incentivo es simple: mientras más claro salgas de la evaluación, más probable es que trabajemos juntos.</p>
-      <p class="lp-carta__firma"><strong>Juan David Marín</strong> · Director, Marín Ríos Consultores</p>
-    </div>
-    <div class="lp-datos">
-      <div><strong>+50</strong><span>Empresas acompañadas</span></div>
-      <div><strong>4</strong><span>Ciudades con atención presencial</span></div>
     </div>
     {_boton()}
   </div>
 </section>
 
-<!-- ===================== 8. EN PERSPECTIVA ===================== -->
+<!-- ===================== 7. POR QUÉ NOSOTROS ===================== -->
 <section class="lp-seccion">
   <div class="lp-contenedor lp-centro lp-angosto">
-    <h2 class="lp-titulo">Solo para ponerlo en perspectiva</h2>
-    <p class="lp-texto">Hoy la DIAN cruza tu facturación electrónica, tu nómina electrónica y la exógena en segundos. Una declaración sin la firma del revisor fiscal se tiene por no presentada: sanción por extemporaneidad más intereses, mes tras mes. La Supersociedades puede sumar multas de hasta <strong class="lp-acento">{MULTA_SUPER}</strong>. Los bancos no reciben estados financieros sin dictamen. Y un revisor elegido a la carrera te cuesta un año entero de informes que no sirven.</p>
-    <p class="lp-perspectiva">Tú lo evitas en una reunión de {DURACION_EVALUACION}, sin costo.</p>
+    <h2 class="lp-titulo">Tu contador necesita un segundo par de ojos</h2>
+    <div class="lp-carta__texto">
+      <p>El departamento contable interno suele estar desbordado con el día a día, la nómina y la facturación.</p>
+      <p>Nuestro rol como revisores fiscales no es juzgar su trabajo, sino actuar como un filtro de seguridad independiente.</p>
+      <p>Nos aseguramos de que lo que se declare coincida con la realidad del negocio, y así reducimos el riesgo de requerimientos de la DIAN por errores de digitación o de criterio.</p>
+    </div>
+    <div class="lp-datos">
+      <div><strong>+50</strong><span>Empresas acompañadas</span></div>
+      <div><strong>100 %</strong><span>Calendario DIAN cumplido</span></div>
+    </div>
   </div>
 </section>
 
-<!-- ===================== 9. RESUMEN RÁPIDO ===================== -->
+<!-- ===================== 8. CONTRASTE DE COSTOS ===================== -->
+<section class="lp-seccion">
+  <div class="lp-contenedor lp-centro lp-angosto">
+    <h2 class="lp-titulo">El costo de la prevención frente al costo de un error</h2>
+    <p class="lp-texto">Una sanción de la DIAN por inexactitud, o por presentar declaraciones sin la firma obligatoria del revisor fiscal, puede superar fácilmente los <strong class="lp-acento">$20 millones</strong>, sin contar los intereses de mora.</p>
+    <p class="lp-perspectiva">Contratar una revisoría fiscal a tiempo en este trimestre cuesta una fracción de eso y elimina el riesgo reputacional de la empresa.</p>
+  </div>
+</section>
+
+<!-- ===================== 9. RESUMEN DE LA OFERTA ===================== -->
 <section class="lp-seccion">
   <div class="lp-contenedor lp-centro">
-    <h2 class="lp-titulo">Resumen rápido de todo lo que obtienes con la evaluación</h2>
+    <h2 class="lp-titulo">Resumen de la oferta</h2>
     <div class="lp-resumen revelar">
-      <ul class="lp-valor">
-        <li><span>Confirmación de obligación 2027</span><strong>Incluido</strong></li>
-        <li><span>Mapa de riesgos DIAN y Supersociedades</span><strong>Incluido</strong></li>
-        <li><span>Propuesta escrita para la asamblea</span><strong>Incluido</strong></li>
+      <ul class="lp-oferta__lista lp-oferta__lista--sola">
+        <li>{ICONO['check']}<span>Auditoría de precierre y diagnóstico inicial.</span></li>
+        <li>{ICONO['check']}<span>Dictamen legal de estados financieros de fin de año.</span></li>
+        <li>{ICONO['check']}<span>Acompañamiento continuo y firma de obligaciones tributarias.</span></li>
       </ul>
-      <a class="lp-resumen__hoy" href="{ANCLA}">Total: $0</a>
+      <a class="lp-resumen__hoy lp-resumen__hoy--texto" href="{ANCLA}">Empieza con una evaluación gratuita</a>
     </div>
-    {_boton("Agendar mi evaluación gratuita")}
   </div>
 </section>
 
@@ -343,8 +333,8 @@ cuerpo = f"""
       <form class="lp-form" id="lp-form" novalidate
             data-sheets="{SHEETS_URL}" data-wa="{WA}"
             data-gracias-ok="/{GRACIAS_OK}/" data-gracias-peq="/{GRACIAS_PEQ}/">
-        <h2 class="lp-titulo">Agenda tu evaluación antes de que la asamblea decida a la carrera</h2>
-        <p class="lp-texto">Toma menos de un minuto. Te escribimos por WhatsApp en menos de 24 horas hábiles.</p>
+        <h2 class="lp-titulo">Asegura tu revisor fiscal antes del 31 de diciembre</h2>
+        <p class="lp-texto">Empieza con una evaluación gratuita. Toma menos de un minuto y te escribimos por WhatsApp en menos de 24 horas hábiles.</p>
         <div class="lp-form__campos">
           <div class="lp-campo">
             <label for="lp-nombre">Nombre</label>
