@@ -188,3 +188,18 @@ document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('a[href*="wa.me"], a[href^="tel:"]');
   if (a && window.fbq) fbq('track', 'Contact', { content_category: 'Servicios profesionales', contact_method: a.href.indexOf('tel:') === 0 ? 'llamada' : 'whatsapp' });
 });
+
+/* Barra fija de celular: se muestra después de bajar un poco más de media pantalla */
+(function () {
+  var barra = document.querySelector('.barra-movil');
+  if (!barra) return;
+  var pendiente = false;
+  function revisar() {
+    pendiente = false;
+    barra.classList.toggle('barra-movil--visible', window.scrollY > window.innerHeight * 0.6);
+  }
+  window.addEventListener('scroll', function () {
+    if (!pendiente) { pendiente = true; requestAnimationFrame(revisar); }
+  }, { passive: true });
+  revisar();
+})();
