@@ -436,14 +436,57 @@ def paquete_css(nombre, hojas):
     return re.sub(r";}", "}", css).strip()
 
 
+_ANCHOS = {}
+
+
+def _version_movil(ruta):
+    """Devuelve (ruta_800, ancho_original) de una imagen ancha, creando la
+    versión de 800 px si falta. None si la imagen ya es pequeña."""
+    import os
+    if ruta in _ANCHOS:
+        return _ANCHOS[ruta]
+    raiz = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
+    origen = os.path.join(raiz, ruta.lstrip("/"))
+    res = None
+    try:
+        from PIL import Image
+        with Image.open(origen) as im:
+            ancho, alto = im.size
+            if ancho >= 1100:
+                chica = ruta[:-len(".webp")] + "-800.webp"
+                destino = os.path.join(raiz, chica.lstrip("/"))
+                if not os.path.exists(destino) or os.path.getmtime(destino) < os.path.getmtime(origen):
+                    im.convert("RGB").resize((800, round(alto * 800 / ancho)), Image.LANCZOS).save(destino, quality=72, method=6)
+                res = (chica, ancho)
+    except Exception:
+        res = None
+    _ANCHOS[ruta] = res
+    return res
+
+
 def imagenes_webp(html):
     """Apunta las imágenes a su versión WebP.
 
     Los archivos del sitio se convirtieron a WebP (la mitad de peso), pero los
     módulos siguen nombrándolas como .jpg o .png porque así se leen mejor. La
     traducción se hace aquí, en un solo sitio, igual que con los enlaces.
+
+    A las fotos anchas les agrega además una versión de 800 px para celular.
     """
-    return re.sub(r'(/assets/img/[^"\']+?)\.(?:jpe?g|png)\b', r'\1.webp', html)
+    html = re.sub(r'(/assets/img/[^"\']+?)\.(?:jpe?g|png)\b', r'\1.webp', html)
+
+    def con_srcset(m):
+        etiqueta, ruta = m.group(0), m.group(1)
+        if "srcset=" in etiqueta:
+            return etiqueta
+        v = _version_movil(ruta)
+        if not v:
+            return etiqueta
+        chica, ancho = v
+        return etiqueta.replace(
+            f'src="{ruta}"',
+            f'src="{ruta}" srcset="{chica} 800w, {ruta} {ancho}w" sizes="(max-width: 800px) 70vw, {ancho}px"', 1)
+    return re.sub(r'<img\b[^>]*?\bsrc="(/assets/img/[^"]+\.webp)"[^>]*>', con_srcset, html)
 
 
 def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img="equipo-ancho.jpg",
@@ -465,21 +508,20 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
     if landing is not None:
         bloque_cabecera = cabecera_landing(*landing) if landing else ""
         bloque_pie = PIE_LANDING
-        # Carga rápida: estilos incrustados, fuentes sin bloquear y GTM diferido
-        hoja = paquete_css(archivo[:-len(".html")],
-                           ["assets/css/estilo.css", "assets/css/modulos.css", *css_extra, "assets/css/movil.css"])
-        bloque_estilos = (f'<link rel="preload" as="style" href="{FUENTES}">\n'
-                          f'<link rel="stylesheet" href="{FUENTES}" media="print" onload="this.media=\'all\'">\n'
-                          f'<noscript><link rel="stylesheet" href="{FUENTES}"></noscript>\n'
-                          f'<style>{hoja}</style>{bloque_schema}')
-        gtm_head = GTM_HEAD_DIFERIDO
     else:
         bloque_cabecera, bloque_pie = cabecera(activo), PIE
-        bloque_estilos = (f'<link href="{FUENTES}" rel="stylesheet">\n'
-                          f'<link rel="stylesheet" href="assets/css/estilo.css">\n'
-                          f'<link rel="stylesheet" href="assets/css/modulos.css">{bloque_fuentes}{bloque_css}\n'
-                          f'<link rel="stylesheet" href="assets/css/movil.css">{bloque_schema}')
-        gtm_head = GTM_HEAD
+    # Carga rápida: los estilos van compactos e incrustados (nada bloquea el
+    # primer pintado), las fuentes llegan sin frenar el texto y Tag Manager
+    # arranca después de que la página ya se ve.
+    hoja = paquete_css(archivo[:-len(".html")],
+                       ["assets/css/estilo.css", "assets/css/modulos.css", *css_extra, "assets/css/movil.css"])
+    fuentes = [FUENTES] + ([fuentes_extra] if fuentes_extra else [])
+    bloque_estilos = "".join(
+        f'<link rel="preload" as="style" href="{f}">\n'
+        f'<link rel="stylesheet" href="{f}" media="print" onload="this.media=\'all\'">\n'
+        f'<noscript><link rel="stylesheet" href="{f}"></noscript>\n' for f in fuentes
+    ) + f'<style>{hoja}</style>{bloque_schema}'
+    gtm_head = GTM_HEAD_DIFERIDO
     return versionar_recursos(imagenes_webp(enlaces_absolutos(f"""<!DOCTYPE html>
 <html lang="es-CO">
 <head>
