@@ -45,6 +45,10 @@ DIAS_PROPUESTA = "3 días hábiles"
 # Ley 222 de 1995, art. 86: multas hasta 200 SMMLV (200 × 1.750.905 = 350.181.000).
 MULTA_SUPER = "$350 millones"
 
+# Páginas de gracias: una URL por tipo de lead para medir la conversión en Meta.
+GRACIAS_OK = "gracias-evaluacion-revisoria"
+GRACIAS_PEQ = "gracias-evaluacion-guia"
+
 GUIA_PEQUENAS = "contabilidad-basica-empresas.html"
 ANCLA = "#agendar"
 CTA_PRINCIPAL = "Quiero saber si mi empresa está obligada"
@@ -336,7 +340,8 @@ cuerpo = f"""
   <div class="lp-contenedor lp-centro">
     <div class="lp-form-caja">
       <form class="lp-form" id="lp-form" novalidate
-            data-sheets="{SHEETS_URL}" data-wa="{WA}">
+            data-sheets="{SHEETS_URL}" data-wa="{WA}"
+            data-gracias-ok="/{GRACIAS_OK}/" data-gracias-peq="/{GRACIAS_PEQ}/">
         <h2 class="lp-titulo">Agenda tu evaluación antes de que la asamblea decida a la carrera</h2>
         <p class="lp-texto">Toma menos de un minuto. Te escribimos por WhatsApp en menos de 24 horas hábiles.</p>
         <div class="lp-form__campos">
@@ -367,23 +372,6 @@ cuerpo = f"""
         <p class="lp-form__error" id="lp-form-error" role="alert" hidden>Revisa los campos marcados antes de continuar.</p>
         <p class="lp-form__legal">Tus datos solo se usan para contactarte sobre esta evaluación. <a href="politica-de-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.</p>
       </form>
-
-      <!-- 14. Pantallas de gracias -->
-      <div class="lp-gracias" id="lp-gracias-ok" hidden tabindex="-1">
-        <span class="lp-gracias__ico">{ICONO['check']}</span>
-        <h2 class="lp-titulo">Listo, ya tenemos tus datos</h2>
-        <p class="lp-texto">En menos de 24 horas hábiles te escribimos por WhatsApp para agendar tu evaluación. Si quieres adelantarte, escríbenos ahora.</p>
-        <a class="lp-btn" id="lp-wa-ok" href="https://wa.me/{WA}" target="_blank" rel="noopener">{ICO['wa']}Escribir por WhatsApp</a>
-      </div>
-      <div class="lp-gracias" id="lp-gracias-peq" hidden tabindex="-1">
-        <span class="lp-gracias__ico">{ICONO['check']}</span>
-        <h2 class="lp-titulo">Gracias por escribirnos</h2>
-        <p class="lp-texto">Por el tamaño de tu empresa, hoy no estás obligada a tener revisor fiscal. Te dejamos una guía para mantener tu contabilidad en orden y cumplir con la DIAN. Si quieres que revisemos tu caso, también podemos hablar.</p>
-        <div class="lp-acciones">
-          <a class="lp-btn" href="{GUIA_PEQUENAS}">Ver la guía{ICO['flecha']}</a>
-          <a class="lp-btn lp-btn--contorno" id="lp-wa-peq" href="https://wa.me/{WA}" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -403,4 +391,53 @@ PAGINAS.append(dict(
     clase_body="lp",
     css_extra=("assets/css/lp-revisoria.css",),
     landing=(),   # sin barra de cabecera: el logo va dentro del héroe
+))
+
+
+# ================================================================
+# PÁGINAS DE GRACIAS (destino del formulario; se miden por URL en Meta)
+# ================================================================
+def _pagina_gracias(tipo, titulo, texto, acciones):
+    return f"""
+<section class="lp-heroe lp-gracias-pag" data-gracias="{tipo}">
+  <div class="lp-contenedor lp-centro lp-angosto">
+    <img class="lp-heroe__logo" src="assets/img/logo-marin-rios.png" alt="Marín Ríos Consultores" width="90" height="80">
+    <span class="lp-gracias__ico">{ICONO['check']}</span>
+    <h1>{titulo}</h1>
+    <p class="lp-heroe__sub">{texto}</p>
+    <div class="lp-acciones">{acciones}</div>
+  </div>
+</section>
+
+<script src="assets/js/lp-revisoria.js" defer></script>
+"""
+
+
+_WA_GENERICO = f"https://wa.me/{WA}?text=Hola%2C%20acabo%20de%20llenar%20el%20formulario%20de%20la%20evaluaci%C3%B3n%20de%20revisor%C3%ADa%20fiscal%202027"
+
+PAGINAS.append(dict(
+    archivo=f"{GRACIAS_OK}.html",
+    titulo="Recibimos tus datos | Evaluación de revisoría fiscal 2027",
+    descripcion="Recibimos tus datos. Te escribimos por WhatsApp para agendar tu evaluación de revisoría fiscal.",
+    activo="", og_img="oficina-atardecer.jpg", robots=NOINDEX, schema="",
+    cuerpo=_pagina_gracias(
+        "calificado",
+        "Listo, <em>ya tenemos tus datos</em>",
+        "En menos de 24 horas hábiles te escribimos por WhatsApp para agendar tu evaluación. Si quieres adelantarte, escríbenos ahora: el mensaje ya va con los datos de tu empresa.",
+        f'<a class="lp-btn" data-wa-lead href="{_WA_GENERICO}" target="_blank" rel="noopener">{ICO["wa"]}Escribir por WhatsApp ahora</a>'),
+    clase_body="lp", css_extra=("assets/css/lp-revisoria.css",), landing=(),
+))
+
+PAGINAS.append(dict(
+    archivo=f"{GRACIAS_PEQ}.html",
+    titulo="Gracias por escribirnos | Marín Ríos Consultores",
+    descripcion="Gracias por escribirnos. Te dejamos una guía para mantener tu contabilidad en orden.",
+    activo="", og_img="oficina-atardecer.jpg", robots=NOINDEX, schema="",
+    cuerpo=_pagina_gracias(
+        "no-calificado",
+        "Gracias por escribirnos",
+        "Por el tamaño de tu empresa, hoy no estás obligada a tener revisor fiscal. Te dejamos una guía para mantener tu contabilidad en orden y cumplir con la DIAN. Si quieres que revisemos tu caso, también podemos hablar.",
+        f'<a class="lp-btn" href="{GUIA_PEQUENAS}">Ver la guía{ICO["flecha"]}</a>'
+        f'<a class="lp-btn lp-btn--contorno" data-wa-lead href="{_WA_GENERICO}" target="_blank" rel="noopener">Hablar por WhatsApp</a>'),
+    clase_body="lp", css_extra=("assets/css/lp-revisoria.css",), landing=(),
 ))

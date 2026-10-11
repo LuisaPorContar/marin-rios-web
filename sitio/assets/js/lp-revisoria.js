@@ -37,6 +37,23 @@
     });
   });
 
+  /* ---------- Páginas de gracias ----------
+     El formulario redirige aquí para que Meta mida la conversión por URL.
+     El mensaje de WhatsApp armado con los datos viaja en sessionStorage. */
+  var panelGracias = document.querySelector('[data-gracias]');
+  if (panelGracias) {
+    var guardado = '';
+    try { guardado = sessionStorage.getItem('lp_wa') || ''; } catch (e) {}
+    if (guardado) {
+      document.querySelectorAll('[data-wa-lead]').forEach(function (a) { a.href = guardado; });
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'gracias_revisoria_2027',
+      lead_calificado: panelGracias.getAttribute('data-gracias') === 'calificado'
+    });
+  }
+
   /* ---------- Formulario ---------- */
   var form = document.getElementById('lp-form');
   if (!form) return;
@@ -99,7 +116,7 @@
     error.hidden = true;
 
     // Trampa para bots: si el campo oculto viene lleno, no se envía nada
-    if (valor('web')) { mostrar('lp-gracias-ok'); return; }
+    if (valor('web')) { form.hidden = true; return; }
 
     boton.disabled = true;
 
@@ -135,13 +152,11 @@
       lead_ciudad: d.ciudad
     });
 
-    if (calificado) {
-      document.getElementById('lp-wa-ok').href = urlWa;
-      window.open(urlWa, '_blank', 'noopener');
-      mostrar('lp-gracias-ok');
-    } else {
-      document.getElementById('lp-wa-peq').href = urlWa;
-      mostrar('lp-gracias-peq');
-    }
+    // Redirige a la página de gracias (una URL por tipo de lead, para que
+    // Meta cuente solo los calificados). La pausa deja salir el envío al
+    // Sheet y el evento de GTM antes de cambiar de página.
+    try { sessionStorage.setItem('lp_wa', urlWa); } catch (e2) {}
+    var destino = calificado ? form.getAttribute('data-gracias-ok') : form.getAttribute('data-gracias-peq');
+    setTimeout(function () { window.location.href = destino; }, 450);
   });
 })();
