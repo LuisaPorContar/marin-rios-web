@@ -102,10 +102,19 @@ propiedades del script.
 Si la empresa **no califica**, al cliente no se le envía nada: el aviso le
 llega al equipo y lo maneja el comercial.
 
-**De dónde salen:** de la cuenta de Google que publica el script (la que elige
-"Ejecutar como: Yo"). El cliente ve esa dirección como remitente, así que
-conviene publicarlo desde una cuenta de la empresa y no desde una personal.
-Las respuestas del cliente llegan a `RESPONDER_A`.
+**De dónde salen:** de `marketingmarinrios@gmail.com`. Google envía siempre
+desde la cuenta que publica el script, así que hay que:
+
+1. Compartir la hoja con `marketingmarinrios@gmail.com` como **Editor**.
+2. Abrir la hoja con la sesión de esa cuenta (mejor en una ventana de
+   incógnito, para que no se mezcle con otra cuenta).
+3. Desde ahí: Extensiones → Apps Script → **Implementar → Nueva
+   implementación → Aplicación web → Ejecutar como: Yo**.
+4. Ejecutar `verRemitente`: debe decir "Correcto: los correos salen de
+   marketingmarinrios@gmail.com".
+
+Las respuestas del cliente llegan a esa misma cuenta, salvo que se ponga otro
+correo en `RESPONDER_A`.
 
 Ajustes al inicio del script:
 

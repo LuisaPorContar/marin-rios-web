@@ -9,9 +9,9 @@
  *      y avisa a Meta por la API de conversiones.
  *      Si NO califica: no se le envía nada; lo maneja el comercial.
  *
- * DE DÓNDE SALEN LOS CORREOS: de la cuenta de Google que publica este
- * script (la que elige "Ejecutar como: Yo"). El cliente ve esa dirección
- * como remitente. Las respuestas del cliente van a RESPONDER_A.
+ * DE DÓNDE SALEN LOS CORREOS: de marketingmarinrios@gmail.com (ver REMITENTE).
+ * Para que eso se cumpla, el script debe publicarse con la sesión de esa
+ * cuenta iniciada ("Ejecutar como: Yo"). Ejecuta `verRemitente` para comprobarlo.
  *
  * Instalación: Extensiones → Apps Script → pegar este archivo completo →
  * Implementar → Nueva implementación → Aplicación web.
@@ -27,6 +27,12 @@
 var PESTANA = 'Leads';
 var ZONA = 'America/Bogota';
 
+// Cuenta desde la que deben salir todos los correos.
+// Google siempre envía desde la cuenta que publica el script, así que hay que
+// publicarlo con la sesión de esta cuenta. (Si se publica desde otra, solo
+// funciona si esta dirección está configurada allí como alias "Enviar como".)
+var REMITENTE = 'marketingmarinrios@gmail.com';
+
 // Aviso interno: a quién le llega el correo cada vez que entra un lead.
 // Varios correos separados por coma. Si se deja vacío, le llega a la cuenta
 // de Google dueña de este script.
@@ -35,7 +41,7 @@ var AVISAR_A = '';
 // Correo de bienvenida al cliente (solo leads calificados)
 var CORREO_ACTIVO = true;
 // A qué correo llegan las respuestas del cliente a la bienvenida.
-// Vacío = a la cuenta de Google dueña de este script.
+// Vacío = al mismo REMITENTE.
 var RESPONDER_A = '';
 var NUMERO_WHATSAPP = '573044176934';
 var FIRMA_NOMBRE = 'Maribel';
@@ -184,7 +190,7 @@ function avisarAlEquipo(p, ahora) {
     name: 'Leads web Marín Ríos'
   };
   if (correoValido(p.correo)) opciones.replyTo = String(p.correo).trim();   // "Responder" le escribe al cliente
-  MailApp.sendEmail(opciones);
+  enviarCorreo(opciones);
 }
 
 
@@ -234,6 +240,31 @@ function enviarBienvenida(p) {
     name: 'Marín Ríos Consultores'
   };
   if (correoValido(RESPONDER_A)) opciones.replyTo = String(RESPONDER_A).trim();
+  enviarCorreo(opciones);
+}
+
+/**
+ * Envía el correo desde REMITENTE.
+ *  - Si el script corre con esa cuenta: envío normal.
+ *  - Si corre con otra cuenta que tiene REMITENTE como alias: lo usa.
+ *  - Si no: lo envía desde la cuenta actual y deja el aviso en Ejecuciones.
+ */
+function enviarCorreo(opciones) {
+  var actual = String(Session.getEffectiveUser().getEmail() || '').toLowerCase();
+  var quiero = String(REMITENTE || '').trim().toLowerCase();
+  if (quiero && actual !== quiero) {
+    var alias = [];
+    try { alias = GmailApp.getAliases().map(function (a) { return a.toLowerCase(); }); } catch (e) {}
+    if (alias.indexOf(quiero) !== -1) {
+      GmailApp.sendEmail(opciones.to, opciones.subject, '', {
+        htmlBody: opciones.htmlBody, name: opciones.name, from: quiero,
+        replyTo: opciones.replyTo || undefined
+      });
+      return;
+    }
+    console.warn('El correo salió desde ' + actual + ' y no desde ' + quiero +
+                 '. Publica el script con la sesión de ' + quiero + '.');
+  }
   MailApp.sendEmail(opciones);
 }
 
@@ -323,6 +354,15 @@ var LEAD_DE_PRUEBA = {
   ciudad: 'Medellín y Valle de Aburrá', ingresos: '$5.000 a $20.000 millones',
   correo: 'prueba@ejemplo.com', agente: 'Mozilla/5.0 (prueba)', calificado: 'Sí', formulario: 'PRUEBA'
 };
+
+// Muestra desde qué cuenta van a salir los correos.
+function verRemitente() {
+  var actual = Session.getEffectiveUser().getEmail();
+  var ok = String(actual).toLowerCase() === String(REMITENTE).toLowerCase();
+  Logger.log(ok ? 'Correcto: los correos salen de ' + actual
+                : 'ATENCIÓN: saldrían de ' + actual + ' y no de ' + REMITENTE +
+                  '. Abre el script y publícalo con la sesión de ' + REMITENTE + '.');
+}
 
 // Envía el aviso interno de prueba (a AVISAR_A, o a tu cuenta si está vacío).
 function probarAviso() {
