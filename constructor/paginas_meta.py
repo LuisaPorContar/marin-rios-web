@@ -337,7 +337,7 @@ cuerpo = f"""
         <p class="lp-texto">Empieza con una evaluación gratuita. Toma menos de un minuto y te escribimos por WhatsApp en menos de 24 horas hábiles.</p>
         <div class="lp-form__campos">
           <div class="lp-campo">
-            <label for="lp-nombre">Nombre</label>
+            <label for="lp-nombre">Nombre y apellido</label>
             <input id="lp-nombre" name="nombre" type="text" autocomplete="name" required maxlength="80">
           </div>
           <div class="lp-campo">
