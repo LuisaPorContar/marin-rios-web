@@ -92,6 +92,19 @@ propiedades del script.
   Así la columna *Conjunto de anuncios* se llena sola.
 - Optimiza la campaña por el evento **Lead** (Cliente potencial).
 
+## Correo de bienvenida
+
+Al recibir un formulario con correo, el script envía **un solo correo** de
+bienvenida (texto distinto si la empresa califica o no). Ya no existe la
+secuencia de recuperación de día 1, 3 y 7.
+
+- Para ver cómo queda: ejecuta `probarBienvenida` (te llega a tu propia cuenta).
+- Para apagarlo: cambia `CORREO_ACTIVO` a `false` al inicio del script.
+- Si antes estaba la secuencia de recuperación: ejecuta **una vez**
+  `quitarTriggerRecuperacion` para borrar el disparador diario. Si no, Google
+  enviará un correo de error cada mañana.
+- La primera vez Google pedirá permiso para enviar correos en tu nombre.
+
 ## Si cambias el script
 
 Después de editarlo: **Implementar → Administrar implementaciones → editar

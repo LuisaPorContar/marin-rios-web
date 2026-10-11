@@ -344,15 +344,18 @@ cuerpo = f"""
             <label for="lp-empresa">Empresa</label>
             <input id="lp-empresa" name="empresa" type="text" autocomplete="organization" required maxlength="120">
           </div>
-          {_campo_lista("cargo", "Cargo", ["Gerente general o representante legal", "Socio o accionista", "Gerente financiero o administrativo", "Contador", "Otro"])}
+          <div class="lp-campo">
+            <label for="lp-correo">Correo</label>
+            <input id="lp-correo" name="correo" type="email" inputmode="email" autocomplete="email" required maxlength="120" placeholder="nombre@empresa.com">
+          </div>
+          <div class="lp-campo">
+            <label for="lp-whatsapp">WhatsApp</label>
+            <input id="lp-whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" required
+                   pattern="[0-9]{{10,13}}" maxlength="13" placeholder="3001234567"
+                   title="Solo números, sin espacios. Ejemplo: 3001234567">
+          </div>
           {_campo_lista("ciudad", "Ciudad", ["Medellín y Valle de Aburrá", "Pereira", "Armenia", "Manizales", "Otra"])}
           {_campo_lista("ingresos", "Ingresos anuales aproximados", INGRESOS)}
-          {_campo_lista("revisor", "¿Tienen revisor fiscal hoy?", ["Sí, persona natural", "Sí, una firma", "No"])}
-          <div class="lp-campo lp-campo--ancho">
-            <label for="lp-whatsapp">WhatsApp</label>
-            <input id="lp-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required
-                   pattern="[0-9 +()-]{{7,20}}" placeholder="300 123 4567">
-          </div>
           <!-- Trampa para bots: los humanos no ven este campo -->
           <div class="lp-trampa" aria-hidden="true">
             <label for="lp-web">No llenar</label>

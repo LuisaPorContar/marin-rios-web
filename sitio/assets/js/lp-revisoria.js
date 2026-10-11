@@ -124,6 +124,12 @@
     panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
+  // WhatsApp: solo números (borra letras, espacios y símbolos mientras se escribe)
+  form.elements.whatsapp.addEventListener('input', function () {
+    var limpio = this.value.replace(/\D/g, '');
+    if (limpio !== this.value) this.value = limpio;
+  });
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!form.checkValidity()) {
@@ -141,17 +147,15 @@
     var d = {
       nombre: valor('nombre'),
       empresa: valor('empresa'),
-      cargo: valor('cargo'),
+      correo: valor('correo').toLowerCase(),
       ciudad: valor('ciudad'),
       ingresos: valor('ingresos'),
-      revisor: valor('revisor'),
       whatsapp: normalizarTelefono(valor('whatsapp'))
     };
     var calificado = d.ingresos !== PEQUENA;
 
-    var mensaje = 'Hola, soy ' + d.nombre + ', ' + d.cargo + ' de ' + d.empresa + ' en ' + d.ciudad +
-      '. Quiero agendar la evaluación de revisoría fiscal 2027. Ingresos aproximados ' + d.ingresos +
-      '. Revisor actual ' + d.revisor + '.';
+    var mensaje = 'Hola, soy ' + d.nombre + ' de ' + d.empresa + ' en ' + d.ciudad +
+      '. Quiero agendar la evaluación de revisoría fiscal 2027. Ingresos aproximados ' + d.ingresos + '.';
     var urlWa = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(mensaje);
 
     // Identificador único del lead: el píxel (navegador) y la API de
