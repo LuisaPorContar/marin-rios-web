@@ -136,3 +136,6 @@
   .marcas__grid { grid-template-columns: 1fr; }
   .barra-movil__tel span { display: none; }
 }
+
+/* Las secciones bajo el primer pantallazo se dibujan cuando se acercan a la vista */
+main > section ~ section { content-visibility: auto; contain-intrinsic-size: auto 720px; }

@@ -47,6 +47,11 @@
     if (guardado) {
       document.querySelectorAll('[data-wa-lead]').forEach(function (a) { a.href = guardado; });
     }
+    // Conversión en Meta: Lead solo para el lead calificado
+    if (window.fbq) {
+      if (panelGracias.getAttribute('data-gracias') === 'calificado') fbq('track', 'Lead', { content_name: 'Evaluación revisoría fiscal 2027' });
+      else fbq('trackCustom', 'LeadNoCalificado');
+    }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'gracias_revisoria_2027',

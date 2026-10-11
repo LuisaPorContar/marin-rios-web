@@ -46,13 +46,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 # En las landings de pauta, Tag Manager arranca después de pintar la página
 # (al cargar, o antes si la persona toca o hace scroll). Los eventos que se
 # empujen a dataLayer antes de ese momento quedan en cola y GTM los procesa.
-GTM_HEAD_DIFERIDO = f"""<!-- Google Tag Manager (diferido) -->
-<script>(function(w,d,l,i){{w[l]=w[l]||[];var hecho=false;function cargar(){{if(hecho)return;hecho=true;
+PIXEL_META = "4029344540722147"
+
+GTM_HEAD_DIFERIDO = f"""<!-- Píxel de Meta y Google Tag Manager (diferidos) -->
+<script>(function(w,d,l,i){{w[l]=w[l]||[];
+if(!w.fbq){{var n=w.fbq=function(){{n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)}};
+if(!w._fbq)w._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];}}
+fbq('init','{PIXEL_META}');fbq('track','PageView');
+var hecho=false;function cargar(){{if(hecho)return;hecho=true;
+var f=d.createElement('script');f.async=true;f.src='https://connect.facebook.net/en_US/fbevents.js';d.head.appendChild(f);
 w[l].push({{'gtm.start':new Date().getTime(),event:'gtm.js'}});var j=d.createElement('script');j.async=true;
 j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j);}}
 ['pointerdown','keydown','touchstart','scroll'].forEach(function(e){{w.addEventListener(e,cargar,{{once:true,passive:true}});}});
-w.addEventListener('load',function(){{setTimeout(cargar,2500);}});
+w.addEventListener('load',function(){{setTimeout(cargar,__ESPERA__);}});
 }})(window,document,'dataLayer','{GTM_ID}');</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id={PIXEL_META}&ev=PageView&noscript=1"></noscript>
 <!-- End Google Tag Manager -->"""
 
 GTM_BODY = f"""<!-- Google Tag Manager (noscript) -->
@@ -521,7 +529,9 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
         f'<link rel="stylesheet" href="{f}" media="print" onload="this.media=\'all\'">\n'
         f'<noscript><link rel="stylesheet" href="{f}"></noscript>\n' for f in fuentes
     ) + f'<style>{hoja}</style>{bloque_schema}'
-    gtm_head = GTM_HEAD_DIFERIDO
+    # En las landings de pauta los píxeles arrancan antes, para no perder
+    # visitas cortas; en el resto del sitio esperan un poco más.
+    gtm_head = GTM_HEAD_DIFERIDO.replace("__ESPERA__", "2000" if landing is not None else "5000")
     return versionar_recursos(imagenes_webp(enlaces_absolutos(f"""<!DOCTYPE html>
 <html lang="es-CO">
 <head>
