@@ -1,5 +1,9 @@
 /**
- * Recibe los leads de las landings de marinriosconsultores.com y los agrega
+ * SCRIPT COMPLETO DE LA HOJA "Leads_Consolidado Marin Rios"
+ * Parte 1: recibe los formularios de la web y avisa a Meta (CAPI).
+ * Parte 2: secuencia de correos de recuperación (día 1, 3 y 7).
+ *
+ * PARTE 1 · Recibe los leads de las landings de marinriosconsultores.com y los agrega
  * como fila en la pestaña "Leads" de "Leads_Consolidado Marin Rios".
  *
  * Se instala desde la propia hoja: Extensiones → Apps Script → pegar este
@@ -170,4 +174,171 @@ function limpiar(v) {
 function respuesta(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+
+// ==================================================================
+// PARTE 2 · SECUENCIA DE RECUPERACIÓN DE LEADS POR CORREO
+// ------------------------------------------------------------------
+// Cada día hábil a las 9 a. m. revisa la pestaña "Leads". A los leads con
+// Estado = "Recuperación" y con correo les envía tres correos: día 1, día 3
+// y día 7. Si el estado cambia, limpia el control (columnas N a Q).
+//
+// Corregido frente a la versión anterior:
+//  - El correo nunca salía: decía `content.asunto` en vez de `contenido.asunto`.
+//  - Si el día 1 fallaba, ese lead se quedaba sin el primer correo para siempre.
+// ==================================================================
+
+var LIMITE_CORREOS_POR_CORRIDA = 30;
+var NUMERO_WHATSAPP = '573044176934';
+var MENSAJE_WHATSAPP = 'Tengo una empresa y quiero agendar una asesoria';
+
+// Posición de cada columna (A = 0). Si se mueven columnas en la hoja, hay
+// que actualizar estos números.
+var COL = {
+  MES: 0, FECHA: 1, NOMBRE: 2, TELEFONO: 3, CORREO: 4, EMPRESA: 5,
+  TIPO_PERSONA: 6, RANGO_VENTAS: 7, CONJUNTO_ANUNCIOS: 8, FORMULARIO: 9,
+  ESTADO: 10, NOTAS: 11,
+  ID_LEAD: 12,                    // columna M
+  FECHA_INICIO_RECUPERACION: 13,  // columna N
+  DIA1_ENVIADO: 14,               // columna O
+  DIA3_ENVIADO: 15,               // columna P
+  DIA7_ENVIADO: 16                // columna Q
+};
+
+var ENCABEZADOS_CONTROL = ['Fecha inicio recuperacion', 'Dia 1 enviado', 'Dia 3 enviado', 'Dia 7 enviado'];
+
+/** Ejecutar UNA VEZ: crea el disparador diario de las 9 a. m. */
+function configurarTriggerRecuperacion() {
+  asegurarEncabezadosControl();
+  var yaExiste = ScriptApp.getProjectTriggers().some(function (t) {
+    return t.getHandlerFunction() === 'procesarRecuperacion';
+  });
+  if (!yaExiste) {
+    ScriptApp.newTrigger('procesarRecuperacion').timeBased().everyDays(1).atHour(9).create();
+  }
+  procesarRecuperacion();
+}
+
+function asegurarEncabezadosControl() {
+  var hoja = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PESTANA);
+  var rango = hoja.getRange(1, COL.FECHA_INICIO_RECUPERACION + 1, 1, 4);
+  var faltan = rango.getValues()[0].some(function (v) { return !v; });
+  if (faltan) rango.setValues([ENCABEZADOS_CONTROL]);
+}
+
+function procesarRecuperacion() {
+  var hoy = new Date();
+  var diaSemana = Number(Utilities.formatDate(hoy, ZONA, 'u'));  // 1 = lunes … 7 = domingo
+  if (diaSemana >= 6) return;                                    // no corre fines de semana
+
+  var hoja = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PESTANA);
+  var datos = hoja.getDataRange().getValues();
+  var enviados = 0;
+
+  for (var fila = 1; fila < datos.length; fila++) {
+    if (enviados >= LIMITE_CORREOS_POR_CORRIDA) break;
+
+    var registro = datos[fila];
+    var estado = String(registro[COL.ESTADO] || '').trim();
+    var correo = String(registro[COL.CORREO] || '').trim();
+    var nombre = String(registro[COL.NOMBRE] || '').trim();
+    var filaSheet = fila + 1;
+
+    var fechaInicioRaw = registro[COL.FECHA_INICIO_RECUPERACION];
+    var dia1Enviado = registro[COL.DIA1_ENVIADO] === true;
+    var dia3Enviado = registro[COL.DIA3_ENVIADO] === true;
+    var dia7Enviado = registro[COL.DIA7_ENVIADO] === true;
+
+    // Si ya no está en recuperación, limpia N a Q (la M, ID_Lead, no se toca)
+    if (quitarTildes(estado) !== 'recuperacion') {
+      if (fechaInicioRaw || dia1Enviado || dia3Enviado || dia7Enviado) {
+        hoja.getRange(filaSheet, COL.FECHA_INICIO_RECUPERACION + 1, 1, 4).setValues([['', false, false, false]]);
+      }
+      continue;
+    }
+    if (!correo) continue;
+
+    var dia = 0;
+    if (!dia1Enviado) {
+      dia = 1;
+    } else {
+      var transcurridos = Math.floor((hoy - new Date(fechaInicioRaw)) / (1000 * 60 * 60 * 24));
+      if (!dia3Enviado && transcurridos >= 3) dia = 3;
+      else if (dia3Enviado && !dia7Enviado && transcurridos >= 7) dia = 7;
+    }
+    if (!dia) continue;
+
+    try {
+      enviarCorreoRecuperacion(correo, nombre, dia);
+      // La fecha de inicio se marca cuando el día 1 sí salió
+      if (dia === 1) hoja.getRange(filaSheet, COL.FECHA_INICIO_RECUPERACION + 1).setValue(hoy);
+      var columna = dia === 1 ? COL.DIA1_ENVIADO : (dia === 3 ? COL.DIA3_ENVIADO : COL.DIA7_ENVIADO);
+      hoja.getRange(filaSheet, columna + 1).setValue(true);
+      enviados++;
+    } catch (error) {
+      // Un correo mal escrito no detiene a los demás
+      console.error('No se pudo enviar el dia ' + dia + ' a ' + correo + ': ' + error);
+      if (String(error).indexOf('Service invoked too many times') !== -1) break;  // cupo diario de Gmail agotado
+    }
+  }
+}
+
+function quitarTildes(texto) {
+  return String(texto).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
+function enviarCorreoRecuperacion(correo, nombre, dia) {
+  var enlaceWhatsapp = 'https://wa.me/' + NUMERO_WHATSAPP + '?text=' + encodeURIComponent(MENSAJE_WHATSAPP);
+  var primerNombre = nombre ? nombre.split(' ')[0] : '';
+  var saludo = primerNombre ? ('Hola ' + primerNombre + ',') : 'Hola,';
+
+  var contenidos = {
+    1: {
+      asunto: '¿Sigues pensando en poner al día tu contabilidad?',
+      cuerpo: 'Notamos que dejaste tus datos con nosotros hace poco, pero no hemos logrado concretar un espacio contigo. ' +
+        'Sabemos que el día a día de una empresa no da tregua, así que te dejamos la puerta abierta: agenda una asesoría ' +
+        'con nuestro equipo cuando te quede más cómodo.'
+    },
+    3: {
+      asunto: 'No queremos perder el contacto contigo',
+      cuerpo: 'Hace unos días te escribimos y todavía no hemos podido coordinar tu asesoría. Entendemos que la agenda se ' +
+        'complica, por eso te dejamos abierta la posibilidad de escribirnos directo por WhatsApp y cuadrar el espacio ' +
+        'en el horario que mejor te funcione.'
+    },
+    7: {
+      asunto: 'Última invitación: hablemos de tu contabilidad',
+      cuerpo: 'Esta es la última vez que te escribimos por este medio. Si en algún momento quieres retomar la conversación ' +
+        'sobre cómo ayudarte con tu contabilidad y tus obligaciones tributarias, con gusto te atendemos. Solo escríbenos ' +
+        'por WhatsApp cuando quieras.'
+    }
+  };
+  var contenido = contenidos[dia];
+
+  var cuerpoHtml = '<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">' +
+    '<div style="background: #0B0733; padding: 32px 24px; text-align: center;">' +
+    '<div style="color: #ffffff; font-size: 20px; font-weight: bold; letter-spacing: 0.5px;">MARÍN RÍOS CONSULTORES</div>' +
+    '<div style="color: #8FE3FF; font-size: 12px; margin-top: 4px; letter-spacing: 1px;">ASESORÍA CONTABLE Y TRIBUTARIA</div>' +
+    '</div>' +
+    '<div style="padding: 32px 28px; background: #ffffff;">' +
+    '<p style="font-size: 16px; color: #1a1a1a; margin: 0 0 16px;">' + saludo + '</p>' +
+    '<p style="font-size: 15px; line-height: 1.7; color: #1a1a1a; margin: 0 0 24px;">' + contenido.cuerpo + '</p>' +
+    '<div style="text-align: center; margin: 0 0 24px;">' +
+    '<a href="' + enlaceWhatsapp + '" style="background: #25D366; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Escribir por WhatsApp</a>' +
+    '</div>' +
+    '<p style="font-size: 13px; color: #5a6b7d; text-align: center; margin: 0 0 24px;">O escríbenos directo al +' + NUMERO_WHATSAPP + '</p>' +
+    '<p style="font-size: 15px; color: #1a1a1a; margin: 24px 0 0;">Con gusto te atendemos,</p>' +
+    '<p style="font-size: 15px; color: #1a1a1a; margin: 4px 0 0;"><b>Maribel</b><br><span style="color: #5a6b7d; font-size: 13px;">Directora Administrativa &middot; Marín Ríos Consultores</span></p>' +
+    '</div>' +
+    '<div style="background: #EAF2FB; padding: 16px 28px; text-align: center;">' +
+    '<span style="font-size: 12px; color: #5a6b7d;">Marín Ríos Consultores S.A.S</span>' +
+    '</div>' +
+    '</div>';
+
+  MailApp.sendEmail({
+    to: correo,
+    subject: contenido.asunto,
+    htmlBody: cuerpoHtml,
+    name: 'Marín Ríos Consultores'
+  });
 }
