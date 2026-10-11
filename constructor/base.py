@@ -43,6 +43,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }})(window,document,'script','dataLayer','{GTM_ID}');</script>
 <!-- End Google Tag Manager -->"""
 
+# En las landings de pauta, Tag Manager arranca después de pintar la página
+# (al cargar, o antes si la persona toca o hace scroll). Los eventos que se
+# empujen a dataLayer antes de ese momento quedan en cola y GTM los procesa.
+GTM_HEAD_DIFERIDO = f"""<!-- Google Tag Manager (diferido) -->
+<script>(function(w,d,l,i){{w[l]=w[l]||[];var hecho=false;function cargar(){{if(hecho)return;hecho=true;
+w[l].push({{'gtm.start':new Date().getTime(),event:'gtm.js'}});var j=d.createElement('script');j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j);}}
+['pointerdown','keydown','touchstart','scroll'].forEach(function(e){{w.addEventListener(e,cargar,{{once:true,passive:true}});}});
+w.addEventListener('load',function(){{setTimeout(cargar,1800);}});
+}})(window,document,'dataLayer','{GTM_ID}');</script>
+<!-- End Google Tag Manager -->"""
+
 GTM_BODY = f"""<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -405,6 +417,28 @@ def versionar_recursos(html):
     return re.sub(r'(href|src)="(/assets/(?:css|js)/[^"?]+\.(?:css|js))"', huella, html)
 
 
+def paquete_css(nombre, hojas):
+    """Une y compacta varias hojas en /assets/css/paquete-<nombre>.css.
+
+    Las landings de pauta cargan una sola hoja en vez de cuatro: en una red
+    móvil lenta cada archivo extra retrasa el primer pintado."""
+    import os
+    raiz = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
+    partes = []
+    for h in hojas:
+        with open(os.path.join(raiz, h), encoding="utf-8") as f:
+            partes.append(f.read())
+    css = "\n".join(partes)
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\s+", " ", css)
+    css = re.sub(r"\s*([{};,>])\s*", r"\1", css)
+    css = re.sub(r";}", "}", css).strip()
+    destino = f"assets/css/paquete-{nombre}.css"
+    with open(os.path.join(raiz, destino), "w", encoding="utf-8", newline="\n") as f:
+        f.write(css)
+    return destino
+
+
 def imagenes_webp(html):
     """Apunta las imágenes a su versión WebP.
 
@@ -430,11 +464,25 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
     atr_body = f' class="{clase_body}"' if clase_body else ""
     # landing = (texto_boton, href) activa la cabecera mínima y el pie corto
     # landing = () -> sin barra de cabecera (el logo va dentro del héroe)
+    FUENTES = "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
     if landing is not None:
         bloque_cabecera = cabecera_landing(*landing) if landing else ""
         bloque_pie = PIE_LANDING
+        # Carga rápida: una sola hoja compacta, fuentes sin bloquear y GTM diferido
+        hoja = paquete_css(archivo[:-len(".html")],
+                           ["assets/css/estilo.css", "assets/css/modulos.css", *css_extra, "assets/css/movil.css"])
+        bloque_estilos = (f'<link rel="preload" as="style" href="{FUENTES}">\n'
+                          f'<link rel="stylesheet" href="{FUENTES}" media="print" onload="this.media=\'all\'">\n'
+                          f'<noscript><link rel="stylesheet" href="{FUENTES}"></noscript>\n'
+                          f'<link rel="stylesheet" href="{hoja}">{bloque_schema}')
+        gtm_head = GTM_HEAD_DIFERIDO
     else:
         bloque_cabecera, bloque_pie = cabecera(activo), PIE
+        bloque_estilos = (f'<link href="{FUENTES}" rel="stylesheet">\n'
+                          f'<link rel="stylesheet" href="assets/css/estilo.css">\n'
+                          f'<link rel="stylesheet" href="assets/css/modulos.css">{bloque_fuentes}{bloque_css}\n'
+                          f'<link rel="stylesheet" href="assets/css/movil.css">{bloque_schema}')
+        gtm_head = GTM_HEAD
     return versionar_recursos(imagenes_webp(enlaces_absolutos(f"""<!DOCTYPE html>
 <html lang="es-CO">
 <head>
@@ -462,12 +510,9 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
 <meta name="theme-color" content="#0B0733">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/estilo.css">
-<link rel="stylesheet" href="assets/css/modulos.css">{bloque_fuentes}{bloque_css}
-<link rel="stylesheet" href="assets/css/movil.css">{bloque_schema}
+{bloque_estilos}
 
-{GTM_HEAD}
+{gtm_head}
 </head>
 <body{atr_body}>
 {GTM_BODY}
