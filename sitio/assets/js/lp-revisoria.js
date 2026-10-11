@@ -109,11 +109,11 @@
     // no-cors: Apps Script no devuelve encabezados CORS; la respuesta es
     // opaca, pero la fila se escribe igual. keepalive asegura el envío
     // aunque el navegador cambie de pestaña al abrir WhatsApp.
+    // Si fetch falla (bloqueador, red), se reintenta con sendBeacon.
+    var respaldo = function () { try { if (navigator.sendBeacon) navigator.sendBeacon(URL_SHEETS, cuerpo); } catch (e2) {} };
     try {
-      fetch(URL_SHEETS, { method: 'POST', mode: 'no-cors', body: cuerpo, keepalive: true });
-    } catch (e) {
-      if (navigator.sendBeacon) navigator.sendBeacon(URL_SHEETS, cuerpo);
-    }
+      fetch(URL_SHEETS, { method: 'POST', mode: 'no-cors', body: cuerpo, keepalive: true }).catch(respaldo);
+    } catch (e) { respaldo(); }
   }
 
   function mostrar(id) {
@@ -138,9 +138,6 @@
       return;
     }
     error.hidden = true;
-
-    // Trampa para bots: si el campo oculto viene lleno, no se envía nada
-    if (valor('web')) { form.hidden = true; return; }
 
     boton.disabled = true;
 
@@ -189,6 +186,6 @@
     // Sheet y el evento de GTM antes de cambiar de página.
     try { sessionStorage.setItem('lp_wa', urlWa); } catch (e2) {}
     var destino = calificado ? form.getAttribute('data-gracias-ok') : form.getAttribute('data-gracias-peq');
-    setTimeout(function () { window.location.href = destino; }, 450);
+    setTimeout(function () { window.location.href = destino; }, 900);
   });
 })();

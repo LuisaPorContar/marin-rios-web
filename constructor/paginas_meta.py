@@ -356,11 +356,6 @@ cuerpo = f"""
           </div>
           {_campo_lista("ciudad", "Ciudad", ["Medellín y Valle de Aburrá", "Pereira", "Armenia", "Manizales", "Otra"])}
           {_campo_lista("ingresos", "Ingresos anuales aproximados", INGRESOS)}
-          <!-- Trampa para bots: los humanos no ven este campo -->
-          <div class="lp-trampa" aria-hidden="true">
-            <label for="lp-web">No llenar</label>
-            <input id="lp-web" name="web" type="text" tabindex="-1" autocomplete="off">
-          </div>
         </div>
         <button class="lp-btn lp-btn--bloque" type="submit">Agendar mi evaluación{ICO['flecha']}</button>
         <p class="lp-form__error" id="lp-form-error" role="alert" hidden>Revisa los campos marcados antes de continuar.</p>
