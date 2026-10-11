@@ -1,8 +1,13 @@
 /**
- * SCRIPT DE LA HOJA "Leads_Consolidado Marin Rios"
+ * RECEPTOR DE LEADS DE LA WEB · MARÍN RÍOS CONSULTORES
  * ------------------------------------------------------------------
+ * Este script vive en una hoja propia de marketingmarinrios@gmail.com
+ * (por ejemplo "Leads web Marín Ríos") y escribe además en la hoja
+ * "Leads_Consolidado Marin Rios".
+ *
  * Cada vez que alguien envía el formulario de la web:
- *   1. Guarda el lead como fila en la pestaña "Leads".
+ *   1. Guarda el lead en la pestaña "Leads" de ESTA hoja (respaldo) y en la
+ *      pestaña "Leads" del Consolidado.
  *   2. Le avisa al equipo por correo, con todos los datos del cliente:
  *        - Lead de revisoría fiscal que CALIFICA (cliente premium):
  *          a Juan David, con copia a Maribel.
@@ -14,12 +19,13 @@
  * Para que eso se cumpla, el script debe publicarse con la sesión de esa
  * cuenta iniciada ("Ejecutar como: Yo"). Ejecuta `verRemitente` para comprobarlo.
  *
- * Instalación: Extensiones → Apps Script → pegar este archivo completo →
- * Implementar → Nueva implementación → Aplicación web.
+ * Instalación (con la sesión de marketingmarinrios@gmail.com):
+ *   1. Crear una hoja de cálculo nueva.
+ *   2. Extensiones → Apps Script → pegar este archivo completo → Guardar.
+ *   3. Ejecutar `prepararHoja` (crea la pestaña "Leads" y comprueba el acceso
+ *      al Consolidado).
+ *   4. Implementar → Nueva implementación → Aplicación web.
  * (Pasos completos en COMO-CONECTAR-EL-SHEET.md)
- *
- * Ya no hay secuencia de correos de recuperación (día 1, 3 y 7).
- * Si existía el disparador diario, ejecuta una vez `quitarTriggerRecuperacion`.
  */
 
 // ==================================================================
@@ -28,10 +34,18 @@
 var PESTANA = 'Leads';
 var ZONA = 'America/Bogota';
 
+// Hoja "Leads_Consolidado Marin Rios": el ID es lo que va entre /d/ y /edit
+// en su dirección. La cuenta que publica este script debe ser Editor de ella.
+// Vacío = solo se guarda en esta hoja.
+var ID_CONSOLIDADO = '12hlw7dm4saGW9YvfCyiv5o9hGmGCAUOWmRFBm573eOY';
+
+// Columnas de la pestaña "Leads" (las mismas del Consolidado)
+var COLUMNAS = ['Mes', 'Fecha', 'Nombre', 'Teléfono', 'Correo', 'Empresa', 'Tipo de persona',
+                'Rango de ventas', 'Conjunto de anuncios', 'Formulario', 'Estado del lead', 'Notas'];
+
 // Cuenta desde la que deben salir todos los correos.
 // Google siempre envía desde la cuenta que publica el script, así que hay que
-// publicarlo con la sesión de esta cuenta. (Si se publica desde otra, solo
-// funciona si esta dirección está configurada allí como alias "Enviar como".)
+// crear la hoja y publicarlo con la sesión de esta cuenta.
 var REMITENTE = 'marketingmarinrios@gmail.com';
 
 // Aviso interno: a quién le llega el correo cada vez que entra un lead.
@@ -102,19 +116,15 @@ function doGet() {
 }
 
 /**
- * NO cambia la estructura de la hoja: solo agrega una fila al final.
- * Columnas que llena: Mes, Fecha, Nombre, Teléfono, Correo, Empresa,
- * Tipo de persona, Rango de ventas, Conjunto de anuncios, Formulario,
- * Estado del lead (vacío) y Notas. La facturación va en "Rango de ventas"
- * y el tipo de persona es "Persona jurídica (empresa)" o "Persona natural".
- * Escribe por NOMBRE de columna, no por posición; una columna que no exista
- * en la hoja simplemente no se llena (no se crea).
+ * Guarda el lead en dos lugares:
+ *   - la pestaña "Leads" de esta hoja (respaldo; se crea si no existe), y
+ *   - la pestaña "Leads" del Consolidado.
+ * En el Consolidado NO cambia la estructura: solo agrega una fila al final y
+ * escribe por NOMBRE de columna; una columna que no exista allí no se llena.
+ * Si el Consolidado falla (por permisos, por ejemplo), el lead queda en el
+ * respaldo y el error se anota en Ejecuciones.
  */
 function guardarLead(p, ahora) {
-  var hoja = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PESTANA);
-  var encabezados = hoja.getRange(1, 1, 1, hoja.getLastColumn()).getValues()[0]
-    .map(function (h) { return String(h).trim(); });
-
   var mes = MESES[Number(Utilities.formatDate(ahora, ZONA, 'M')) - 1] + ' ' +
             Utilities.formatDate(ahora, ZONA, 'yyyy');
 
@@ -143,9 +153,39 @@ function guardarLead(p, ahora) {
     'Visible': 1
   };
 
+  // 1. Respaldo en esta hoja
+  agregarFila(hojaLocal(), valores);
+
+  // 2. Consolidado
+  if (ID_CONSOLIDADO) {
+    try {
+      var destino = SpreadsheetApp.openById(ID_CONSOLIDADO).getSheetByName(PESTANA);
+      if (!destino) throw new Error('El Consolidado no tiene la pestaña "' + PESTANA + '"');
+      agregarFila(destino, valores);
+    } catch (err) {
+      console.error('No se pudo escribir en el Consolidado (el lead quedó en el respaldo): ' + err);
+    }
+  }
+}
+
+function agregarFila(hoja, valores) {
+  var encabezados = hoja.getRange(1, 1, 1, hoja.getLastColumn()).getValues()[0]
+    .map(function (h) { return String(h).trim(); });
   hoja.appendRow(encabezados.map(function (h) {
     return h in valores ? limpiar(valores[h]) : '';
   }));
+}
+
+// Pestaña "Leads" de esta hoja; la crea con sus encabezados si no existe.
+function hojaLocal() {
+  var libro = SpreadsheetApp.getActiveSpreadsheet();
+  var hoja = libro.getSheetByName(PESTANA);
+  if (!hoja) hoja = libro.insertSheet(PESTANA);
+  if (hoja.getLastRow() === 0) {
+    hoja.getRange(1, 1, 1, COLUMNAS.length).setValues([COLUMNAS]).setFontWeight('bold');
+    hoja.setFrozenRows(1);
+  }
+  return hoja;
 }
 
 // "Persona jurídica (empresa)" si el lead trae empresa; "Persona natural" si no.
@@ -179,7 +219,8 @@ function avisarAlEquipo(p, ahora) {
   var primerNombre = String(p.nombre || '').trim().split(/\s+/)[0];
   var enlaceWa = 'https://wa.me/' + digitos + '?text=' + encodeURIComponent(
     'Hola ' + primerNombre + ', te escribe ' + FIRMA_NOMBRE + ' de Marín Ríos Consultores. Recibimos tu solicitud de evaluación de revisoría fiscal.');
-  var hoja = SpreadsheetApp.getActiveSpreadsheet();
+  var urlHoja = ID_CONSOLIDADO ? 'https://docs.google.com/spreadsheets/d/' + ID_CONSOLIDADO + '/edit'
+                               : SpreadsheetApp.getActiveSpreadsheet().getUrl();
 
   var filas = [
     ['Nombre', p.nombre],
@@ -210,7 +251,7 @@ function avisarAlEquipo(p, ahora) {
     '<a href="' + enlaceWa + '" style="background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 26px; border-radius: 8px; font-weight: bold; font-size: 15px; display: inline-block; margin: 4px;">Escribirle por WhatsApp</a>' +
     '<a href="tel:+' + digitos + '" style="background: #2BB3EF; color: #0B0733; text-decoration: none; padding: 13px 26px; border-radius: 8px; font-weight: bold; font-size: 15px; display: inline-block; margin: 4px;">Llamar</a>' +
     '</div>' +
-    '<p style="text-align: center; font-size: 13px; margin: 14px 0 0;"><a href="' + hoja.getUrl() + '" style="color: #1A6FB8;">Abrir la hoja de leads</a></p>' +
+    '<p style="text-align: center; font-size: 13px; margin: 14px 0 0;"><a href="' + urlHoja + '" style="color: #1A6FB8;">Abrir la hoja de leads</a></p>' +
     '</div>' +
     '</div>';
 
@@ -287,25 +328,12 @@ function enviarBienvenida(p) {
   enviarCorreo(opciones);
 }
 
-/**
- * Envía el correo desde REMITENTE.
- *  - Si el script corre con esa cuenta: envío normal.
- *  - Si corre con otra cuenta que tiene REMITENTE como alias: lo usa.
- *  - Si no: lo envía desde la cuenta actual y deja el aviso en Ejecuciones.
- */
+// Los correos salen de la cuenta que publicó el script. Si no es REMITENTE,
+// se envían igual y queda la advertencia en Ejecuciones.
 function enviarCorreo(opciones) {
   var actual = String(Session.getEffectiveUser().getEmail() || '').toLowerCase();
   var quiero = String(REMITENTE || '').trim().toLowerCase();
   if (quiero && actual !== quiero) {
-    var alias = [];
-    try { alias = GmailApp.getAliases().map(function (a) { return a.toLowerCase(); }); } catch (e) {}
-    if (alias.indexOf(quiero) !== -1) {
-      var extra = { htmlBody: opciones.htmlBody, name: opciones.name, from: quiero };
-      if (opciones.replyTo) extra.replyTo = opciones.replyTo;
-      if (opciones.cc) extra.cc = opciones.cc;
-      GmailApp.sendEmail(opciones.to, opciones.subject, '', extra);
-      return;
-    }
     console.warn('El correo salió desde ' + actual + ' y no desde ' + quiero +
                  '. Publica el script con la sesión de ' + quiero + '.');
   }
@@ -400,6 +428,27 @@ var LEAD_DE_PRUEBA = {
   formulario: 'PRUEBA · Landing Revisoría Fiscal 2027'
 };
 
+// Ejecutar UNA VEZ después de pegar el script: crea la pestaña "Leads" en
+// esta hoja y comprueba que se puede escribir en el Consolidado.
+function prepararHoja() {
+  hojaLocal();
+  Logger.log('Pestaña "' + PESTANA + '" lista en esta hoja.');
+  if (!ID_CONSOLIDADO) { Logger.log('Sin ID_CONSOLIDADO: los leads solo quedarán en esta hoja.'); return; }
+  try {
+    var libro = SpreadsheetApp.openById(ID_CONSOLIDADO);
+    var hoja = libro.getSheetByName(PESTANA);
+    if (!hoja) throw new Error('no existe la pestaña "' + PESTANA + '"');
+    var encabezados = hoja.getRange(1, 1, 1, hoja.getLastColumn()).getValues()[0].map(function (h) { return String(h).trim(); });
+    var faltan = COLUMNAS.filter(function (c) { return encabezados.indexOf(c) === -1; });
+    Logger.log('Consolidado encontrado: "' + libro.getName() + '".' +
+               (faltan.length ? ' ATENCIÓN, no tiene estas columnas (no se llenarán): ' + faltan.join(', ')
+                              : ' Tiene todas las columnas.'));
+  } catch (err) {
+    Logger.log('ATENCIÓN: no se puede abrir el Consolidado: ' + err +
+               '. Comparte esa hoja con ' + Session.getEffectiveUser().getEmail() + ' como Editor.');
+  }
+}
+
 // Muestra desde qué cuenta van a salir los correos.
 function verRemitente() {
   var actual = Session.getEffectiveUser().getEmail();
@@ -431,16 +480,6 @@ function probarBienvenida() {
   lead.correo = Session.getActiveUser().getEmail();
   enviarBienvenida(lead);
   Logger.log('Correo de prueba enviado a ' + lead.correo);
-}
-
-// Ejecutar UNA VEZ: borra el disparador diario de la secuencia de
-// recuperación anterior (día 1, 3 y 7), que ya no existe en este script.
-function quitarTriggerRecuperacion() {
-  var borrados = 0;
-  ScriptApp.getProjectTriggers().forEach(function (t) {
-    if (t.getHandlerFunction() === 'procesarRecuperacion') { ScriptApp.deleteTrigger(t); borrados++; }
-  });
-  Logger.log('Disparadores eliminados: ' + borrados);
 }
 
 
