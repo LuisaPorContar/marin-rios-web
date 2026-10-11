@@ -23,7 +23,7 @@ NOINDEX = "noindex, nofollow"
 # URL del Apps Script publicado como aplicación web (termina en /exec).
 # Mientras esté vacía, el formulario igual abre WhatsApp, pero NO guarda en el
 # Sheet. Ver integraciones/COMO-CONECTAR-EL-SHEET.md
-SHEETS_URL = ""
+SHEETS_URL = "https://script.google.com/macros/s/AKfycbwmIAVPBJ3KSfFSk0YcLXKaMERHIMBjkKjoe7TlgRBu7oAuBgMUqPLIQfec23nOpBEC/exec"
 
 # ID del video de YouTube con Juan David (lo que va después de v=).
 # Vacío = la sección de video no se publica.
