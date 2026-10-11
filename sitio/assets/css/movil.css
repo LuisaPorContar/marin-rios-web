@@ -52,9 +52,9 @@
     border: 1px solid rgba(255, 255, 255, .25);
   }
   .barra-movil__wa { background: #1EA952; color: #fff; padding-inline: 1rem; }
-  .barra-movil--landing { background: rgba(0, 0, 0, .94); }
+  .barra-movil--landing { background: rgba(7, 4, 35, .96); }
   .barra-movil--landing .barra-movil__wa { width: 50px; padding: 0; }
-  .barra-movil__cta { background: #2BB3EF; color: #000; }
+  .barra-movil__cta { background: #2BB3EF; color: #0B0733; }
   /* el pie legal no queda tapado por la barra */
   .pie { padding-bottom: var(--sp-4); }
 
