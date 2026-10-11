@@ -135,12 +135,12 @@ function guardarLead(p, ahora) {
   var mes = MESES[Number(Utilities.formatDate(ahora, ZONA, 'M')) - 1] + ' ' +
             Utilities.formatDate(ahora, ZONA, 'yyyy');
 
-  var fuente = [p.utm_source, p.utm_medium, p.utm_content].filter(Boolean).join(' / ');
-  // Notas: ciudad, si califica y la fuente (la facturación va en "Rango de ventas")
+  // Notas: ciudad, si califica y de qué anuncio vino (la facturación va en "Rango de ventas")
   var notas = [
     p.ciudad ? 'Ciudad: ' + p.ciudad : '',
     'Califica: ' + (p.calificado || ''),
-    fuente ? 'Fuente: ' + fuente : ''
+    p.utm_content ? 'Anuncio: ' + p.utm_content : '',
+    p.utm_term ? 'Campaña: ' + p.utm_term : ''
   ].filter(String).join(' · ');
 
   var valores = {
@@ -152,7 +152,7 @@ function guardarLead(p, ahora) {
     'Empresa': p.empresa || '',
     'Tipo de persona': tipoDePersona(p),
     'Rango de ventas': p.ingresos || '',
-    'Conjunto de anuncios': p.utm_campaign || p.utm_source || 'Directo / orgánico',
+    'Conjunto de anuncios': origen(p),
     'Formulario': p.formulario || 'Landing',
     'Estado del lead': '',
     'Notas': notas,
@@ -195,6 +195,15 @@ function hojaLocal() {
   return hoja;
 }
 
+// De dónde vino el lead. Con los parámetros UTM del anuncio sale el nombre del
+// conjunto de anuncios; si llegó de un anuncio de Meta sin UTM, se avisa.
+function origen(p) {
+  if (p.utm_campaign) return p.utm_campaign;
+  if (p.utm_source) return p.utm_source;
+  if (p.fbclid || p.fbc) return 'Anuncio de Meta (sin UTM)';
+  return 'Directo / orgánico';
+}
+
 // "Persona jurídica (empresa)" si el lead trae empresa; "Persona natural" si no.
 // Un formulario también puede enviarlo explícito en el campo tipo_persona.
 function tipoDePersona(p) {
@@ -222,7 +231,7 @@ function avisarAlEquipo(p, ahora) {
 
   var califica = p.calificado === 'Sí';
   var digitos = String(p.whatsapp || '').replace(/\D/g, '');
-  var fuente = [p.utm_source, p.utm_medium, p.utm_campaign, p.utm_content].filter(Boolean).join(' / ') || 'Directo / orgánico';
+  var fuente = [origen(p), p.utm_content ? 'anuncio: ' + p.utm_content : '', p.utm_term ? 'campaña: ' + p.utm_term : ''].filter(Boolean).join(' · ');
   var primerNombre = String(p.nombre || '').trim().split(/\s+/)[0];
   var enlaceWa = 'https://wa.me/' + digitos + '?text=' + encodeURIComponent(
     'Hola ' + primerNombre + ', te escribe ' + FIRMA_NOMBRE + ' de Marín Ríos Consultores. Recibimos tu solicitud de evaluación de revisoría fiscal.');
