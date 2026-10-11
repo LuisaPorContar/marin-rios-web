@@ -22,6 +22,21 @@
     });
   });
 
+  /* ---------- Video propio del héroe: el .mp4 solo se pide al hacer clic ---------- */
+  document.querySelectorAll('.lp-vvideo[data-mp4]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var v = document.createElement('video');
+      v.className = 'lp-vvideo__marco';
+      v.src = btn.getAttribute('data-mp4');
+      v.poster = btn.querySelector('img').currentSrc || btn.querySelector('img').src;
+      v.controls = true; v.autoplay = true; v.playsInline = true;
+      v.setAttribute('playsinline', '');
+      btn.replaceWith(v);
+      v.play().catch(function () {});
+      if (window.dataLayer) window.dataLayer.push({ event: 'lp_revisoria_video_play' });
+    });
+  });
+
   /* ---------- Formulario ---------- */
   var form = document.getElementById('lp-form');
   if (!form) return;

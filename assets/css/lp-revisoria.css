@@ -501,3 +501,168 @@
   .lp-logo[aria-hidden="true"] { display: none; }
   .lp-foto img { transition: none; }
 }
+
+/* ============================================================
+   TEMA DE MARCA
+   La landing nació con el fondo negro de 30X. Esta capa la pasa a los
+   fondos de Marín Ríos: navy con los brillos cian del degradado de marca,
+   tarjetas en vidrio sobre navy y texto de botones en navy.
+   ============================================================ */
+.lp {
+  --l-negro: #070423;
+  --l-tarjeta: rgba(255,255,255,.045);
+  --l-tarjeta-2: rgba(255,255,255,.07);
+  --l-borde: rgba(143,227,255,.16);
+  --l-suave: #B4B8D6;
+  background: #070423;
+}
+.lp main {
+  background:
+    radial-gradient(70% 420px at 85% 0, rgba(43,179,239,.26) 0%, transparent 70%),
+    linear-gradient(180deg, #0B0733 0%, #070423 30%, #0B0733 65%, #120A47 100%);
+}
+/* Secciones alternas con el brillo cian a un lado, como en la portada */
+.lp-seccion:nth-of-type(odd) {
+  background: radial-gradient(55% 70% at 0% 50%, rgba(43,179,239,.10) 0%, transparent 65%);
+}
+.lp-seccion:nth-of-type(even) {
+  background: radial-gradient(55% 70% at 100% 50%, rgba(43,179,239,.10) 0%, transparent 65%);
+}
+.lp-btn, .lp-resumen__hoy, .lp-gracias__ico { color: #0B0733; }
+.lp-btn { box-shadow: 0 14px 34px -14px rgba(43,179,239,.75); }
+.lp-btn--contorno { color: #fff; border-color: rgba(255,255,255,.28); box-shadow: none; }
+.lp-btn--contorno:hover { color: #0B0733; }
+.lp-ico, .lp-etiqueta { background: rgba(43,179,239,.10); }
+.lp-cifras span { background: rgba(255,255,255,.08); }
+.lp-texto, .lp-carta__texto p { color: #DDE1F5; }
+
+/* Héroe: titular blanco con el acento en cian, como en la portada */
+.lp-heroe h1 { color: #fff; }
+.lp-heroe h1 em { font-style: normal; color: var(--l-acento); }
+
+/* Retrato recortado del director sobre el bloque cian de marca */
+.lp-heroe__media--retrato {
+  position: relative;
+  width: min(100%, 400px);
+  aspect-ratio: 4 / 4.3;
+  border: 0; border-radius: 0; overflow: visible;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.lp-heroe__media--retrato::before {
+  content: ""; position: absolute; left: 6%; right: 6%; bottom: 0; height: 74%;
+  border-radius: 22px;
+  background: linear-gradient(160deg, #4FC4F7 0%, #2BB3EF 45%, #1A6FB8 100%);
+  box-shadow: 0 30px 70px -30px rgba(43,179,239,.8);
+}
+.lp-heroe__media--retrato img {
+  position: relative;
+  width: auto; height: 100%;
+  object-fit: contain; object-position: bottom;
+  border-radius: 0 0 22px 22px;
+}
+
+.lp-foto::after {
+  background: linear-gradient(180deg, rgba(7,4,35,.05) 0%, rgba(7,4,35,.45) 40%, rgba(7,4,35,.94) 100%);
+}
+.lp-carta__foto {
+  background:
+    radial-gradient(70% 90% at 50% 100%, rgba(43,179,239,.5) 0%, transparent 70%),
+    linear-gradient(160deg, #120A47 0%, #0B0733 100%);
+}
+.lp-wa {
+  background:
+    radial-gradient(70% 90% at 85% 0%, rgba(43,179,239,.30) 0%, transparent 60%),
+    radial-gradient(60% 80% at 0% 100%, rgba(43,179,239,.22) 0%, transparent 60%),
+    linear-gradient(160deg, #070423 0%, #0B0733 50%, #120A47 100%);
+  border-block-color: rgba(143,227,255,.14);
+}
+.lp-campo input, .lp-campo select { background: rgba(7,4,35,.7); border-color: rgba(143,227,255,.22); }
+.lp-campo input::placeholder { color: #8088B0; }
+.lp-campo select option { background: #0B0733; }
+.lp-final { border-top-color: rgba(143,227,255,.14); }
+.lp .pie--landing { background: #070423; border-top-color: rgba(143,227,255,.14); }
+.lp .pie--landing .pie__legal { color: #8E93B8; }
+.lp .resenas--oscuro .resena { background: rgba(255,255,255,.055); border-color: rgba(143,227,255,.16); }
+.lp .resenas--oscuro .resenas__resumen, .lp .resenas--oscuro .resena__id small { color: #B4B8D6; }
+.lp .resenas--oscuro .resenas__nav { color: #0B0733; }
+
+/* ============================================================
+   Estructura 30X: prueba y descripción del héroe, ciudades,
+   tarjeta de oferta, perspectiva y resumen de valor
+   ============================================================ */
+.lp-heroe h1 { max-width: 20ch; }
+.lp-heroe__sub { font-size: 1.2rem; font-weight: 600; max-width: 54ch; }
+.lp-heroe__prueba { margin: var(--sp-2) auto 0; max-width: 54ch; color: var(--l-suave); font-size: 1rem; }
+.lp-heroe__desc {
+  margin: var(--sp-4) auto 0; max-width: 62ch;
+  color: #DDE1F5; font-size: 1rem; line-height: 1.6;
+}
+.lp-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-top: var(--sp-3); }
+.lp-chips li {
+  padding: .4rem .95rem; border-radius: 8px;
+  background: rgba(255,255,255,.07); border: 1px solid var(--l-borde);
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: #fff;
+}
+.lp-oferta {
+  max-width: 560px; margin: var(--sp-5) auto 0;
+  padding: var(--sp-4) var(--sp-4);
+  border-radius: var(--l-radio);
+  background: var(--l-tarjeta); border: 1px solid var(--l-borde);
+  text-align: left;
+}
+.lp-oferta__nombre { font-family: var(--display); font-weight: 800; font-size: 1.35rem; color: #fff; line-height: 1.2; }
+.lp-oferta__precio { color: var(--l-acento); font-weight: 700; margin: .35rem 0 var(--sp-3); }
+.lp-oferta__precio strong { color: var(--l-acento); font-size: 1.25rem; }
+.lp-oferta > p:not([class]) { color: #DDE1F5; line-height: 1.6; }
+.lp-oferta > p:not([class]) + p { margin-top: var(--sp-2); }
+.lp-oferta__lista { display: grid; gap: .8rem; margin-top: var(--sp-3); padding-top: var(--sp-3); border-top: 1px solid var(--l-borde); }
+.lp-oferta__lista li { display: flex; gap: .65rem; align-items: flex-start; color: #fff; font-weight: 600; line-height: 1.4; }
+.lp-oferta__lista svg { width: 18px; height: 18px; flex: none; margin-top: .2rem; color: var(--l-acento); }
+.lp-perspectiva {
+  margin-top: var(--sp-4);
+  font-family: var(--display); font-weight: 800; letter-spacing: -.02em;
+  font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2rem); line-height: 1.15; color: var(--l-acento);
+}
+.lp-valor { display: grid; }
+.lp-valor li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  padding: .95rem 0; border-bottom: 1px solid var(--l-borde);
+}
+.lp-valor li:first-child { padding-top: 0; }
+.lp-valor span { color: #fff; font-weight: 600; font-size: .98rem; line-height: 1.35; }
+.lp-valor strong { color: var(--l-acento); font-size: .9rem; white-space: nowrap; }
+.lp-valor + .lp-resumen__hoy { margin-top: var(--sp-3); }
+@media (max-width: 600px) {
+  .lp-oferta { padding: var(--sp-3); }
+  .lp-heroe__sub { font-size: 1.08rem; }
+}
+
+/* Video vertical del héroe: solo se ve la portada; el archivo se descarga al hacer clic */
+.lp-vvideo, .lp-vvideo__marco {
+  display: block; position: relative;
+  width: min(100%, 300px); aspect-ratio: 9 / 16;
+  margin: var(--sp-4) auto 0; padding: 0;
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--l-borde);
+  background: #0B0733;
+  box-shadow: 0 30px 70px -30px rgba(43,179,239,.75);
+}
+.lp-vvideo { cursor: pointer; }
+.lp-vvideo img, .lp-vvideo__marco { object-fit: cover; }
+.lp-vvideo img { width: 100%; height: 100%; }
+.lp-vvideo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(7,4,35,.55) 100%); }
+.lp-vvideo__play {
+  position: absolute; inset: 0; margin: auto; z-index: 1;
+  width: 74px; height: 74px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--l-acento); color: #0B0733;
+  box-shadow: 0 0 0 10px rgba(43,179,239,.25);
+  transition: transform var(--transicion);
+}
+.lp-vvideo__play svg { width: 32px; height: 32px; margin-left: 4px; }
+.lp-vvideo:hover .lp-vvideo__play { transform: scale(1.08); }
+.lp-vvideo__dur {
+  position: absolute; right: .7rem; bottom: .7rem; z-index: 1;
+  padding: .2rem .55rem; border-radius: 6px;
+  background: rgba(7,4,35,.8); color: #fff; font-size: .78rem; font-weight: 700;
+}
