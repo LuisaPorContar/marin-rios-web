@@ -53,16 +53,44 @@ Cada envío agrega una fila en **Leads** con:
 
 **Estado del lead** queda vacío para que el equipo lo califique.
 
-## Importante para Meta
+## Meta: píxel y API de conversiones (CAPI)
 
-- En los anuncios, usa parámetros UTM en la URL, por ejemplo:
+El píxel `4029344540722147` ya está instalado en todo el sitio. Eventos:
+
+| Evento | Cuándo se envía | Por dónde |
+|---|---|---|
+| PageView | Cada página | Píxel |
+| ViewContent | Al abrir la landing | Píxel |
+| Contact | Clic en WhatsApp o en llamar (todo el sitio) | Píxel |
+| Lead | Formulario enviado por una empresa que califica | Píxel (página de gracias) **y** CAPI (este script) |
+| LeadNoCalificado | Formulario de una empresa pequeña | Píxel (evento personalizado) |
+
+El Lead viaja por los dos caminos con el mismo `event_id`, así Meta lo cuenta
+una sola vez aunque el navegador bloquee el píxel.
+
+### Activar el CAPI
+
+1. En el Administrador de eventos de Meta: **Configuración → API de
+   conversiones → Generar token de acceso**. Copia el token.
+2. En el editor de Apps Script: **Configuración del proyecto** (engranaje) →
+   **Propiedades de la secuencia de comandos → Agregar propiedad**:
+   - Propiedad `META_TOKEN`, valor: el token.
+3. Para probar: en Meta abre **Probar eventos**, copia el código (`TEST12345`)
+   y agrégalo como propiedad `META_TEST_CODE`. En el editor ejecuta la función
+   `probarMeta`. El evento debe aparecer en *Probar eventos* como "Servidor".
+4. Cuando funcione, **borra `META_TEST_CODE`** (si se queda, los leads reales
+   llegan como prueba y no cuentan).
+5. Publica una versión nueva del script (ver abajo).
+
+El token no se escribe en el código ni se sube a GitHub: solo vive en las
+propiedades del script.
+
+### En los anuncios
+
+- URL del anuncio con UTM, por ejemplo:
   `?utm_source=meta&utm_medium=paid&utm_campaign={{adset.name}}&utm_content={{ad.name}}`
   Así la columna *Conjunto de anuncios* se llena sola.
-- Al enviar el formulario, la página manda a Google Tag Manager el evento
-  `lead_revisoria_2027` (con `lead_calificado` = true/false). En GTM, crea un
-  activador de *Evento personalizado* con ese nombre y conéctalo a la etiqueta
-  del píxel de Meta (`Lead`). Si quieres optimizar solo por leads que califican,
-  agrega la condición `lead_calificado` igual a `true`.
+- Optimiza la campaña por el evento **Lead** (Cliente potencial).
 
 ## Si cambias el script
 

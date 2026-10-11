@@ -182,3 +182,9 @@
   var anio = document.querySelector('[data-anio]');
   if (anio) anio.textContent = new Date().getFullYear();
 })();
+
+/* Meta: clic en WhatsApp o en llamar = evento Contactar */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href*="wa.me"], a[href^="tel:"]');
+  if (a && window.fbq) fbq('track', 'Contact', { content_category: 'Servicios profesionales', contact_method: a.href.indexOf('tel:') === 0 ? 'llamada' : 'whatsapp' });
+});
