@@ -96,11 +96,11 @@ propiedades del script.
 
 | Correo | A quién | Cuándo |
 |---|---|---|
-| Aviso de lead nuevo, con todos los datos del cliente | Al equipo (`AVISAR_A`) | Siempre, califique o no |
-| Bienvenida | Al cliente | Solo si la empresa califica |
+| Aviso de lead premium | Juan David (`AVISAR_PREMIUM_A`), con copia a Maribel | Lead de revisoría fiscal que califica |
+| Aviso de lead nuevo | Maribel (`AVISAR_A`) | Cualquier otro lead |
+| Bienvenida | Al cliente | Siempre, califique o no (texto distinto en cada caso) |
 
-Si la empresa **no califica**, al cliente no se le envía nada: el aviso le
-llega al equipo y lo maneja el comercial.
+A Meta (CAPI) solo se envían los leads que califican.
 
 **De dónde salen:** de `marketingmarinrios@gmail.com`. Google envía siempre
 desde la cuenta que publica el script, así que hay que:
