@@ -700,3 +700,17 @@
 .lp-resumen .lp-oferta__lista--sola { padding-bottom: var(--sp-3); }
 .lp-resumen__hoy--texto { font-size: 1.05rem; }
 .lp-seccion .lp-heroe__media--retrato { margin-top: var(--sp-4); }
+
+/* Descripciones un poco más grandes */
+.lp-texto { font-size: 1.12rem; line-height: 1.6; }
+.lp-heroe__desc { font-size: 1.1rem; }
+.lp-heroe--cols .lp-heroe__prueba { font-size: 1.02rem; }
+.lp-partes p:not(.lp-partes__bajada) { font-size: 1.05rem; line-height: 1.55; }
+.lp-partes__bajada { font-size: 1.05rem; }
+.lp-carta__texto p { font-size: 1.1rem; }
+.lp-oferta__lista li { font-size: 1.06rem; }
+.lp-tarjeta--fila p { font-size: 1.05rem; }
+.lp-persona__rol { font-size: 1.08rem; }
+.lp-datos span { font-size: .96rem; }
+.lp .acordeon p, .lp-faq p { font-size: 1.05rem; }
+.lp-form__legal { font-size: .9rem; }
