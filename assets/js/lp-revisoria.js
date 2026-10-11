@@ -49,7 +49,12 @@
     }
     // Conversión en Meta: Lead solo para el lead calificado
     if (window.fbq) {
-      if (panelGracias.getAttribute('data-gracias') === 'calificado') fbq('track', 'Lead', { content_name: 'Evaluación revisoría fiscal 2027' });
+      var idLead = '';
+      try { idLead = sessionStorage.getItem('lp_event_id') || ''; sessionStorage.removeItem('lp_event_id'); } catch (e4) {}
+      if (panelGracias.getAttribute('data-gracias') === 'calificado') {
+        // Solo cuenta si viene del formulario (evita Leads por recargar la página)
+        if (idLead) fbq('track', 'Lead', { content_name: 'Evaluación revisoría fiscal 2027', content_category: 'Servicios profesionales' }, { eventID: idLead });
+      }
       else fbq('trackCustom', 'LeadNoCalificado');
     }
     window.dataLayer = window.dataLayer || [];
@@ -74,6 +79,14 @@
   ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'].forEach(function (k) {
     utm[k] = (qs.get(k) || '').slice(0, 200);
   });
+
+  function galleta(nombre) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + nombre + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+
+  // Meta: quien llega a la landing vio el contenido del servicio
+  if (window.fbq) fbq('track', 'ViewContent', { content_name: 'Evaluación revisoría fiscal 2027', content_category: 'Servicios profesionales' });
 
   function valor(nombre) {
     var campo = form.elements[nombre];
@@ -141,10 +154,20 @@
       '. Revisor actual ' + d.revisor + '.';
     var urlWa = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(mensaje);
 
+    // Identificador único del lead: el píxel (navegador) y la API de
+    // conversiones (servidor) lo envían igual para que Meta no lo cuente doble.
+    var idEvento = 'rf27-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+    try { sessionStorage.setItem('lp_event_id', idEvento); } catch (e3) {}
+    var fbc = galleta('_fbc') || (utm.fbclid ? 'fb.1.' + Date.now() + '.' + utm.fbclid : '');
+
     var registro = Object.assign({}, d, utm, {
       calificado: calificado ? 'Sí' : 'No',
       formulario: 'Landing Revisoría Fiscal 2027',
-      pagina: window.location.origin + window.location.pathname
+      pagina: window.location.origin + window.location.pathname,
+      event_id: idEvento,
+      fbp: galleta('_fbp'),
+      fbc: fbc,
+      agente: navigator.userAgent
     });
     enviarAlSheet(registro);
 
