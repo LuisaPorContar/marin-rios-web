@@ -666,3 +666,9 @@
   padding: .2rem .55rem; border-radius: 6px;
   background: rgba(7,4,35,.8); color: #fff; font-size: .78rem; font-weight: 700;
 }
+
+/* Páginas de gracias */
+.lp-gracias-pag { min-height: 78vh; display: grid; align-items: center; }
+.lp-gracias-pag .lp-gracias__ico { margin: 0 auto var(--sp-3); }
+.lp-gracias-pag .lp-acciones { margin-top: var(--sp-2); }
+.lp:has(.lp-gracias-pag) .barra-movil { display: none; }
