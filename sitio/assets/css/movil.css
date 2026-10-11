@@ -139,3 +139,11 @@
 
 /* Las secciones bajo el primer pantallazo se dibujan cuando se acercan a la vista */
 main > section ~ section { content-visibility: auto; contain-intrinsic-size: auto 720px; }
+
+/* La barra fija aparece cuando la persona ya bajó: arriba el héroe trae su
+   propio botón. Solo se esconde si hay JavaScript (clase .js en <html>). */
+@media (max-width: 760px) {
+  .js .barra-movil { transform: translateY(110%); transition: transform .28s ease; }
+  .js .barra-movil.barra-movil--visible { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .js .barra-movil { transition: none; } }
