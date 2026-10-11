@@ -173,7 +173,7 @@ cuerpo = f"""
     <h1>¿Tu empresa facturó más de {TOPE_INGRESOS} en 2026? En marzo tu asamblea tiene que nombrar revisor fiscal.</h1>
     <p class="lp-heroe__sub">Si llegas a la asamblea sin propuestas, eliges a la carrera, con los socios preguntando y el riesgo de contratar a alguien que solo firma. <span class="lp-acento">Agenda una evaluación gratuita y llega a marzo con la decisión tomada.</span></p>
     <div class="lp-heroe__media">
-      <img src="assets/img/equipo-ancho.jpg" alt="Equipo de Marín Ríos Consultores en su oficina de Medellín" width="1600" height="900" fetchpriority="high">
+      <img src="assets/img/heroe-juan-david.jpg" alt="Juan David Marín, contador público y director de Marín Ríos Consultores" width="1600" height="900" fetchpriority="high">
     </div>
     {_boton()}
     <ul class="lp-cifras">
