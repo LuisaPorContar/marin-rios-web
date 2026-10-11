@@ -672,3 +672,22 @@
 .lp-gracias-pag .lp-gracias__ico { margin: 0 auto var(--sp-3); }
 .lp-gracias-pag .lp-acciones { margin-top: var(--sp-2); }
 .lp:has(.lp-gracias-pag) .barra-movil { display: none; }
+
+/* Héroe en dos columnas: texto a la izquierda, video a la derecha */
+.lp-heroe--cols .lp-heroe__logo { display: block; margin: 0 auto var(--sp-4); }
+.lp-heroe__rejilla { display: grid; gap: var(--sp-4); justify-items: center; text-align: center; }
+.lp-heroe--cols h1, .lp-heroe--cols .lp-heroe__sub, .lp-heroe--cols .lp-heroe__desc, .lp-heroe--cols .lp-heroe__prueba { margin-inline: auto; }
+.lp-heroe--cols .lp-heroe__desc { margin-top: var(--sp-3); }
+.lp-heroe--cols .lp-heroe__prueba { margin-top: var(--sp-3); font-size: .95rem; }
+.lp-heroe--cols .lp-vvideo, .lp-heroe--cols .lp-vvideo__marco { margin-top: 0; }
+@media (min-width: 900px) {
+  .lp-heroe--cols .lp-heroe__logo { margin-inline: 0; }
+  .lp-heroe__rejilla {
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, 340px);
+    gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+    align-items: center; justify-items: stretch; text-align: left;
+  }
+  .lp-heroe--cols h1 { max-width: 17ch; margin-inline: 0; font-size: clamp(2.3rem, 1.2rem + 2.6vw, 3.5rem); }
+  .lp-heroe--cols .lp-heroe__sub, .lp-heroe--cols .lp-heroe__desc, .lp-heroe--cols .lp-heroe__prueba { margin-inline: 0; max-width: 52ch; }
+  .lp-heroe--cols .lp-vvideo, .lp-heroe--cols .lp-vvideo__marco { width: 100%; margin-inline: 0; justify-self: end; }
+}

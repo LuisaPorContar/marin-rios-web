@@ -177,24 +177,25 @@ PREGUNTAS = [
 
 cuerpo = f"""
 <!-- ===================== 1. HÉROE =====================
-     30X: promesa · bajada · prueba · imagen · qué es · ciudades · botón -->
-<section class="lp-heroe">
-  <div class="lp-contenedor lp-centro">
+     Dos columnas en escritorio (texto · video); apilado en celular. -->
+<section class="lp-heroe lp-heroe--cols">
+  <div class="lp-contenedor">
     <img class="lp-heroe__logo" src="assets/img/logo-marin-rios.png" alt="Marín Ríos Consultores" width="90" height="80">
-    <p class="lp-etiqueta">Empresas que facturaron más de {TOPE_INGRESOS} en 2026</p>
-    <h1>Sin revisor fiscal en 2027, <em>la DIAN da tus declaraciones por no presentadas</em></h1>
-    <p class="lp-heroe__sub">Pagas sanción por extemporaneidad, intereses y una multa de la Supersociedades que llega a {MULTA_SUPER}. Y ante tus socios, el que responde eres tú. <span class="lp-acento">Agenda la evaluación gratuita y llega a marzo con el revisor elegido.</span></p>
-    <p class="lp-heroe__prueba">Con el equipo que ya acompaña a <strong>más de 50 empresas</strong> en Medellín y el Eje Cafetero.</p>
-    <button class="lp-vvideo" type="button" data-mp4="/assets/video/evaluacion-revisoria.mp4" aria-label="Reproducir video de 44 segundos">
-      <img src="assets/img/video-evaluacion.jpg" alt="Video: cómo trabajamos la revisoría fiscal en Marín Ríos Consultores" width="540" height="960" fetchpriority="high">
-      <span class="lp-vvideo__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-      <span class="lp-vvideo__dur" aria-hidden="true">0:44</span>
-    </button>
-    <p class="lp-heroe__desc">Es una evaluación de {DURACION_EVALUACION}, presencial o virtual, en la que un contador público revisa tus ingresos, tus activos y tus estados financieros, te dice si estás obligado, qué riesgos tienes hoy frente a la DIAN y la Supersociedades, y te entrega una propuesta escrita para tu asamblea.</p>
-    <ul class="lp-chips" aria-label="Ciudades con atención presencial">
-      <li>Medellín</li><li>Pereira</li><li>Armenia</li><li>Manizales</li>
-    </ul>
-    {_boton()}
+    <div class="lp-heroe__rejilla">
+      <div class="lp-heroe__texto">
+        <p class="lp-etiqueta">Empresas que facturaron más de {TOPE_INGRESOS} en 2026</p>
+        <h1>Sin revisor fiscal en 2027, <em>la DIAN da tus declaraciones por no presentadas</em></h1>
+        <p class="lp-heroe__sub">Pagas sanción por extemporaneidad, intereses y una multa de la Supersociedades que llega a {MULTA_SUPER}. Y ante tus socios, el que responde eres tú.</p>
+        <p class="lp-heroe__desc">Agenda la evaluación gratuita: en {DURACION_EVALUACION} un contador público te dice si estás obligado, qué riesgos tienes hoy frente a la DIAN y te entrega una propuesta escrita para tu asamblea de marzo.</p>
+        {_boton()}
+        <p class="lp-heroe__prueba">Con el equipo que ya acompaña a <strong>más de 50 empresas</strong>.</p>
+      </div>
+      <button class="lp-vvideo" type="button" data-mp4="/assets/video/evaluacion-revisoria.mp4" aria-label="Reproducir video de 44 segundos">
+        <img src="assets/img/video-evaluacion.jpg" alt="Video: cómo trabajamos la revisoría fiscal en Marín Ríos Consultores" width="540" height="960" fetchpriority="high">
+        <span class="lp-vvideo__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="lp-vvideo__dur" aria-hidden="true">0:44</span>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -233,7 +234,7 @@ cuerpo = f"""
       </li>
       <li>
         <span class="lp-ico lp-ico--grande">{ICONO['alerta']}</span>
-        <div><h3>Parte 2: ¿Qué riesgos tengo?</h3><p class="lp-partes__bajada">Encuentra el problema antes de que lo encuentre la DIAN.</p><p>Leemos tus estados financieros y te mostramos los puntos que hoy te exponen a un requerimiento.</p></div>
+        <div><h3>Parte 2: ¿Qué riesgos tengo?</h3><p class="lp-partes__bajada">Encuentra el problema antes de que lo encuentre la DIAN.</p><p>Leemos tus estados financieros y te mostramos las inconsistencias que la DIAN detecta al cruzar factura, nómina y exógena.</p></div>
       </li>
       <li>
         <span class="lp-ico lp-ico--grande">{ICONO['documento']}</span>
@@ -290,7 +291,7 @@ cuerpo = f"""
 <section class="lp-seccion">
   <div class="lp-contenedor lp-centro lp-angosto">
     <h2 class="lp-titulo">Solo para ponerlo en perspectiva</h2>
-    <p class="lp-texto">Una declaración de renta sin la firma del revisor fiscal se tiene por no presentada: sanción por extemporaneidad más intereses, mes tras mes. La Supersociedades puede sumar multas de hasta <strong class="lp-acento">{MULTA_SUPER}</strong>. Los bancos no reciben estados financieros sin dictamen. Y un revisor elegido a la carrera te cuesta un año entero de informes que no sirven.</p>
+    <p class="lp-texto">Hoy la DIAN cruza tu facturación electrónica, tu nómina electrónica y la exógena en segundos. Una declaración sin la firma del revisor fiscal se tiene por no presentada: sanción por extemporaneidad más intereses, mes tras mes. La Supersociedades puede sumar multas de hasta <strong class="lp-acento">{MULTA_SUPER}</strong>. Los bancos no reciben estados financieros sin dictamen. Y un revisor elegido a la carrera te cuesta un año entero de informes que no sirven.</p>
     <p class="lp-perspectiva">Tú lo evitas en una reunión de {DURACION_EVALUACION}, sin costo.</p>
   </div>
 </section>
