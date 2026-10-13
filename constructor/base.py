@@ -557,6 +557,7 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
 <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0B0733">
+<meta name="facebook-domain-verification" content="wyqcbkra4nwkp3huamxa9r4ioj00co" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {bloque_estilos}
