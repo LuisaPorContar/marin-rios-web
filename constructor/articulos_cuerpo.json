@@ -722,686 +722,6 @@
   ]
  },
  {
-  "slug": "cierre-contable-empresas",
-  "titulo_seo": "Cierre contable 2025: guía práctica para empresas",
-  "h1": "¿Cómo realizar un adecuado cierre contable este 2025? Guía práctica empresarial",
-  "desc": "Aprende cómo planear tu cierre contable 2025, evitar errores comunes y convertirlo en herramienta estratégica para tu empresa en 2026.",
-  "publicado": "2025-12-04",
-  "modificado": "2025-12-09",
-  "seccion": "Outsourcing contable",
-  "portada": "assets/img/blog/como-generar-presupuesto-de-sgsst-6-1024x1024.jpg",
-  "toc": true,
-  "palabras": 1684,
-  "bloques": [
-   {
-    "t": "p",
-    "texto": "Para muchos, el cierre contable es el equivalente a correr una maratón después de otro periodo largo de obligaciones."
-   },
-   {
-    "t": "p",
-    "texto": "Termina renta, comienza cierre. Pero verlo como una tarea repetitiva y agotadora es perder de vista lo esencial: el cierre contable y fiscal es el evaluador silencioso de todo lo que pasó en el año y, más importante aún, es la base sobre la que construirás decisiones inteligentes para 2026.",
-    "html": "Termina renta, comienza cierre. Pero verlo como una tarea repetitiva y agotadora es perder de vista lo esencial: <strong>el cierre contable y fiscal es el evaluador silencioso de todo lo que pasó en el año y, más importante aún, es la base sobre la que construirás decisiones inteligentes para 2026.</strong>"
-   },
-   {
-    "t": "img",
-    "src": "assets/img/blog/como-generar-presupuesto-de-sgsst-6-1024x1024.jpg",
-    "alt": "Cierre contable 1"
-   },
-   {
-    "t": "h3",
-    "texto": "¿Por qué el cierre contable no es el final sino el comienzo de tu estrategia 2026?",
-    "ancla": "por-que-el-cierre-contable-no-es-el-final-sino-el-comienzo-d"
-   },
-   {
-    "t": "img",
-    "src": "assets/img/blog/unnamed-6-1024x572.jpg",
-    "alt": "pasos cierre contable"
-   },
-   {
-    "t": "p",
-    "texto": "Los problemas más comunes en el cierre contable, no vienen de temas complejos sino de detalles ignorados."
-   },
-   {
-    "t": "p",
-    "texto": "Soportes incompletos, registros fuera de fecha, diferencias entre contabilidad y reporte fiscal, pagos sin bancarización, nómina transmitida tarde o políticas contables aplicadas sin entender su impacto fiscal."
-   },
-   {
-    "t": "p",
-    "texto": "Estos pequeños errores se convierten luego en contingencias, ajustes, reprocesos o sanciones."
-   },
-   {
-    "t": "p",
-    "texto": "Un cierre hecho con calma, anticipación y criterio convierte un requisito legal en un instrumento de planeación."
-   },
-   {
-    "t": "p",
-    "texto": "Esa es la intención de esta guía: que el cierre deje de ser un trámite y se transforme en una herramienta que protege tus cifras, mejora tus decisiones y evita sorpresas con la DIAN.",
-    "html": "Esa es la intención de esta guía: <strong>que el cierre deje de ser un trámite y se transforme en una herramienta que protege tus cifras, mejora tus decisiones y evita sorpresas con la DIAN.</strong>"
-   },
-   {
-    "t": "h3",
-    "texto": "¿Por qué el cierre contable 2025 exige una mentalidad distinta a años anteriores?",
-    "ancla": "por-que-el-cierre-contable-2025-exige-una-mentalidad-distint"
-   },
-   {
-    "t": "p",
-    "texto": "Durante décadas, las empresas se acostumbraron a cerrar contabilidad en marzo, abril o incluso junio del año siguiente."
-   },
-   {
-    "t": "p",
-    "texto": "Ese enfoque quedó atrás por dos razones que cambiaron el juego:",
-    "html": "<strong>Ese enfoque quedó atrás por dos razones que cambiaron el juego:</strong>"
-   },
-   {
-    "t": "p",
-    "texto": "Primero, la contabilidad ya no es un universo independiente. El artículo 21-1 del Estatuto Tributario los conectó de manera formal: el impuesto parte de la contabilidad. Significa que cualquier decisión contable, desde cómo reconoces ingresos hasta cómo calculas depreciaciones, construye la base fiscal del impuesto de renta.",
-    "html": "<strong>Primero,</strong> la contabilidad ya no es un universo independiente. <a href=\"https://normograma.dian.gov.co/dian/compilacion/docs/oficio_dian_908671_2021.htm\" target=\"_blank\" rel=\"noopener\">El artículo 21-1 del Estatuto Tributario</a> los conectó de manera formal: el impuesto parte de la contabilidad. Significa que cualquier decisión contable, desde cómo reconoces ingresos hasta cómo calculas depreciaciones, construye la base fiscal del impuesto de renta.",
-    "enlaces": [
-     {
-      "href": "https://normograma.dian.gov.co/dian/compilacion/docs/oficio_dian_908671_2021.htm",
-      "texto": "El artículo 21-1 del Estatuto Tributario"
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "Segundo, el ecosistema digital eliminó la flexibilidad de años anteriores. Con facturación electrónica, nómina electrónica y documento soporte, quedó atrás el “lo emitimos después pero le ponemos fecha del año anterior”. La DIAN recibe la información al instante porque su sistema valida cada documento. Lo que no se soportó y transmitió antes del 31 de diciembre simplemente no existe fiscalmente.",
-    "html": "<strong>Segundo,</strong> el ecosistema digital eliminó la flexibilidad de años anteriores. Con facturación electrónica, nómina electrónica y documento soporte, quedó atrás el<strong> “lo emitimos después pero le ponemos fecha del año anterior”.</strong> La DIAN recibe la información al instante porque su sistema valida cada documento. Lo que no se soportó y transmitió <strong>antes del 31 de diciembre simplemente no existe fiscalmente.</strong>"
-   },
-   {
-    "t": "p",
-    "texto": "Esto obliga a un cambio mental: ya no se puede pensar en arreglar las cifras meses después.",
-    "html": "Esto obliga a un cambio mental: <strong>ya no se puede pensar en arreglar las cifras meses después.</strong>"
-   },
-   {
-    "t": "p",
-    "texto": "Cerrar bien implica planear, anticipar y evitar llegar a marzo arreglando errores del año pasado porque ya no hay cómo corregirlos."
-   },
-   {
-    "t": "h2",
-    "texto": "¿Cómo se diseña un cierre contable estratégicamente?",
-    "ancla": "como-se-disena-un-cierre-contable-estrategicamente"
-   },
-   {
-    "t": "h3",
-    "texto": "Estrategia de cierre fiscal",
-    "deWidget": true,
-    "ancla": "estrategia-de-cierre-fiscal"
-   },
-   {
-    "t": "p",
-    "texto": "Roadmap Fiscal 2025",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "El arte del cierre fiscal",
-    "deWidget": true,
-    "ancla": "el-arte-del-cierre-fiscal"
-   },
-   {
-    "t": "p",
-    "texto": "No cierres con sorpresas. Transforma la obligación tributaria en una ventaja competitiva siguiendo estas tres fases estratégicas.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "El plan maestro",
-    "deWidget": true,
-    "ancla": "el-plan-maestro"
-   },
-   {
-    "t": "p",
-    "texto": "Octubre – Noviembre",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "¿Para qué hacer un precorte antes de cerrar?",
-    "deWidget": true,
-    "ancla": "para-que-hacer-un-precorte-antes-de-cerrar"
-   },
-   {
-    "t": "p",
-    "texto": "Realizar un cierre preliminar al 31 de octubre es como mirar el tablero de ajedrez antes de mover las piezas finales. Te permite:",
-    "deWidget": true
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "•: Proyectar ingresos y utilidades reales."
-     },
-     {
-      "texto": "•: Anticipar la carga tributaria de 2026."
-     },
-     {
-      "texto": "•: Conversar con gerencia meses antes, no el día antes de declarar."
-     },
-     {
-      "texto": "•: Abrir espacio para tomar decisiones inteligentes."
-     }
-    ],
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "Con un precorte no cierras con sorpresa. Cierras consciente.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "¿Por qué revisar políticas contables es vital?",
-    "deWidget": true,
-    "ancla": "por-que-revisar-politicas-contables-es-vital"
-   },
-   {
-    "t": "p",
-    "texto": "Las políticas no son documentos para archivar. Definen cómo mides tu dinero. Muchas empresas adoptan políticas (como valor razonable o valorizaciones) que elevan la utilidad contable sin generar caja real.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "Auditoría y checklist",
-    "deWidget": true,
-    "ancla": "auditoria-y-checklist"
-   },
-   {
-    "t": "p",
-    "texto": "Fase de Blindaje",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "¿Cómo \"sobreviven\" tus deducciones?",
-    "deWidget": true,
-    "ancla": "como-sobreviven-tus-deducciones"
-   },
-   {
-    "t": "p",
-    "texto": "Aquí es donde se logran los ahorros: evitando rechazos. Tu Checklist de supervivencia:",
-    "deWidget": true
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "✅ Factura Electrónica: Obligatoria para proveedores responsables."
-     },
-     {
-      "texto": "✅ Documento Soporte: Transmitido para proveedores no obligados."
-     },
-     {
-      "texto": "✅ Nómina Electrónica: Transmitida, aunque sea extemporánea."
-     },
-     {
-      "texto": "✅ Acuses RADIAN: Vital para justificar costos en compras a crédito."
-     }
-    ],
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "Efectivo, art. 107 y criterios fiscales",
-    "deWidget": true,
-    "ancla": "efectivo-art-107-y-criterios-fiscales"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Pagos en Efectivo (Art 771-5): Cuidado. Pagos individuales > 100 UVT pierden deducción. Revisa el límite global."
-     },
-     {
-      "texto": "Art. 107 ET: Todo gasto debe tener Causalidad, Necesidad y Proporcionalidad."
-     },
-     {
-      "texto": "Seguridad Social: Sin pago de aportes, no hay deducción de salarios."
-     },
-     {
-      "texto": "Regla del 1%: Atenciones a clientes/empleados no pueden superar el 1% del ingreso fiscal."
-     }
-    ],
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "La conciliación",
-    "deWidget": true,
-    "ancla": "la-conciliacion"
-   },
-   {
-    "t": "p",
-    "texto": "Diciembre – Cierre de Brecha",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "¿Qué es realmente la conciliación fiscal?",
-    "deWidget": true,
-    "ancla": "que-es-realmente-la-conciliacion-fiscal"
-   },
-   {
-    "t": "p",
-    "texto": "El Formato 2516 no es un simple adjunto. Es el puente que conecta tu contabilidad financiera con lo que la DIAN ve. Aquí identificamos dos tipos de diferencias:",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "Diferencias permanentes",
-    "deWidget": true,
-    "ancla": "diferencias-permanentes"
-   },
-   {
-    "t": "p",
-    "texto": "Nunca se revierten (ej. Multas, Gastos no deducibles). Se pierden para siempre.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "Diferencias temporarias",
-    "deWidget": true,
-    "ancla": "diferencias-temporarias"
-   },
-   {
-    "t": "p",
-    "texto": "Cuestión de tiempo (ej. Deterioros). Se revierten en el futuro y generan Impuesto Diferido.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "El impuesto diferido: la verdad futura",
-    "deWidget": true,
-    "ancla": "el-impuesto-diferido-la-verdad-futura"
-   },
-   {
-    "t": "p",
-    "texto": "Ignorar el impuesto diferido es mentirse a sí mismo. Puede hacer ver las utilidades \"más bonitas\" hoy, pero oculta la realidad de mañana.",
-    "deWidget": true
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Pasivo Diferido: Impuestos que tendrás que pagar en el futuro."
-     },
-     {
-      "texto": "Activo Diferido: Beneficios tributarios que recuperarás."
-     }
-    ],
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "No calcularlo es dar una \"foto falseada\" a la junta directiva.",
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "© 2024 Planeación Tributaria Inteligente.",
-    "deWidget": true
-   },
-   {
-    "t": "h2",
-    "texto": "Fase 1: el plan maestro (Octubre–Noviembre) ¿Para qué hacer un precorte contable antes de cerrar?",
-    "ancla": "fase-1-el-plan-maestro-octubre-noviembre-para-que-hacer-un-p"
-   },
-   {
-    "t": "p",
-    "texto": "Realizar un cierre preliminar al 31 de octubre es como mirar el tablero antes de mover las piezas finales.",
-    "html": "<strong>Realizar un cierre preliminar al 31 de octubre</strong> es como mirar el tablero antes de mover las piezas finales."
-   },
-   {
-    "t": "p",
-    "texto": "Un precorte te permite:"
-   },
-   {
-    "t": "p",
-    "texto": "• Proyectar ingresos, costos y utilidades reales del año."
-   },
-   {
-    "t": "p",
-    "texto": "• Anticipar la carga tributaria de 2026."
-   },
-   {
-    "t": "p",
-    "texto": "• Conversar con gerencia sobre impuestos meses antes, no el día previo a declarar."
-   },
-   {
-    "t": "p",
-    "texto": "• Abrir espacio para decisiones inteligentes antes de que termine el año."
-   },
-   {
-    "t": "p",
-    "texto": "En otras palabras, con un precorte no cierras con sorpresa. Cierras consciente de dónde estás y qué puedes ajustar."
-   },
-   {
-    "t": "h2",
-    "texto": "¿Cómo asegurar que tus deducciones sean válidas? fase 2: auditoría interna y lista de chequeo",
-    "ancla": "como-asegurar-que-tus-deducciones-sean-validas-fase-2-audito"
-   },
-   {
-    "t": "p",
-    "texto": "Esta es la fase donde los ahorros se logran en silencio. Cada verificación evita ajustes costosos después."
-   },
-   {
-    "t": "p",
-    "texto": "A continuación te compartimos las verificaciones más importantes para la auditoría previa al cierre contable."
-   },
-   {
-    "t": "h3",
-    "texto": "¿Qué revisar en soportes para que tus deducciones sobrevivan a la DIAN?",
-    "ancla": "que-revisar-en-soportes-para-que-tus-deducciones-sobrevivan-"
-   },
-   {
-    "t": "p",
-    "texto": "• Que los gastos con proveedores obligados a facturar tengan factura electrónica validada."
-   },
-   {
-    "t": "p",
-    "texto": "• Que compras a proveedores no obligados tengan documento soporte transmitido."
-   },
-   {
-    "t": "p",
-    "texto": "• Que la nómina electrónica esté transmitida, incluso si ocurrió tarde."
-   },
-   {
-    "t": "p",
-    "texto": "• Que existan los acuses y eventos requeridos para justificar gastos en compras a crédito."
-   },
-   {
-    "t": "p",
-    "texto": "El principio es simple: sin soporte adecuado, la DIAN tiene base para rechazar la deducción, así que cada documento cuenta.",
-    "html": "<strong>El principio es simple:</strong> sin soporte adecuado, la DIAN tiene base para rechazar la deducción, así que cada documento cuenta."
-   },
-   {
-    "t": "h3",
-    "texto": "¿Qué hacer con pagos en efectivo para evitar pérdida de deducciones?",
-    "ancla": "que-hacer-con-pagos-en-efectivo-para-evitar-perdida-de-deduc"
-   },
-   {
-    "t": "p",
-    "texto": "El artículo 771-5 del estatuto tributario limita deducibilidad cuando pagas en efectivo más allá de ciertos valores:",
-    "html": "<a href=\"http://www.secretariasenado.gov.co/senado/basedoc/estatuto_tributario_pr031.html\" target=\"_blank\" rel=\"noopener\">El artículo 771-5 del estatuto tributario</a> limita deducibilidad cuando pagas en efectivo más allá de ciertos valores:",
-    "enlaces": [
-     {
-      "href": "http://www.secretariasenado.gov.co/senado/basedoc/estatuto_tributario_pr031.html",
-      "texto": "El artículo 771-5 del estatuto tributario"
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "• Pagos individuales mayores a 100 UVT pierden deducción."
-   },
-   {
-    "t": "p",
-    "texto": "• Existe un límite global sobre todos los pagos en efectivo que no puedes exceder."
-   },
-   {
-    "t": "h3",
-    "texto": "¿Qué criterios fiscales deben cumplir tus costos y gastos?",
-    "ancla": "que-criterios-fiscales-deben-cumplir-tus-costos-y-gastos"
-   },
-   {
-    "t": "p",
-    "texto": "La lista es amplia, pero implica verificaciones como:"
-   },
-   {
-    "t": "p",
-    "texto": "• Relación de causalidad, necesidad y proporcionalidad del gasto (Art. 107 ET)."
-   },
-   {
-    "t": "p",
-    "texto": "• Que el proveedor no esté declarado ficticio o insolvente."
-   },
-   {
-    "t": "p",
-    "texto": "• Que salarios y prestaciones solo se deducen si estás al día en seguridad social."
-   },
-   {
-    "t": "p",
-    "texto": "• Que los impuestos pagados correspondan al mismo año fiscal."
-   },
-   {
-    "t": "p",
-    "texto": "• Que depreciaciones sigan límites fiscales."
-   },
-   {
-    "t": "p",
-    "texto": "• Que deterioros sigan reglas fiscales distintas a las contables."
-   },
-   {
-    "t": "p",
-    "texto": "• Que atenciones a clientes y empleados no excedan el límite del 1% del ingreso fiscal."
-   },
-   {
-    "t": "p",
-    "texto": "Una empresa que no revisa estos puntos termina pagando impuestos por errores evitables."
-   },
-   {
-    "t": "h2",
-    "texto": "Fase 3: cómo cerrar la brecha entre lo contable y lo fiscal (diciembre)",
-    "ancla": "fase-3-como-cerrar-la-brecha-entre-lo-contable-y-lo-fiscal-d"
-   },
-   {
-    "t": "h3",
-    "texto": "La conciliación fiscal: el puente",
-    "deWidget": true,
-    "ancla": "la-conciliacion-fiscal-el-puente"
-   },
-   {
-    "t": "h4",
-    "texto": "El puente de la verdad",
-    "deWidget": true,
-    "ancla": "el-puente-de-la-verdad"
-   },
-   {
-    "t": "p",
-    "texto": "¿Cómo conectamos tu realidad financiera con tu obligación tributaria? Bienvenido a la Conciliación Fiscal.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "El formato 2516",
-    "deWidget": true,
-    "ancla": "el-formato-2516"
-   },
-   {
-    "t": "p",
-    "texto": "Muchos lo ven como un adjunto \"para llenar\". Es un error. Es el documento crítico que conecta tu estado financiero con lo que la DIAN verá en tu declaración.",
-    "deWidget": true
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "La conciliación fiscal es el puente entre dos orillas: de un lado la contabilidad de su empresa; del otro, lo que la DIAN exige en materia fiscal.",
-      "html": "La conciliación fiscal es el puente entre dos orillas: de un lado la <strong>contabilidad</strong> de su empresa; del otro, lo que la <strong>DIAN</strong> exige en materia fiscal."
-     },
-     {
-      "texto": "Conciliación"
-     },
-     {
-      "texto": "La DIANFiscal"
-     }
-    ],
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "Exige entender qué coincide y qué debe ajustarse.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "Diferencias permanentes",
-    "deWidget": true,
-    "ancla": "diferencias-permanentes-2"
-   },
-   {
-    "t": "p",
-    "texto": "Nunca Vuelven",
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "Gastos que contablemente existen pero fiscalmente están prohibidos para siempre.",
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "Ejemplo: Multas y Sanciones",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "Diferencias temporarias",
-    "deWidget": true,
-    "ancla": "diferencias-temporarias-2"
-   },
-   {
-    "t": "p",
-    "texto": "Cuestión de Tiempo",
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "Gastos o ingresos que se reconocen hoy en un lado, y mañana en el otro.",
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "Ejemplo: Deterioro de Cartera",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "El impuesto diferido revela el futuro",
-    "deWidget": true,
-    "ancla": "el-impuesto-diferido-revela-el-futuro"
-   },
-   {
-    "t": "h4",
-    "texto": "Sin impuesto diferido",
-    "deWidget": true,
-    "ancla": "sin-impuesto-diferido"
-   },
-   {
-    "t": "p",
-    "texto": "Muestras un resultado \"más bonito\" pero irreal. Es una foto falseada para la junta y los socios.",
-    "deWidget": true
-   },
-   {
-    "t": "h4",
-    "texto": "Con impuesto diferido",
-    "deWidget": true,
-    "ancla": "con-impuesto-diferido"
-   },
-   {
-    "t": "p",
-    "texto": "Reconoces deudas futuras (Pasivo) o beneficios por cobrar (Activo). Es la realidad financiera pura.",
-    "deWidget": true
-   },
-   {
-    "t": "p",
-    "texto": "No cierres los ojos ante la realidad fiscal.",
-    "deWidget": true
-   },
-   {
-    "t": "h3",
-    "texto": "¿Por qué revisar tus políticas contables es un paso indispensable?",
-    "ancla": "por-que-revisar-tus-politicas-contables-es-un-paso-indispens"
-   },
-   {
-    "t": "img",
-    "src": "assets/img/blog/unnamed-7-1024x572.jpg",
-    "alt": "Politicas contables"
-   },
-   {
-    "t": "p",
-    "texto": "Las políticas contables no son un documento archivado. Son la forma en que tu empresa decide reconocer ingresos, medir activos, calcular deterioros, depreciar bienes, entre otros."
-   },
-   {
-    "t": "p",
-    "texto": "El problema es que muchas empresas adoptan políticas sin entender implicaciones fiscales."
-   },
-   {
-    "t": "p",
-    "texto": "Ejemplos como medición a valor razonable, deterioros o valorizaciones pueden elevar la utilidad contable sin caja real, generando una Tasa de Tributación Depurada mayor y dividendos potencialmente gravados sin haber flujo para distribuir."
-   },
-   {
-    "t": "p",
-    "texto": "Por eso, revisar las políticas es clave: si contablemente las cifras inflan utilidades, fiscalmente puedes terminar pagando más."
-   },
-   {
-    "t": "h2",
-    "texto": "¿Qué hacer luego del cierre? el paso que muchas empresas olvidan: presupuestar",
-    "ancla": "que-hacer-luego-del-cierre-el-paso-que-muchas-empresas-olvid"
-   },
-   {
-    "t": "p",
-    "texto": "Muchos hacen cierre técnico y paran allí."
-   },
-   {
-    "t": "p",
-    "texto": "Pero si no conectas ese cierre con un presupuesto serio, tu trabajo se queda incompleto.",
-    "html": "<strong>Pero si no conectas ese cierre con un presupuesto serio, tu trabajo se queda incompleto. </strong>"
-   },
-   {
-    "t": "p",
-    "texto": "El presupuesto convierte cifras en decisiones: define hacia dónde va tu negocio, asigna recursos, detecta riesgos y establece metas realistas.",
-    "html": "El presupuesto convierte cifras en decisiones: <strong>define hacia dónde va tu negocio, asigna recursos, detecta riesgos y establece metas realistas.</strong>"
-   },
-   {
-    "t": "p",
-    "texto": "Si quieres profundizar en cómo hacerlo, hay un recurso práctico que explica cómo construir un presupuesto útil para dirección:"
-   },
-   {
-    "t": "p",
-    "texto": "Cómo crear un presupuesto empresarial que sirva para tomar decisiones.",
-    "html": "<a href=\"presupuesto-empresarial.html\">Cómo crear un presupuesto empresarial que sirva para tomar decisiones.</a>",
-    "enlaces": [
-     {
-      "href": "presupuesto-empresarial.html",
-      "texto": "Cómo crear un presupuesto empresarial que sirva para tomar decisiones."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "¿Qué hace realmente valioso un cierre contable bien ejecutado y cómo llevarlo a la práctica?",
-    "ancla": "que-hace-realmente-valioso-un-cierre-contable-bien-ejecutado"
-   },
-   {
-    "t": "p",
-    "texto": "Un cierre contable dejó de ser un trámite de contador para convertirse en el primer paso de planeación empresarial, fiscal y financiera."
-   },
-   {
-    "t": "p",
-    "texto": "Cuando se hace con anticipación y criterio, se transforma en un activo que protege tus cifras, da visibilidad sobre tu flujo de caja y prepara decisiones inteligentes para 2026."
-   },
-   {
-    "t": "p",
-    "texto": "Si al revisar tu cierre notas que necesitas acompañamiento profesional para aterrizar ese ejercicio y convertirlo en estrategia, contar con un aliado especializado puede marcar la diferencia."
-   },
-   {
-    "t": "p",
-    "texto": "En Marín Ríos Consultores ofrecemos outsourcing contable para empresas que buscan claridad financiera real.",
-    "html": "En <b>Marín Ríos Consultores</b> ofrecemos outsourcing contable para empresas que buscan claridad financiera real."
-   },
-   {
-    "t": "p",
-    "texto": "Gestionamos tus procesos contables, tributarios y administrativos para que tomes decisiones informadas sin descuidar tu operación diaria."
-   },
-   {
-    "t": "p",
-    "texto": "Ahorra tiempo, reduce riesgos y mantén el control genuino de tu empresa.",
-    "html": "<strong>Ahorra tiempo, reduce riesgos y mantén el control genuino de tu empresa.</strong>"
-   }
-  ]
- },
- {
   "slug": "como-leer-un-balance-general",
   "titulo_seo": "¿Cómo leer un balance general y entender tu negocio?",
   "h1": "¿Cómo leer un balance general y entender la salud financiera de tu empresa?",
@@ -15384,7 +14704,7 @@
   "h1": "El revisor fiscal en el cierre contable: qué revisa y cómo prepararse",
   "desc": "Qué revisa el revisor fiscal en el cierre contable de fin de año: inventarios, cartera, bancos, estimaciones e impuestos. Y qué debe tener listo su empresa.",
   "publicado": "2026-10-10",
-  "modificado": "2026-10-10",
+  "modificado": "2026-10-18",
   "seccion": "Revisoría fiscal",
   "portada": "assets/img/blog/revisor-fiscal-cierre-contable.png",
   "toc": true,
@@ -15549,8 +14869,8 @@
       "html": "<strong>Enero y febrero:</strong> el revisor completa sus pruebas y la administración prepara los estados financieros y las notas."
      },
      {
-      "texto": "Antes de la asamblea: los estados financieros, con el dictamen del revisor y el informe de gestión, deben quedar a disposición de los accionistas durante los quince días hábiles previos a la reunión, para que ejerzan su derecho de inspección.",
-      "html": "<strong>Antes de la asamblea:</strong> los estados financieros, con el dictamen del revisor y el informe de gestión, deben quedar a disposición de los accionistas durante los quince días hábiles previos a la reunión, para que ejerzan su derecho de inspección."
+      "texto": "Antes de la asamblea: los estados financieros, con el dictamen del revisor y el informe de gestión, deben quedar a disposición de los accionistas durante el término que fija la ley antes de la reunión: quince días hábiles en las sociedades anónimas y cinco en las S.A.S., salvo que sus estatutos digan otra cosa, para que ejerzan su derecho de inspección.",
+      "html": "<strong>Antes de la asamblea:</strong> los estados financieros, con el dictamen del revisor y el informe de gestión, deben quedar a disposición de los accionistas durante el término que fija la ley antes de la reunión: quince días hábiles en las sociedades anónimas y cinco en las S.A.S., salvo que sus estatutos digan otra cosa, para que ejerzan su derecho de inspección."
      },
      {
       "texto": "Primer trimestre: la asamblea ordinaria aprueba los estados financieros. En esa misma reunión se nombra o se ratifica al revisor para el año que empieza.",
@@ -15595,297 +14915,12 @@
    {
     "t": "faq",
     "pregunta": "¿Cuándo debe estar listo el dictamen del revisor fiscal?",
-    "respuesta": "Antes de la asamblea ordinaria. Los estados financieros con el dictamen deben estar a disposición de los accionistas durante los quince días hábiles anteriores a la reunión."
+    "respuesta": "Antes de la asamblea ordinaria. Los estados financieros con el dictamen deben estar a disposición de los accionistas antes de la reunión: quince días hábiles en las sociedades anónimas y cinco en las S.A.S., salvo que los estatutos fijen otro plazo."
    },
    {
     "t": "faq",
     "pregunta": "¿Qué pasa si el revisor no obtiene la información a tiempo?",
     "respuesta": "Puede emitir un dictamen con salvedades o abstenerse de opinar sobre algunas partidas. Eso genera preguntas de socios, bancos y entidades de control."
-   }
-  ]
- },
- {
-  "slug": "preparar-cierre-contable-2026",
-  "titulo_seo": "Cómo preparar el cierre contable 2026: lista por meses",
-  "h1": "Cómo preparar el cierre contable 2026: lista de tareas de octubre a marzo",
-  "desc": "Lista práctica para preparar el cierre contable 2026 en Colombia: qué hacer en octubre, noviembre, diciembre y el primer trimestre de 2027, con UVT y topes vigentes.",
-  "publicado": "2026-10-10",
-  "modificado": "2026-10-10",
-  "seccion": "Outsourcing contable",
-  "portada": "assets/img/blog/preparar-cierre-contable-2026.png",
-  "toc": true,
-  "palabras": 864,
-  "bloques": [
-   {
-    "t": "p",
-    "texto": "El cierre contable no empieza el 31 de diciembre. Las empresas que llegan tranquilas a la asamblea de marzo son las que empezaron a ordenar sus cifras en octubre. Las que lo dejan para enero terminan corrigiendo errores con la declaración de renta encima."
-   },
-   {
-    "t": "p",
-    "texto": "Esta es una lista de tareas para el cierre del año gravable 2026, organizada por meses. Si busca la explicación de qué es el cierre y por qué importa, la encuentra en nuestra guía de cierre contable para empresas. Aquí vamos directo al calendario.",
-    "html": "Esta es una lista de tareas para el cierre del año gravable 2026, organizada por meses. Si busca la explicación de qué es el cierre y por qué importa, la encuentra en nuestra guía de <a href=\"cierre-contable-empresas.html\">cierre contable para empresas</a>. Aquí vamos directo al calendario."
-   },
-   {
-    "t": "h2",
-    "texto": "Cifras de referencia para el cierre 2026",
-    "ancla": "cifras-de-referencia-para-el-cierre-2026"
-   },
-   {
-    "t": "table",
-    "filas": [
-     [
-      {
-       "th": true,
-       "texto": "Concepto"
-      },
-      {
-       "th": true,
-       "texto": "Valor"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "UVT 2026"
-      },
-      {
-       "th": false,
-       "texto": "$52.374"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "Salario mínimo 2026"
-      },
-      {
-       "th": false,
-       "texto": "$1.750.905"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "Tope de activos para revisor fiscal en 2027"
-      },
-      {
-       "th": false,
-       "texto": "$8.754.525.000"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "Tope de ingresos para revisor fiscal en 2027"
-      },
-      {
-       "th": false,
-       "texto": "$5.252.715.000"
-      }
-     ]
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "Los topes de la tabla se miden con las cifras al 31 de diciembre de 2026. Si su empresa supera cualquiera de los dos, deberá tener revisor fiscal desde 2027. Lo explicamos con ejemplos en empresas obligadas a tener revisor fiscal.",
-    "html": "Los topes de la tabla se miden con las cifras al 31 de diciembre de 2026. Si su empresa supera cualquiera de los dos, deberá tener revisor fiscal desde 2027. Lo explicamos con ejemplos en <a href=\"empresas-obligadas-revisor-fiscal.html\">empresas obligadas a tener revisor fiscal</a>."
-   },
-   {
-    "t": "h2",
-    "texto": "Octubre: ordenar la casa",
-    "ancla": "octubre-ordenar-la-casa"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Concilie bancos al día. Las partidas sin identificar de meses atrás se resuelven ahora, no en enero.",
-      "html": "<strong>Concilie bancos al día.</strong> Las partidas sin identificar de meses atrás se resuelven ahora, no en enero."
-     },
-     {
-      "texto": "Depure la cartera. Identifique los clientes que no van a pagar y documente la gestión de cobro. Sin soportes, el deterioro no se puede justificar.",
-      "html": "<strong>Depure la cartera.</strong> Identifique los clientes que no van a pagar y documente la gestión de cobro. Sin soportes, el deterioro no se puede justificar."
-     },
-     {
-      "texto": "Revise los terceros. NIT, nombres y direcciones correctos en la contabilidad ahorran semanas cuando llegue la información exógena.",
-      "html": "<strong>Revise los terceros.</strong> NIT, nombres y direcciones correctos en la contabilidad ahorran semanas cuando llegue la información exógena."
-     },
-     {
-      "texto": "Haga una proyección de renta. Con las cifras de septiembre puede estimar el impuesto del año y decidir con tiempo, en lugar de enterarse en abril.",
-      "html": "<strong>Haga una proyección de renta.</strong> Con las cifras de septiembre puede estimar el impuesto del año y decidir con tiempo, en lugar de enterarse en abril."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "Noviembre: planear antes de que se cierre la ventana",
-    "ancla": "noviembre-planear-antes-de-que-se-cierre-la-ventana"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Planee las compras y gastos del año. Los gastos deducibles deben estar causados y soportados en factura electrónica dentro del año.",
-      "html": "<strong>Planee las compras y gastos del año.</strong> Los gastos deducibles deben estar causados y soportados en factura electrónica dentro del año."
-     },
-     {
-      "texto": "Revise los activos fijos. Confirme que existen, que están depreciados correctamente y dé de baja los que ya no usa.",
-      "html": "<strong>Revise los activos fijos.</strong> Confirme que existen, que están depreciados correctamente y dé de baja los que ya no usa."
-     },
-     {
-      "texto": "Programe el inventario físico. Defina fecha, responsables y método de conteo. Si tiene revisor fiscal, avísele para que pueda presenciarlo.",
-      "html": "<strong>Programe el inventario físico.</strong> Defina fecha, responsables y método de conteo. Si tiene revisor fiscal, avísele para que pueda presenciarlo."
-     },
-     {
-      "texto": "Calcule si cruza el tope de revisor fiscal. Si va a quedar obligada en 2027, este es el momento de pedir propuestas. Puede hacerlo en nuestra evaluación de revisoría fiscal 2027.",
-      "html": "<strong>Calcule si cruza el tope de revisor fiscal.</strong> Si va a quedar obligada en 2027, este es el momento de pedir propuestas. Puede hacerlo en nuestra <a href=\"evaluacion-revisoria-fiscal.html\">evaluación de revisoría fiscal 2027</a>."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "Diciembre: cerrar el periodo",
-    "ancla": "diciembre-cerrar-el-periodo"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Haga el inventario físico y ajuste las diferencias.",
-      "html": "<strong>Haga el inventario físico</strong> y ajuste las diferencias."
-     },
-     {
-      "texto": "Cause todo lo del año: facturas de proveedores, servicios públicos, honorarios y arrendamientos de diciembre.",
-      "html": "<strong>Cause todo lo del año:</strong> facturas de proveedores, servicios públicos, honorarios y arrendamientos de diciembre."
-     },
-     {
-      "texto": "Verifique el corte de facturación. Las ventas de diciembre deben quedar en diciembre.",
-      "html": "<strong>Verifique el corte de facturación.</strong> Las ventas de diciembre deben quedar en diciembre."
-     },
-     {
-      "texto": "Liquide la prima de diciembre, que vence el 20 de diciembre, y deje calculadas las cesantías y sus intereses.",
-      "html": "<strong>Liquide la prima de diciembre</strong>, que vence el 20 de diciembre, y deje calculadas las cesantías y sus intereses."
-     },
-     {
-      "texto": "Confirme que la nómina electrónica de todo el año fue transmitida.",
-      "html": "<strong>Confirme que la nómina electrónica</strong> de todo el año fue transmitida."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "Enero: consolidar las cifras",
-    "ancla": "enero-consolidar-las-cifras"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Pague los intereses sobre cesantías a los trabajadores antes del 31 de enero.",
-      "html": "<strong>Pague los intereses sobre cesantías</strong> a los trabajadores antes del 31 de enero."
-     },
-     {
-      "texto": "Cierre las cuentas de resultado y prepare el balance de prueba definitivo.",
-      "html": "<strong>Cierre las cuentas de resultado</strong> y prepare el balance de prueba definitivo."
-     },
-     {
-      "texto": "Calcule el deterioro de cartera e inventarios y el impuesto de renta y diferido.",
-      "html": "<strong>Calcule el deterioro de cartera e inventarios</strong> y el impuesto de renta y diferido."
-     },
-     {
-      "texto": "Entregue la información al revisor fiscal. Le explicamos qué va a pedir en el revisor fiscal en el cierre contable.",
-      "html": "<strong>Entregue la información al revisor fiscal.</strong> Le explicamos qué va a pedir en <a href=\"revisor-fiscal-cierre-contable.html\">el revisor fiscal en el cierre contable</a>."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "Febrero y marzo: estados financieros y asamblea",
-    "ancla": "febrero-y-marzo-estados-financieros-y-asamblea"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Consigne las cesantías en el fondo de cada trabajador antes del 14 de febrero.",
-      "html": "<strong>Consigne las cesantías</strong> en el fondo de cada trabajador antes del 14 de febrero."
-     },
-     {
-      "texto": "Prepare los estados financieros y sus notas bajo NIIF para pymes o el marco que le aplique.",
-      "html": "<strong>Prepare los estados financieros y sus notas</strong> bajo NIIF para pymes o el marco que le aplique."
-     },
-     {
-      "texto": "Prepare la información exógena según el calendario que publique la DIAN para el año gravable 2026. Repase qué es la información exógena y quién debe presentarla.",
-      "html": "<strong>Prepare la información exógena</strong> según el calendario que publique la DIAN para el año gravable 2026. Repase <a href=\"exogena.html\">qué es la información exógena</a> y quién debe presentarla."
-     },
-     {
-      "texto": "Convoque la asamblea ordinaria con la antelación que exigen los estatutos, y deje los estados financieros a disposición de los socios durante los quince días hábiles anteriores.",
-      "html": "<strong>Convoque la asamblea ordinaria</strong> con la antelación que exigen los estatutos, y deje los estados financieros a disposición de los socios durante los quince días hábiles anteriores."
-     },
-     {
-      "texto": "Defina el revisor fiscal de 2027 en la misma asamblea, si está obligada o si quiere cambiar el actual. Vea cómo cambiar de revisor fiscal.",
-      "html": "<strong>Defina el revisor fiscal de 2027</strong> en la misma asamblea, si está obligada o si quiere cambiar el actual. Vea <a href=\"cambiar-revisor-fiscal.html\">cómo cambiar de revisor fiscal</a>."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "Los errores que más vemos en el cierre",
-    "ancla": "los-errores-que-mas-vemos-en-el-cierre"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Facturas de diciembre registradas en enero, que alteran la renta de los dos años."
-     },
-     {
-      "texto": "Cartera vieja sin deterioro y sin soportes de cobro."
-     },
-     {
-      "texto": "Activos que ya no existen y siguen en el balance."
-     },
-     {
-      "texto": "Diferencias entre la nómina contable y la nómina electrónica transmitida."
-     },
-     {
-      "texto": "Saldos de IVA y retenciones que no cuadran con las declaraciones presentadas."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "Cada uno de estos errores es más fácil de corregir en octubre que en marzo. Por eso el calendario empieza ahora."
-   },
-   {
-    "t": "h2",
-    "texto": "¿Necesita apoyo con el cierre?",
-    "ancla": "necesita-apoyo-con-el-cierre"
-   },
-   {
-    "t": "p",
-    "texto": "Si su equipo contable no da abasto, nuestro outsourcing contable se encarga del cierre completo: conciliaciones, ajustes, estados financieros y declaraciones. Y si su empresa ya debe tener revisor fiscal, lo acompañamos con nuestro servicio de revisoría fiscal.",
-    "html": "Si su equipo contable no da abasto, nuestro <a href=\"outsourcing-contable.html\">outsourcing contable</a> se encarga del cierre completo: conciliaciones, ajustes, estados financieros y declaraciones. Y si su empresa ya debe tener revisor fiscal, lo acompañamos con nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Cuándo se debe empezar a preparar el cierre contable?",
-    "respuesta": "Lo ideal es en octubre, con conciliaciones, depuración de cartera y una proyección de renta. Así queda tiempo para corregir errores y planear antes de que termine el año gravable."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Cuál es el valor de la UVT en 2026?",
-    "respuesta": "$52.374. Es la unidad que se usa para calcular sanciones, topes de declarantes y otros valores tributarios del año gravable 2026."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Qué fechas laborales hay que tener en cuenta en el cierre?",
-    "respuesta": "La prima de diciembre se paga a más tardar el 20 de diciembre, los intereses sobre cesantías antes del 31 de enero y las cesantías se consignan en el fondo antes del 14 de febrero."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿El cierre 2026 define si necesito revisor fiscal en 2027?",
-    "respuesta": "Sí. Si a 31 de diciembre de 2026 sus activos brutos superan $8.754.525.000 o sus ingresos brutos del año superan $5.252.715.000, su empresa debe tener revisor fiscal en 2027."
    }
   ]
  },
@@ -32760,6 +31795,1612 @@
     "pregunta": "¿Cuánto cuesta el outsourcing contable para una empresa nueva?",
     "respuesta": "En Marín Ríos Consultores los planes van desde 2 SMMLV al mes. El valor final depende del volumen de facturas, empleados y obligaciones; pida una cotización de outsourcing contable para recibir una propuesta por escrito.",
     "html": "<p>En Marín Ríos Consultores los planes van <strong>desde 2 SMMLV al mes</strong>. El valor final depende del volumen de facturas, empleados y obligaciones; pida una <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a> para recibir una propuesta por escrito.</p>"
+   }
+  ]
+ },
+ {
+  "slug": "cierre-contable-empresas",
+  "titulo_seo": "Cierre contable y fiscal: qué es, pasos y ejemplo para pymes",
+  "h1": "Cierre contable y fiscal: qué es, cómo se hace y qué pasos seguir en su empresa",
+  "desc": "Qué es el cierre contable y fiscal, pasos del cierre mensual y anual con su norma, diferencias entre ambos, formato 2516 y un ejemplo de ajuste para pymes.",
+  "publicado": "2025-12-04",
+  "modificado": "2026-10-18",
+  "seccion": "Outsourcing contable",
+  "portada": "assets/img/blog/como-generar-presupuesto-de-sgsst-6-1024x1024.jpg",
+  "toc": true,
+  "palabras": 2564,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "El cierre contable es el proceso con el que una empresa corta sus cuentas a una fecha, verifica y ajusta los saldos y prepara sus estados financieros. En Colombia todas las sociedades deben hacerlo por lo menos una vez al año, el 31 de diciembre. El cierre fiscal parte de esas mismas cifras y las depura con las reglas tributarias para la declaración de renta.",
+    "html": "<strong>El cierre contable es el proceso con el que una empresa corta sus cuentas a una fecha, verifica y ajusta los saldos y prepara sus estados financieros.</strong> En Colombia todas las sociedades deben hacerlo por lo menos una vez al año, el 31 de diciembre. El cierre fiscal parte de esas mismas cifras y las depura con las reglas tributarias para la declaración de renta."
+   },
+   {
+    "t": "p",
+    "texto": "En esta guía le explicamos cómo se hace el cierre cada mes y al final del año, en qué se diferencia del cierre fiscal y qué errores conviene evitar. Si lo que necesita son las fechas de esta temporada, consulte la lista de tareas del cierre 2026, organizada mes a mes de octubre a marzo.",
+    "html": "En esta guía le explicamos cómo se hace el cierre cada mes y al final del año, en qué se diferencia del cierre fiscal y qué errores conviene evitar. Si lo que necesita son las fechas de esta temporada, consulte la <a href=\"preparar-cierre-contable-2026.html\">lista de tareas del cierre 2026</a>, organizada mes a mes de octubre a marzo."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué es el cierre contable y por qué importa para una pyme?",
+    "ancla": "que-es-el-cierre-contable"
+   },
+   {
+    "t": "p",
+    "texto": "El cierre contable es el último paso del ciclo contable de un periodo: se dejan de registrar operaciones, se comparan los saldos con sus soportes, se registran los ajustes que faltan y se preparan los estados financieros."
+   },
+   {
+    "t": "p",
+    "texto": "La obligación está en el artículo 34 de la Ley 222 de 1995: al final de cada ejercicio, y por lo menos una vez al año el 31 de diciembre, las sociedades deben cortar sus cuentas y preparar y difundir estados financieros de propósito general, debidamente certificados. En las sociedades anónimas, el art. 445 del Código de Comercio agrega el inventario y el balance general a esa fecha.",
+    "html": "La obligación está en el <a href=\"http://www.secretariasenado.gov.co/senado/basedoc/ley_0222_1995.html\" target=\"_blank\" rel=\"noopener\">artículo 34 de la Ley 222 de 1995</a>: al final de cada ejercicio, y por lo menos una vez al año el 31 de diciembre, las sociedades deben cortar sus cuentas y preparar y difundir estados financieros de propósito general, debidamente certificados. En las sociedades anónimas, el art. 445 del Código de Comercio agrega el inventario y el balance general a esa fecha."
+   },
+   {
+    "t": "p",
+    "texto": "Para una pyme, el cierre importa por tres razones:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Los socios deciden con esas cifras. La asamblea aprueba los estados financieros y la distribución de utilidades a partir del cierre.",
+      "html": "<strong>Los socios deciden con esas cifras.</strong> La asamblea aprueba los estados financieros y la distribución de utilidades a partir del cierre."
+     },
+     {
+      "texto": "La renta sale del cierre. Para los obligados a llevar contabilidad, la ley tributaria remite a los marcos contables cuando lo dice expresamente y cuando no regula el tema (art. 21-1 del Estatuto Tributario).",
+      "html": "<strong>La renta sale del cierre.</strong> Para los obligados a llevar contabilidad, la ley tributaria remite a los marcos contables cuando lo dice expresamente y cuando no regula el tema (art. 21-1 del Estatuto Tributario)."
+     },
+     {
+      "texto": "Terceros lo piden. Bancos, proveedores e inversionistas solicitan los estados financieros del último cierre.",
+      "html": "<strong>Terceros lo piden.</strong> Bancos, proveedores e inversionistas solicitan los estados financieros del último cierre."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Una aclaración: el \"cierre contable y presupuestal\" es el de las entidades públicas, que siguen el Régimen de Contabilidad Pública de la Contaduría General de la Nación; es otro régimen y esta guía no lo cubre."
+   },
+   {
+    "t": "h2",
+    "texto": "Cierre contable mensual frente a cierre anual",
+    "ancla": "cierre-mensual-y-anual"
+   },
+   {
+    "t": "p",
+    "texto": "La obligación legal es el corte anual al 31 de diciembre. El cierre contable mensual es una práctica de control: deja cada mes cuadrado, da a la gerencia cifras confiables y hace que las declaraciones mensuales y bimestrales salgan de saldos revisados."
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Aspecto"
+      },
+      {
+       "th": true,
+       "texto": "Cierre mensual"
+      },
+      {
+       "th": true,
+       "texto": "Cierre anual"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Origen"
+      },
+      {
+       "th": false,
+       "texto": "Control interno de la empresa"
+      },
+      {
+       "th": false,
+       "texto": "Art. 34 de la Ley 222 de 1995: corte al 31 de diciembre"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Resultado"
+      },
+      {
+       "th": false,
+       "texto": "Balance de prueba e informe para la gerencia"
+      },
+      {
+       "th": false,
+       "texto": "Estados financieros de propósito general con notas, certificados"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Cuentas de resultado"
+      },
+      {
+       "th": false,
+       "texto": "Se acumulan durante el año"
+      },
+      {
+       "th": false,
+       "texto": "Se cierran contra la utilidad o pérdida del ejercicio"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Ajustes típicos"
+      },
+      {
+       "th": false,
+       "texto": "Causaciones, depreciación, conciliaciones"
+      },
+      {
+       "th": false,
+       "texto": "Además: inventario físico, deterioro, provisiones, prestaciones, renta e impuesto diferido"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Quién usa la información"
+      },
+      {
+       "th": false,
+       "texto": "Gerencia"
+      },
+      {
+       "th": false,
+       "texto": "Socios, revisor fiscal, DIAN, bancos y entidades de supervisión"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h3",
+    "texto": "Pasos del cierre contable mensual",
+    "ancla": "pasos-del-cierre-contable-mensual"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Registre las facturas de venta y de compra del mes y crúcelas con los documentos electrónicos validados por la DIAN."
+     },
+     {
+      "texto": "Concilie cada cuenta bancaria con su extracto."
+     },
+     {
+      "texto": "Cause los gastos del mes aunque la factura no haya llegado."
+     },
+     {
+      "texto": "Registre la nómina y compruebe que coincida con la nómina electrónica transmitida."
+     },
+     {
+      "texto": "Registre la depreciación y la amortización."
+     },
+     {
+      "texto": "Cuadre las cuentas de retención en la fuente e IVA con las declaraciones del periodo."
+     },
+     {
+      "texto": "Emita el balance de prueba y el estado de resultados, y revise las variaciones grandes con la gerencia."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "El cierre anual repite estos pasos con corte al 31 de diciembre y suma las tareas que solo se hacen una vez al año. Si los doce cierres mensuales están bien hechos, el anual toma semanas y no meses."
+   },
+   {
+    "t": "h2",
+    "texto": "Pasos del cierre contable anual, con la norma de cada tarea",
+    "ancla": "pasos-del-cierre-anual"
+   },
+   {
+    "t": "p",
+    "texto": "Este es el orden que seguimos. Al lado de cada tarea va la norma que la sustenta, para que sepa qué es obligación legal y qué es control interno."
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Conciliaciones bancarias. No hay una norma que las exija como tales, pero el representante legal y el contador certifican que las cifras se tomaron fielmente de los libros (art. 37 de la Ley 222), y sin conciliaciones esa afirmación queda sin respaldo.",
+      "html": "<strong>Conciliaciones bancarias.</strong> No hay una norma que las exija como tales, pero el representante legal y el contador certifican que las cifras se tomaron fielmente de los libros (art. 37 de la Ley 222), y sin conciliaciones esa afirmación queda sin respaldo."
+     },
+     {
+      "texto": "Cruce de la facturación electrónica con la contabilidad. Es un control: facturas, notas y documento soporte contra ingresos y costos. El marco del sistema está en el Título 5 de la Resolución DIAN 000227 de 2025.",
+      "html": "<strong>Cruce de la facturación electrónica con la contabilidad.</strong> Es un control: facturas, notas y documento soporte contra ingresos y costos. El marco del sistema está en el Título 5 de la Resolución DIAN 000227 de 2025."
+     },
+     {
+      "texto": "Inventario físico y valoración. Sección 13 de la NIIF para las pymes (NIC 2 en el Grupo 1). En renta, los arts. 65 y 66 del Estatuto Tributario regulan la valoración y el costo fiscal.",
+      "html": "<strong>Inventario físico y valoración.</strong> Sección 13 de la NIIF para las pymes (NIC 2 en el Grupo 1). En renta, los arts. 65 y 66 del Estatuto Tributario regulan la valoración y el costo fiscal."
+     },
+     {
+      "texto": "Deterioro de cartera. Sección 11 (NIIF 9). En renta rige el art. 145 del Estatuto, con dos métodos del DUT 1625: el general (5 % de la cartera con más de 3 y hasta 6 meses de vencida, 10 % entre 6 meses y 1 año, 15 % la de más de 1 año) o el individual (hasta el 33 % anual de cada deuda con más de 1 año de vencida).",
+      "html": "<strong>Deterioro de cartera.</strong> Sección 11 (NIIF 9). En renta rige el art. 145 del Estatuto, con dos métodos del DUT 1625: el general (5 % de la cartera con más de 3 y hasta 6 meses de vencida, 10 % entre 6 meses y 1 año, 15 % la de más de 1 año) o el individual (hasta el 33 % anual de cada deuda con más de 1 año de vencida)."
+     },
+     {
+      "texto": "Depreciación. Sección 17 (NIC 16). En renta, el art. 137 del Estatuto acepta la tasa contable hasta un máximo: 2,22 % anual para edificaciones, 10 % para maquinaria y muebles, 20 % para equipo de cómputo, entre otras.",
+      "html": "<strong>Depreciación.</strong> Sección 17 (NIC 16). En renta, el art. 137 del Estatuto acepta la tasa contable hasta un máximo: 2,22 % anual para edificaciones, 10 % para maquinaria y muebles, 20 % para equipo de cómputo, entre otras."
+     },
+     {
+      "texto": "Provisiones y pasivos estimados. Sección 21 (NIC 37). En renta solo se deducen cuando la obligación tiene monto y fecha ciertos (art. 105 del Estatuto).",
+      "html": "<strong>Provisiones y pasivos estimados.</strong> Sección 21 (NIC 37). En renta solo se deducen cuando la obligación tiene monto y fecha ciertos (art. 105 del Estatuto)."
+     },
+     {
+      "texto": "Diferencia en cambio. Contablemente, con la TRM del 31 de diciembre (Sección 30 o NIC 21). En renta, el art. 288 del Estatuto la reconoce solo al pagar, abonar o enajenar.",
+      "html": "<strong>Diferencia en cambio.</strong> Contablemente, con la TRM del 31 de diciembre (Sección 30 o NIC 21). En renta, el art. 288 del Estatuto la reconoce solo al pagar, abonar o enajenar."
+     },
+     {
+      "texto": "Prestaciones sociales. Las cesantías se liquidan al 31 de diciembre y se consignan antes del 15 de febrero (art. 99 de la Ley 50 de 1990); los intereses, del 12 % anual, se pagan a más tardar el 31 de enero, según la Superintendencia Financiera.",
+      "html": "<strong>Prestaciones sociales.</strong> Las cesantías se liquidan al 31 de diciembre y se consignan antes del 15 de febrero (art. 99 de la Ley 50 de 1990); los intereses, del 12 % anual, se pagan a más tardar el 31 de enero, según la Superintendencia Financiera."
+     },
+     {
+      "texto": "Impuesto de renta y diferido. Sección 29 en el Grupo 2 y NIC 12 en el Grupo 1. En el Grupo 3, confirme con su contador qué exige el marco simplificado.",
+      "html": "<strong>Impuesto de renta y diferido.</strong> Sección 29 en el Grupo 2 y NIC 12 en el Grupo 1. En el Grupo 3, confirme con su contador qué exige el marco simplificado."
+     },
+     {
+      "texto": "Cierre de las cuentas de resultado contra la utilidad o pérdida del ejercicio, que pasa al patrimonio.",
+      "html": "<strong>Cierre de las cuentas de resultado</strong> contra la utilidad o pérdida del ejercicio, que pasa al patrimonio."
+     },
+     {
+      "texto": "Estados financieros con notas. Los certifican el representante legal y el contador (art. 37 de la Ley 222) y los dictamina el revisor fiscal o un contador independiente (art. 38). La matriz prepara además estados consolidados (art. 35).",
+      "html": "<strong>Estados financieros con notas.</strong> Los certifican el representante legal y el contador (art. 37 de la Ley 222) y los dictamina el revisor fiscal o un contador independiente (art. 38). La matriz prepara además estados consolidados (art. 35)."
+     },
+     {
+      "texto": "Conciliación fiscal y renta (art. 772-1 del Estatuto y art. 1.7.1 del DUT 1625).",
+      "html": "<strong>Conciliación fiscal y renta</strong> (art. 772-1 del Estatuto y art. 1.7.1 del DUT 1625)."
+     },
+     {
+      "texto": "Certificados y exógena. Los certificados de retención se expiden a más tardar el último día hábil de marzo (art. 1.6.1.13.2.40 del DUT 1625). La información exógena se arma con los terceros depurados en el cierre (art. 631 del Estatuto).",
+      "html": "<strong>Certificados y exógena.</strong> Los certificados de retención se expiden a más tardar el último día hábil de marzo (art. 1.6.1.13.2.40 del DUT 1625). La <a href=\"exogena.html\">información exógena</a> se arma con los terceros depurados en el cierre (art. 631 del Estatuto)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si su empresa tiene revisor fiscal, este revisa buena parte de estos pasos antes del dictamen. Le contamos qué pide en qué revisa el revisor fiscal en el cierre contable.",
+    "html": "Si su empresa tiene revisor fiscal, este revisa buena parte de estos pasos antes del dictamen. Le contamos qué pide en <a href=\"revisor-fiscal-cierre-contable.html\">qué revisa el revisor fiscal en el cierre contable</a>."
+   },
+   {
+    "t": "blockquote",
+    "texto": "¿Prefiere no cerrar el año solo? En nuestra asesoría de cierre contable y fiscal revisamos sus saldos, proponemos los ajustes y dejamos listos los estados financieros y el soporte del cierre fiscal, con su contador o en lugar de él. El valor se cotiza según el volumen de operaciones y el estado de la contabilidad.",
+    "html": "¿Prefiere no cerrar el año solo? En nuestra <a href=\"asesoria-cierre-contable.html\">asesoría de cierre contable y fiscal</a> revisamos sus saldos, proponemos los ajustes y dejamos listos los estados financieros y el soporte del cierre fiscal, con su contador o en lugar de él. El valor se cotiza según el volumen de operaciones y el estado de la contabilidad."
+   },
+   {
+    "t": "h2",
+    "texto": "Diferencia entre cierre contable y fiscal",
+    "ancla": "cierre-contable-vs-cierre-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "El cierre contable y el cierre fiscal, también llamado cierre tributario, usan la misma información pero responden a normas distintas: el art. 4 de la Ley 1314 de 2009 permite que la ley tributaria dé un tratamiento distinto al contable. Por eso el cierre contable y tributario se planea junto, aunque produzca dos resultados."
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Aspecto"
+      },
+      {
+       "th": true,
+       "texto": "Cierre contable"
+      },
+      {
+       "th": true,
+       "texto": "Cierre fiscal"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Para qué sirve"
+      },
+      {
+       "th": false,
+       "texto": "Mostrar la situación financiera de la empresa"
+      },
+      {
+       "th": false,
+       "texto": "Calcular la renta líquida y el impuesto"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Normas"
+      },
+      {
+       "th": false,
+       "texto": "Ley 222 de 1995, Ley 1314 de 2009 y DUR 2420 de 2015 (NIIF según el grupo)"
+      },
+      {
+       "th": false,
+       "texto": "Estatuto Tributario y DUT 1625 de 2016"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Resultado"
+      },
+      {
+       "th": false,
+       "texto": "Estados financieros con notas"
+      },
+      {
+       "th": false,
+       "texto": "Declaración de renta y reporte de conciliación fiscal"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Quién lo recibe"
+      },
+      {
+       "th": false,
+       "texto": "Asamblea de socios, cámara de comercio o Supersociedades"
+      },
+      {
+       "th": false,
+       "texto": "DIAN"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Deterioro de cartera"
+      },
+      {
+       "th": false,
+       "texto": "Según la pérdida esperada"
+      },
+      {
+       "th": false,
+       "texto": "Con los porcentajes o el método individual del DUT"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Depreciación"
+      },
+      {
+       "th": false,
+       "texto": "Según la vida útil de la política contable"
+      },
+      {
+       "th": false,
+       "texto": "Con tope en las tasas máximas del art. 137 ET"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Diferencia en cambio"
+      },
+      {
+       "th": false,
+       "texto": "Se ajusta con la TRM del 31 de diciembre"
+      },
+      {
+       "th": false,
+       "texto": "Solo tiene efecto cuando se realiza"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h3",
+    "texto": "Conciliación fiscal y formato 2516: quién la presenta",
+    "ancla": "conciliacion-fiscal-y-formato-2516-quien-la-presenta"
+   },
+   {
+    "t": "p",
+    "texto": "El art. 772-1 del Estatuto Tributario obliga a quienes llevan contabilidad a conciliar las diferencias entre lo contable y lo fiscal; no hacerlo es irregularidad en la contabilidad para efectos de sanción. Según el art. 1.7.1 del DUT 1625, la conciliación tiene dos partes: el control de detalle, herramienta interna, y el reporte de conciliación fiscal, anexo de la renta. El reporte es el formato 2516 para quienes declaran en el formulario 110 y el 2517 para personas naturales que declaran en el 210.",
+    "html": "El art. 772-1 del Estatuto Tributario obliga a quienes llevan contabilidad a conciliar las diferencias entre lo contable y lo fiscal; no hacerlo es irregularidad en la contabilidad para efectos de sanción. Según el art. 1.7.1 del DUT 1625, la conciliación tiene dos partes: el <strong>control de detalle</strong>, herramienta interna, y el <strong>reporte de conciliación fiscal</strong>, anexo de la renta. El reporte es el formato 2516 para quienes declaran en el formulario 110 y el 2517 para personas naturales que declaran en el 210."
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "La elaboran todos los contribuyentes de renta obligados a llevar contabilidad o que la llevan voluntariamente.",
+      "html": "<strong>La elaboran</strong> todos los contribuyentes de renta obligados a llevar contabilidad o que la llevan voluntariamente."
+     },
+     {
+      "texto": "La presentan ante la DIAN quienes tengan ingresos brutos fiscales iguales o superiores a 45.000 UVT. Para el año gravable 2026 son $2.356.830.000, con la UVT de $52.374. Cuentan los ingresos ordinarios, los extraordinarios y las ganancias ocasionales.",
+      "html": "<strong>La presentan</strong> ante la DIAN quienes tengan ingresos brutos fiscales iguales o superiores a 45.000 UVT. Para el año gravable 2026 son $2.356.830.000, con la UVT de $52.374. Cuentan los ingresos ordinarios, los extraordinarios y las ganancias ocasionales."
+     },
+     {
+      "texto": "Por debajo del tope, se diligencia y se conserva a disposición de la DIAN. En el Grupo 3 hay que diligenciar al menos la carátula y las secciones ESF-Patrimonio y ERI-Renta líquida.",
+      "html": "<strong>Por debajo del tope</strong>, se diligencia y se conserva a disposición de la DIAN. En el Grupo 3 hay que diligenciar al menos la carátula y las secciones ESF-Patrimonio y ERI-Renta líquida."
+     },
+     {
+      "texto": "Sin importar los ingresos, la presentan quienes consoliden o combinen estados financieros, los grupos empresariales o en situación de control y las entidades consolidadas (Resolución DIAN 000246 de 2025).",
+      "html": "<strong>Sin importar los ingresos</strong>, la presentan quienes consoliden o combinen estados financieros, los grupos empresariales o en situación de control y las entidades consolidadas (<a href=\"https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0246_2025.htm\" target=\"_blank\" rel=\"noopener\">Resolución DIAN 000246 de 2025</a>)."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "En la conciliación aparecen diferencias temporarias, que la NIC 12 y la Sección 29 clasifican como imponibles o deducibles: se revierten en años futuros y generan impuesto diferido. Las partidas que nunca serán deducibles se llaman en la práctica tributaria \"diferencias permanentes\", aunque ese término no es una categoría de la NIC 12.",
+    "html": "En la conciliación aparecen <strong>diferencias temporarias</strong>, que la NIC 12 y la Sección 29 clasifican como imponibles o deducibles: se revierten en años futuros y generan impuesto diferido. Las partidas que nunca serán deducibles se llaman en la práctica tributaria \"diferencias permanentes\", aunque ese término no es una categoría de la NIC 12."
+   },
+   {
+    "t": "h2",
+    "texto": "Cierre contable: ejemplo de un ajuste de depreciación",
+    "ancla": "ejemplo-de-cierre-contable"
+   },
+   {
+    "t": "p",
+    "texto": "Ejemplo con cifras ilustrativas, no tomadas de un cliente. Una pyme compra un computador por $9.000.000 y lo usa desde el 1 de enero. Su política contable le asigna una vida útil de 3 años, en línea recta y sin valor residual. Para la renta, la tasa máxima del equipo de cómputo es el 20 % anual.",
+    "html": "<strong>Ejemplo con cifras ilustrativas, no tomadas de un cliente.</strong> Una pyme compra un computador por $9.000.000 y lo usa desde el 1 de enero. Su política contable le asigna una vida útil de 3 años, en línea recta y sin valor residual. Para la renta, la tasa máxima del equipo de cómputo es el 20 % anual."
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Concepto"
+      },
+      {
+       "th": true,
+       "texto": "Contable"
+      },
+      {
+       "th": true,
+       "texto": "Fiscal"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Costo del equipo"
+      },
+      {
+       "th": false,
+       "texto": "$9.000.000"
+      },
+      {
+       "th": false,
+       "texto": "$9.000.000"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Tasa anual"
+      },
+      {
+       "th": false,
+       "texto": "33,33 % (vida útil de 3 años)"
+      },
+      {
+       "th": false,
+       "texto": "20 % (tasa máxima del art. 137 ET)"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Depreciación del año"
+      },
+      {
+       "th": false,
+       "texto": "$3.000.000"
+      },
+      {
+       "th": false,
+       "texto": "$1.800.000"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Valor al 31 de diciembre"
+      },
+      {
+       "th": false,
+       "texto": "$6.000.000"
+      },
+      {
+       "th": false,
+       "texto": "$7.200.000"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "El asiento contable del año es un débito al gasto por depreciación y un crédito a la depreciación acumulada por $3.000.000 (si la empresa hace cierre mensual, $250.000 cada mes).",
+    "html": "<strong>El asiento contable</strong> del año es un débito al gasto por depreciación y un crédito a la depreciación acumulada por $3.000.000 (si la empresa hace cierre mensual, $250.000 cada mes)."
+   },
+   {
+    "t": "p",
+    "texto": "En la conciliación fiscal, los $1.200.000 que superan la tasa máxima no se deducen este año: se suman a la renta líquida en el control de detalle. No se pierden, porque el parágrafo 4 del art. 137 permite recuperar el exceso no deducido después de la vida útil.",
+    "html": "<strong>En la conciliación fiscal</strong>, los $1.200.000 que superan la tasa máxima no se deducen este año: se suman a la renta líquida en el control de detalle. No se pierden, porque el parágrafo 4 del art. 137 permite recuperar el exceso no deducido después de la vida útil."
+   },
+   {
+    "t": "p",
+    "texto": "En el impuesto diferido, el valor fiscal del equipo ($7.200.000) es mayor que el contable ($6.000.000). Esa diferencia temporaria deducible de $1.200.000, multiplicada por la tarifa de renta que le aplique a la sociedad, da el impuesto diferido activo que se registra al cierre.",
+    "html": "<strong>En el impuesto diferido</strong>, el valor fiscal del equipo ($7.200.000) es mayor que el contable ($6.000.000). Esa diferencia temporaria deducible de $1.200.000, multiplicada por la tarifa de renta que le aplique a la sociedad, da el impuesto diferido activo que se registra al cierre."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué debe tener un software contable para el cierre en Colombia?",
+    "ancla": "software-contable-para-el-cierre"
+   },
+   {
+    "t": "p",
+    "texto": "No existe un estándar oficial de software contable. Lo que sí existe son obligaciones que el programa debe ayudarle a cumplir:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Función"
+      },
+      {
+       "th": true,
+       "texto": "Para qué sirve en el cierre"
+      },
+      {
+       "th": true,
+       "texto": "Norma relacionada"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Facturación electrónica y documento soporte"
+      },
+      {
+       "th": false,
+       "texto": "Que ventas y compras cuadren con lo validado por la DIAN"
+      },
+      {
+       "th": false,
+       "texto": "Título 5 de la Res. DIAN 000227 de 2025"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Nómina electrónica"
+      },
+      {
+       "th": false,
+       "texto": "Soportar los costos laborales y consolidar prestaciones"
+      },
+      {
+       "th": false,
+       "texto": "Regulación DIAN de nómina electrónica"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Marco NIIF del grupo (1, 2 o 3)"
+      },
+      {
+       "th": false,
+       "texto": "Preparar estados financieros de propósito general"
+      },
+      {
+       "th": false,
+       "texto": "DUR 2420 de 2015"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Formatos de información exógena"
+      },
+      {
+       "th": false,
+       "texto": "Generar los reportes del año gravable"
+      },
+      {
+       "th": false,
+       "texto": "Título 3 de la Res. 000227 de 2025"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Conciliación fiscal (2516 o 2517)"
+      },
+      {
+       "th": false,
+       "texto": "Llevar el control de detalle y el anexo de la renta"
+      },
+      {
+       "th": false,
+       "texto": "Art. 772-1 ET y art. 1.7.1 del DUT 1625"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Conciliación bancaria"
+      },
+      {
+       "th": false,
+       "texto": "Respaldar los saldos de bancos"
+      },
+      {
+       "th": false,
+       "texto": "Sin norma específica"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Sume a esa lista el bloqueo de periodos cerrados, el comprobante de cierre de cuentas de resultado, los reportes por tercero y el registro de quién modificó cada asiento."
+   },
+   {
+    "t": "p",
+    "texto": "Pida una demostración con datos de su empresa. Como referencia de lo que publican los propios proveedores: Siigo describe en su sitio facturación electrónica, punto de venta, administración, contabilidad y nómina en la nube (Siigo Nube); Alegra anuncia en su página de contabilidad facturación electrónica, nómina, reportes de exógena, conciliación bancaria automática y un formulario 300 prearmado, aunque esa página no menciona NIIF, formato 2516 ni cierre contable. No hacemos rankings: el programa adecuado depende del volumen, del grupo NIIF y de quién lo va a operar."
+   },
+   {
+    "t": "h2",
+    "texto": "Estados financieros, asamblea y depósito",
+    "ancla": "estados-financieros-asamblea-y-deposito"
+   },
+   {
+    "t": "p",
+    "texto": "Los estados financieros certificados (art. 37 de la Ley 222) y dictaminados cuando hay revisor fiscal (art. 38) se presentan a la asamblea con sus notas, el informe de gestión y el proyecto de distribución de utilidades (arts. 46 y 47)."
+   },
+   {
+    "t": "p",
+    "texto": "La reunión ordinaria se hace en la fecha de los estatutos o, si no la fijan, dentro de los tres meses siguientes al cierre del ejercicio, es decir, a más tardar el 31 de marzo (art. 422 del Código de Comercio). Si no se convoca, la asamblea se reúne por derecho propio el primer día hábil de abril a las 10 a. m. La convocatoria y el derecho de inspección cambian según el tipo de sociedad:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Tipo de sociedad"
+      },
+      {
+       "th": true,
+       "texto": "Antelación de la convocatoria"
+      },
+      {
+       "th": true,
+       "texto": "Derecho de inspección"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Sociedad anónima"
+      },
+      {
+       "th": false,
+       "texto": "15 días hábiles (art. 424 C.Co.)"
+      },
+      {
+       "th": false,
+       "texto": "Durante los 15 días hábiles anteriores a la reunión (art. 447 C.Co.)"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "S.A.S."
+      },
+      {
+       "th": false,
+       "texto": "5 días hábiles, salvo pacto en contrario (art. 20 de la Ley 1258 de 2008)"
+      },
+      {
+       "th": false,
+       "texto": "5 días hábiles antes de la reunión, salvo término estatutario mayor (art. 20 de la Ley 1258); los accionistas pueden renunciar a él (art. 21)"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Después de la aprobación, las sociedades que no envían sus estados financieros a Supersociedades los depositan en la cámara de comercio de su domicilio dentro del mes siguiente (art. 41 de la Ley 222). Pregunte en su cámara si el trámite tiene costo."
+   },
+   {
+    "t": "p",
+    "texto": "Las vigiladas o controladas por Supersociedades reportan sin necesidad de orden particular (art. 289 del Código de Comercio y Circular Externa 100-000009 de 2023); las que solo están en inspección, cuando reciben una orden. Una sociedad queda vigilada por tamaño cuando sus activos o sus ingresos totales superan 789.390,6 UVT al cierre del ejercicio."
+   },
+   {
+    "t": "h2",
+    "texto": "Errores frecuentes en el cierre contable y tributario",
+    "ancla": "errores-frecuentes"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Facturas de diciembre registradas en enero, que alteran la renta de los dos años."
+     },
+     {
+      "texto": "Cartera vieja sin deterioro y sin soportes de cobro."
+     },
+     {
+      "texto": "Llevar a la renta el deterioro, la depreciación o la diferencia en cambio contables sin pasar por la conciliación fiscal."
+     },
+     {
+      "texto": "Activos que ya no existen y siguen en el balance."
+     },
+     {
+      "texto": "Nómina contable que no coincide con la nómina electrónica transmitida."
+     },
+     {
+      "texto": "Saldos de IVA y retenciones que no cuadran con las declaraciones."
+     },
+     {
+      "texto": "Convocar una S.A.S. con las reglas de una sociedad anónima, o al revés."
+     },
+     {
+      "texto": "Cerrar el año y no usar las cifras: el cierre es la base del presupuesto empresarial del año siguiente.",
+      "html": "Cerrar el año y no usar las cifras: el cierre es la base del <a href=\"presupuesto-empresarial.html\">presupuesto empresarial</a> del año siguiente."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué debe hacer su empresa?",
+    "ancla": "que-debe-hacer-su-empresa"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Confirme su grupo NIIF y repase si las NIIF para pymes aplican a su empresa. La tercera edición de esa norma no está vigente; el CTCP propone que rija desde el 1 de enero de 2028.",
+      "html": "<strong>Confirme su grupo NIIF</strong> y repase <a href=\"niif-para-pymes-colombia.html\">si las NIIF para pymes aplican a su empresa</a>. La tercera edición de esa norma no está vigente; el CTCP propone que rija desde el 1 de enero de 2028."
+     },
+     {
+      "texto": "Haga un precierre con las cifras de octubre o noviembre.",
+      "html": "<strong>Haga un precierre</strong> con las cifras de octubre o noviembre."
+     },
+     {
+      "texto": "Lleve el cierre mensual al día hasta diciembre.",
+      "html": "<strong>Lleve el cierre mensual al día</strong> hasta diciembre."
+     },
+     {
+      "texto": "Agende los vencimientos. Los de enero de 2027 ya están en el calendario tributario 2026 de la DIAN.",
+      "html": "<strong>Agende los vencimientos.</strong> Los de enero de 2027 ya están en el <a href=\"calendario-tributario-actualizado.html\">calendario tributario 2026 de la DIAN</a>."
+     },
+     {
+      "texto": "Verifique si debe presentar el formato 2516 con sus ingresos brutos fiscales del año.",
+      "html": "<strong>Verifique si debe presentar el formato 2516</strong> con sus ingresos brutos fiscales del año."
+     },
+     {
+      "texto": "Asigne un responsable y una fecha a cada paso del cierre anual.",
+      "html": "<strong>Asigne un responsable y una fecha</strong> a cada paso del cierre anual."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si prefiere delegar la contabilidad de todo el año, nuestro outsourcing contable incluye el cierre. Si solo necesita apoyo en la temporada, pida una propuesta de asesoría de cierre contable y fiscal: trabajamos desde Medellín, con visitas programadas en Medellín, Pereira, Armenia y Manizales, y de forma virtual en Bogotá y el resto de Colombia.",
+    "html": "Si prefiere delegar la contabilidad de todo el año, nuestro <a href=\"outsourcing-contable.html\">outsourcing contable</a> incluye el cierre. Si solo necesita apoyo en la temporada, pida una propuesta de <a href=\"asesoria-cierre-contable.html\">asesoría de cierre contable y fiscal</a>: trabajamos desde Medellín, con visitas programadas en Medellín, Pereira, Armenia y Manizales, y de forma virtual en Bogotá y el resto de Colombia."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué es el cierre contable?",
+    "respuesta": "Es el proceso con el que la empresa corta sus cuentas a una fecha, ajusta los saldos y prepara sus estados financieros. Las sociedades deben hacerlo por lo menos el 31 de diciembre de cada año (art. 34 de la Ley 222 de 1995)."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuál es la diferencia entre cierre contable y fiscal?",
+    "respuesta": "El cierre contable produce los estados financieros con el marco NIIF de la empresa. El cierre fiscal ajusta esas cifras con el Estatuto Tributario para calcular la renta, y las diferencias se registran en la conciliación fiscal.",
+    "html": "<p>El cierre contable produce los estados financieros con el marco NIIF de la empresa. El cierre fiscal ajusta esas cifras con el Estatuto Tributario para calcular la renta, y las diferencias se registran en la <strong>conciliación fiscal</strong>.</p>"
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Quién debe presentar el formato 2516?",
+    "respuesta": "Quienes llevan contabilidad y tienen ingresos brutos fiscales desde 45.000 UVT ($2.356.830.000 en el año gravable 2026), y quienes consolidan estados financieros o son grupo empresarial, sin importar sus ingresos."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿El cierre contable mensual es obligatorio?",
+    "respuesta": "La obligación legal es el corte anual al 31 de diciembre. El cierre mensual es una práctica de control que mejora la información para la gerencia y acorta el cierre anual."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuántos días antes de la asamblea deben estar disponibles los estados financieros?",
+    "respuesta": "En la sociedad anónima, durante los 15 días hábiles anteriores (art. 447 del Código de Comercio). En la S.A.S., 5 días hábiles, salvo un término estatutario mayor (art. 20 de la Ley 1258 de 2008)."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué es el cierre contable y presupuestal?",
+    "respuesta": "Es el cierre de las entidades públicas, que siguen el Régimen de Contabilidad Pública de la Contaduría General de la Nación. Las empresas privadas cierran con la Ley 222 de 1995 y el marco NIIF del DUR 2420 de 2015."
+   }
+  ]
+ },
+ {
+  "slug": "preparar-cierre-contable-2026",
+  "titulo_seo": "Cierre contable 2026: lista de tareas de octubre a marzo",
+  "h1": "Cierre contable 2026: lista de tareas mes a mes, de octubre de 2026 a marzo de 2027",
+  "desc": "Cierre contable 2026 mes a mes: cesantías, certificados de retención, asamblea, formato 2516 desde 45.000 UVT y vencimientos DIAN de enero de 2027.",
+  "publicado": "2026-10-10",
+  "modificado": "2026-10-18",
+  "seccion": "Outsourcing contable",
+  "portada": "assets/img/blog/preparar-cierre-contable-2026.png",
+  "toc": true,
+  "palabras": 1916,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "Para el cierre contable 2026, empiece en octubre con conciliaciones y una proyección de renta, cierre el periodo en diciembre, consolide las prestaciones en enero y llegue a marzo de 2027 con los estados financieros, los certificados de retención y la asamblea. Esta lista ordena cada tarea por mes y separa las fechas oficiales de las que todavía son estimaciones.",
+    "html": "<strong>Para el cierre contable 2026, empiece en octubre con conciliaciones y una proyección de renta, cierre el periodo en diciembre, consolide las prestaciones en enero y llegue a marzo de 2027 con los estados financieros, los certificados de retención y la asamblea.</strong> Esta lista ordena cada tarea por mes y separa las fechas oficiales de las que todavía son estimaciones."
+   },
+   {
+    "t": "p",
+    "texto": "Si busca la explicación de qué es el cierre y cómo se hace cada paso, está en nuestra guía de qué es el cierre contable y cómo se hace. Aquí vamos directo al calendario.",
+    "html": "Si busca la explicación de qué es el cierre y cómo se hace cada paso, está en nuestra guía de <a href=\"cierre-contable-empresas.html\">qué es el cierre contable y cómo se hace</a>. Aquí vamos directo al calendario."
+   },
+   {
+    "t": "blockquote",
+    "texto": "A 18 de octubre de 2026, la DIAN no ha publicado el calendario tributario 2027 ni Supersociedades sus plazos de reporte para 2027. Las fechas de 2027 marcadas como estimación se calcularon con las reglas vigentes en días hábiles y hay que confirmarlas cuando salgan los calendarios oficiales."
+   },
+   {
+    "t": "h2",
+    "texto": "Elementos a considerar para el cierre del ejercicio fiscal 2026",
+    "ancla": "cifras-de-referencia"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Concepto"
+      },
+      {
+       "th": true,
+       "texto": "Valor"
+      },
+      {
+       "th": true,
+       "texto": "Norma o fuente"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "UVT 2026"
+      },
+      {
+       "th": false,
+       "texto": "$52.374"
+      },
+      {
+       "th": false,
+       "texto": "Resolución DIAN 000238 de 2025"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "UVT 2027"
+      },
+      {
+       "th": false,
+       "texto": "No publicada todavía"
+      },
+      {
+       "th": false,
+       "texto": "La DIAN suele fijarla en diciembre"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Salario mínimo 2026"
+      },
+      {
+       "th": false,
+       "texto": "$1.750.905"
+      },
+      {
+       "th": false,
+       "texto": "Decreto 0159 de 2026, transitorio"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Presentar el formato 2516"
+      },
+      {
+       "th": false,
+       "texto": "Ingresos brutos fiscales desde 45.000 UVT ($2.356.830.000)"
+      },
+      {
+       "th": false,
+       "texto": "Art. 1.7.2 del DUT 1625 y Res. DIAN 000227 de 2025"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Exógena de personas jurídicas"
+      },
+      {
+       "th": false,
+       "texto": "Ingresos brutos superiores a 2.400 UVT ($125.697.600) o ser agente de retención"
+      },
+      {
+       "th": false,
+       "texto": "Art. 1.3.1.1 de la Res. DIAN 000227 de 2025"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Revisor fiscal obligatorio"
+      },
+      {
+       "th": false,
+       "texto": "Activos brutos desde 5.000 salarios mínimos o ingresos brutos desde 3.000"
+      },
+      {
+       "th": false,
+       "texto": "Art. 13 de la Ley 43 de 1990"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Vigilancia de Supersociedades"
+      },
+      {
+       "th": false,
+       "texto": "Activos o ingresos superiores a 789.390,6 UVT"
+      },
+      {
+       "th": false,
+       "texto": "DUR 1074 de 2015"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "El salario mínimo de 2026 lo fijó el Decreto 1469 de 2025, que el Consejo de Estado suspendió; hoy lo sostiene el Decreto 0159 de 2026, de carácter transitorio, mientras sigue el proceso. Con ese valor, los topes del revisor fiscal equivalen a $8.754.525.000 de activos y $5.252.715.000 de ingresos, pero la ley no dice de qué año es el salario mínimo que se usa. Mídalos con las cifras al 31 de diciembre de 2026 y revise el detalle en qué empresas están obligadas a tener revisor fiscal.",
+    "html": "El salario mínimo de 2026 lo fijó el Decreto 1469 de 2025, que el Consejo de Estado suspendió; hoy lo sostiene el Decreto 0159 de 2026, de carácter transitorio, mientras sigue el proceso. Con ese valor, los topes del revisor fiscal equivalen a $8.754.525.000 de activos y $5.252.715.000 de ingresos, pero la ley no dice de qué año es el salario mínimo que se usa. Mídalos con las cifras al 31 de diciembre de 2026 y revise el detalle en <a href=\"empresas-obligadas-revisor-fiscal.html\">qué empresas están obligadas a tener revisor fiscal</a>."
+   },
+   {
+    "t": "p",
+    "texto": "El umbral de Supersociedades no lo damos en pesos: no está claro con qué UVT se mide el corte de 2026, y la UVT 2027 aún no existe."
+   },
+   {
+    "t": "h2",
+    "texto": "Octubre de 2026: ordenar la casa",
+    "ancla": "octubre"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Concilie los bancos al día. Las partidas sin identificar de meses atrás se resuelven ahora, no en enero.",
+      "html": "<strong>Concilie los bancos al día.</strong> Las partidas sin identificar de meses atrás se resuelven ahora, no en enero."
+     },
+     {
+      "texto": "Depure la cartera. Identifique los clientes que no van a pagar y documente la gestión de cobro. Sin soportes, el deterioro no se puede justificar.",
+      "html": "<strong>Depure la cartera.</strong> Identifique los clientes que no van a pagar y documente la gestión de cobro. Sin soportes, el deterioro no se puede justificar."
+     },
+     {
+      "texto": "Revise los terceros. NIT, nombres y direcciones correctos ahorran semanas cuando llegue la información exógena del año gravable 2026.",
+      "html": "<strong>Revise los terceros.</strong> NIT, nombres y direcciones correctos ahorran semanas cuando llegue la <a href=\"exogena.html\">información exógena del año gravable 2026</a>."
+     },
+     {
+      "texto": "Cruce la facturación electrónica emitida y recibida con lo que está registrado en la contabilidad.",
+      "html": "<strong>Cruce la facturación electrónica</strong> emitida y recibida con lo que está registrado en la contabilidad."
+     },
+     {
+      "texto": "Haga una proyección de renta. Con las cifras de septiembre puede estimar el impuesto del año y decidir con tiempo.",
+      "html": "<strong>Haga una proyección de renta.</strong> Con las cifras de septiembre puede estimar el impuesto del año y decidir con tiempo."
+     },
+     {
+      "texto": "Declare la retención en la fuente de septiembre, que vence entre el 9 y el 23 de octubre según el último dígito del NIT.",
+      "html": "<strong>Declare la retención en la fuente de septiembre</strong>, que vence entre el 9 y el 23 de octubre según el último dígito del NIT."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Noviembre de 2026: planear antes de que termine el año",
+    "ancla": "noviembre"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Planee las compras y gastos del año. Los costos y gastos deben quedar causados y soportados dentro de 2026 para contar en la renta de este año.",
+      "html": "<strong>Planee las compras y gastos del año.</strong> Los costos y gastos deben quedar causados y soportados dentro de 2026 para contar en la renta de este año."
+     },
+     {
+      "texto": "Revise los activos fijos. Confirme que existen, que la depreciación no supera las tasas máximas fiscales del art. 137 del Estatuto Tributario y dé de baja los que ya no usa.",
+      "html": "<strong>Revise los activos fijos.</strong> Confirme que existen, que la depreciación no supera las tasas máximas fiscales del art. 137 del Estatuto Tributario y dé de baja los que ya no usa."
+     },
+     {
+      "texto": "Programe el inventario físico. Defina fecha, responsables y método de conteo. Si tiene revisor fiscal, avísele para que pueda presenciarlo.",
+      "html": "<strong>Programe el inventario físico.</strong> Defina fecha, responsables y método de conteo. Si tiene revisor fiscal, avísele para que pueda presenciarlo."
+     },
+     {
+      "texto": "Mida sus topes. Con las cifras de noviembre sabrá si su empresa va a cruzar el tope del formato 2516, el de revisor fiscal o el de vigilancia de Supersociedades.",
+      "html": "<strong>Mida sus topes.</strong> Con las cifras de noviembre sabrá si su empresa va a cruzar el tope del formato 2516, el de revisor fiscal o el de vigilancia de Supersociedades."
+     },
+     {
+      "texto": "Decida cómo manejará las cesantías. La Ley 2466 de 2025 (art. 64) permite consignar cada mes el 8,33 % como consignación anticipada y acordar por escrito el pago mensual del 1 % de intereses. A la fecha de publicación no encontramos que el Ministerio del Trabajo haya expedido el decreto reglamentario.",
+      "html": "<strong>Decida cómo manejará las cesantías.</strong> La Ley 2466 de 2025 (art. 64) permite consignar cada mes el 8,33 % como consignación anticipada y acordar por escrito el pago mensual del 1 % de intereses. A la fecha de publicación no encontramos que el Ministerio del Trabajo haya expedido el decreto reglamentario."
+     },
+     {
+      "texto": "Declare la retención de octubre y el IVA bimestral de septiembre-octubre, que vencen entre el 11 y el 25 de noviembre.",
+      "html": "<strong>Declare la retención de octubre y el IVA bimestral de septiembre-octubre</strong>, que vencen entre el 11 y el 25 de noviembre."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Diciembre de 2026: cerrar el periodo",
+    "ancla": "diciembre"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Haga el inventario físico y ajuste las diferencias.",
+      "html": "<strong>Haga el inventario físico</strong> y ajuste las diferencias."
+     },
+     {
+      "texto": "Cause todo lo del año: facturas de proveedores, servicios públicos, honorarios y arrendamientos de diciembre.",
+      "html": "<strong>Cause todo lo del año:</strong> facturas de proveedores, servicios públicos, honorarios y arrendamientos de diciembre."
+     },
+     {
+      "texto": "Verifique el corte de facturación. Las ventas de diciembre deben quedar en diciembre.",
+      "html": "<strong>Verifique el corte de facturación.</strong> Las ventas de diciembre deben quedar en diciembre."
+     },
+     {
+      "texto": "Liquide las prestaciones al 31 de diciembre. La cesantía se liquida a esa fecha (art. 99 de la Ley 50 de 1990) y sobre ella se calculan los intereses del 12 % anual.",
+      "html": "<strong>Liquide las prestaciones al 31 de diciembre.</strong> La cesantía se liquida a esa fecha (art. 99 de la Ley 50 de 1990) y sobre ella se calculan los intereses del 12 % anual."
+     },
+     {
+      "texto": "Confirme que la nómina electrónica de todo el año fue transmitida.",
+      "html": "<strong>Confirme que la nómina electrónica</strong> de todo el año fue transmitida."
+     },
+     {
+      "texto": "Declare la retención de noviembre, que vence entre el 10 y el 23 de diciembre.",
+      "html": "<strong>Declare la retención de noviembre</strong>, que vence entre el 10 y el 23 de diciembre."
+     }
+    ]
+   },
+   {
+    "t": "blockquote",
+    "texto": "Si su equipo contable no alcanza a cubrir el cierre, nuestra asesoría de cierre contable y fiscal se encarga del precierre, las conciliaciones, los ajustes y los estados financieros para la asamblea. El valor se cotiza según el volumen de operaciones y el estado de su contabilidad.",
+    "html": "Si su equipo contable no alcanza a cubrir el cierre, nuestra <a href=\"asesoria-cierre-contable.html\">asesoría de cierre contable y fiscal</a> se encarga del precierre, las conciliaciones, los ajustes y los estados financieros para la asamblea. El valor se cotiza según el volumen de operaciones y el estado de su contabilidad."
+   },
+   {
+    "t": "h2",
+    "texto": "Enero de 2027: primeras fechas oficiales",
+    "ancla": "enero"
+   },
+   {
+    "t": "p",
+    "texto": "Los vencimientos de enero de 2027 ya son oficiales porque están en el calendario tributario 2026 de la DIAN. Entre el 13 y el 26 de enero se declaran la retención en la fuente de diciembre de 2026, el IVA bimestral de noviembre-diciembre y el IVA cuatrimestral de septiembre-diciembre. Si tiene dudas sobre bases y tarifas, repase la tabla de retención en la fuente 2026.",
+    "html": "Los vencimientos de enero de 2027 ya son oficiales porque están en el <a href=\"calendario-tributario-actualizado.html\">calendario tributario 2026 de la DIAN</a>. Entre el 13 y el 26 de enero se declaran la retención en la fuente de diciembre de 2026, el IVA bimestral de noviembre-diciembre y el IVA cuatrimestral de septiembre-diciembre. Si tiene dudas sobre bases y tarifas, repase la <a href=\"que-es-la-retencion-en-la-fuente.html\">tabla de retención en la fuente 2026</a>."
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Último dígito del NIT"
+      },
+      {
+       "th": true,
+       "texto": "Vence en enero de 2027"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "1"
+      },
+      {
+       "th": false,
+       "texto": "Miércoles 13"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "2"
+      },
+      {
+       "th": false,
+       "texto": "Jueves 14"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "3"
+      },
+      {
+       "th": false,
+       "texto": "Viernes 15"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "4"
+      },
+      {
+       "th": false,
+       "texto": "Lunes 18"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "5"
+      },
+      {
+       "th": false,
+       "texto": "Martes 19"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "6"
+      },
+      {
+       "th": false,
+       "texto": "Miércoles 20"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "7"
+      },
+      {
+       "th": false,
+       "texto": "Jueves 21"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "8"
+      },
+      {
+       "th": false,
+       "texto": "Viernes 22"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "9"
+      },
+      {
+       "th": false,
+       "texto": "Lunes 25"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "0"
+      },
+      {
+       "th": false,
+       "texto": "Martes 26"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Pague los intereses sobre cesantías. Según la Superintendencia Financiera, se pagan a más tardar el 31 de enero, y el 31 de enero de 2027 es domingo. No encontramos un pronunciamiento oficial que diga si el plazo se corre; lo prudente es pagar a más tardar el viernes 29 de enero.",
+      "html": "<strong>Pague los intereses sobre cesantías.</strong> Según la Superintendencia Financiera, se pagan a más tardar el 31 de enero, y el 31 de enero de 2027 es domingo. No encontramos un pronunciamiento oficial que diga si el plazo se corre; lo prudente es pagar a más tardar el viernes 29 de enero."
+     },
+     {
+      "texto": "Cierre las cuentas de resultado y prepare el balance de prueba definitivo.",
+      "html": "<strong>Cierre las cuentas de resultado</strong> y prepare el balance de prueba definitivo."
+     },
+     {
+      "texto": "Calcule el deterioro de cartera e inventarios, las provisiones, el impuesto de renta y el impuesto diferido.",
+      "html": "<strong>Calcule el deterioro de cartera e inventarios</strong>, las provisiones, el impuesto de renta y el impuesto diferido."
+     },
+     {
+      "texto": "Entregue la información al revisor fiscal. Le explicamos qué va a pedir en qué revisa el revisor fiscal en el cierre contable.",
+      "html": "<strong>Entregue la información al revisor fiscal.</strong> Le explicamos qué va a pedir en <a href=\"revisor-fiscal-cierre-contable.html\">qué revisa el revisor fiscal en el cierre contable</a>."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Febrero de 2027: cesantías y estados financieros",
+    "ancla": "febrero"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Consigne las cesantías en el fondo de cada trabajador antes del 15 de febrero (art. 99 de la Ley 50 de 1990). El 14 de febrero de 2027 es domingo y no hay una regla oficial sobre el corrimiento del plazo, así que consigne a más tardar el viernes 12 de febrero. La mora cuesta un día de salario por cada día de retardo.",
+      "html": "<strong>Consigne las cesantías</strong> en el fondo de cada trabajador antes del 15 de febrero (art. 99 de la Ley 50 de 1990). El 14 de febrero de 2027 es domingo y no hay una regla oficial sobre el corrimiento del plazo, así que consigne a más tardar el viernes 12 de febrero. La mora cuesta un día de salario por cada día de retardo."
+     },
+     {
+      "texto": "Grandes contribuyentes: primera cuota de renta del año gravable 2026. Estimación a partir de la regla en días hábiles: del 9 al 22 de febrero de 2027, según el último dígito del NIT. Confírmela cuando la DIAN publique el calendario 2027.",
+      "html": "<strong>Grandes contribuyentes: primera cuota de renta del año gravable 2026.</strong> Estimación a partir de la regla en días hábiles: del 9 al 22 de febrero de 2027, según el último dígito del NIT. Confírmela cuando la DIAN publique el calendario 2027."
+     },
+     {
+      "texto": "Prepare los estados financieros y sus notas bajo NIIF para pymes o el marco que le aplique.",
+      "html": "<strong>Prepare los estados financieros y sus notas</strong> bajo NIIF para pymes o el marco que le aplique."
+     },
+     {
+      "texto": "Arme la conciliación fiscal y, si sus ingresos brutos fiscales llegan a 45.000 UVT, prepare el formato 2516 para presentarlo con la renta.",
+      "html": "<strong>Arme la conciliación fiscal</strong> y, si sus ingresos brutos fiscales llegan a 45.000 UVT, prepare el formato 2516 para presentarlo con la renta."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Marzo de 2027: certificados, asamblea y matrícula",
+    "ancla": "marzo"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Expida los certificados de retención del año gravable 2026. Los de ingresos y retenciones laborales y los de otras retenciones se entregan a más tardar el último día hábil de marzo (art. 1.6.1.13.2.40 del DUT 1625), que en 2027 es el miércoles 31 de marzo.",
+      "html": "<strong>Expida los certificados de retención del año gravable 2026.</strong> Los de ingresos y retenciones laborales y los de otras retenciones se entregan a más tardar el último día hábil de marzo (art. 1.6.1.13.2.40 del DUT 1625), que en 2027 es el miércoles 31 de marzo."
+     },
+     {
+      "texto": "Convoque la asamblea ordinaria. Para aprobar balances, la sociedad anónima convoca con 15 días hábiles de anticipación (art. 424 del Código de Comercio) y la S.A.S. con 5 días hábiles, salvo pacto en contrario (art. 20 de la Ley 1258 de 2008). Para una reunión el 31 de marzo, nuestra estimación es convocar a más tardar el jueves 4 de marzo en una sociedad anónima y el jueves 18 de marzo en una S.A.S., sin contar sábados, domingos ni los festivos del 22, 25 y 26 de marzo, ni el día de la convocatoria ni el de la reunión. Confirme el conteo con su abogado.",
+      "html": "<strong>Convoque la asamblea ordinaria.</strong> Para aprobar balances, la sociedad anónima convoca con 15 días hábiles de anticipación (art. 424 del Código de Comercio) y la S.A.S. con 5 días hábiles, salvo pacto en contrario (art. 20 de la Ley 1258 de 2008). Para una reunión el 31 de marzo, nuestra estimación es convocar a más tardar el jueves 4 de marzo en una sociedad anónima y el jueves 18 de marzo en una S.A.S., sin contar sábados, domingos ni los festivos del 22, 25 y 26 de marzo, ni el día de la convocatoria ni el de la reunión. Confirme el conteo con su abogado."
+     },
+     {
+      "texto": "Deje los libros y documentos a disposición de los socios: durante los 15 días hábiles anteriores a la reunión en la sociedad anónima (art. 447 del Código de Comercio) y 5 días hábiles antes en la S.A.S., salvo un término estatutario mayor.",
+      "html": "<strong>Deje los libros y documentos a disposición de los socios:</strong> durante los 15 días hábiles anteriores a la reunión en la sociedad anónima (art. 447 del Código de Comercio) y 5 días hábiles antes en la S.A.S., salvo un término estatutario mayor."
+     },
+     {
+      "texto": "Celebre la asamblea. Si los estatutos no fijan otra fecha, el plazo es el miércoles 31 de marzo de 2027 (art. 422 del Código de Comercio). Sin convocatoria, la asamblea se reúne por derecho propio el jueves 1 de abril a las 10 a. m.",
+      "html": "<strong>Celebre la asamblea.</strong> Si los estatutos no fijan otra fecha, el plazo es el miércoles 31 de marzo de 2027 (art. 422 del Código de Comercio). Sin convocatoria, la asamblea se reúne por derecho propio el jueves 1 de abril a las 10 a. m."
+     },
+     {
+      "texto": "Renueve la matrícula mercantil a más tardar el 31 de marzo de 2027 (art. 33 del Código de Comercio).",
+      "html": "<strong>Renueve la matrícula mercantil</strong> a más tardar el 31 de marzo de 2027 (art. 33 del Código de Comercio)."
+     },
+     {
+      "texto": "Defina el revisor fiscal de 2027 en la misma asamblea, si su empresa quedó obligada.",
+      "html": "<strong>Defina el revisor fiscal de 2027</strong> en la misma asamblea, si su empresa quedó obligada."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Después de marzo: depósito, Supersociedades y exógena",
+    "ancla": "despues-de-marzo"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Depósito en cámara de comercio: dentro del mes siguiente a la aprobación de los estados financieros (art. 41 de la Ley 222 de 1995), salvo que los deposite en Supersociedades.",
+      "html": "<strong>Depósito en cámara de comercio:</strong> dentro del mes siguiente a la aprobación de los estados financieros (art. 41 de la Ley 222 de 1995), salvo que los deposite en Supersociedades."
+     },
+     {
+      "texto": "Reporte a Supersociedades: las sociedades vigiladas o controladas reportan sin orden particular; las que están en inspección, solo si reciben una orden. Los plazos de 2027 no se han publicado. Solo como referencia, en 2026 los informes de fin de ejercicio vencieron entre el 13 de abril (NIT terminados en 01 a 05) y el 11 de mayo (96 a 00). Los estados consolidados van a más tardar el último día hábil de mayo, según la circular de requerimiento de información de Supersociedades.",
+      "html": "<strong>Reporte a Supersociedades:</strong> las sociedades vigiladas o controladas reportan sin orden particular; las que están en inspección, solo si reciben una orden. Los plazos de 2027 no se han publicado. <strong>Solo como referencia</strong>, en 2026 los informes de fin de ejercicio vencieron entre el 13 de abril (NIT terminados en 01 a 05) y el 11 de mayo (96 a 00). Los estados consolidados van a más tardar el último día hábil de mayo, según la circular de requerimiento de información de Supersociedades."
+     },
+     {
+      "texto": "Exógena del año gravable 2026. Estimación con la regla en días hábiles de la Resolución 000227 de 2025: grandes contribuyentes, del 23 de abril al 13 de mayo de 2027; personas jurídicas y naturales, del 14 de mayo al 14 de junio de 2027. La DIAN puede modificar fechas puntuales, así que confírmelas.",
+      "html": "<strong>Exógena del año gravable 2026.</strong> Estimación con la regla en días hábiles de la Resolución 000227 de 2025: grandes contribuyentes, del 23 de abril al 13 de mayo de 2027; personas jurídicas y naturales, del 14 de mayo al 14 de junio de 2027. La DIAN puede modificar fechas puntuales, así que confírmelas."
+     },
+     {
+      "texto": "Renta del año gravable 2026: los plazos dependen del calendario 2027. Le contamos lo que ya se sabe en calendario tributario 2027: qué se sabe y qué preparar.",
+      "html": "<strong>Renta del año gravable 2026:</strong> los plazos dependen del calendario 2027. Le contamos lo que ya se sabe en <a href=\"calendario-tributario-2027.html\">calendario tributario 2027: qué se sabe y qué preparar</a>."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "Tabla resumen de fechas clave del cierre 2026",
+    "ancla": "fechas-clave"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Fecha"
+      },
+      {
+       "th": true,
+       "texto": "Obligación"
+      },
+      {
+       "th": true,
+       "texto": "Estado"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "9 al 23 de octubre de 2026"
+      },
+      {
+       "th": false,
+       "texto": "Retención en la fuente de septiembre"
+      },
+      {
+       "th": false,
+       "texto": "Oficial"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "11 al 25 de noviembre de 2026"
+      },
+      {
+       "th": false,
+       "texto": "Retención de octubre e IVA bimestral de septiembre-octubre"
+      },
+      {
+       "th": false,
+       "texto": "Oficial"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "10 al 23 de diciembre de 2026"
+      },
+      {
+       "th": false,
+       "texto": "Retención de noviembre"
+      },
+      {
+       "th": false,
+       "texto": "Oficial"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "31 de diciembre de 2026"
+      },
+      {
+       "th": false,
+       "texto": "Corte de cuentas y liquidación de cesantías"
+      },
+      {
+       "th": false,
+       "texto": "Regla legal"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "13 al 26 de enero de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Retención de diciembre, IVA bimestral de noviembre-diciembre e IVA cuatrimestral de septiembre-diciembre"
+      },
+      {
+       "th": false,
+       "texto": "Oficial (calendario DIAN 2026)"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Domingo 31 de enero de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Intereses sobre cesantías"
+      },
+      {
+       "th": false,
+       "texto": "Plazo de la Superfinanciera; pago prudente el viernes 29"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Domingo 14 de febrero de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Consignación de cesantías (antes del 15 de febrero)"
+      },
+      {
+       "th": false,
+       "texto": "Plazo legal; consignación prudente el viernes 12"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "9 al 22 de febrero de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Primera cuota de renta de grandes contribuyentes"
+      },
+      {
+       "th": false,
+       "texto": "Estimación"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "4 de marzo (S.A.) y 18 de marzo de 2027 (S.A.S.)"
+      },
+      {
+       "th": false,
+       "texto": "Última fecha para convocar una asamblea del 31 de marzo"
+      },
+      {
+       "th": false,
+       "texto": "Estimación"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Miércoles 31 de marzo de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Certificados de retención, asamblea ordinaria si los estatutos callan y matrícula mercantil"
+      },
+      {
+       "th": false,
+       "texto": "Regla legal"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Jueves 1 de abril de 2027, 10 a. m."
+      },
+      {
+       "th": false,
+       "texto": "Asamblea por derecho propio"
+      },
+      {
+       "th": false,
+       "texto": "Regla legal"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Abril y mayo de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Estados financieros a Supersociedades"
+      },
+      {
+       "th": false,
+       "texto": "Por publicar (referencia 2026: 13 de abril a 11 de mayo)"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "23 de abril a 14 de junio de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Información exógena del año gravable 2026"
+      },
+      {
+       "th": false,
+       "texto": "Estimación"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Mes siguiente a la aprobación"
+      },
+      {
+       "th": false,
+       "texto": "Depósito de estados financieros en cámara de comercio"
+      },
+      {
+       "th": false,
+       "texto": "Regla legal"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué debe hacer su empresa?",
+    "ancla": "que-debe-hacer-su-empresa"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Asigne un responsable y una fecha a cada tarea de esta lista.",
+      "html": "<strong>Asigne un responsable y una fecha</strong> a cada tarea de esta lista."
+     },
+     {
+      "texto": "Haga el precierre con las cifras de octubre y corrija lo que encuentre antes de diciembre.",
+      "html": "<strong>Haga el precierre</strong> con las cifras de octubre y corrija lo que encuentre antes de diciembre."
+     },
+     {
+      "texto": "Mida sus topes con el corte de noviembre: formato 2516, revisor fiscal y Supersociedades.",
+      "html": "<strong>Mida sus topes</strong> con el corte de noviembre: formato 2516, revisor fiscal y Supersociedades."
+     },
+     {
+      "texto": "Agende las fechas oficiales y deje las estimadas en revisión hasta que salgan los calendarios de 2027.",
+      "html": "<strong>Agende las fechas oficiales</strong> y deje las estimadas en revisión hasta que salgan los calendarios de 2027."
+     },
+     {
+      "texto": "Revise los estatutos para saber la fecha de la asamblea y la antelación de la convocatoria.",
+      "html": "<strong>Revise los estatutos</strong> para saber la fecha de la asamblea y la antelación de la convocatoria."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si quiere llegar a la asamblea con cifras que se pueden sustentar, pida una propuesta de asesoría de cierre contable y fiscal. Trabajamos desde Medellín, con visitas programadas en Medellín, Pereira, Armenia y Manizales, y de forma virtual en Bogotá y el resto de Colombia.",
+    "html": "Si quiere llegar a la asamblea con cifras que se pueden sustentar, pida una propuesta de <a href=\"asesoria-cierre-contable.html\">asesoría de cierre contable y fiscal</a>. Trabajamos desde Medellín, con visitas programadas en Medellín, Pereira, Armenia y Manizales, y de forma virtual en Bogotá y el resto de Colombia."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuándo se debe empezar a preparar el cierre contable 2026?",
+    "respuesta": "En octubre de 2026, con conciliaciones bancarias, depuración de cartera, revisión de terceros y una proyección de renta. Así queda tiempo para corregir y planear antes del 31 de diciembre."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Hasta cuándo se pueden consignar las cesantías de 2026?",
+    "respuesta": "La ley dice \"antes del 15 de febrero\". En 2027 el 14 de febrero es domingo y no hay una regla oficial sobre el corrimiento, así que lo prudente es consignar a más tardar el viernes 12 de febrero de 2027."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuál es el plazo de los certificados de retención del año gravable 2026?",
+    "respuesta": "El último día hábil de marzo de 2027, que es el miércoles 31 de marzo. Aplica a los certificados de ingresos y retenciones laborales y a los de otras retenciones."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Desde qué ingresos se presenta el formato 2516 en el cierre fiscal 2026?",
+    "respuesta": "Desde 45.000 UVT de ingresos brutos fiscales, que con la UVT 2026 son $2.356.830.000. Quienes consolidan estados financieros o son grupo empresarial lo presentan sin importar sus ingresos.",
+    "html": "<p>Desde 45.000 UVT de ingresos brutos fiscales, que con la UVT 2026 son <strong>$2.356.830.000</strong>. Quienes consolidan estados financieros o son grupo empresarial lo presentan sin importar sus ingresos.</p>"
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Ya está publicado el calendario tributario 2027?",
+    "respuesta": "No. A 18 de octubre de 2026 la DIAN no lo ha publicado. Las fechas de 2027 de esta lista son estimaciones con la regla en días hábiles; las de enero de 2027 sí son oficiales porque están en el calendario 2026."
    }
   ]
  }
