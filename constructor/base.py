@@ -158,6 +158,7 @@ PIE = f"""<footer class="pie">
           <li><a href="outsourcing-contable.html">Outsourcing contable</a></li>
           <li><a href="consultoria-financiera.html">Consultoría financiera</a></li>
           <li><a href="revisoria-fiscal.html">Revisoría fiscal</a></li>
+          <li><a href="asesoria-cierre-contable.html">Asesoría de cierre contable</a></li>
           <li><a href="/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/#planes">Planes desde 2 SMMLV</a></li>
           <li><a href="cotizacion-outsourcing-contable.html">Cotizar outsourcing contable</a></li>
           <li><a href="cotizacion-revisoria-fiscal.html">Cotizar revisoría fiscal</a></li>

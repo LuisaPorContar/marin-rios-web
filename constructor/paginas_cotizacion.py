@@ -37,7 +37,7 @@ def _pasos(items):
 # ================================================================
 faq_cot_out = [
     ("¿Cuánto cuesta un outsourcing contable?",
-     "Depende del volumen de facturas y movimientos, del número de empleados en nómina, de las obligaciones tributarias de la empresa y del estado en que esté la contabilidad. Por eso cotizamos con los datos de su operación y entregamos el valor por escrito."),
+     "Nuestros planes van desde 2 SMMLV al mes. El valor final depende del volumen de facturas y movimientos, del número de empleados en nómina, de las obligaciones tributarias de la empresa y del estado en que esté la contabilidad. Por eso cotizamos con los datos de su operación y entregamos el valor por escrito."),
     ("¿La cotización tiene algún costo?",
      "No. Revisar su caso y enviarle la propuesta no tiene costo ni lo compromete a contratar."),
     ("¿Qué información necesitan para cotizar?",

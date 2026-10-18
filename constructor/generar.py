@@ -14,6 +14,7 @@ import articulos_paginas  # añade una página por cada artículo del blog
 import paginas_meta       # landings de pauta en Meta (revisoría fiscal)
 import paginas_rf_ciudades  # revisoría fiscal en Medellín y el Eje Cafetero
 import paginas_cotizacion   # cotización de outsourcing contable y de revisoría fiscal
+import paginas_cierre       # asesoría de cierre contable y fiscal
 from paginas import PAGINAS
 
 SALIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
