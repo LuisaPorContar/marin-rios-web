@@ -7,6 +7,7 @@ from base import (ICO, wa, plantilla, heroe, encabezado, servicios_num, fijo,
                   resenas_google, ultimas_publicaciones)
 
 import json
+import re
 
 # Clúster de revisoría fiscal: orden en que se muestran en la página pilar.
 GUIAS_REVISORIA = [
@@ -20,13 +21,13 @@ GUIAS_REVISORIA = [
 TRIO = [
     ("01 — Contable", "Gestión contable",
      "Externaliza toda tu operación contable: registros, conciliaciones, impuestos y reportes. Menos carga interna, más control financiero.",
-     None, "Quiero este servicio", "outsourcing-contable.html"),
+     None, "Ver outsourcing contable", "outsourcing-contable.html"),
     ("02 — Financiero", "Consultoría financiera",
      "Toma decisiones basadas en datos. Analizamos tus finanzas, rentabilidad, flujo de caja y proyecciones.",
-     None, "Quiero este servicio", "consultoria-financiera.html"),
+     None, "Ver consultoría financiera", "consultoria-financiera.html"),
     ("03 — Fiscal", "Revisoría fiscal",
      "Asegura el cumplimiento legal y protege tu empresa frente a riesgos fiscales. Revisión independiente y reportes confiables.",
-     None, "Quiero este servicio", "revisoria-fiscal.html"),
+     None, "Ver revisoría fiscal", "revisoria-fiscal.html"),
 ]
 
 
@@ -45,7 +46,7 @@ def schema_servicio(nombre, descripcion, url, faqs=None):
         g.append({
             "@type": "FAQPage",
             "mainEntity": [{"@type": "Question", "name": q,
-                            "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]
+                            "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}} for q, a in faqs]
         })
     return json.dumps({"@context": "https://schema.org", "@graph": g}, ensure_ascii=False, indent=2)
 
@@ -58,11 +59,11 @@ PAGINAS = []
 # ================================================================
 faq_out = [
     ("¿Qué es un outsourcing contable?",
-     "Es delegar la operación contable de tu empresa a una firma externa especializada. En lugar de sostener un área interna, un equipo de contadores asume registros, conciliaciones, impuestos, nómina y reportes, y responde por el cumplimiento mes a mes."),
+     "Es delegar la operación contable de tu empresa a una firma externa especializada. En lugar de sostener un área interna, un equipo de contadores asume registros, conciliaciones, impuestos, nómina y reportes, y responde por el cumplimiento mes a mes. Lo explicamos a fondo en <a href=\"que-es-outsourcing-contable.html\">qué es el outsourcing contable</a>."),
     ("¿Qué incluye el servicio de outsourcing contable?",
      "Contabilidad general y libros oficiales, conciliaciones bancarias, cuentas por cobrar y pagar, liquidación y presentación de impuestos, nómina electrónica, estados financieros bajo NIIF y acompañamiento en requerimientos de la DIAN."),
     ("¿Cuánto cuesta el outsourcing contable en Colombia?",
-     "Depende del volumen de transacciones, el número de empleados en nómina y los servicios incluidos. Revisamos tu operación sin costo y te enviamos una cotización a la medida de tu empresa."),
+     "Depende del volumen de transacciones, el número de empleados en nómina y los servicios incluidos. Revisamos tu operación sin costo y te enviamos una <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a> a la medida de tu empresa. Te explicamos cada variable en <a href=\"cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable.html\">cuánto cuesta un outsourcing contable</a>."),
     ("¿Cuánto tarda la transición desde mi contador actual?",
      "Entre 15 y 30 días. Hacemos un diagnóstico del estado real de la información, migramos saldos y soportes, y asumimos la operación desde el siguiente cierre mensual sin interrumpir tus obligaciones."),
     ("¿Qué pasa si mi contabilidad está atrasada?",
@@ -78,7 +79,7 @@ cuerpo = f"""
     chip="Servicio · Outsourcing contable",
     migas=[("Inicio", "index.html"), ("Servicios", None), ("Outsourcing contable", None)],
     cta1=("Agenda una asesoría", wa("Hola, quiero cotizar el servicio de outsourcing contable para mi empresa")),
-    cta2=("Ver planes", "precios-outsourcing-contable.html"),
+    cta2=("Pide tu cotización", "cotizacion-outsourcing-contable.html"),
     riel=[("+50", "Empresas con su contabilidad tercerizada"),
           ("15 días", "Tiempo promedio de transición"),
           ("100%", "Cumplimiento del calendario DIAN"),
@@ -143,7 +144,7 @@ cuerpo = f"""
 
 <section class="seccion claro">
   <div class="contenedor">
-    {encabezado("Otros servicios", "Combina el outsourcing con lo que tu empresa necesite", "Muchas empresas empiezan por la gestión contable y suman revisoría fiscal o consultoría financiera cuando crecen.")}
+    {encabezado("Otros servicios", "Combina el outsourcing con lo que tu empresa necesite", "Muchas empresas empiezan por la gestión contable y suman <a href=\"revisoria-fiscal.html\">revisoría fiscal</a> o <a href=\"consultoria-financiera.html\">consultoría financiera</a> cuando crecen.")}
     {servicios_num(TRIO)}
   </div>
 </section>
@@ -177,8 +178,8 @@ cuerpo = f"""
 
 PAGINAS.append(dict(
     archivo="outsourcing-contable.html",
-    titulo="Outsourcing Contable en Colombia para Pymes | Marín Ríos",
-    descripcion=f"Outsourcing contable para empresas en Colombia: contabilidad, impuestos, nómina y estados financieros NIIF. Cotización a la medida de tu empresa.",
+    titulo="Outsourcing Contable para Empresas en Colombia | Marín Ríos",
+    descripcion=f"Outsourcing contable para empresas en Colombia: contabilidad, impuestos, nómina y estados financieros NIIF, con atención en Medellín, Pereira, Armenia y Manizales.",
     activo="servicios",
     og_img="reunion-ancho.jpg",
     schema=schema_servicio("Outsourcing contable",
@@ -193,13 +194,13 @@ PAGINAS.append(dict(
 # ================================================================
 faq_rev = [
     ("¿Qué es la revisoría fiscal en Colombia?",
-     "Es un órgano de fiscalización independiente, regulado por el Código de Comercio y la Ley 43 de 1990, cuya función es dictaminar sobre la razonabilidad de los estados financieros y velar por que la sociedad cumpla la ley, los estatutos y las decisiones de sus órganos de gobierno."),
+     "Es un órgano de fiscalización independiente, regulado por el Código de Comercio y la Ley 43 de 1990, cuya función es dictaminar sobre la razonabilidad de los estados financieros y velar por que la sociedad cumpla la ley, los estatutos y las decisiones de sus órganos de gobierno. Lo ampliamos en <a href=\"que-es-revisoria-fiscal.html\">qué es la revisoría fiscal y para qué sirve</a>."),
     ("¿Quiénes pueden ejercer como revisores fiscales en Colombia?",
      "Únicamente contadores públicos con tarjeta profesional vigente expedida por la Junta Central de Contadores, que no estén incursos en las inhabilidades e incompatibilidades del artículo 205 del Código de Comercio. También pueden ejercer las firmas de contadores debidamente inscritas."),
     ("¿Qué empresas están obligadas a tener revisor fiscal?",
      "Las sociedades anónimas, en comandita por acciones y las sucursales de sociedades extranjeras siempre. Las demás, incluidas las SAS, cuando al 31 de diciembre del año anterior sus activos brutos sean iguales o superiores a 5.000 SMMLV o sus ingresos brutos a 3.000 SMMLV. Para 2027 eso equivale a $8.754.525.000 en activos o $5.252.715.000 en ingresos. También aplica por mandato estatutario o de la asamblea."),
     ("¿Cuáles son las funciones y responsabilidades de un revisor fiscal?",
-     "Dictaminar los estados financieros, verificar que las operaciones se ajusten a los estatutos y a las decisiones de la asamblea y la junta directiva, velar por la conservación de los bienes sociales, colaborar con las entidades de vigilancia y control, y dar cuenta oportuna de las irregularidades que encuentre."),
+     "Dictaminar los estados financieros, verificar que las operaciones se ajusten a los estatutos y a las decisiones de la asamblea y la junta directiva, velar por la conservación de los bienes sociales, colaborar con las entidades de vigilancia y control, y dar cuenta oportuna de las irregularidades que encuentre. Las explicamos una por una en <a href=\"funciones-revisor-fiscal-colombia.html\">funciones del revisor fiscal</a>."),
     ("¿Cómo se elige a un revisor fiscal en una empresa?",
      "Lo elige la asamblea general de accionistas o la junta de socios por mayoría absoluta, para el período fijado en los estatutos. La designación se inscribe en el registro mercantil de la Cámara de Comercio para que sea oponible a terceros."),
     ("¿Qué normativas regulan la revisoría fiscal en Colombia?",
@@ -207,7 +208,7 @@ faq_rev = [
     ("¿Qué es el informe del revisor fiscal y qué debe contener?",
      "Es el dictamen que se presenta a la asamblea. Debe indicar si los estados financieros presentan razonablemente la situación financiera, si la contabilidad se lleva conforme a las normas, si las operaciones se ajustan a los estatutos y a la ley, y si el control interno y la conservación de los bienes son adecuados."),
     ("¿Cuál es la diferencia entre revisoría fiscal y auditoría externa?",
-     "La revisoría fiscal es una figura obligatoria y permanente creada por la ley colombiana, con función de fiscalización integral y fe pública. La auditoría externa es voluntaria, contractual, se enfoca en un alcance definido por el cliente y no otorga fe pública."),
+     "La revisoría fiscal es una figura obligatoria y permanente creada por la ley colombiana, con función de fiscalización integral y fe pública. La auditoría externa es voluntaria, contractual, se enfoca en un alcance definido por el cliente y no otorga fe pública. Vea la <a href=\"contador-auditor-revisor-fiscal-cual-necesita.html\">diferencia entre contador, auditor y revisor fiscal</a>."),
 ]
 
 cuerpo = f"""
@@ -219,7 +220,7 @@ cuerpo = f"""
     chip="Servicio · Revisoría fiscal",
     migas=[("Inicio", "index.html"), ("Servicios", None), ("Revisoría fiscal", None)],
     cta1=("Quiero una asesoría", wa("Hola, quiero una asesoría sobre el servicio de revisoría fiscal")),
-    cta2=("Ver planes", "precios-outsourcing-contable.html"),
+    cta2=("Pide tu cotización", "cotizacion-revisoria-fiscal.html"),
     riel=[("Ley 43", "Ejercicio profesional bajo la Ley 43 de 1990"),
           ("Art. 203", "Código de Comercio: obligación de revisor fiscal"),
           ("NIA", "Normas Internacionales de Auditoría aplicadas"),
@@ -284,7 +285,7 @@ cuerpo = f"""
 {proposito(
     "Un revisor fiscal que sí revisa",
     "Prestamos servicios de contabilidad, auditoría y asesoría fiscal para pymes. Nuestro trabajo se documenta bajo Normas Internacionales de Auditoría y se sustenta con papeles de trabajo.",
-    "Cada hallazgo llega con su recomendación, y cada informe se explica en una reunión con los socios. Sin lenguaje técnico innecesario.",
+    "Cada hallazgo llega con su recomendación, y cada informe se explica en una reunión con los socios. Si está armando el presupuesto, mire <a href=\"cuanto-cobra-un-revisor-fiscal-en-colombia.html\">cuánto cobra un revisor fiscal</a> y pida su <a href=\"cotizacion-revisoria-fiscal.html\">cotización de revisoría fiscal</a>.",
     boton="Obtén tu asesoría aquí",
     mensaje="Hola, quiero una asesoría con un experto en revisoría fiscal",
     flotante_a=("NIA", "Normas de auditoría aplicadas"),
@@ -307,10 +308,10 @@ cuerpo = f"""
   <div class="contenedor">
     {encabezado("Cobertura", "Revisoría fiscal en Medellín y el Eje Cafetero", "Visitas presenciales y revisión remota durante todo el año.", ancho="54rem", tam="var(--paso-4)")}
     <div class="directorio__lista revelar">
-      <a class="etiqueta-enlace" href="revisoria-fiscal-medellin.html">Medellín</a>
-      <a class="etiqueta-enlace" href="revisoria-fiscal-pereira.html">Pereira</a>
-      <a class="etiqueta-enlace" href="revisoria-fiscal-armenia.html">Armenia</a>
-      <a class="etiqueta-enlace" href="revisoria-fiscal-manizales.html">Manizales</a>
+      <a class="etiqueta-enlace" href="revisoria-fiscal-medellin.html">Revisoría fiscal en Medellín</a>
+      <a class="etiqueta-enlace" href="revisoria-fiscal-pereira.html">Revisoría fiscal en Pereira</a>
+      <a class="etiqueta-enlace" href="revisoria-fiscal-armenia.html">Revisoría fiscal en Armenia</a>
+      <a class="etiqueta-enlace" href="revisoria-fiscal-manizales.html">Revisoría fiscal en Manizales</a>
     </div>
   </div>
 </section>
@@ -343,13 +344,14 @@ cuerpo = f"""
     "Obtén tu asesoría con un experto especializado",
     "Cuéntanos el tamaño de tu sociedad y te decimos si estás obligado a tener revisor fiscal y qué alcance necesitas.",
     boton="Quiero información",
-    mensaje="Hola, quiero información sobre el servicio de revisoría fiscal"
+    mensaje="Hola, quiero información sobre el servicio de revisoría fiscal",
+    secundario=("Cotiza tu revisoría fiscal", "cotizacion-revisoria-fiscal.html"),
 )}
 """
 
 PAGINAS.append(dict(
     archivo="revisoria-fiscal.html",
-    titulo="Servicio de Revisoría Fiscal en Medellín y Colombia | Marín Ríos",
+    titulo="Revisoría Fiscal para Empresas en Colombia | Marín Ríos",
     descripcion=f"Firma de revisoría fiscal en Medellín y Colombia. ¿Tu empresa está obligada en 2027? Dictamen independiente bajo NIA, informes útiles y propuesta a la medida.",
     activo="servicios",
     og_img="reunion-duotono.jpg",
@@ -385,7 +387,7 @@ cuerpo = f"""
     chip="Servicio · Consultoría financiera",
     migas=[("Inicio", "index.html"), ("Servicios", None), ("Consultoría financiera", None)],
     cta1=("Quiero este servicio", wa("Hola, quiero cotizar el servicio de consultoría financiera")),
-    cta2=("Ver planes", "precios-outsourcing-contable.html"),
+    cta2=("Ver planes de outsourcing contable", "precios-outsourcing-contable.html"),
     riel=[("Diagnóstico", "Lectura financiera inicial de tu empresa"),
           ("12 meses", "Horizonte de proyección del flujo de caja"),
           ("Mensual", "Reunión de seguimiento con indicadores"),
@@ -480,7 +482,7 @@ cuerpo = f"""
 PAGINAS.append(dict(
     archivo="consultoria-financiera.html",
     titulo="Consultoría Financiera para Empresas y Pymes | Marín Ríos",
-    descripcion=f"Consultoría financiera para pymes: análisis de rentabilidad, flujo de caja a 12 meses, costos e indicadores. Cotización a la medida de tu empresa.",
+    descripcion=f"Consultoría financiera para pymes: análisis de rentabilidad, flujo de caja a 12 meses, costos e indicadores, con atención en Medellín y el Eje Cafetero.",
     activo="servicios",
     og_img="detalle-documentos.jpg",
     schema=schema_servicio("Consultoría financiera",

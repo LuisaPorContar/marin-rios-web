@@ -30,13 +30,13 @@ faq_pre = [
 
 cuerpo_precios = f"""
 {heroe(
-    "¿Cuánto cuesta un outsourcing contable? Qué define el valor",
+    "Planes de outsourcing contable para su empresa",
     "Te explicamos con transparencia qué determina el valor de un servicio contable en Colombia, cuándo conviene externalizar y cómo cotizamos según el tamaño de tu empresa.",
     "detalle-documentos.jpg",
     "Documentos contables y análisis de costos de un servicio de outsourcing contable",
     chip="Planes · Servicios contables",
     migas=[("Inicio", "index.html"), ("Planes", None)],
-    cta1=("Pide una cotización", wa("Hola, quiero una cotización de sus servicios contables")),
+    cta1=("Pide una cotización", "cotizacion-outsourcing-contable.html"),
     cta2=("Ver el servicio", "outsourcing-contable.html"),
     riel=[("A la medida", "Cotización según tu operación"),
           ("+50", "Empresas con su contabilidad tercerizada"),
@@ -134,8 +134,8 @@ cuerpo_precios = f"""
 
 PAGINAS.append(dict(
     archivo="precios-outsourcing-contable.html",
-    titulo="¿Cuánto Cuesta un Outsourcing Contable en Colombia? | Marín Ríos",
-    descripcion="¿Cuánto cuesta un outsourcing contable en Colombia? Qué determina el valor del servicio, qué incluye cada plan para pymes y cómo pedir tu cotización.",
+    titulo="Planes de Outsourcing Contable para Pymes | Marín Ríos",
+    descripcion="Planes de outsourcing contable para pymes: qué incluye cada plan, qué servicios puede sumar y cómo se adapta al tamaño de su empresa en Colombia.",
     activo="precios",
     og_img="detalle-documentos.jpg",
     schema=schema_servicio("Outsourcing contable",
@@ -155,8 +155,8 @@ with open(os.path.join(AQUI, "articulos.json"), encoding="utf-8") as f:
 def categoria(a):
     u = a["url"]
     if re.search(r"revisor|revisoria|auditor", u): return "Revisoría fiscal"
-    if re.search(r"impuesto|tributar|dian|retencion|exogena|regimen|salario|nomina|niif|calendario", u): return "Impuestos y normativa"
-    if re.search(r"financier|rentab|deuda|credito|factoring|presupuesto|balance|escalar|llaves|volatil", u): return "Finanzas"
+    if re.search(r"impuesto|tributar|dian|retencion|exogena|regimen|salario|nomina|niif|calendario|decreto|ley-|4x1000", u): return "Impuestos y normativa"
+    if re.search(r"financier|rentab|deuda|credito|factoring|presupuesto|balance|escalar|llaves|volatil|inflacion|tasas", u): return "Finanzas"
     return "Outsourcing contable"
 
 
@@ -201,7 +201,7 @@ for a in resto:
 
 bloques_cat = []
 for nombre, arts in cats.items():
-    tarjetas = "".join(tarjeta_articulo(a, i=j) for j, a in enumerate(arts[:6]))
+    tarjetas = "".join(tarjeta_articulo(a, i=j) for j, a in enumerate(arts))
     bloques_cat.append(f"""<section class="seccion--ajustada">
   <div class="contenedor carrusel">
     <div class="carrusel__cabecera revelar">
@@ -285,6 +285,10 @@ PAGINAS.append(dict(
 # ================================================================
 # CIUDADES
 # ================================================================
+# Zona que cubre cada ciudad, para las descripciones de búsqueda.
+AREA_CIUDAD = {"medellin": "Medellín y el Valle de Aburrá", "pereira": "Pereira y Dosquebradas",
+               "armenia": "Armenia y el Quindío", "manizales": "Manizales y Caldas"}
+
 CIUDADES = [
     dict(slug="medellin", nombre="Medellín", depto="Antioquia", gentilicio="antioqueñas",
          zona="Valle de Aburrá", locales=["Medellín", "Envigado", "Bello", "Oriente Antioqueño"],
@@ -330,14 +334,14 @@ for c in CIUDADES:
 
     servicios_ciudad = [
         ("01 — Contable", "Outsourcing contable",
-         "Nos encargamos de tu contabilidad de principio a fin. Ideal si no tienes equipo interno o necesitas mayor control.",
-         None, "Quiero este servicio", "outsourcing-contable.html"),
+         "Nuestro <a href=\"outsourcing-contable.html\">servicio de outsourcing contable</a> se encarga de tu contabilidad de principio a fin. Ideal si no tienes equipo interno o necesitas mayor control.",
+         None, "Ver outsourcing contable", "outsourcing-contable.html"),
         ("02 — Financiero", "Consultoría financiera",
          "¿No sabes por qué tu negocio no despega? Analizamos tu situación y te damos soluciones claras para mejorar tu rentabilidad.",
-         None, "Quiero este servicio", "consultoria-financiera.html"),
+         None, "Ver consultoría financiera", "consultoria-financiera.html"),
         ("03 — Fiscal", "Revisoría fiscal",
          "Cumple con la ley y evita sanciones. Revisamos, auditamos y reportamos todo como exige la norma.",
-         None, "Quiero este servicio", "revisoria-fiscal.html"),
+         None, "Ver revisoría fiscal", "revisoria-fiscal.html"),
     ]
 
     locales_html = "".join(f'<span class="etiqueta-enlace etiqueta-enlace--inerte">{x}</span>' for x in c["locales"])
@@ -349,9 +353,9 @@ for c in CIUDADES:
     f"ciudad-{slug}.jpg",
     f"Servicios de outsourcing contable en {nombre}, {depto}",
     chip=f"{depto} · {nombre}",
-    migas=[("Inicio", "index.html"), ("Ciudades", None), (nombre, None)],
+    migas=[("Inicio", "index.html"), ("Outsourcing contable", "outsourcing-contable.html"), (nombre, None)],
     cta1=("Conversemos", wa(f"Hola, vengo de la página de {nombre} y quiero cotizar el servicio contable")),
-    cta2=("Ver planes", "precios-outsourcing-contable.html"),
+    cta2=("Pide tu cotización", "cotizacion-outsourcing-contable.html"),
     riel=[("+50", "Empresas con su contabilidad tercerizada"),
           ("15 días", "Tiempo promedio de transición"),
           (nombre, f"Atención en {c['zona']}"),
@@ -367,7 +371,7 @@ for c in CIUDADES:
         ("documento", "Obligaciones ante la DIAN", "IVA, retención en la fuente, ICA, renta e información exógena dentro del calendario tributario."),
         ("lupa", "Auditorías internas", "Revisión de procesos y soportes para detectar riesgos antes de que lo haga una entidad de control."),
         ("grafico", "Reducción de costos", "Identificamos sobrecostos y fugas que la contabilidad registra pero nadie está leyendo."),
-        ("escudo", "Revisoría fiscal y análisis financiero", "Dictamen independiente y lectura financiera cuando tu empresa alcanza el tamaño que lo exige."),
+        ("escudo", "Revisoría fiscal y análisis financiero", f'Dictamen independiente con nuestra <a href="revisoria-fiscal-{slug}.html">revisoría fiscal en {nombre}</a> y lectura financiera cuando tu empresa alcanza el tamaño que lo exige.'),
     ])}
   </div>
 </section>
@@ -491,8 +495,8 @@ for c in CIUDADES:
 
     PAGINAS.append(dict(
         archivo=f"outsourcing-contable-{slug}.html",
-        titulo=f"Outsourcing Contable en {nombre} para Pymes | Marín Ríos",
-        descripcion=f"Outsourcing contable en {nombre}: contabilidad, nómina, impuestos DIAN y revisoría fiscal para pymes y startups. Cotización a la medida.",
+        titulo=f"Outsourcing Contable en {nombre} para Empresas | Marín Ríos",
+        descripcion=f"Outsourcing contable en {AREA_CIUDAD.get(slug, nombre)}: contabilidad, nómina, impuestos ante la DIAN y estados financieros NIIF, con un equipo asignado a su empresa.",
         activo="",
         og_img=f"ciudad-{slug}.jpg",
         schema=schema,

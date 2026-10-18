@@ -132,7 +132,7 @@ for c in CIUDADES:
 
 <section class="seccion">
   <div class="contenedor">
-    {encabezado("Topes 2027", f"¿Tu empresa en {nombre} está obligada a tener revisor fiscal?", "Se mide con las cifras al 31 de diciembre de 2026. Basta con superar uno de los dos topes.")}
+    {encabezado("Topes 2027", f"¿Tu empresa en {nombre} está obligada a tener revisor fiscal?", "Se mide con las cifras al 31 de diciembre de 2026. Basta con superar uno de los dos <a href=\"empresas-obligadas-revisor-fiscal.html\">topes para tener revisor fiscal</a>.")}
     {tarjetas_item([
         ("documento", "Activos desde $8.754 millones", f"Activos brutos iguales o superiores a 5.000 salarios mínimos: {TOPE_ACTIVOS}."),
         ("lupa", "Ingresos desde $5.252 millones", f"Ingresos brutos del año iguales o superiores a 3.000 salarios mínimos: {TOPE_INGRESOS}."),
@@ -145,13 +145,13 @@ for c in CIUDADES:
 <section class="seccion claro">
   {fijo(
     encabezado("Cómo trabajamos", f"Un revisor fiscal presente durante todo el año en {nombre}",
-               "No una firma en marzo: un plan de trabajo con visitas, alertas e informes.",
+               "No una firma en marzo: nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a> es un plan de trabajo con visitas, alertas e informes.",
                ancho="none", tam="var(--paso-4)"),
     [
         ("Diagnóstico y plan anual", "Revisamos la situación de la empresa, sus riesgos frente a la DIAN y la superintendencia, y fijamos un calendario de visitas y entregables."),
         ("Visitas y revisión permanente", f"Visitas presenciales en {c['zona']} y revisión remota de la contabilidad, el control interno y el cumplimiento tributario."),
         ("Alertas a tiempo", "Si encontramos una irregularidad, la informamos por escrito en el momento, no al cierre."),
-        ("Cierre y dictamen", "Acompañamos el cierre contable y entregamos el dictamen y el informe a la asamblea con tiempo para el derecho de inspección."),
+        ("Cierre y dictamen", "Acompañamos el cierre contable y entregamos el <a href=\"dictamen-revisor-fiscal.html\">dictamen del revisor fiscal</a> y el <a href=\"informe-revisor-fiscal-asamblea.html\">informe a la asamblea</a> con tiempo para el derecho de inspección."),
         ("Firma de declaraciones", "Revisamos y firmamos las declaraciones tributarias que la ley exige con firma de revisor fiscal."),
     ]
   )}
@@ -204,7 +204,8 @@ for c in CIUDADES:
     f"Tu revisor fiscal en {nombre}",
     "Cuéntanos el tamaño de tu empresa y te decimos si estás obligado, qué alcance necesitas y cuánto costaría.",
     boton="Quiero una propuesta",
-    mensaje=f"Hola, vengo de la página de revisoría fiscal en {nombre} y quiero una propuesta"
+    mensaje=f"Hola, vengo de la página de revisoría fiscal en {nombre} y quiero una propuesta",
+    secundario=("Cotiza tu revisoría fiscal", "cotizacion-revisoria-fiscal.html"),
 )}
 """
 
@@ -234,7 +235,7 @@ for c in CIUDADES:
 
     PAGINAS.append(dict(
         archivo=f"revisoria-fiscal-{slug}.html",
-        titulo=f"Revisoría Fiscal en {nombre} | Marín Ríos Consultores",
+        titulo=f"Revisoría Fiscal en {nombre} para Empresas | Marín Ríos",
         descripcion=f"Revisor fiscal en {nombre}, {depto}: topes 2027, dictamen bajo NIA, visitas presenciales e informes claros para socios, bancos y la DIAN.",
         activo="servicios",
         og_img=f"ciudad-{slug}.jpg",

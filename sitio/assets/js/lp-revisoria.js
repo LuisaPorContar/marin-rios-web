@@ -53,7 +53,9 @@
       try { idLead = sessionStorage.getItem('lp_event_id') || ''; sessionStorage.removeItem('lp_event_id'); } catch (e4) {}
       if (panelGracias.getAttribute('data-gracias') === 'calificado') {
         // Solo cuenta si viene del formulario (evita Leads por recargar la página)
-        if (idLead) fbq('track', 'Lead', { content_name: 'Evaluación revisoría fiscal 2027', content_category: 'Servicios profesionales' }, { eventID: idLead });
+        var oferta = panelGracias.getAttribute('data-oferta') || '';
+        try { oferta = sessionStorage.getItem('lp_oferta') || oferta; } catch (e5) {}
+        if (idLead) fbq('track', 'Lead', { content_name: oferta || 'Evaluación revisoría fiscal 2027', content_category: 'Servicios profesionales' }, { eventID: idLead });
       }
       else fbq('trackCustom', 'LeadNoCalificado');
     }
@@ -72,6 +74,11 @@
   var URL_SHEETS = form.getAttribute('data-sheets') || '';
   var WA = form.getAttribute('data-wa');
   var PEQUENA = 'Menos de $1.000 millones';
+  var FORMULARIO = form.getAttribute('data-formulario') || 'Landing Revisoría Fiscal 2027';
+  var OFERTA = form.getAttribute('data-oferta') || 'Evaluación revisoría fiscal 2027';
+  var SERVICIO = form.getAttribute('data-servicio') || 'revisoria';
+  var CALIFICA_TODOS = form.getAttribute('data-califica-todos') === '1';
+  var FRASE_WA = form.getAttribute('data-mensaje') || 'agendar la evaluación de revisoría fiscal 2027';
 
   // Parámetros de la campaña (Meta los agrega a la URL del anuncio)
   var qs = new URLSearchParams(window.location.search);
@@ -87,7 +94,7 @@
   }
 
   // Meta: quien llega a la landing vio el contenido del servicio
-  if (window.fbq) fbq('track', 'ViewContent', { content_name: 'Evaluación revisoría fiscal 2027', content_category: 'Servicios profesionales' });
+  if (window.fbq) fbq('track', 'ViewContent', { content_name: OFERTA, content_category: 'Servicios profesionales' });
 
   function valor(nombre) {
     var campo = form.elements[nombre];
@@ -150,10 +157,10 @@
       ingresos: valor('ingresos'),
       whatsapp: normalizarTelefono(valor('whatsapp'))
     };
-    var calificado = d.ingresos !== PEQUENA;
+    var calificado = CALIFICA_TODOS || d.ingresos !== PEQUENA;
 
     var mensaje = 'Hola, soy ' + d.nombre + ' de ' + d.empresa + ' en ' + d.ciudad +
-      '. Quiero agendar la evaluación de revisoría fiscal 2027. Ingresos aproximados ' + d.ingresos + '.';
+      '. Quiero ' + FRASE_WA + '. Ingresos aproximados ' + d.ingresos + '.';
     var urlWa = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(mensaje);
 
     // Identificador único del lead: el píxel (navegador) y la API de
@@ -164,7 +171,9 @@
 
     var registro = Object.assign({}, d, utm, {
       calificado: calificado ? 'Sí' : 'No',
-      formulario: 'Landing Revisoría Fiscal 2027',
+      formulario: FORMULARIO,
+      servicio: SERVICIO,
+      oferta: OFERTA,
       pagina: window.location.origin + window.location.pathname,
       event_id: idEvento,
       fbp: galleta('_fbp'),
@@ -185,7 +194,7 @@
     // Redirige a la página de gracias (una URL por tipo de lead, para que
     // Meta cuente solo los calificados). La pausa deja salir el envío al
     // Sheet y el evento de GTM antes de cambiar de página.
-    try { sessionStorage.setItem('lp_wa', urlWa); } catch (e2) {}
+    try { sessionStorage.setItem('lp_wa', urlWa); sessionStorage.setItem('lp_oferta', OFERTA); } catch (e2) {}
     var destino = calificado ? form.getAttribute('data-gracias-ok') : form.getAttribute('data-gracias-peq');
     setTimeout(function () { window.location.href = destino; }, 900);
   });

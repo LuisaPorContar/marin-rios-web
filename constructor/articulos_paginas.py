@@ -37,11 +37,23 @@ def categoria(slug):
     """Misma clasificación que usa el listado del blog."""
     if re.search(r"revisor|revisoria|auditor", slug):
         return "Revisoría fiscal"
-    if re.search(r"impuesto|tributar|dian|retencion|exogena|regimen|salario|nomina|niif|calendario", slug):
+    if re.search(r"impuesto|tributar|dian|retencion|exogena|regimen|salario|nomina|niif|calendario|decreto|ley-|4x1000", slug):
         return "Impuestos y normativa"
-    if re.search(r"financier|rentab|deuda|credito|factoring|presupuesto|balance|escalar|llaves|volatil", slug):
+    if re.search(r"financier|rentab|deuda|credito|factoring|presupuesto|balance|escalar|llaves|volatil|inflacion|tasas", slug):
         return "Finanzas"
     return "Outsourcing contable"
+
+
+# Página de servicio que encabeza cada categoría: va en las migas y en el botón secundario del cierre.
+PILAR_DE = {
+    "Revisoría fiscal": ("Revisoría fiscal", "revisoria-fiscal.html"),
+    "Outsourcing contable": ("Outsourcing contable", "outsourcing-contable.html"),
+    "Finanzas": ("Consultoría financiera", "consultoria-financiera.html"),
+}
+SECUNDARIO_DE = {
+    "Revisoría fiscal": ("Cotiza tu revisoría fiscal", "cotizacion-revisoria-fiscal.html"),
+    "Finanzas": ("Conoce la consultoría financiera", "consultoria-financiera.html"),
+}
 
 
 def fecha_larga(iso):
@@ -186,7 +198,7 @@ def construir():
     foto,
     alt_foto,
     chip=f"Blog · {cat}",
-    migas=[("Inicio", "index.html"), ("Blog", "blog.html"), (escape(recortar(a["h1"], 48)), None)],
+    migas=[("Inicio", "index.html"), PILAR_DE.get(cat, ("Blog", "blog.html")), (escape(recortar(a["h1"], 48)), None)],
     cta1=("Agenda una asesoría", wa(MENSAJE_WA.format(a["h1"][:60]))),
 )}
 
@@ -224,6 +236,7 @@ def construir():
     "Escríbenos con la situación real de tu empresa y te respondemos con una recomendación, no con un artículo genérico.",
     boton="Escríbenos",
     mensaje=MENSAJE_WA.format(a["h1"][:60]),
+    secundario=SECUNDARIO_DE.get(cat, ("Cotiza tu outsourcing contable", "cotizacion-outsourcing-contable.html")),
 )}
 """
 
@@ -235,6 +248,7 @@ def construir():
             og_img=a["portada"].replace("assets/img/", "") if a.get("portada") else "reunion-ancho.jpg",
             schema=schema_articulo(a, cat, faqs),
             cuerpo=cuerpo,
+            categoria=cat,
         ))
 
 

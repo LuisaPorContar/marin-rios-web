@@ -82,6 +82,7 @@ cuerpo_integral = f"""
 
 PAGINAS.append(dict(
     archivo="landing-integral.html",
+    robots=NOINDEX,
     titulo="Servicios contables para pymes | Marín Ríos Consultores",
     descripcion="Contabilidad, revisoría fiscal y consultoría financiera para pymes en Colombia. Encuentra el servicio que necesita tu empresa.",
     activo="",

@@ -13,6 +13,7 @@ import paginas_404        # la página de error
 import articulos_paginas  # añade una página por cada artículo del blog
 import paginas_meta       # landings de pauta en Meta (revisoría fiscal)
 import paginas_rf_ciudades  # revisoría fiscal en Medellín y el Eje Cafetero
+import paginas_cotizacion   # cotización de outsourcing contable y de revisoría fiscal
 from paginas import PAGINAS
 
 SALIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
@@ -41,14 +42,57 @@ def limpiar_planos():
     return borrados
 
 
+GUIAS_OUTSOURCING = [
+    "que-es-outsourcing-contable", "cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable",
+    "como-contratar-un-servicio-de-outsourcing-contable", "cambiar-contador-cuanto-cuesta",
+    "calendario-tributario-actualizado", "exogena", "que-es-la-retencion-en-la-fuente",
+    "nomina-electronica-colombia",
+]
+GUIAS_FINANZAS = [
+    "flujo-caja-pymes-colombia", "presupuesto-empresarial", "fugas-financieras",
+    "aumenta-rentabilidad-negocio-contabilidad", "como-leer-un-balance-general",
+    "como-salir-de-deudas-empresariales", "inflacion-tasas-banco-republica-empresas",
+    "cuando-escalar-negocio-senales-finacieras",
+]
+
+
+def _articulos_por_fecha():
+    import json
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "articulos_cuerpo.json"), encoding="utf-8") as f:
+        return sorted(json.load(f), key=lambda a: a.get("publicado", ""), reverse=True)
+
+
 def recientes_para(p):
-    """Carrusel de últimas publicaciones antes del pie: en las páginas de la
-    web normal (portada, servicios, ciudades, nosotros, contacto y artículos).
-    No va en landings de pauta, páginas noindex ni en el propio /blog/.
-    Devuelve el slug a excluir ("" = ninguno) o None si no aplica."""
+    """Carrusel de artículos antes del pie, curado según la sección de la página.
+    No va en landings de pauta, páginas noindex ni en el propio /blog/, y tampoco
+    en las de revisoría fiscal, que ya traen su carrusel de guías en el cuerpo.
+    Devuelve None si no aplica, el slug a excluir (últimas publicaciones) o los
+    argumentos de ultimas_publicaciones()."""
     if p.get("landing") is not None or "noindex" in p.get("robots", "") or p["archivo"] == "blog.html":
         return None
-    return p["archivo"][:-len(".html")]
+    slug = p["archivo"][:-len(".html")]
+    if slug == "revisoria-fiscal" or slug.startswith("revisoria-fiscal-"):
+        return None
+    if slug in ("index", "outsourcing-contable", "precios-outsourcing-contable", "cotizacion-outsourcing-contable") \
+            or slug.startswith("outsourcing-contable-"):
+        return dict(solo=GUIAS_OUTSOURCING, eyebrow="Guías de outsourcing contable",
+                    titulo="Guías para tener su contabilidad al día",
+                    intro="Lo que conviene saber antes de tercerizar la contabilidad y las obligaciones que su empresa no puede dejar vencer.")
+    if slug == "cotizacion-revisoria-fiscal":
+        from paginas import GUIAS_REVISORIA
+        return dict(solo=GUIAS_REVISORIA, eyebrow="Guías de revisoría fiscal", titulo="Antes de contratar, lea esto",
+                    intro="Quién está obligado, qué hace el revisor fiscal y cómo comparar propuestas.")
+    if slug == "consultoria-financiera":
+        return dict(solo=GUIAS_FINANZAS, eyebrow="Guías de finanzas", titulo="Finanzas para pymes, sin rodeos",
+                    intro="Flujo de caja, presupuesto, rentabilidad y deuda explicados para decidir mejor.")
+    cat = p.get("categoria")
+    if cat:
+        from articulos_paginas import categoria
+        mismos = [a["slug"] for a in _articulos_por_fecha() if a["slug"] != slug and categoria(a["slug"]) == cat]
+        if len(mismos) < 4:
+            mismos += [a["slug"] for a in _articulos_por_fecha() if a["slug"] != slug and a["slug"] not in mismos]
+        return dict(solo=mismos[:8], titulo=f"Más guías de {cat[0].lower() + cat[1:]}")
+    return slug
 
 def main():
     os.makedirs(SALIDA, exist_ok=True)

@@ -17,7 +17,7 @@ integraciones/google-sheets-leads.gs) y además abre WhatsApp con el mensaje.
 from base import ICO, WA, acordeon, resenas_google, carrusel_clientes
 from paginas import PAGINAS
 
-NOINDEX = "noindex, nofollow"
+NOINDEX = "noindex, follow"
 
 # ----------------------------------------------------------------- ajustes
 # URL del Apps Script publicado como aplicación web (termina en /exec).
@@ -427,5 +427,20 @@ PAGINAS.append(dict(
         "Gracias, <em>ya tenemos tus datos</em>",
         "Un asesor de nuestro equipo revisará tu caso y te contactará por WhatsApp.",
         f'<a class="lp-btn lp-btn--contorno" data-wa-lead href="{_WA_GENERICO}" target="_blank" rel="noopener">Escribir por WhatsApp</a>'),
+    clase_body="lp", css_extra=("assets/css/lp-revisoria.css",), landing=(),
+))
+
+
+# Gracias de las páginas de cotización (outsourcing y revisoría): cuenta como Lead
+PAGINAS.append(dict(
+    archivo="gracias-cotizacion.html",
+    titulo="Recibimos tu solicitud de cotización | Marín Ríos",
+    descripcion="Recibimos tu solicitud de cotización. Te escribimos por WhatsApp en menos de 24 horas hábiles.",
+    activo="", og_img="oficina-atardecer.jpg", robots=NOINDEX, schema="",
+    cuerpo=_pagina_gracias(
+        "calificado",
+        "Listo, <em>recibimos tu solicitud</em>",
+        "En menos de 24 horas hábiles te escribimos por WhatsApp para entender tu operación y enviarte la cotización por escrito. Si quieres adelantarte, escríbenos ahora: el mensaje ya va con los datos de tu empresa.",
+        f'<a class="lp-btn" data-wa-lead href="https://wa.me/{WA}?text=Hola%2C%20acabo%20de%20pedir%20una%20cotizaci%C3%B3n%20en%20la%20web" target="_blank" rel="noopener">{ICO["wa"]}Escribir por WhatsApp ahora</a>'),
     clase_body="lp", css_extra=("assets/css/lp-revisoria.css",), landing=(),
 ))

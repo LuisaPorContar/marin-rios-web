@@ -66,17 +66,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://marinriosconsultores.com/landing-integral/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://marinriosconsultores.com/aumenta-rentabilidad-negocio-contabilidad/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/calendario-tributario-actualizado/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -87,16 +77,6 @@
   </url>
   <url>
     <loc>https://marinriosconsultores.com/cierre-contable-empresas/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/como-contratar-un-servicio-de-outsourcing-contable/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/como-elegir-outsourcing-contable/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -141,22 +121,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://marinriosconsultores.com/cuanto-cobra-un-revisor-fiscal-en-colombia/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://marinriosconsultores.com/empresas-obligadas-revisor-fiscal/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/exogena/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -211,21 +176,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://marinriosconsultores.com/proyecto-ley-507/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/que-es-la-retencion-en-la-fuente/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/que-es-outsourcing-contable/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://marinriosconsultores.com/que-es-revisoria-fiscal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -262,11 +212,6 @@
   </url>
   <url>
     <loc>https://marinriosconsultores.com/tendencias-financieras-empresas/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://marinriosconsultores.com/ventajas-outsourcing-contable/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -321,6 +266,66 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://marinriosconsultores.com/como-contratar-un-servicio-de-outsourcing-contable/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/exogena/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/inflacion-tasas-banco-republica-empresas/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/ley-de-rescate-4x1000-empresas/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/proyecto-ley-507/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/que-es-outsourcing-contable/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/que-es-la-retencion-en-la-fuente/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/calendario-tributario-2027/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/calendario-tributario-actualizado/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/cuanto-cobra-un-revisor-fiscal-en-colombia/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/decreto-1419-alivio-sanciones-dian/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://marinriosconsultores.com/revisoria-fiscal-medellin/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -337,6 +342,16 @@
   </url>
   <url>
     <loc>https://marinriosconsultores.com/revisoria-fiscal-manizales/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/cotizacion-outsourcing-contable/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://marinriosconsultores.com/cotizacion-revisoria-fiscal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

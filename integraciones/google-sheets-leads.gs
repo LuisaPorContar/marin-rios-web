@@ -8,6 +8,8 @@
  * Cada vez que alguien envía el formulario de la web:
  *   1. Guarda el lead en la pestaña "Leads" de ESTA hoja (respaldo) y en la
  *      pestaña "Leads" del Consolidado.
+ *   (Atiende la landing de revisoría y las páginas de cotización de outsourcing
+ *    contable y revisoría fiscal; el campo "servicio" distingue cada una.)
  *   2. Le avisa al equipo por correo, con todos los datos del cliente:
  *        - Lead de revisoría fiscal que CALIFICA (cliente premium):
  *          a Juan David, con copia a Maribel.
@@ -219,7 +221,15 @@ function tipoDePersona(p) {
 // ==================================================================
 // Premium = viene de un formulario de revisoría fiscal y califica por ingresos
 function esPremium(p) {
-  return p.calificado === 'Sí' && /revisor/i.test(sinTildes(p.formulario || ''));
+  return p.calificado === 'Sí' && servicioDe(p) === 'revisoria';
+}
+
+// "revisoria" u "outsourcing". Lo envía el formulario; si no viene, se deduce del nombre.
+function servicioDe(p) {
+  var s = sinTildes(p.servicio || '');
+  if (s.indexOf('outsourcing') !== -1) return 'outsourcing';
+  if (s.indexOf('revisor') !== -1) return 'revisoria';
+  return /outsourcing|contab/i.test(sinTildes(p.formulario || '')) ? 'outsourcing' : 'revisoria';
 }
 
 function avisarAlEquipo(p, ahora) {
@@ -234,7 +244,8 @@ function avisarAlEquipo(p, ahora) {
   var fuente = [origen(p), p.utm_content ? 'anuncio: ' + p.utm_content : '', p.utm_term ? 'campaña: ' + p.utm_term : ''].filter(Boolean).join(' · ');
   var primerNombre = String(p.nombre || '').trim().split(/\s+/)[0];
   var enlaceWa = 'https://wa.me/' + digitos + '?text=' + encodeURIComponent(
-    'Hola ' + primerNombre + ', te escribe ' + FIRMA_NOMBRE + ' de Marín Ríos Consultores. Recibimos tu solicitud de evaluación de revisoría fiscal.');
+    'Hola ' + primerNombre + ', te escribe ' + FIRMA_NOMBRE + ' de Marín Ríos Consultores. Recibimos tu solicitud ' +
+    (servicioDe(p) === 'outsourcing' ? 'de cotización de outsourcing contable.' : 'de evaluación de revisoría fiscal.'));
   var urlHoja = ID_CONSOLIDADO ? 'https://docs.google.com/spreadsheets/d/' + ID_CONSOLIDADO + '/edit'
                                : SpreadsheetApp.getActiveSpreadsheet().getUrl();
 
@@ -258,7 +269,7 @@ function avisarAlEquipo(p, ahora) {
 
   var cuerpo = '<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">' +
     '<div style="background: ' + (califica ? '#0B0733' : '#5a6b7d') + '; padding: 22px 24px;' + (premium ? ' border-top: 5px solid #2BB3EF;' : '') + '">' +
-    '<div style="color: #8FE3FF; font-size: 12px; letter-spacing: 1px;">' + (premium ? 'LEAD PREMIUM · REVISORÍA FISCAL' : 'NUEVO LEAD · ' + (califica ? 'CALIFICADO' : 'NO CALIFICA')) + '</div>' +
+    '<div style="color: #8FE3FF; font-size: 12px; letter-spacing: 1px;">' + (premium ? 'LEAD PREMIUM · REVISORÍA FISCAL' : (servicioDe(p) === 'outsourcing' ? 'NUEVO LEAD · OUTSOURCING CONTABLE' : 'NUEVO LEAD · ' + (califica ? 'CALIFICADO' : 'NO CALIFICA'))) + '</div>' +
     '<div style="color: #ffffff; font-size: 20px; font-weight: bold; margin-top: 4px;">' + html(p.empresa || p.nombre || 'Sin nombre') + '</div>' +
     '</div>' +
     '<div style="padding: 20px 16px; background: #ffffff;">' +
@@ -273,7 +284,9 @@ function avisarAlEquipo(p, ahora) {
 
   var opciones = {
     to: para,
-    subject: (premium ? 'LEAD PREMIUM de revisoría fiscal: ' : (califica ? 'Nuevo lead CALIFICADO: ' : 'Nuevo lead (no califica): ')) +
+    subject: (premium ? 'LEAD PREMIUM de revisoría fiscal: ' :
+              servicioDe(p) === 'outsourcing' ? 'Nuevo lead de outsourcing contable: ' :
+              (califica ? 'Nuevo lead CALIFICADO: ' : 'Nuevo lead (no califica): ')) +
              (p.empresa || p.nombre || '') + (p.ciudad ? ' · ' + p.ciudad : ''),
     htmlBody: cuerpo,
     name: 'Leads web Marín Ríos'
@@ -291,10 +304,19 @@ function enviarBienvenida(p) {
   var primerNombre = String(p.nombre || '').trim().split(/\s+/)[0];
   var saludo = primerNombre ? 'Hola ' + html(primerNombre) + ',' : 'Hola,';
   var enlaceWa = 'https://wa.me/' + NUMERO_WHATSAPP + '?text=' +
-    encodeURIComponent('Hola, llené el formulario de revisoría fiscal en la web y quiero hablar con un asesor');
+    encodeURIComponent('Hola, llené el formulario de ' + (servicioDe(p) === 'outsourcing' ? 'outsourcing contable' : 'revisoría fiscal') +
+                       ' en la web y quiero hablar con un asesor');
 
   var asunto, parrafos, boton;
-  if (p.calificado === 'Sí') {
+  if (servicioDe(p) === 'outsourcing') {
+    asunto = 'Recibimos tu solicitud de cotización de outsourcing contable';
+    parrafos = [
+      'Gracias por escribirnos' + (p.empresa ? ' desde <b>' + html(p.empresa) + '</b>' : '') + '. Ya tenemos tus datos.',
+      'En menos de 24 horas hábiles te contactamos por WhatsApp para entender cómo opera tu empresa (volumen de facturas, nómina, impuestos) y enviarte la cotización por escrito.',
+      'Si prefieres adelantarte, escríbenos ahora:'
+    ];
+    boton = { texto: 'Escribir por WhatsApp', enlace: enlaceWa };
+  } else if (p.calificado === 'Sí') {
     asunto = 'Recibimos tus datos: tu evaluación de revisoría fiscal';
     parrafos = [
       'Gracias por escribirnos' + (p.empresa ? ' desde <b>' + html(p.empresa) + '</b>' : '') + '. Ya tenemos tus datos.',
@@ -397,7 +419,7 @@ function enviarAMeta(p, ahora) {
       event_source_url: p.pagina || 'https://marinriosconsultores.com/evaluacion-revisoria-fiscal/',
       user_data: usuario,
       custom_data: {
-        content_name: 'Evaluación revisoría fiscal 2027',
+        content_name: p.oferta || 'Evaluación revisoría fiscal 2027',
         content_category: 'Servicios profesionales',
         lead_ingresos: p.ingresos || ''
       }

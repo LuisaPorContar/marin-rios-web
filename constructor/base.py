@@ -159,16 +159,22 @@ PIE = f"""<footer class="pie">
           <li><a href="consultoria-financiera.html">Consultoría financiera</a></li>
           <li><a href="revisoria-fiscal.html">Revisoría fiscal</a></li>
           <li><a href="precios-outsourcing-contable.html">Planes</a></li>
+          <li><a href="cotizacion-outsourcing-contable.html">Cotizar outsourcing contable</a></li>
+          <li><a href="cotizacion-revisoria-fiscal.html">Cotizar revisoría fiscal</a></li>
         </ul>
       </div>
 
       <div>
         <h4>Ciudades</h4>
         <ul>
-          <li><a href="outsourcing-contable-medellin.html">Medellín</a></li>
-          <li><a href="outsourcing-contable-armenia.html">Armenia</a></li>
-          <li><a href="outsourcing-contable-pereira.html">Pereira</a></li>
-          <li><a href="outsourcing-contable-manizales.html">Manizales</a></li>
+          <li><a href="outsourcing-contable-medellin.html">Outsourcing contable Medellín</a></li>
+          <li><a href="outsourcing-contable-pereira.html">Outsourcing contable Pereira</a></li>
+          <li><a href="outsourcing-contable-armenia.html">Outsourcing contable Armenia</a></li>
+          <li><a href="outsourcing-contable-manizales.html">Outsourcing contable Manizales</a></li>
+          <li><a href="revisoria-fiscal-medellin.html">Revisoría fiscal Medellín</a></li>
+          <li><a href="revisoria-fiscal-pereira.html">Revisoría fiscal Pereira</a></li>
+          <li><a href="revisoria-fiscal-armenia.html">Revisoría fiscal Armenia</a></li>
+          <li><a href="revisoria-fiscal-manizales.html">Revisoría fiscal Manizales</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
         </ul>
@@ -355,14 +361,14 @@ def ultimas_publicaciones(excluir="", cantidad=8, solo=None, eyebrow="Blog Marí
         if len(resumen) > 120:
             resumen = resumen[:117].rsplit(" ", 1)[0] + "…"
         tarjetas.append(f"""<article class="reciente">
-          <a class="reciente__media" href="{a['slug']}.html" tabindex="-1" aria-hidden="true">
+          <div class="reciente__media">
             <img src="{a['portada']}" alt="" width="819" height="1024" loading="lazy">
-          </a>
+          </div>
           <div class="reciente__cuerpo">
             <p class="reciente__fecha">{cal}<time datetime="{a.get('publicado', '')}">{_fecha_larga(a.get('publicado', ''))}</time></p>
             <h3><a href="{a['slug']}.html">{a.get('h1') or a.get('titulo_seo')}</a></h3>
             <p class="reciente__resumen">{resumen}</p>
-            <a class="reciente__mas" href="{a['slug']}.html" aria-hidden="true" tabindex="-1">Leer más</a>
+            <span class="reciente__mas" aria-hidden="true">Leer más</span>
           </div>
         </article>""")
     return f"""<section class="seccion recientes">
@@ -573,7 +579,7 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
 
 <main id="contenido">
 {cuerpo}
-{ultimas_publicaciones(recientes) if recientes is not None else ""}
+{(ultimas_publicaciones(**recientes) if isinstance(recientes, dict) else ultimas_publicaciones(recientes)) if recientes is not None else ""}
 </main>
 
 {bloque_pie}
@@ -773,7 +779,8 @@ def directorio(ciudad_actual=None):
     </div>"""
 
 
-def cta_final(titulo, texto, boton="Agenda tu asesoría", mensaje="Hola, quiero agendar una asesoría contable para mi empresa"):
+def cta_final(titulo, texto, boton="Agenda tu asesoría", mensaje="Hola, quiero agendar una asesoría contable para mi empresa",
+              secundario=("Cotiza tu outsourcing contable", "cotizacion-outsourcing-contable.html")):
     return f"""<section class="seccion cta-final oscuro degradado centrado">
   <div class="contenedor">
     <p class="eyebrow" style="justify-content:center">Siguiente paso</p>
@@ -781,7 +788,7 @@ def cta_final(titulo, texto, boton="Agenda tu asesoría", mensaje="Hola, quiero 
     <p>{texto}</p>
     <div class="cta-final__acciones">
       <a class="btn btn--primario" href="{wa(mensaje)}">{boton}{ICO['flecha']}</a>
-      <a class="btn btn--fantasma" href="precios-outsourcing-contable.html">Conoce nuestros planes</a>
+      <a class="btn btn--fantasma" href="{secundario[1]}">{secundario[0]}</a>
     </div>
     <div class="cta-contacto">
       <a href="tel:{TEL_URI}">{ICO['tel']}{TEL}</a>
