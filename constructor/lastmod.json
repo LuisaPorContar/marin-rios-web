@@ -5,15 +5,35 @@
  },
  "blog.html": {
   "fecha": "2026-10-17",
-  "hash": "a1744d463455e7ce746cd254c2ebfaf2f65bf1ce"
+  "hash": "a97cb41ab55229afb8932a6587a2a4fae7613398"
  },
  "calendario-tributario-2027.html": {
   "fecha": "2026-10-17",
-  "hash": "cd8cf4d9b9fbd845fe27b662746a877fddb82c67"
+  "hash": "d42fc3a7424a471c47b4155910cfceecd63ce797"
  },
  "calendario-tributario-actualizado.html": {
   "fecha": "2026-10-17",
-  "hash": "fbe85732cc1f39f16a7366c9c71aa6aae5322154"
+  "hash": "60bd9410d21b450a1fcbe56f6a6da29ab4504498"
+ },
+ "calendario-tributario-armenia-2026.html": {
+  "fecha": "2026-10-17",
+  "hash": "1b151d800b18dfb7c739c69dc4d8e2d0f73eb5b3"
+ },
+ "calendario-tributario-dosquebradas-2026.html": {
+  "fecha": "2026-10-17",
+  "hash": "cd07f3567ac0a4e27cdf0ebef6a92fcd35825bd0"
+ },
+ "calendario-tributario-manizales-2026.html": {
+  "fecha": "2026-10-17",
+  "hash": "43bc4acccebd3cb7d7f2027e329c1e2bf14c845b"
+ },
+ "calendario-tributario-medellin-2026.html": {
+  "fecha": "2026-10-17",
+  "hash": "e861e0c377a41723ea4a507df1ee489b14c93763"
+ },
+ "calendario-tributario-pereira-2026.html": {
+  "fecha": "2026-10-17",
+  "hash": "da2a51544e9249e382078aea650b9e18ab5ebbdb"
  },
  "cambiar-contador-cuanto-cuesta.html": {
   "fecha": "2026-10-17",
@@ -65,7 +85,7 @@
  },
  "contactenos.html": {
   "fecha": "2026-10-17",
-  "hash": "c7d2ca46539c7da28d048d235de19624b3b78274"
+  "hash": "37afe7cff185401487c8e9c001b84fb402498e28"
  },
  "contador-auditor-revisor-fiscal-cual-necesita.html": {
   "fecha": "2026-10-17",
@@ -93,7 +113,7 @@
  },
  "decreto-1419-alivio-sanciones-dian.html": {
   "fecha": "2026-10-17",
-  "hash": "e38a709a10a9a5f724acd9a560dd612861746c27"
+  "hash": "7039afabd75dc3ea1cbaef5b32ce38ed07199c1d"
  },
  "dictamen-revisor-fiscal.html": {
   "fecha": "2026-10-17",
@@ -103,9 +123,13 @@
   "fecha": "2026-10-17",
   "hash": "a103410a9feef71250ba4548f75f2414a6e67484"
  },
+ "exogena-medellin-2026.html": {
+  "fecha": "2026-10-17",
+  "hash": "c1361c8d4cda9a9f833268e6dd5b3f6386cd5e77"
+ },
  "exogena.html": {
   "fecha": "2026-10-17",
-  "hash": "1c70f814ed6aac602db50b21aa8c4c8435dffe6c"
+  "hash": "258b2f30d8299f66c9d367e328a068491fd4bc46"
  },
  "factoring-credito-termino.html": {
   "fecha": "2026-10-17",
@@ -129,7 +153,7 @@
  },
  "impacto-salario-minimo.html": {
   "fecha": "2026-10-17",
-  "hash": "8cab65949bef374f0a2b2b1cb65dacc3933322ac"
+  "hash": "8296e01cca3741d13afce257b8c1757a6fcc8ddc"
  },
  "index.html": {
   "fecha": "2026-10-17",
@@ -145,7 +169,7 @@
  },
  "ley-de-rescate-4x1000-empresas.html": {
   "fecha": "2026-10-17",
-  "hash": "257768b6837bbce53646586f37b68ea5b4aacee3"
+  "hash": "dd4c9d27d394259ca424cc3ba5e9385d179f5387"
  },
  "llaves-bancarias.html": {
   "fecha": "2026-10-17",
@@ -153,35 +177,35 @@
  },
  "niif-para-pymes-colombia.html": {
   "fecha": "2026-10-17",
-  "hash": "159bb9572e7cfc52c8ae32c20834f8f41bddcfff"
+  "hash": "69265e88ab19058ba73ca6e4be896594f4a7b823"
  },
  "nomina-electronica-colombia.html": {
   "fecha": "2026-10-17",
-  "hash": "c39245a4e89ad9b576c370907f93f81a7896b5af"
+  "hash": "1ee70bbd0fc9ae54d23d56ea115ed316c668d239"
  },
  "nosotros.html": {
   "fecha": "2026-10-17",
-  "hash": "b18c4a8b8f423788323478cd91e84aa396bd5630"
+  "hash": "96f6ecbca630f06c9c0a4a39a4daf64c08503f55"
  },
  "optimizar-impuestos-negocio.html": {
   "fecha": "2026-10-17",
-  "hash": "8889ce04d96f5fd54acb2983012e9cca7956f75e"
+  "hash": "0a2bd46819547ecc4e8c4eb80f9cb3126e662622"
  },
  "outsourcing-contable-armenia.html": {
   "fecha": "2026-10-17",
-  "hash": "04f7bb133fe3e74b59f5c2cbee58d35869700be0"
+  "hash": "f1f3e8ddf05c10be6fccc7172b8b5eac81a2f8aa"
  },
  "outsourcing-contable-manizales.html": {
   "fecha": "2026-10-17",
-  "hash": "33fe8c4bbc32a39885bcb10ea28dddebfc94e237"
+  "hash": "c2f179f2f3e2ffd27f81aae34acbdebb132ea46a"
  },
  "outsourcing-contable-medellin.html": {
   "fecha": "2026-10-17",
-  "hash": "02c82368b4cf95c28c10534d12c2dfe5594db95c"
+  "hash": "75a347ae5cfa5f7d7eff44bbf1bcb629da2e533d"
  },
  "outsourcing-contable-pereira.html": {
   "fecha": "2026-10-17",
-  "hash": "433aed231bc86189729cd385e4c656be13f243f1"
+  "hash": "0dfc3fc7fcd0d2cf7f68b6278aa40c9abc2a7de9"
  },
  "outsourcing-contable.html": {
   "fecha": "2026-10-17",
@@ -189,7 +213,7 @@
  },
  "politica-de-privacidad.html": {
   "fecha": "2026-10-17",
-  "hash": "e006b65516be60263874459177d6711beb2c14de"
+  "hash": "5d62e3ac5eb1562ea4c12ac8d74918f527df211f"
  },
  "precios-outsourcing-contable.html": {
   "fecha": "2026-10-17",
@@ -205,7 +229,7 @@
  },
  "que-es-la-retencion-en-la-fuente.html": {
   "fecha": "2026-10-17",
-  "hash": "474f546ab59702915c7f231ccacddce10ae27810"
+  "hash": "fd8e96d3f807af9427849c7e034b647b42afc0eb"
  },
  "que-es-outsourcing-contable.html": {
   "fecha": "2026-10-17",
@@ -217,15 +241,15 @@
  },
  "reforma-tributaria-para-empresas.html": {
   "fecha": "2026-10-17",
-  "hash": "566d710f635c4253f6fdbf5e96fb922927098cf4"
+  "hash": "05865f2420dd80e35712ffe0f8b735f718dc9314"
  },
  "reforma-tributaria.html": {
   "fecha": "2026-10-17",
-  "hash": "f77fc45d2dd615cfd451ff643db17d65ed0fb881"
+  "hash": "4d717b46842f2474571c039c909f4ef58afd2460"
  },
  "regimen-simple-o-regimen-ordinario.html": {
   "fecha": "2026-10-17",
-  "hash": "868d0a03e09f2ca71f28745f645b2e9167cbee27"
+  "hash": "d8b04f8008ab3ca4c4352b2fecfaad09b35122b3"
  },
  "responsabilidad-representante-legal-revisor-fiscal.html": {
   "fecha": "2026-10-17",

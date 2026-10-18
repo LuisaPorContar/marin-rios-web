@@ -2,7 +2,7 @@
 """Planes, blog y páginas de ciudad."""
 
 import json, os, re
-from base import (resenas_google, ICO, wa, heroe, encabezado, servicios_num, fijo, carrusel,
+from base import (resenas_google, lista_check, ICO, wa, heroe, encabezado, servicios_num, fijo, carrusel,
                   acordeon, tarjetas_item, ciudades_grid, directorio,
                   cta_final, proposito, marcas)
 from paginas import PAGINAS, TRIO, schema_servicio
@@ -395,6 +395,54 @@ LOCAL = {
 }
 
 
+# Impuestos municipales de cada ciudad: fechas de hechos_municipales.md (normas leídas el 17-oct-2026).
+# Revisar en enero de 2027, cuando salgan los calendarios municipales 2027.
+MUNICIPAL = {
+    "medellin": dict(
+        texto=("En Medellín el calendario 2026 lo fija la Resolución 202550100057 de 2025, y no tuvo cambios por el "
+               "sismo de agosto. El ICA se declara cada año por último dígito del NIT; durante el año se practican la "
+               "retención y la autorretención de ICA por bimestres, y el municipio pide además su propia información exógena."),
+        fechas=["28 de octubre: ICA del régimen simplificado, 5.º bimestre.",
+                "18 de noviembre: retención y autorretención de ICA de septiembre-octubre.",
+                "21 de diciembre: autorretención de ICA de noviembre-diciembre.",
+                "28 de diciembre: predial del trimestre IV con recargo y 6.º bimestre del régimen simplificado."],
+        enlaces=[("calendario-tributario-medellin-2026", "Calendario tributario de Medellín 2026"),
+                 ("exogena-medellin-2026", "Exógena de Medellín 2026")],
+    ),
+    "pereira": dict(
+        texto=("En Pereira el calendario lo fija el Decreto 000005 de 2026, que el Decreto 000306 modificó después del "
+               "sismo del 10 de agosto. Las empresas del régimen ordinario son autorretenedoras de ICA: presentan "
+               "anticipos bimestrales y una declaración anual, que para el año gravable 2026 vence el 31 de marzo de 2027. "
+               "Dosquebradas tiene su propio estatuto y su propio calendario."),
+        fechas=["26 de octubre (Pereira): retención y autorretención de ICA de julio-agosto, ampliada por el sismo.",
+                "20 de noviembre (Dosquebradas): retención y autorretención de ICA de septiembre-octubre.",
+                "30 de noviembre (Pereira): predial y régimen simplificado especial de julio-septiembre.",
+                "15 de diciembre (Pereira): retención y autorretención de ICA de septiembre-octubre."],
+        enlaces=[("calendario-tributario-pereira-2026", "Calendario tributario de Pereira 2026"),
+                 ("calendario-tributario-dosquebradas-2026", "Calendario tributario de Dosquebradas 2026")],
+    ),
+    "armenia": dict(
+        texto=("En Armenia, desde 2026 el ICA y la retención de ICA se presentan solo en línea. La retención de ICA va "
+               "por último dígito del NIT, y este año el municipio aprobó un alivio de intereses de mora del predial "
+               "de vigencias anteriores que baja por tramos hasta el 28 de diciembre."),
+        fechas=["31 de octubre: último día del 90 % de reducción de intereses de mora del predial.",
+                "9 al 13 de noviembre: retención de ICA de septiembre-octubre, según el último dígito del NIT.",
+                "Noviembre: la reducción de intereses del predial baja al 70 %; en diciembre, al 50 %.",
+                "28 de diciembre: pago total del predial 2026."],
+        enlaces=[("calendario-tributario-armenia-2026", "Calendario tributario de Armenia 2026")],
+    ),
+    "manizales": dict(
+        texto=("En Manizales el calendario lo fija la Resolución 280 de 2025, que la Resolución 279 de 2026 ajustó por "
+               "el sismo. El ICA anual del año gravable 2025 se presentó entre el 4 de mayo y el 1 de junio según los "
+               "dos últimos dígitos del NIT; durante el año se presentan la retención y la autorretención de ICA por bimestres."),
+        fechas=["31 de octubre: 5.ª cuota del predial diferido.",
+                "10 de noviembre: retención y autorretención de ICA de septiembre-octubre.",
+                "29 de diciembre: 6.ª cuota del predial diferido.",
+                "12 de enero de 2027: retención y autorretención de ICA de noviembre-diciembre."],
+        enlaces=[("calendario-tributario-manizales-2026", "Calendario tributario de Manizales 2026")],
+    ),
+}
+
 def lugar(nombre, depto=None):
     """Nodo schema.org para una zona atendida."""
     if nombre in ("Oriente Antioqueño", "Valle de Aburrá", "Quindío", "Caldas", "Risaralda", "Antioquia"):
@@ -473,6 +521,23 @@ for c in CIUDADES:
 </section>
 
 <section class="seccion claro">
+  <div class="contenedor">
+    <div class="split">
+      <div class="revelar">
+        {encabezado(f"Impuestos en {nombre}", f"Impuestos municipales en {nombre}: lo que viene", MUNICIPAL[slug]["texto"], ancho="none", tam="var(--paso-4)")}
+        <div class="directorio__lista" style="margin-top:var(--sp-3)">
+          {"".join(f'<a class="etiqueta-enlace" href="{u}.html">{t}</a>' for u, t in MUNICIPAL[slug]["enlaces"])}
+        </div>
+      </div>
+      <div class="revelar">
+        <h3 style="margin-bottom:var(--sp-2)">Próximos vencimientos de 2026</h3>
+        {lista_check(MUNICIPAL[slug]["fechas"])}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
   <div class="contenedor">
     {encabezado("Qué incluye", f"Qué hacemos por tu empresa en {nombre}", "Lo que cubre el servicio desde el primer mes:")}
     {tarjetas_item([
