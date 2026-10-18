@@ -136,7 +136,7 @@ cuerpo_out = f"""
 
 PAGINAS.append(dict(
     archivo="cotizacion-outsourcing-contable.html",
-    titulo="Cotización de outsourcing contable | Marín Ríos",
+    titulo="Cotización de Outsourcing Contable sin Costo | Marín Ríos",
     descripcion="Pida una cotización de outsourcing contable para su empresa en Medellín o el Eje Cafetero: alcance, entregables y honorarios por escrito, sin costo.",
     activo="servicios",
     og_img="reunion-cuadro.jpg",
@@ -252,7 +252,7 @@ cuerpo_rf = f"""
 
 PAGINAS.append(dict(
     archivo="cotizacion-revisoria-fiscal.html",
-    titulo="Cotización de revisoría fiscal | Marín Ríos",
+    titulo="Cotización de Revisoría Fiscal sin Costo | Marín Ríos",
     descripcion="Pida una cotización de revisoría fiscal en Medellín o el Eje Cafetero: alcance, horas, equipo y honorarios por escrito para su asamblea. Sin costo.",
     activo="servicios",
     og_img="reunion-duotono.jpg",

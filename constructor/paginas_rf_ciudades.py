@@ -205,7 +205,7 @@ for c in CIUDADES:
     "Cuéntanos el tamaño de tu empresa y te decimos si estás obligado, qué alcance necesitas y cuánto costaría.",
     boton="Quiero una propuesta",
     mensaje=f"Hola, vengo de la página de revisoría fiscal en {nombre} y quiero una propuesta",
-    secundario=("Cotiza tu revisoría fiscal", "cotizacion-revisoria-fiscal.html"),
+    secundario=("Cotiza tu revisoría fiscal", f"/cotizacion-revisoria-fiscal/?ciudad={slug}"),
 )}
 """
 

@@ -446,7 +446,7 @@ for c in CIUDADES:
     chip=f"{depto} · {nombre}",
     migas=[("Inicio", "index.html"), ("Outsourcing contable", "outsourcing-contable.html"), (nombre, None)],
     cta1=("Conversemos", wa(f"Hola, vengo de la página de {nombre} y quiero cotizar el servicio contable")),
-    cta2=("Pide tu cotización", "cotizacion-outsourcing-contable.html"),
+    cta2=("Pide tu cotización", f"/cotizacion-outsourcing-contable/?ciudad={slug}"),
     riel=[("+50", "Empresas con su contabilidad tercerizada"),
           ("15 días", "Tiempo promedio de transición"),
           (nombre, f"Atención en {c['zona']}"),
@@ -467,7 +467,7 @@ for c in CIUDADES:
     [
         ("Un equipo asignado", f"Tu empresa tiene un contador responsable y un equipo que la conoce. No hablas cada mes con alguien distinto ni tienes que volver a explicar tu operación."),
         ("Impuestos nacionales y municipales", f"Llevamos el calendario de la DIAN (IVA, retención en la fuente, renta y exógena) y también el de tu municipio: ICA, retención de ICA y avisos y tableros, cada uno con sus propias fechas."),
-        (f"Revisoría fiscal en {nombre}", f'Si tu empresa supera los topes o tus estatutos lo exigen, la <a href="revisoria-fiscal-{slug}.html">revisoría fiscal en {nombre}</a> la hace un equipo distinto del que lleva tu contabilidad, como exige la independencia del cargo.'),
+        (f"Revisoría fiscal en {nombre}", f'La revisoría fiscal exige independencia: quien lleva tu contabilidad no puede ser tu revisor fiscal. Si ya tienes contador y tu empresa supera los topes, conoce nuestra <a href="revisoria-fiscal-{slug}.html">revisoría fiscal en {nombre}</a>.'),
     ]
   )}
 </section>
@@ -561,7 +561,8 @@ for c in CIUDADES:
     f"Comunícate con nuestro equipo en {nombre}",
     "Cuéntanos en qué estado está tu contabilidad y te decimos con claridad qué necesita tu empresa y cuánto costaría.",
     boton="Conversemos",
-    mensaje=f"Hola, vengo de la página de {nombre} y quiero agendar una asesoría"
+    mensaje=f"Hola, vengo de la página de {nombre} y quiero agendar una asesoría",
+    secundario=("Cotiza tu outsourcing contable", f"/cotizacion-outsourcing-contable/?ciudad={slug}"),
 )}
 """
 
