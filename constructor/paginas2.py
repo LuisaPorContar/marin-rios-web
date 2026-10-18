@@ -277,7 +277,8 @@ PAGINAS.append(dict(
 # ================================================================
 # Zona que cubre cada ciudad, para las descripciones de búsqueda.
 AREA_CIUDAD = {"medellin": "Medellín y el Valle de Aburrá", "pereira": "Pereira y Dosquebradas",
-               "armenia": "Armenia y el Quindío", "manizales": "Manizales y Caldas"}
+               "armenia": "Armenia y el Quindío", "manizales": "Manizales y Caldas",
+               "bogota": "Bogotá, con atención virtual"}
 
 CIUDADES = [
     dict(slug="medellin", nombre="Medellín", depto="Antioquia", gentilicio="antioqueñas",
@@ -300,6 +301,12 @@ CIUDADES = [
          entrada="Outsourcing contable para empresas caldenses que necesitan orden, cumplimiento y cifras confiables para crecer.",
          contexto="Manizales combina un fuerte sector educativo y de servicios con industria y agroindustria cafetera. Son operaciones con estructuras de costos muy distintas, que exigen una contabilidad bien parametrizada.",
          sede=False),
+    # Bogotá: atención 100 % virtual, sin oficina ni visitas. No tiene página de revisoría fiscal.
+    dict(slug="bogota", nombre="Bogotá", depto="Bogotá D.C.", gentilicio="bogotanas",
+         zona="Bogotá y la Sabana, en línea", locales=["Bogotá", "Chía", "Cota", "Funza", "Mosquera"],
+         entrada="Contabilidad, impuestos y nómina para empresas de Bogotá, con un equipo asignado que trabaja con tu empresa en línea. Sin sostener un área contable interna.",
+         contexto="En Bogotá se concentran empresas de servicios, tecnología y comercio, y buena parte de las sucursales y filiales de compañías extranjeras en Colombia. La mayoría ya opera con software en la nube, facturación electrónica y bancos en línea, así que su contabilidad se puede llevar a distancia sin perder control.",
+         sede=False, virtual=True, foto="reunion-ancho.jpg", chip="Atención virtual · Bogotá"),
 ]
 
 
@@ -361,6 +368,27 @@ LOCAL = {
              "Sí. Programamos visitas en Armenia, Calarcá, Montenegro y La Tebaida, y el resto del trabajo se hace en línea."),
             ("¿Llevan la contabilidad de hoteles, alojamientos turísticos o empresas cafeteras?",
              "Sí. Parametrizamos la contabilidad según la actividad: temporadas e IVA en turismo, compras a productores y retenciones en café, y costos de producción en la agroindustria."),
+        ],
+    ),
+    "bogota": dict(
+        titulo="Outsourcing Contable Bogotá: Atención Virtual | Marín Ríos",
+        h1="Outsourcing contable en Bogotá con atención 100 % virtual",
+        atencion=("Atendemos empresas de Bogotá y la Sabana de forma 100 % virtual, desde nuestra sede en Medellín: "
+                  "un equipo asignado, reuniones por videollamada, documentos y firmas en línea y acceso al software "
+                  "contable que ya usa tu empresa. Los planes van desde 2 SMMLV al mes, igual que en el resto del país."),
+        sectores=[
+            ("documento", "Servicios profesionales y consultoría", "Facturación por proyecto, contratistas, retenciones y pagos que hay que conciliar mes a mes para saber cuánto deja cada cliente."),
+            ("grafico", "Tecnología y software", "Ingresos recurrentes, pagos a proveedores del exterior, IVA en servicios digitales y socios inversionistas que piden cifras confiables."),
+            ("escudo", "Comercio y distribución", "Facturación electrónica de alto volumen, inventarios y cartera que deben cuadrar con bancos y pasarelas de pago."),
+            ("gente", "Sucursales y filiales extranjeras", "Contabilidad en Colombia bajo NIIF, reportes para la casa matriz e impuestos locales, con un equipo que responde en español y a tiempo."),
+        ],
+        faq=[
+            ("¿Cómo funciona el outsourcing contable virtual en Bogotá?",
+             "Trabajamos con un equipo asignado a tu empresa y nos conectamos al software contable, a la facturación electrónica y a los bancos en línea. Las reuniones de seguimiento son por videollamada y los documentos se firman de forma digital. No necesitas tener a alguien de tu equipo pendiente de enviar papeles."),
+            ("¿Llevan el ICA de Bogotá?",
+             "Sí. Preparamos y presentamos el ICA, la retención de ICA y los reportes que pide la Secretaría Distrital de Hacienda, con su propio calendario, que es distinto al de la DIAN."),
+            ("¿Cuánto cuesta el outsourcing contable en Bogotá?",
+             "Los planes van desde 2 SMMLV al mes. El valor final depende del volumen de documentos, la nómina y los impuestos de tu empresa, y te lo enviamos por escrito después de revisar tu operación sin costo."),
         ],
     ),
     "manizales": dict(
@@ -437,6 +465,10 @@ def lugar(nombre, depto=None):
     """Nodo schema.org para una zona atendida."""
     if nombre in ("Oriente Antioqueño", "Valle de Aburrá", "Quindío", "Caldas", "Risaralda", "Antioquia"):
         return {"@type": "AdministrativeArea", "name": nombre}
+    if nombre == "Bogotá":
+        return {"@type": "City", "name": "Bogotá D.C."}
+    if depto == "Bogotá D.C.":
+        depto = "Cundinamarca"
     n = {"@type": "City", "name": nombre}
     if depto:
         n["containedInPlace"] = {"@type": "AdministrativeArea", "name": depto}
@@ -474,14 +506,36 @@ for c in CIUDADES:
 
     locales_html = "".join(f'<span class="etiqueta-enlace etiqueta-enlace--inerte">{x}</span>' for x in c["locales"])
     L = LOCAL[slug]
+    # Bogotá no tiene página de revisoría por ciudad: enlaza al servicio nacional
+    rf_url = "revisoria-fiscal.html" if c.get("virtual") else f"revisoria-fiscal-{slug}.html"
+    rf_ancla = "servicio de revisoría fiscal" if c.get("virtual") else f"revisoría fiscal en {nombre}"
+    M = MUNICIPAL.get(slug)
+    bloque_municipal = ""
+    if M:
+        bloque_municipal = f"""<section class="seccion claro">
+  <div class="contenedor">
+    <div class="split">
+      <div class="revelar">
+        {encabezado(f"Impuestos en {nombre}", M.get("titulo", f"Impuestos municipales en {nombre}: lo que viene"), M["texto"], ancho="none", tam="var(--paso-4)")}
+        <div class="directorio__lista" style="margin-top:var(--sp-3)">
+          {"".join(f'<a class="etiqueta-enlace" href="{u}.html">{t}</a>' for u, t in M["enlaces"])}
+        </div>
+      </div>
+      <div class="revelar">
+        <h3 style="margin-bottom:var(--sp-2)">{M.get("subtitulo", "Próximos vencimientos de 2026")}</h3>
+        {lista_check(M["fechas"])}
+      </div>
+    </div>
+  </div>
+</section>"""
 
     cuerpo = f"""
 {heroe(
     L["h1"],
     c["entrada"],
-    f"ciudad-{slug}.jpg",
+    c.get("foto", f"ciudad-{slug}.jpg"),
     f"Servicios de outsourcing contable en {nombre}, {depto}",
-    chip=f"{depto} · {nombre}",
+    chip=c.get("chip", f"{depto} · {nombre}"),
     migas=[("Inicio", "index.html"), ("Outsourcing contable", "outsourcing-contable.html"), (nombre, None)],
     cta1=("Conversemos", wa(f"Hola, vengo de la página de {nombre} y quiero cotizar el servicio contable")),
     cta2=("Pide tu cotización", f"/cotizacion-outsourcing-contable/?ciudad={slug}"),
@@ -505,27 +559,12 @@ for c in CIUDADES:
     [
         ("Un equipo asignado", f"Tu empresa tiene un contador responsable y un equipo que la conoce. No hablas cada mes con alguien distinto ni tienes que volver a explicar tu operación."),
         ("Impuestos nacionales y municipales", f"Llevamos el calendario de la DIAN (IVA, retención en la fuente, renta y exógena) y también el de tu municipio: ICA, retención de ICA y avisos y tableros, cada uno con sus propias fechas."),
-        (f"Revisoría fiscal en {nombre}", f'La revisoría fiscal exige independencia: quien lleva tu contabilidad no puede ser tu revisor fiscal. Si ya tienes contador y tu empresa supera los topes, conoce nuestra <a href="revisoria-fiscal-{slug}.html">revisoría fiscal en {nombre}</a>.'),
+        ("¿Y la revisoría fiscal?" if c.get("virtual") else f"Revisoría fiscal en {nombre}", f'La revisoría fiscal exige independencia: quien lleva tu contabilidad no puede ser tu revisor fiscal. Si ya tienes contador y tu empresa supera los topes, conoce nuestro <a href="{rf_url}">{rf_ancla}</a>.'),
     ]
   )}
 </section>
 
-<section class="seccion claro">
-  <div class="contenedor">
-    <div class="split">
-      <div class="revelar">
-        {encabezado(f"Impuestos en {nombre}", f"Impuestos municipales en {nombre}: lo que viene", MUNICIPAL[slug]["texto"], ancho="none", tam="var(--paso-4)")}
-        <div class="directorio__lista" style="margin-top:var(--sp-3)">
-          {"".join(f'<a class="etiqueta-enlace" href="{u}.html">{t}</a>' for u, t in MUNICIPAL[slug]["enlaces"])}
-        </div>
-      </div>
-      <div class="revelar">
-        <h3 style="margin-bottom:var(--sp-2)">Próximos vencimientos de 2026</h3>
-        {lista_check(MUNICIPAL[slug]["fechas"])}
-      </div>
-    </div>
-  </div>
-</section>
+{bloque_municipal}
 
 <section class="seccion">
   <div class="contenedor">
@@ -592,9 +631,9 @@ for c in CIUDADES:
         </div>
       </div>
       <div>
-        <h3>Revisoría fiscal en {nombre}</h3>
+        <h3>Revisoría fiscal</h3>
         <div class="directorio__lista">
-          <a class="etiqueta-enlace" href="revisoria-fiscal-{slug}.html">Revisor fiscal en {nombre}</a>
+          <a class="etiqueta-enlace" href="{rf_url}">{rf_ancla[0].upper() + rf_ancla[1:]}</a>
         </div>
       </div>
     </div>
@@ -647,7 +686,7 @@ for c in CIUDADES:
         titulo=LOCAL[slug]["titulo"],
         descripcion=f"Outsourcing contable en {AREA_CIUDAD.get(slug, nombre)}: contabilidad, nómina, impuestos ante la DIAN y estados financieros NIIF, con un equipo asignado a su empresa.",
         activo="",
-        og_img=f"ciudad-{slug}.jpg",
+        og_img=c.get("foto", f"ciudad-{slug}.jpg"),
         schema=schema,
         cuerpo=cuerpo,
     ))

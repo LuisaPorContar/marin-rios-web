@@ -171,6 +171,7 @@ PIE = f"""<footer class="pie">
           <li><a href="outsourcing-contable-pereira.html">Outsourcing contable Pereira</a></li>
           <li><a href="outsourcing-contable-armenia.html">Outsourcing contable Armenia</a></li>
           <li><a href="outsourcing-contable-manizales.html">Outsourcing contable Manizales</a></li>
+          <li><a href="outsourcing-contable-bogota.html">Outsourcing contable Bogotá (virtual)</a></li>
           <li><a href="revisoria-fiscal-medellin.html">Revisoría fiscal Medellín</a></li>
           <li><a href="revisoria-fiscal-pereira.html">Revisoría fiscal Pereira</a></li>
           <li><a href="revisoria-fiscal-armenia.html">Revisoría fiscal Armenia</a></li>
@@ -743,7 +744,7 @@ def tarjetas_item(items):
 
 def lista_check(items, oscuro=False):
     li = "".join(
-        f'<li><span class="check">{ICO["check"]}</span> {x}</li>' for x in items
+        f'<li><span class="check">{ICO["check"]}</span><span>{x}</span></li>' for x in items
     )
     return f'<ul class="split__lista">{li}</ul>'
 
@@ -769,7 +770,7 @@ def ciudades_grid():
 
 def directorio(ciudad_actual=None):
     ciudades = [("Medellín", "medellin"), ("Armenia", "armenia"),
-                ("Pereira", "pereira"), ("Manizales", "manizales")]
+                ("Pereira", "pereira"), ("Manizales", "manizales"), ("Bogotá (virtual)", "bogota")]
     enlaces = []
     for nombre, slug in ciudades:
         if ciudad_actual == slug:

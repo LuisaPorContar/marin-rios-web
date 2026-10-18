@@ -103,8 +103,10 @@ GUIAS = ["empresas-obligadas-revisor-fiscal", "revisor-fiscal-sas", "como-elegir
 
 for c in CIUDADES:
     slug, nombre, depto = c["slug"], c["nombre"], c["depto"]
+    if slug not in RF:
+        continue
     d = RF[slug]
-    otras = [x for x in CIUDADES if x["slug"] != slug]
+    otras = [x for x in CIUDADES if x["slug"] != slug and x["slug"] in RF]
     locales_html = "".join(f'<span class="etiqueta-enlace etiqueta-enlace--inerte">{x}</span>' for x in c["locales"])
 
     cuerpo = f"""

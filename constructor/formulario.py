@@ -9,7 +9,7 @@ assets/js/lp-revisoria.js. Lo propio de cada página va en atributos data-*.
 from base import ICO, WA
 from paginas_meta import SHEETS_URL, INGRESOS, _campo_lista
 
-CIUDADES = ["Medellín y Valle de Aburrá", "Pereira", "Dosquebradas", "Armenia", "Manizales", "Otra"]
+CIUDADES = ["Medellín y Valle de Aburrá", "Pereira", "Dosquebradas", "Armenia", "Manizales", "Bogotá", "Otra"]
 
 
 def formulario_leads(formulario, oferta, servicio, titulo, texto, boton,

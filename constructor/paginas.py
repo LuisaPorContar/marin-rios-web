@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Contenido de las páginas de servicio, precios y blog."""
 
-from base import (ICO, wa, plantilla, heroe, encabezado, servicios_num, fijo,
+from base import (lista_check, ICO, wa, plantilla, heroe, encabezado, servicios_num, fijo,
                   carrusel, acordeon, tarjetas_item, ciudades_grid, directorio,
                   cta_final, proposito, marcas, TEL, TEL_URI, EMAIL,
                   resenas_google, ultimas_publicaciones)
@@ -72,6 +72,10 @@ faq_out = [
      "Un contador público con tarjeta profesional vigente de nuestro equipo firma como contador de tu empresa, y el representante legal firma como responsable. Si tu empresa está obligada a tener revisor fiscal, él también firma, y debe ser independiente de quien lleva la contabilidad."),
     ("¿Pueden llevar mi contabilidad y ser también mi revisor fiscal?",
      "No para la misma empresa: quien lleva la contabilidad no puede auditarla. Si ya tienes contador y necesitas revisor fiscal, mira nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a>; si lo que necesitas es la contabilidad, te ayudamos a coordinar con tu revisor actual."),
+    ("¿Qué herramientas digitales usan?",
+     "Software contable en la nube, facturación y nómina electrónica, los portales de la DIAN y de cada municipio, conciliación bancaria y documentos y firmas en línea. Trabajamos sobre el software que ya usa tu empresa, así que no tienes que cambiarlo para empezar."),
+    ("¿Atienden empresas en Bogotá y el resto del país?",
+     "Sí. Tenemos visitas programadas en Medellín, Pereira, Armenia y Manizales, y en Bogotá y el resto de Colombia trabajamos de forma 100 % virtual. Mira cómo funciona el <a href=\"outsourcing-contable-bogota.html\">outsourcing contable en Bogotá</a>."),
     ("¿Tengo que cambiar de software contable?",
      "No necesariamente. Trabajamos sobre el software que ya usa tu empresa. Si tu herramienta actual limita la operación, te lo decimos y te mostramos alternativas, pero la decisión es tuya."),
     ("¿Qué pasa si mi contabilidad está atrasada?",
@@ -126,6 +130,25 @@ cuerpo = f"""
         ("Reunión periódica de seguimiento", "Un espacio fijo con tu contador para revisar cifras, alertas y decisiones del mes."),
     ]
   )}
+</section>
+
+<section class="seccion claro">
+  <div class="contenedor">
+    <div class="split" style="align-items:start">
+      <div class="revelar">
+        {encabezado("Contable y tributario", "Outsourcing contable y tributario", "La contabilidad y los impuestos van juntos: llevamos los libros y, con ellos, todas las obligaciones de tu empresa ante la DIAN y ante el municipio. Así el impuesto que pagas sale de cifras conciliadas y no de una estimación.", ancho="none", tam="var(--paso-4)")}
+        {lista_check(["IVA, retención en la fuente, renta e información exógena dentro del <a href=\"calendario-tributario-actualizado.html\">calendario tributario</a>.",
+                      "ICA, retención de ICA y avisos y tableros, con el calendario de cada municipio.",
+                      "Planeación tributaria antes del cierre y respuesta a requerimientos de la DIAN."])}
+      </div>
+      <div class="revelar">
+        {encabezado("Contable y financiero", "Outsourcing contable y financiero", "Una contabilidad al día sirve para algo más que cumplir. Con las cifras del mes te mostramos márgenes, flujo de caja y cartera, y si necesitas ir más allá, la sumamos a nuestra <a href=\"consultoria-financiera.html\">consultoría financiera</a>.", ancho="none", tam="var(--paso-4)")}
+        {lista_check(["Estados financieros mensuales con una explicación de qué está pasando.",
+                      "Flujo de caja y alertas de cartera para no quedarte sin liquidez.",
+                      "Presupuesto y lectura de rentabilidad por línea de negocio."])}
+      </div>
+    </div>
+  </div>
 </section>
 
 {proposito(
@@ -187,7 +210,7 @@ cuerpo = f"""
 PAGINAS.append(dict(
     archivo="outsourcing-contable.html",
     titulo="Outsourcing Contable para Empresas en Colombia | Marín Ríos",
-    descripcion=f"Outsourcing contable para empresas en Colombia: contabilidad, impuestos, nómina y estados financieros NIIF, con atención en Medellín, Pereira, Armenia y Manizales.",
+    descripcion=f"Outsourcing contable y tributario para empresas en Colombia: contabilidad, impuestos, nómina y NIIF. Medellín y Eje Cafetero, y virtual en Bogotá.",
     activo="servicios",
     og_img="reunion-ancho.jpg",
     schema=schema_servicio("Outsourcing contable",

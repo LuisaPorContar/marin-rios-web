@@ -16,10 +16,11 @@ def _ciudades(servicio):
     nombre = "Outsourcing contable" if servicio == "outsourcing" else "Revisoría fiscal"
     enlaces = "".join(
         f'<a class="etiqueta-enlace" href="{base}-{slug}.html">{nombre} en {ciudad}</a>'
-        for slug, ciudad in (("medellin", "Medellín"), ("pereira", "Pereira"), ("armenia", "Armenia"), ("manizales", "Manizales")))
+        for slug, ciudad in (("medellin", "Medellín"), ("pereira", "Pereira"), ("armenia", "Armenia"), ("manizales", "Manizales"))
+        + ((("bogota", "Bogotá (virtual)"),) if servicio == "outsourcing" else ()))
     return f"""<section class="seccion--ajustada">
   <div class="contenedor">
-    {encabezado("Cobertura", "Cotizamos en Medellín y el Eje Cafetero", "Visitas presenciales en Medellín, Pereira, Armenia y Manizales, y trabajo remoto en todo el país.", ancho="54rem", tam="var(--paso-4)")}
+    {encabezado("Cobertura", "Cotizamos en Medellín y el Eje Cafetero", "Visitas presenciales en Medellín, Pereira, Armenia y Manizales, y atención virtual en Bogotá y el resto del país.", ancho="54rem", tam="var(--paso-4)")}
     <div class="directorio__lista revelar">{enlaces}</div>
   </div>
 </section>"""

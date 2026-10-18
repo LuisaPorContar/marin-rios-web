@@ -332,6 +332,7 @@ CUERPO = """<!-- ===================== HÉROE ===================== -->
           <a class="etiqueta-enlace" href="/outsourcing-contable-armenia/">Armenia</a>
           <a class="etiqueta-enlace" href="/outsourcing-contable-pereira/">Pereira</a>
           <a class="etiqueta-enlace" href="/outsourcing-contable-manizales/">Manizales</a>
+          <a class="etiqueta-enlace" href="/outsourcing-contable-bogota/">Bogotá (virtual)</a>
         </div>
       </div>
     </div>
