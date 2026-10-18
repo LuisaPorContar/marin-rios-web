@@ -432,6 +432,65 @@ CUERPO = """<!-- ===================== HÉROE ===================== -->
   </div>
 </section>"""
 
+# Reels de Instagram de la firma. El script de Instagram pesa mucho, así que solo
+# se carga cuando la sección se acerca a la pantalla.
+REELS_INSTAGRAM = ["DdcrhpsN8qc", "Ddcrz6FurmL", "DbY4J6AEd40", "DZ-mXJ5FLVD", "DYzjAS1gU4o"]
+
+CARGA_INSTAGRAM = """<script>
+(function () {
+  var seccion = document.getElementById('instagram');
+  if (!seccion) return;
+  function cargar() {
+    if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.instagram.com/embed.js';
+    document.body.appendChild(s);
+  }
+  if (!('IntersectionObserver' in window)) { cargar(); return; }
+  var obs = new IntersectionObserver(function (e) {
+    if (e[0].isIntersecting) { obs.disconnect(); cargar(); }
+  }, { rootMargin: '600px 0px' });
+  obs.observe(seccion);
+})();
+</script>"""
+
+
+def carrusel_instagram():
+    flecha_i = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>'
+    flecha_d = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>'
+    reels = "\n".join(
+        f'        <div class="insta__item"><blockquote class="instagram-media" '
+        f'data-instgrm-permalink="https://www.instagram.com/reel/{r}/?utm_source=ig_embed&amp;utm_campaign=loading" '
+        f'data-instgrm-version="14"><a href="https://www.instagram.com/reel/{r}/" target="_blank" rel="noopener">'
+        f'Ver este video en Instagram</a></blockquote></div>'
+        for r in REELS_INSTAGRAM)
+    return f"""<!-- ===================== INSTAGRAM ===================== -->
+<section class="seccion insta" id="instagram">
+  <div class="contenedor">
+    <div class="recientes__cabecera revelar">
+      <div>
+        <p class="eyebrow">Instagram · @marinriosconsultores</p>
+        <h2>Contabilidad e impuestos en un minuto</h2>
+      </div>
+      <p class="recientes__intro">Videos cortos con lo que tu empresa necesita saber de impuestos, contabilidad y finanzas. <a href="https://www.instagram.com/marinriosconsultores/" target="_blank" rel="noopener">Síguenos en Instagram</a></p>
+    </div>
+    <div class="carrusel insta__carrusel">
+      <div class="recientes__nav">
+        <button class="carrusel__btn" data-dir="anterior" aria-label="Videos anteriores">{flecha_i}</button>
+        <button class="carrusel__btn" data-dir="siguiente" aria-label="Más videos">{flecha_d}</button>
+      </div>
+      <div class="carrusel__pista insta__pista" role="group" aria-label="Videos de Instagram de Marín Ríos">
+{reels}
+      </div>
+    </div>
+  </div>
+</section>
+{CARGA_INSTAGRAM}
+
+"""
+
+
 PAGINAS.append(dict(
     archivo="index.html",
     titulo=TITULO,
@@ -439,9 +498,11 @@ PAGINAS.append(dict(
     activo="",
     og_img=OG_IMG,
     schema=SCHEMA,
-    # Las reseñas de Google van antes de Cobertura
+    # Las reseñas de Google van antes de Cobertura; los reels de Instagram, al final,
+    # justo antes del carrusel de guías que agrega la plantilla
     cuerpo=CUERPO.replace("{{MARCAS}}", marcas()).replace("<!-- ===================== COBERTURA",
-                          resenas_google() + "\n\n<!-- ===================== COBERTURA", 1),
+                          resenas_google() + "\n\n<!-- ===================== COBERTURA", 1)
+           + "\n\n" + carrusel_instagram(),
     # Capa visual corporativa, solo para la portada. No toca textos ni SEO.
     clase_body="corp",
     css_extra=("assets/css/home-corp.css",),
