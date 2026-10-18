@@ -62,7 +62,7 @@ cuerpo_out = f"""
     riel=[("$0", "La cotización no tiene costo"),
           ("24 h", "Respuesta en horas hábiles"),
           ("4", "Ciudades con atención presencial"),
-          ("NIIF", "Estados financieros bajo norma")]
+          ("2 SMMLV", "Planes desde 2 salarios mínimos al mes")]
 )}
 
 <section class="seccion claro">

@@ -132,17 +132,7 @@ cuerpo_precios = f"""
 )}
 """
 
-PAGINAS.append(dict(
-    archivo="precios-outsourcing-contable.html",
-    titulo="Planes de Outsourcing Contable para Pymes | Marín Ríos",
-    descripcion="Planes de outsourcing contable para pymes: qué incluye cada plan, qué servicios puede sumar y cómo se adapta al tamaño de su empresa en Colombia.",
-    activo="precios",
-    og_img="detalle-documentos.jpg",
-    schema=schema_servicio("Outsourcing contable",
-                           "Planes de outsourcing contable, revisoría fiscal y consultoría financiera para pymes en Colombia, cotizados a la medida.",
-                           "precios-outsourcing-contable/", faq_pre),
-    cuerpo=cuerpo_precios,
-))
+# /precios-outsourcing-contable/ se retiró (oct. 2026): redirige con 301 a cuánto cuesta (#planes).
 
 
 # ================================================================
@@ -458,7 +448,7 @@ def faq_ciudad(c):
         ("¿Qué incluye un servicio de outsourcing contable?",
          "Puede incluir desde la elaboración de estados financieros y libros contables hasta la gestión de nómina, impuestos, auditorías internas y reportes para la toma de decisiones. En general te libera de tareas repetitivas, reduce errores y asegura el cumplimiento tributario."),
         ("¿Cómo se calcula el precio del servicio contable?",
-         "Se calcula según el volumen de transacciones mensuales, el número de empleados en nómina, la cantidad de obligaciones tributarias de tu empresa y los servicios adicionales que necesites. Con esa información te enviamos una cotización a la medida."),
+         "Nuestros planes van desde 2 SMMLV al mes. El valor final se calcula según el volumen de transacciones mensuales, el número de empleados en nómina, la cantidad de obligaciones tributarias de tu empresa y los servicios adicionales que necesites. Con esa información te enviamos una cotización por escrito."),
         ("¿Qué tipo de empresas pueden tercerizar su contabilidad?",
          f"Cualquier empresa obligada a llevar contabilidad en {c['nombre']}: SAS, LTDA, SA, fundaciones, ESAL y empresas de servicios temporales. Es especialmente útil para pymes que aún no justifican un área contable interna."),
         ("¿Necesito cambiar de software contable?",

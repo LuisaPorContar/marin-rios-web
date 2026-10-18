@@ -9867,8 +9867,8 @@
     "html": "Si quiere calcular cuánto le costaría tercerizar todo el back office contable de su empresa, incluyendo nómina electrónica y los reportes a la DIAN, revise nuestra guía sobre <a href=\"cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable.html\">cuánto cuesta un outsourcing contable en Colombia</a>.",
     "enlaces": [
      {
-      "href": "precios-outsourcing-contable.html",
-      "texto": "revise nuestra guía sobre cuánto cuesta un outsourcing contable en Colombia."
+      "href": "cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable.html",
+      "texto": "cuánto cuesta un outsourcing contable en Colombia"
      }
     ]
    },
@@ -17846,9 +17846,9 @@
   "slug": "cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable",
   "titulo_seo": "¿Cuánto cuesta un outsourcing contable en Colombia? (2026)",
   "h1": "¿Cuánto cuesta un outsourcing contable en Colombia y cómo se compara con un contador de planta?",
-  "desc": "Cuánto cuesta un outsourcing contable en Colombia: de qué depende el precio, cuánto cuesta un contador de planta en 2026 y qué requiere cada tipo de empresa.",
+  "desc": "Cuánto cuesta un outsourcing contable en Colombia: planes desde 2 SMMLV al mes, de qué depende el precio y cuánto cuesta un contador de planta en 2026.",
   "publicado": "2026-04-06",
-  "modificado": "2026-10-17",
+  "modificado": "2026-10-18",
   "seccion": "Outsourcing contable",
   "portada": "assets/img/blog/pauta-cuadradomarin-5-819x1024.jpg",
   "toc": true,
@@ -17868,6 +17868,16 @@
     "t": "img",
     "src": "assets/img/blog/pauta-cuadradomarin-5-819x1024.jpg",
     "alt": "Cuánto cuesta un servicio de outsourcing contable en Colombia"
+   },
+   {
+    "t": "h2",
+    "texto": "Planes de outsourcing contable de Marín Ríos: desde 2 SMMLV al mes",
+    "ancla": "planes"
+   },
+   {
+    "t": "p",
+    "texto": "Nuestros planes de outsourcing contable van desde 2 SMMLV al mes, es decir, desde $3.501.810 mensuales con el salario mínimo de 2026. El valor final depende del volumen de documentos, la nómina, el régimen tributario y el alcance que necesite su empresa. Revisamos su operación sin costo y le enviamos la cotización por escrito.",
+    "html": "Nuestros planes de outsourcing contable van <strong>desde 2 SMMLV al mes</strong>, es decir, desde $3.501.810 mensuales con el salario mínimo de 2026. El valor final depende del volumen de documentos, la nómina, el régimen tributario y el alcance que necesite su empresa. Revisamos su operación sin costo y le enviamos la <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a> por escrito."
    },
    {
     "t": "h2",
@@ -17993,12 +18003,12 @@
    },
    {
     "t": "h3",
-    "texto": "¿Por qué no publicamos una tarifa de lista?",
-    "ancla": "por-que-no-publicamos-una-tarifa-de-lista"
+    "texto": "¿Por qué el valor final depende de su operación?",
+    "ancla": "por-que-el-valor-final-depende-de-su-operacion"
    },
    {
     "t": "p",
-    "texto": "Porque dos empresas con el mismo número de empleados pueden necesitar trabajos muy distintos. Una comercializadora con inventario y 400 facturas al mes no se parece a una consultora con 20 facturas y la misma nómina. Una tarifa publicada le cobraría de más a la consultora, o se quedaría corta con la comercializadora y terminaría compensándose con cobros extra. Preferimos mirar su operación y explicarle el valor por escrito."
+    "texto": "Porque dos empresas con el mismo número de empleados pueden necesitar trabajos muy distintos. Una comercializadora con inventario y 400 facturas al mes no se parece a una consultora con 20 facturas y la misma nómina. Por eso damos un punto de partida, desde 2 SMMLV al mes, y el valor exacto sale de revisar su operación y queda por escrito."
    },
    {
     "t": "h2",
@@ -18225,8 +18235,8 @@
    },
    {
     "t": "p",
-    "texto": "En nuestro servicio de outsourcing contable el valor se fija con base en un diagnóstico de su operación, y queda por escrito qué incluye. Puede ver cómo organizamos el servicio en nuestros planes de outsourcing contable.",
-    "html": "En nuestro <a href=\"outsourcing-contable.html\">servicio de outsourcing contable</a> el valor se fija con base en un diagnóstico de su operación, y queda por escrito qué incluye. Puede ver cómo organizamos el servicio en nuestros <a href=\"precios-outsourcing-contable.html\">planes de outsourcing contable</a>."
+    "texto": "En nuestro servicio de outsourcing contable el valor se fija con base en un diagnóstico de su operación, parte de 2 SMMLV al mes y queda por escrito qué incluye.",
+    "html": "En nuestro <a href=\"outsourcing-contable.html\">servicio de outsourcing contable</a> el valor se fija con base en un diagnóstico de su operación, parte de 2 SMMLV al mes y queda por escrito qué incluye."
    },
    {
     "t": "p",

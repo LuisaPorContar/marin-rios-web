@@ -73,7 +73,7 @@ def recientes_para(p):
     slug = p["archivo"][:-len(".html")]
     if slug == "revisoria-fiscal" or slug.startswith("revisoria-fiscal-"):
         return None
-    if slug in ("index", "outsourcing-contable", "precios-outsourcing-contable", "cotizacion-outsourcing-contable") \
+    if slug in ("index", "outsourcing-contable", "cotizacion-outsourcing-contable") \
             or slug.startswith("outsourcing-contable-"):
         return dict(solo=GUIAS_OUTSOURCING, eyebrow="Guías de outsourcing contable",
                     titulo="Guías para tener su contabilidad al día",
@@ -126,7 +126,7 @@ def main():
     # ---- sitemap ----
     prioridades = {"index.html": "1.0", "outsourcing-contable.html": "0.9",
                    "revisoria-fiscal.html": "0.9", "consultoria-financiera.html": "0.9",
-                   "precios-outsourcing-contable.html": "0.8", "blog.html": "0.8"}
+                   "blog.html": "0.8"}
     # El sitemap solo lista lo indexable: incluir páginas noindex es una
     # contradicción que Search Console reporta como error.
     urls = ["index.html"] + escritas

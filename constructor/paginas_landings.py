@@ -59,7 +59,7 @@ cuerpo_integral = f"""
     "Servicios contables para pymes en Colombia",
     chip="Servicios · Contabilidad, revisoría y finanzas",
     cta1=("Pide una cotización", wa("Hola, quiero una cotización de sus servicios contables")),
-    cta2=("Ver planes", "precios-outsourcing-contable.html"),
+    cta2=("Ver planes", "/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/#planes"),
 )}
 
 <section class="seccion">
@@ -336,7 +336,7 @@ def _gracias(archivo, titulo_h1, entrada, extra=""):
         <div class="tarjeta-item__icono">{ICO['tarjeta']}</div>
         <h3>Cuánto cuesta</h3>
         <p>Qué determina el valor de un outsourcing contable y cómo lo cotizamos.</p>
-        <p><a class="etiqueta-enlace" href="precios-outsourcing-contable.html">Ver planes{ICO['flecha_fina']}</a></p>
+        <p><a class="etiqueta-enlace" href="/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/#planes">Ver planes{ICO['flecha_fina']}</a></p>
       </article>
       <article class="tarjeta-item">
         <div class="tarjeta-item__icono">{ICO['escudo']}</div>

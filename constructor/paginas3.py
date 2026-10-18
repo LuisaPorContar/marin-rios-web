@@ -29,7 +29,7 @@ cuerpo_contacto = f"""
     chip="Contacto · Respuesta el mismo día",
     migas=[("Inicio", "index.html"), ("Contacto", None)],
     cta1=("Escríbenos por WhatsApp", wa("Hola, quiero hablar con un asesor sobre la contabilidad de mi empresa")),
-    cta2=("Ver planes", "precios-outsourcing-contable.html"),
+    cta2=("Ver planes", "/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/#planes"),
 )}
 
 <section class="seccion--ajustada">

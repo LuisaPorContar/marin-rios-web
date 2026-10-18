@@ -61,7 +61,7 @@ SCHEMA = """{
       "@type": "FAQPage",
       "@id": "https://marinriosconsultores.com/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Cuánto cuesta un servicio de outsourcing contable en Colombia?", "acceptedAnswer": { "@type": "Answer", "text": "En Marín Ríos cotizamos cada plan a la medida. El valor depende del tamaño de la empresa, la complejidad de los procesos y los servicios incluidos como revisoría fiscal, consultoría financiera o nómina. Revisamos tu operación sin costo y te enviamos la cotización." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta un servicio de outsourcing contable en Colombia?", "acceptedAnswer": { "@type": "Answer", "text": "En Marín Ríos los planes van desde 2 SMMLV al mes. El valor final depende del tamaño de la empresa, la complejidad de los procesos y los servicios incluidos, como nómina o consultoría financiera. Revisamos tu operación sin costo y te enviamos la cotización por escrito." } },
         { "@type": "Question", "name": "¿Qué empresas pueden contratar outsourcing contable?", "acceptedAnswer": { "@type": "Answer", "text": "Cualquier empresa obligada a llevar contabilidad: SAS, LTDA, SA, fundaciones, ESAL, empresas de servicios temporales y organizaciones de economía solidaria. También startups y pymes en crecimiento que aún no justifican un área contable interna." } },
         { "@type": "Question", "name": "¿Cuál es la diferencia entre outsourcing contable y asesoría contable?", "acceptedAnswer": { "@type": "Answer", "text": "La asesoría contable resuelve dudas puntuales y acompaña decisiones específicas. El outsourcing contable asume la operación completa: registros, conciliaciones, impuestos, nómina y reportes, con un equipo responsable del proceso mes a mes." } },
         { "@type": "Question", "name": "¿Cuáles son los beneficios del outsourcing contable?", "acceptedAnswer": { "@type": "Answer", "text": "Reduces el costo de una nómina contable interna, eliminas carga operativa, disminuyes el riesgo de sanciones ante la DIAN y obtienes reportes financieros útiles para tomar decisiones con información real." } }
@@ -356,7 +356,7 @@ CUERPO = """<!-- ===================== HÉROE ===================== -->
             <span class="acordeon__signo" aria-hidden="true"></span>
           </button>
           <div class="acordeon__panel" id="p1" role="region" aria-labelledby="p1-btn" data-abierto="false"><div><div class="interior">
-            <p>En Marín Ríos cotizamos cada plan a la medida. El valor depende del tamaño de la empresa, la complejidad de los procesos y los servicios incluidos como revisoría fiscal, consultoría financiera o nómina. Revisamos tu operación sin costo y te enviamos la cotización.</p>
+            <p>En Marín Ríos los planes van desde 2 SMMLV al mes. El valor final depende del tamaño de la empresa, la complejidad de los procesos y los servicios incluidos, como nómina o consultoría financiera. Revisamos tu operación sin costo y te enviamos la cotización por escrito.</p>
           </div></div></div>
         </div>
 

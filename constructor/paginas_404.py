@@ -35,7 +35,7 @@ cuerpo_404 = f"""
         <div class="tarjeta-item__icono">{ICO['tarjeta']}</div>
         <h3>Planes</h3>
         <p>Qué determina el valor del servicio y cómo lo cotizamos.</p>
-        <p><a class="etiqueta-enlace" href="precios-outsourcing-contable.html">Ver planes{ICO['flecha_fina']}</a></p>
+        <p><a class="etiqueta-enlace" href="/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/#planes">Ver planes{ICO['flecha_fina']}</a></p>
       </article>
       <article class="tarjeta-item">
         <div class="tarjeta-item__icono">{ICO['libro']}</div>
