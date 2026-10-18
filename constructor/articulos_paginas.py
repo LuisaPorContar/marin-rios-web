@@ -158,7 +158,8 @@ def schema_articulo(a, cat, faqs):
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://marinriosconsultores.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://marinriosconsultores.com/blog/"},
+            {"@type": "ListItem", "position": 2, "name": PILAR_DE.get(cat, ("Blog", "blog.html"))[0],
+             "item": "https://marinriosconsultores.com/" + PILAR_DE.get(cat, ("Blog", "blog.html"))[1].replace(".html", "/")},
             {"@type": "ListItem", "position": 3, "name": a["h1"][:110], "item": url},
         ],
     })
@@ -200,6 +201,7 @@ def construir():
     chip=f"Blog · {cat}",
     migas=[("Inicio", "index.html"), PILAR_DE.get(cat, ("Blog", "blog.html")), (escape(recortar(a["h1"], 48)), None)],
     cta1=("Agenda una asesoría", wa(MENSAJE_WA.format(a["h1"][:60]))),
+    schema_migas=False,
 )}
 
 <section class="seccion--ajustada">

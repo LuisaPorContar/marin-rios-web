@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Genera todas las páginas del sitio, el sitemap y el robots.txt."""
 
-import os, sys
+import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from base import plantilla, ruta_publica, BASE_URL
@@ -130,6 +130,21 @@ def main():
     # El sitemap solo lista lo indexable: incluir páginas noindex es una
     # contradicción que Search Console reporta como error.
     urls = ["index.html"] + escritas
+    # lastmod real: la fecha cambia solo cuando cambia el HTML de la página.
+    import hashlib, datetime
+    ruta_lm = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lastmod.json")
+    try:
+        lm = json.load(open(ruta_lm, encoding="utf-8"))
+    except (OSError, ValueError):
+        lm = {}
+    hoy = datetime.date.today().isoformat()
+    for a in urls:
+        with open(destino(a), encoding="utf-8") as f:
+            h = hashlib.sha1(f.read().encode("utf-8")).hexdigest()
+        if lm.get(a, {}).get("hash") != h:
+            lm[a] = {"hash": h, "fecha": hoy}
+    with open(ruta_lm, "w", encoding="utf-8") as f:
+        json.dump(lm, f, ensure_ascii=False, indent=1, sort_keys=True)
     vistas, filas = set(), []
     for a in urls:
         if a in vistas:
@@ -137,7 +152,7 @@ def main():
         vistas.add(a)
         loc = BASE_URL + ("" if a == "index.html" else a.replace(".html", "/"))
         filas.append(
-            f"  <url>\n    <loc>{loc}</loc>\n"
+            f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lm[a]['fecha']}</lastmod>\n"
             f"    <changefreq>monthly</changefreq>\n"
             f"    <priority>{prioridades.get(a, '0.7')}</priority>\n  </url>"
         )

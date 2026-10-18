@@ -592,7 +592,7 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
 # Componentes
 # ================================================================
 
-def heroe(titulo, entrada, foto, alt, chip="", migas=None, cta1=None, cta2=None, riel=None):
+def heroe(titulo, entrada, foto, alt, chip="", migas=None, cta1=None, cta2=None, riel=None, schema_migas=True):
     m = ""
     if migas:
         piezas = []
@@ -601,6 +601,19 @@ def heroe(titulo, entrada, foto, alt, chip="", migas=None, cta1=None, cta2=None,
             if i < len(migas) - 1:
                 piezas.append('<span>/</span>')
         m = f'<nav class="migas" aria-label="Ruta">{" ".join(piezas)}</nav>'
+    if migas and schema_migas:
+        # La misma ruta en datos estructurados, para que Google la muestre en el resultado
+        import html as _html, json as _json
+        elementos = []
+        for i, (txt, href) in enumerate(migas, 1):
+            e = {"@type": "ListItem", "position": i, "name": _html.unescape(re.sub(r"<[^>]+>", "", txt))}
+            if href:
+                e["item"] = BASE_URL if href == "index.html" else BASE_URL + href.replace(".html", "/")
+            elementos.append(e)
+        m += ('<script type="application/ld+json">'
+              + _json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList",
+                             "itemListElement": elementos}, ensure_ascii=False)
+              + "</script>")
 
     c = f'<span class="chip"><span class="chip__punto"></span>{chip}</span>' if chip else ""
 
@@ -724,7 +737,8 @@ def tarjetas_item(items):
         <h3>{tit}</h3>
         <p>{txt}</p>
       </article>""" for ic, tit, txt in items)
-    return f'<div class="rejilla-3 rejilla-movil">{t}</div>'
+    # Con 4 tarjetas, 4 columnas: en 3 columnas la cuarta queda sola en otra fila
+    return f'<div class="{"rejilla-4" if len(items) == 4 else "rejilla-3"} rejilla-movil">{t}</div>'
 
 
 def lista_check(items, oscuro=False):

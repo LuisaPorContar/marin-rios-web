@@ -2,7 +2,7 @@
 """Planes, blog y páginas de ciudad."""
 
 import json, os, re
-from base import (ICO, wa, heroe, encabezado, servicios_num, fijo, carrusel,
+from base import (resenas_google, ICO, wa, heroe, encabezado, servicios_num, fijo, carrusel,
                   acordeon, tarjetas_item, ciudades_grid, directorio,
                   cta_final, proposito, marcas)
 from paginas import PAGINAS, TRIO, schema_servicio
@@ -313,16 +313,106 @@ CIUDADES = [
 ]
 
 
+# Lo propio de cada ciudad: así ninguna página es una copia de otra con el nombre cambiado.
+LOCAL = {
+    "medellin": dict(
+        titulo="Outsourcing Contable en Medellín para Empresas | Marín Ríos",
+        h1="Outsourcing contable para empresas en Medellín y el Valle de Aburrá",
+        atencion=("Nuestra sede está en Laureles - Estadio (Cl. 49B #64b-54). Desde ahí atendemos empresas de Medellín, "
+                  "Envigado, Itagüí, Sabaneta, Bello y el Oriente Antioqueño: el trabajo diario se hace en línea y nos "
+                  "reunimos en tu empresa o en la oficina cuando hace falta, por ejemplo en cierres, inventarios o "
+                  "reuniones con socios y bancos."),
+        sectores=[
+            ("documento", "Confección y textil", "Inventarios por referencia, costos de producción, maquila y devoluciones. Si el costo está mal calculado, el margen que ves en el estado de resultados no es real."),
+            ("grafico", "Comercio y distribución", "Facturación electrónica de alto volumen, cartera, rotación de inventarios y conciliación con bancos y pasarelas de pago."),
+            ("escudo", "Construcción e inmobiliario", "Contratos de obra, anticipos, AIU y retenciones especiales que exigen llevar la contabilidad por proyecto."),
+            ("lupa", "Tecnología y servicios", "Ingresos recurrentes, pagos al exterior, contratistas y socios inversionistas que piden estados financieros confiables."),
+        ],
+        faq=[
+            ("¿Dónde está su oficina en Medellín?",
+             "En Laureles - Estadio, Cl. 49B #64b-54. Allí recibimos a los clientes con cita, y también vamos a tu empresa cuando el trabajo lo requiere: cierres, inventarios o reuniones con socios y bancos."),
+            ("¿Atienden empresas de Envigado, Itagüí, Sabaneta o Bello?",
+             "Sí, todo el Valle de Aburrá y el Oriente Antioqueño. Ten en cuenta que el ICA se declara en el municipio donde realizas la actividad: si operas en varios municipios, cada uno tiene su propia declaración y su propio calendario, y nosotros los llevamos todos."),
+        ],
+    ),
+    "pereira": dict(
+        titulo="Outsourcing Contable en Pereira y Dosquebradas | Marín Ríos",
+        h1="Outsourcing contable para empresas en Pereira y Dosquebradas",
+        atencion=("Atendemos empresas de Pereira, Dosquebradas, Santa Rosa de Cabal y La Virginia. El trabajo diario se "
+                  "hace en línea, con un equipo asignado que conoce tu empresa, y programamos visitas para cierres, "
+                  "inventarios y reuniones con socios. La sede principal de la firma está en Medellín."),
+        sectores=[
+            ("grafico", "Comercio mayorista y minorista", "Pereira es el centro comercial del Eje Cafetero: muchas facturas, inventarios y cartera que hay que conciliar cada mes para saber cuánto se gana de verdad."),
+            ("documento", "Industria en Dosquebradas", "Metalmecánica, confección y alimentos, con costos de producción, activos fijos y compras de materia prima que pesan en el IVA y en la renta."),
+            ("escudo", "Transporte y logística", "Vinculación de vehículos, anticipos, peajes y retenciones que, mal registrados, inflan la renta o terminan en sanciones."),
+            ("gente", "Salud y servicios", "Clínicas, consultorios y empresas de servicios con nómina grande, facturación a EPS o a clientes del exterior."),
+        ],
+        faq=[
+            ("¿Atienden presencialmente en Pereira y Dosquebradas?",
+             "Sí. El trabajo diario se hace en línea y programamos visitas en Pereira, Dosquebradas y Santa Rosa de Cabal para cierres, inventarios o reuniones con socios y bancos."),
+            ("Mi empresa está en Dosquebradas, ¿cambia algo frente a Pereira?",
+             "En los impuestos nacionales no; en los municipales sí. El ICA y la retención de ICA se declaran ante el municipio donde se realiza la actividad, y Dosquebradas tiene su propio estatuto y su propio calendario. Nosotros llevamos los dos."),
+        ],
+    ),
+    "armenia": dict(
+        titulo="Outsourcing Contable en Armenia, Quindío | Marín Ríos",
+        h1="Outsourcing contable para empresas en Armenia y el Quindío",
+        atencion=("Atendemos empresas de Armenia, Calarcá, Montenegro y La Tebaida. El trabajo diario se hace en línea, "
+                  "con un equipo asignado que conoce tu empresa, y programamos visitas para cierres, inventarios y "
+                  "reuniones con socios. La sede principal de la firma está en Medellín."),
+        sectores=[
+            ("documento", "Turismo y hotelería", "Temporadas altas y bajas, anticipos de reservas, plataformas de alojamiento e IVA en servicios turísticos."),
+            ("grafico", "Café y agroindustria", "Compras a productores, retenciones en la compra de café, inventarios y exportaciones con reglas propias."),
+            ("escudo", "Comercio y construcción", "Facturación de alto volumen y contratos de obra que exigen controlar anticipos, inventarios y retenciones."),
+            ("gente", "Sector solidario", "Cooperativas y fondos de empleados con reportes a la Supersolidaria y revisoría fiscal obligatoria."),
+        ],
+        faq=[
+            ("¿Atienden presencialmente en Armenia?",
+             "Sí. Programamos visitas en Armenia, Calarcá, Montenegro y La Tebaida, y el resto del trabajo se hace en línea."),
+            ("¿Llevan la contabilidad de hoteles, alojamientos turísticos o empresas cafeteras?",
+             "Sí. Parametrizamos la contabilidad según la actividad: temporadas e IVA en turismo, compras a productores y retenciones en café, y costos de producción en la agroindustria."),
+        ],
+    ),
+    "manizales": dict(
+        titulo="Outsourcing y Asesoría Contable en Manizales | Marín Ríos",
+        h1="Outsourcing y asesoría contable para empresas en Manizales",
+        atencion=("Atendemos empresas de Manizales, Villamaría y Chinchiná. El trabajo diario se hace en línea, con un "
+                  "equipo asignado que conoce tu empresa, y programamos visitas para cierres, inventarios y reuniones "
+                  "con socios. La sede principal de la firma está en Medellín."),
+        sectores=[
+            ("documento", "Industria", "Metalmecánica, alimentos y manufactura con costos de producción, inventarios y activos fijos de alto valor."),
+            ("gente", "Educación, salud y ESAL", "Instituciones y fundaciones del régimen tributario especial, con reportes a su ente de vigilancia."),
+            ("grafico", "Café en Chinchiná y la región", "Compras a caficultores, cooperativas y exportadoras con reglas tributarias propias."),
+            ("escudo", "Comercio y servicios", "Empresas en crecimiento que necesitan pasar de una contabilidad para cumplir a una que sirva para decidir."),
+        ],
+        faq=[
+            ("¿Ofrecen asesoría contable en Manizales o solo outsourcing?",
+             "Las dos. Puedes delegarnos toda la contabilidad o contratar asesoría puntual: revisión de estados financieros, planeación tributaria, cierre del año o respuesta a requerimientos de la DIAN."),
+            ("¿Atienden presencialmente en Manizales?",
+             "Sí. Programamos visitas en Manizales, Villamaría y Chinchiná, y el resto del trabajo se hace en línea."),
+        ],
+    ),
+}
+
+
+def lugar(nombre, depto=None):
+    """Nodo schema.org para una zona atendida."""
+    if nombre in ("Oriente Antioqueño", "Valle de Aburrá", "Quindío", "Caldas", "Risaralda", "Antioquia"):
+        return {"@type": "AdministrativeArea", "name": nombre}
+    n = {"@type": "City", "name": nombre}
+    if depto:
+        n["containedInPlace"] = {"@type": "AdministrativeArea", "name": depto}
+    return n
+
+
 def faq_ciudad(c):
-    return [
+    return LOCAL[c["slug"]]["faq"] + [
         ("¿Qué incluye un servicio de outsourcing contable?",
          "Puede incluir desde la elaboración de estados financieros y libros contables hasta la gestión de nómina, impuestos, auditorías internas y reportes para la toma de decisiones. En general te libera de tareas repetitivas, reduce errores y asegura el cumplimiento tributario."),
         ("¿Cómo se calcula el precio del servicio contable?",
          "Se calcula según el volumen de transacciones mensuales, el número de empleados en nómina, la cantidad de obligaciones tributarias de tu empresa y los servicios adicionales que necesites. Con esa información te enviamos una cotización a la medida."),
         ("¿Qué tipo de empresas pueden tercerizar su contabilidad?",
-         f"Cualquier empresa obligada a llevar contabilidad en {c['nombre']}: SAS, LTDA, SA, fundaciones, ESAL y empresas de servicios temporales. Es especialmente útil para pymes y startups que aún no justifican un área contable interna."),
-        (f"¿Atienden empresas fuera de {c['nombre']}?",
-         "Sí. Trabajamos con herramientas digitales que permiten operar de forma remota en todo el país, y atendemos presencialmente en " + ", ".join(c["locales"][:3]) + " y municipios cercanos."),
+         f"Cualquier empresa obligada a llevar contabilidad en {c['nombre']}: SAS, LTDA, SA, fundaciones, ESAL y empresas de servicios temporales. Es especialmente útil para pymes que aún no justifican un área contable interna."),
         ("¿Necesito cambiar de software contable?",
          "No necesariamente. Trabajamos sobre el software que ya usa tu empresa. Si tu herramienta actual limita la operación, te lo decimos y te mostramos alternativas, pero la decisión es tuya."),
     ]
@@ -345,10 +435,11 @@ for c in CIUDADES:
     ]
 
     locales_html = "".join(f'<span class="etiqueta-enlace etiqueta-enlace--inerte">{x}</span>' for x in c["locales"])
+    L = LOCAL[slug]
 
     cuerpo = f"""
 {heroe(
-    f"Outsourcing contable en {nombre} para pymes y startups",
+    L["h1"],
     c["entrada"],
     f"ciudad-{slug}.jpg",
     f"Servicios de outsourcing contable en {nombre}, {depto}",
@@ -364,14 +455,33 @@ for c in CIUDADES:
 
 <section class="seccion claro">
   <div class="contenedor">
-    {encabezado(f"Por qué tercerizar en {nombre}", f"¿Por qué tercerizar tu contabilidad si estás en {nombre}?", c["contexto"] + " Te ayudamos con:")}
+    {encabezado(f"Empresas en {nombre}", f"¿Por qué tercerizar tu contabilidad si estás en {nombre}?", c["contexto"])}
+    {tarjetas_item(L["sectores"])}
+  </div>
+</section>
+
+<section class="seccion">
+  {fijo(
+    encabezado(f"Atención en {nombre}", f"Cómo trabajamos con empresas de {nombre}", L["atencion"],
+               ancho="none", tam="var(--paso-4)"),
+    [
+        ("Un equipo asignado", f"Tu empresa tiene un contador responsable y un equipo que la conoce. No hablas cada mes con alguien distinto ni tienes que volver a explicar tu operación."),
+        ("Impuestos nacionales y municipales", f"Llevamos el calendario de la DIAN (IVA, retención en la fuente, renta y exógena) y también el de tu municipio: ICA, retención de ICA y avisos y tableros, cada uno con sus propias fechas."),
+        (f"Revisoría fiscal en {nombre}", f'Si tu empresa supera los topes o tus estatutos lo exigen, la <a href="revisoria-fiscal-{slug}.html">revisoría fiscal en {nombre}</a> la hace un equipo distinto del que lleva tu contabilidad, como exige la independencia del cargo.'),
+    ]
+  )}
+</section>
+
+<section class="seccion claro">
+  <div class="contenedor">
+    {encabezado("Qué incluye", f"Qué hacemos por tu empresa en {nombre}", "Lo que cubre el servicio desde el primer mes:")}
     {tarjetas_item([
-        ("libro", "Contabilidad para pymes y startups", "Registro, cierres y estados financieros bajo NIIF, parametrizados según tu actividad económica."),
+        ("libro", "Contabilidad bajo NIIF", "Registro, cierres y estados financieros bajo NIIF, parametrizados según tu actividad económica."),
         ("gente", "Gestión de nómina y liquidaciones", "Nómina electrónica, prestaciones, seguridad social y liquidaciones sin errores ni reprocesos."),
         ("documento", "Obligaciones ante la DIAN", "IVA, retención en la fuente, ICA, renta e información exógena dentro del calendario tributario."),
         ("lupa", "Auditorías internas", "Revisión de procesos y soportes para detectar riesgos antes de que lo haga una entidad de control."),
         ("grafico", "Reducción de costos", "Identificamos sobrecostos y fugas que la contabilidad registra pero nadie está leyendo."),
-        ("escudo", "Revisoría fiscal y análisis financiero", f'Dictamen independiente con nuestra <a href="revisoria-fiscal-{slug}.html">revisoría fiscal en {nombre}</a> y lectura financiera cuando tu empresa alcanza el tamaño que lo exige.'),
+        ("escudo", "Análisis financiero", "Lectura mensual de márgenes, flujo de caja y cartera para que decidas con cifras y no con intuición."),
     ])}
   </div>
 </section>
@@ -383,22 +493,9 @@ for c in CIUDADES:
   </div>
 </section>
 
-<section class="seccion claro">
-  {fijo(
-    encabezado("Gestión contable", f"Servicios de contabilidad para negocios en {nombre}",
-               "Cinco frentes de trabajo que cubrimos desde el primer mes.",
-               ancho="none", tam="var(--paso-4)"),
-    [
-        ("Revisión financiera estratégica", "Examinamos tus finanzas a fondo para identificar fugas de dinero, oportunidades de mejora y puntos ciegos. Todo enfocado en el ritmo y los retos de las startups."),
-        ("Optimización de procesos contables", "Corregimos errores frecuentes y rediseñamos tu contabilidad para que sea clara, eficiente y útil. Nos adaptamos a la realidad de las pymes y al entorno emprendedor."),
-        ("Planeación fiscal inteligente", "Creamos un plan tributario que se ajusta a la normativa y a las necesidades de tu empresa. Menos riesgos, más ahorro y cero improvisación."),
-        ("Capacitación en herramientas digitales", "Entrenamos a tu equipo en el uso de software contable y herramientas digitales que automatizan tareas y reducen errores."),
-        ("Acompañamiento contable constante", "No te dejamos solo. Agendamos reuniones periódicas para revisar tu contabilidad, hacer ajustes y tomar decisiones con información real."),
-    ]
-  )}
-</section>
-
 {marcas()}
+
+{resenas_google()}
 
 {proposito(
     f"¿Por qué elegir nuestro outsourcing contable en {nombre}?",
@@ -472,17 +569,13 @@ for c in CIUDADES:
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "AccountingService",
-                "name": f"Marín Ríos Consultores — Outsourcing contable en {nombre}",
-                "description": f"Servicio de outsourcing contable, revisoría fiscal y consultoría financiera para empresas en {nombre}, {depto}.",
+                "@type": "Service",
+                "name": f"Outsourcing contable en {nombre}",
+                "serviceType": "Outsourcing contable",
+                "description": f"Contabilidad, nómina, impuestos nacionales y municipales y estados financieros NIIF para empresas de {AREA_CIUDAD.get(slug, nombre)}.",
                 "url": f"https://marinriosconsultores.com/outsourcing-contable-{slug}/",
-                "telephone": "+57 314 884 3835",
-                "email": "j@marinriosconsultores.com",
-                "priceRange": "$$",
-                "parentOrganization": {"@id": "https://marinriosconsultores.com/#empresa"},
-                "address": {"@type": "PostalAddress", "addressLocality": nombre,
-                            "addressRegion": depto, "addressCountry": "CO"},
-                "areaServed": [{"@type": "City", "name": x} for x in c["locales"]],
+                "provider": {"@id": "https://marinriosconsultores.com/#empresa"},
+                "areaServed": [lugar(x, depto) for x in c["locales"]],
             },
             {
                 "@type": "FAQPage",
@@ -495,7 +588,7 @@ for c in CIUDADES:
 
     PAGINAS.append(dict(
         archivo=f"outsourcing-contable-{slug}.html",
-        titulo=f"Outsourcing Contable en {nombre} para Empresas | Marín Ríos",
+        titulo=LOCAL[slug]["titulo"],
         descripcion=f"Outsourcing contable en {AREA_CIUDAD.get(slug, nombre)}: contabilidad, nómina, impuestos ante la DIAN y estados financieros NIIF, con un equipo asignado a su empresa.",
         activo="",
         og_img=f"ciudad-{slug}.jpg",

@@ -213,7 +213,7 @@ faq_rev = [
 
 cuerpo = f"""
 {heroe(
-    "Empresas de revisoría fiscal en Colombia",
+    "Servicio de revisoría fiscal para empresas en Colombia",
     "Demuestra que tu información contable es fiable y libre de errores, con un dictamen independiente que da confianza a socios, bancos y entidades de control.",
     "reunion-duotono.jpg",
     "Revisores fiscales de Marín Ríos Consultores auditando estados financieros",
@@ -351,8 +351,8 @@ cuerpo = f"""
 
 PAGINAS.append(dict(
     archivo="revisoria-fiscal.html",
-    titulo="Revisoría Fiscal para Empresas en Colombia | Marín Ríos",
-    descripcion=f"Firma de revisoría fiscal en Medellín y Colombia. ¿Tu empresa está obligada en 2027? Dictamen independiente bajo NIA, informes útiles y propuesta a la medida.",
+    titulo="Servicio de Revisoría Fiscal para Empresas | Marín Ríos",
+    descripcion=f"Servicio de revisoría fiscal para empresas en Colombia: dictamen independiente bajo NIA, visitas durante el año e informes claros. ¿Tu empresa está obligada en 2027?",
     activo="servicios",
     og_img="reunion-duotono.jpg",
     schema=schema_servicio("Revisoría fiscal",

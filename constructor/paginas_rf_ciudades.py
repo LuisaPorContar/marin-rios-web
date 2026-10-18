@@ -9,7 +9,7 @@ import json
 from base import (ICO, wa, heroe, encabezado, fijo, acordeon, tarjetas_item,
                   cta_final, carrusel_clientes, resenas_google, ultimas_publicaciones)
 from paginas import PAGINAS
-from paginas2 import CIUDADES
+from paginas2 import CIUDADES, lugar
 
 TOPE_ACTIVOS = "$8.754.525.000"
 TOPE_INGRESOS = "$5.252.715.000"
@@ -213,16 +213,13 @@ for c in CIUDADES:
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "AccountingService",
-                "name": f"Marín Ríos Consultores — Revisoría fiscal en {nombre}",
+                "@type": "Service",
+                "name": f"Revisoría fiscal en {nombre}",
+                "serviceType": "Revisoría fiscal",
                 "description": f"Servicio de revisoría fiscal para sociedades, cooperativas y ESAL en {nombre}, {depto}.",
                 "url": f"https://marinriosconsultores.com/revisoria-fiscal-{slug}/",
-                "telephone": "+57 314 884 3835",
-                "email": "j@marinriosconsultores.com",
-                "parentOrganization": {"@id": "https://marinriosconsultores.com/#empresa"},
-                "address": {"@type": "PostalAddress", "addressLocality": nombre,
-                            "addressRegion": depto, "addressCountry": "CO"},
-                "areaServed": [{"@type": "City", "name": x} for x in c["locales"]],
+                "provider": {"@id": "https://marinriosconsultores.com/#empresa"},
+                "areaServed": [lugar(x, depto) for x in c["locales"]],
             },
             {
                 "@type": "FAQPage",
@@ -235,7 +232,9 @@ for c in CIUDADES:
 
     PAGINAS.append(dict(
         archivo=f"revisoria-fiscal-{slug}.html",
-        titulo=f"Revisoría Fiscal en {nombre} para Empresas | Marín Ríos",
+        titulo={"pereira": "Revisoría Fiscal en Pereira y Dosquebradas | Marín Ríos",
+                "armenia": "Revisoría Fiscal en Armenia, Quindío | Marín Ríos"}.get(
+            slug, f"Revisoría Fiscal en {nombre} para Empresas | Marín Ríos"),
         descripcion=f"Revisor fiscal en {nombre}, {depto}: topes 2027, dictamen bajo NIA, visitas presenciales e informes claros para socios, bancos y la DIAN.",
         activo="servicios",
         og_img=f"ciudad-{slug}.jpg",
