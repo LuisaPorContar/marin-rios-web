@@ -25,13 +25,14 @@ ErrorDocument 410 /404.html
 
   # ---------- Enlaces antiguos que quedaron rotos en el WordPress ----------
   RewriteRule ^contacto/?$ /contactenos/ [L,R=301]
-  RewriteRule ^costos-de-outsourcing-contable/?$ /precios-outsourcing-contable/ [L,R=301]
+  RewriteRule ^costos-de-outsourcing-contable/?$ /cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/ [L,R=301]
   # URLs del WordPress que Google todavía muestra (Search Console, oct. 2026)
   RewriteRule ^asesoria-integral-contable/?$ /outsourcing-contable/ [L,R=301]
   RewriteRule ^que-is-revisoria-fiscal/?$ /que-es-revisoria-fiscal/ [L,R=301]
   # Artículos fusionados para que cada búsqueda tenga una sola página (oct. 2026)
   RewriteRule ^ventajas-outsourcing-contable/?$ /que-es-outsourcing-contable/ [L,R=301]
   RewriteRule ^como-elegir-outsourcing-contable/?$ /como-contratar-un-servicio-de-outsourcing-contable/ [L,R=301]
+  RewriteRule ^precios-outsourcing-contable/?$ /cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/ [L,R=301]
   # Página retirada a propósito: 410 le dice a Google que no existe y que la saque del índice
   RewriteRule ^proyecto-ley-507/?$ - [G,L]
 
