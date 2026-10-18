@@ -380,7 +380,7 @@ LOCAL = {
             ("documento", "Servicios profesionales y consultoría", "Facturación por proyecto, contratistas, retenciones y pagos que hay que conciliar mes a mes para saber cuánto deja cada cliente."),
             ("grafico", "Tecnología y software", "Ingresos recurrentes, pagos a proveedores del exterior, IVA en servicios digitales y socios inversionistas que piden cifras confiables."),
             ("escudo", "Comercio y distribución", "Facturación electrónica de alto volumen, inventarios y cartera que deben cuadrar con bancos y pasarelas de pago."),
-            ("gente", "Sucursales y filiales extranjeras", "Contabilidad en Colombia bajo NIIF, reportes para la casa matriz e impuestos locales, con un equipo que responde en español y a tiempo."),
+            ("gente", "Sucursales y filiales extranjeras", 'Contabilidad en Colombia bajo NIIF, reportes para la casa matriz e impuestos locales. Vea qué exige la ley en <a href="outsourcing-contable-empresas-extranjeras.html">outsourcing contable para empresas extranjeras</a>.'),
         ],
         faq=[
             ("¿Cómo funciona el outsourcing contable virtual en Bogotá?",

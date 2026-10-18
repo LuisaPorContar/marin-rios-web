@@ -31425,5 +31425,1342 @@
     "respuesta": "En general sí, si tienen relación con su actividad, son necesarios y proporcionados, y están soportados con factura electrónica. Recuerde practicar la retención en la fuente que corresponda al pagarlos."
    }
   ]
+ },
+ {
+  "slug": "outsourcing-contable-empresas-extranjeras",
+  "titulo_seo": "Outsourcing contable para empresas extranjeras en Colombia",
+  "h1": "Outsourcing contable para sucursales y filiales de empresas extranjeras en Colombia",
+  "desc": "Contabilidad para sucursales y filiales de sociedades extranjeras en Colombia: libros, NIIF, revisor fiscal, renta, precios de transferencia y BanRep.",
+  "publicado": "2026-10-18",
+  "modificado": "2026-10-18",
+  "seccion": "Outsourcing contable",
+  "portada": "assets/img/blog/empresas-reforma-tributria-1024x683.jpg",
+  "toc": true,
+  "palabras": 2178,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "El outsourcing contable para empresas extranjeras en Colombia se ocupa de la sucursal o la filial que la sociedad extranjera tiene en el país, no de la casa matriz en el exterior. Esa sucursal debe llevar libros en español registrados en la cámara de comercio, tener revisor fiscal siempre y cumplir obligaciones ante la DIAN, el Banco de la República y la Superintendencia de Sociedades.",
+    "html": "<strong>El outsourcing contable para empresas extranjeras en Colombia se ocupa de la sucursal o la filial que la sociedad extranjera tiene en el país, no de la casa matriz en el exterior.</strong> Esa sucursal debe llevar libros en español registrados en la cámara de comercio, tener revisor fiscal siempre y cumplir obligaciones ante la DIAN, el Banco de la República y la Superintendencia de Sociedades."
+   },
+   {
+    "t": "p",
+    "texto": "Aquí verá las diferencias entre sucursal y filial, las obligaciones de una sucursal extranjera en Colombia, el régimen cambiario y los reportes a la Supersociedades. La información está actualizada al 18 de octubre de 2026."
+   },
+   {
+    "t": "img",
+    "src": "assets/img/blog/empresas-reforma-tributria-1024x683.jpg",
+    "alt": "Contabilidad de una sucursal de sociedad extranjera en Colombia"
+   },
+   {
+    "t": "h2",
+    "texto": "¿Sucursal o filial? Diferencias que cambian la contabilidad",
+    "ancla": "sucursal-o-filial-diferencias-que-cambian-la-contabilidad"
+   },
+   {
+    "t": "p",
+    "texto": "Una sociedad extranjera que emprende negocios permanentes en Colombia debe establecer una sucursal con domicilio en el país (art. 471 del Código de Comercio). Se consideran permanentes, entre otras, abrir oficinas aunque sean técnicas o de asesoría, ser contratista de obras o servicios y explotar concesiones del Estado (art. 474). La otra figura es la filial: una sociedad colombiana subordinada a la matriz extranjera."
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Aspecto"
+      },
+      {
+       "th": true,
+       "texto": "Sucursal de sociedad extranjera"
+      },
+      {
+       "th": true,
+       "texto": "Filial"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Naturaleza"
+      },
+      {
+       "th": false,
+       "texto": "Establecimiento de comercio de la sociedad extranjera, administrado por mandatarios (art. 263 C.Co.)"
+      },
+      {
+       "th": false,
+       "texto": "Sociedad colombiana subordinada a la matriz, con personería propia (art. 260 C.Co.)"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Responsabilidad"
+      },
+      {
+       "th": false,
+       "texto": "No es una persona jurídica distinta: la casa matriz responde por los negocios celebrados en Colombia (art. 485)"
+      },
+      {
+       "th": false,
+       "texto": "Es una persona jurídica distinta de la matriz"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Cómo se crea"
+      },
+      {
+       "th": false,
+       "texto": "Acto de establecimiento con negocios, capital asignado, domicilio, duración, mandatario general con suplentes y revisor fiscal (art. 472)"
+      },
+      {
+       "th": false,
+       "texto": "Como cualquier sociedad colombiana, por ejemplo una SAS con socio extranjero"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Revisor fiscal"
+      },
+      {
+       "th": false,
+       "texto": "Siempre (art. 203, num. 2)"
+      },
+      {
+       "th": false,
+       "texto": "SAS: según los topes de la Ley 43 de 1990 o sus estatutos. Sociedad anónima: siempre"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Régimen Simple"
+      },
+      {
+       "th": false,
+       "texto": "No puede optar"
+      },
+      {
+       "th": false,
+       "texto": "No puede optar"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Renta"
+      },
+      {
+       "th": false,
+       "texto": "35 %, como establecimiento permanente"
+      },
+      {
+       "th": false,
+       "texto": "35 %, como sociedad nacional"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Utilidades a la matriz"
+      },
+      {
+       "th": false,
+       "texto": "La transferencia de utilidades se considera dividendo (art. 30 ET)"
+      },
+      {
+       "th": false,
+       "texto": "Se distribuyen como dividendos"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Financiación desde la matriz"
+      },
+      {
+       "th": false,
+       "texto": "No se permite endeudamiento externo entre matriz y sucursal"
+      },
+      {
+       "th": false,
+       "texto": "Los anticipos para futuras capitalizaciones se tratan como endeudamiento externo"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué obligaciones contables tiene una sucursal extranjera?",
+    "ancla": "que-obligaciones-contables-tiene-una-sucursal-extranjera"
+   },
+   {
+    "t": "p",
+    "texto": "El art. 488 del Código de Comercio es la base de la contabilidad para sucursales de sociedades extranjeras: las sociedades extranjeras llevan la contabilidad de sus negocios en Colombia en libros registrados en la cámara de comercio de su domicilio, en español y conforme a las leyes nacionales, y envían a la Superintendencia y a la cámara copia de un balance general al menos al final de cada año. El texto está en el Código de Comercio publicado por el Senado.",
+    "html": "El art. 488 del Código de Comercio es la base de la contabilidad para sucursales de sociedades extranjeras: las sociedades extranjeras llevan la contabilidad de sus negocios en Colombia <strong>en libros registrados en la cámara de comercio de su domicilio, en español y conforme a las leyes nacionales</strong>, y envían a la Superintendencia y a la cámara copia de un balance general al menos al final de cada año. El texto está en el <a href=\"http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio_pr015.html\" target=\"_blank\" rel=\"noopener\">Código de Comercio publicado por el Senado</a>."
+   },
+   {
+    "t": "h3",
+    "texto": "¿Qué marco NIIF aplica: Grupo 1 o NIIF para pymes?",
+    "ancla": "que-marco-niif-aplica-grupo-1-o-niif-para-pymes"
+   },
+   {
+    "t": "p",
+    "texto": "Una sucursal o subordinada de compañía extranjera que aplique NIIF plenas pertenece al Grupo 1 cuando, además, tiene más de 200 trabajadores o activos totales superiores a 30.000 SMMLV (anexo del Decreto 2420 de 2015). Si no cumple las dos condiciones, aplica el Grupo 2 (NIIF para pymes) o el Grupo 3 (microempresas), según su tamaño. Si tiene dudas sobre su grupo, revise nuestra guía de NIIF para pymes en Colombia.",
+    "html": "Una sucursal o subordinada de compañía extranjera que aplique NIIF plenas pertenece al Grupo 1 cuando, además, tiene <strong>más de 200 trabajadores o activos totales superiores a 30.000 SMMLV</strong> (anexo del Decreto 2420 de 2015). Si no cumple las dos condiciones, aplica el Grupo 2 (NIIF para pymes) o el Grupo 3 (microempresas), según su tamaño. Si tiene dudas sobre su grupo, revise nuestra guía de <a href=\"niif-para-pymes-colombia.html\">NIIF para pymes en Colombia</a>."
+   },
+   {
+    "t": "h3",
+    "texto": "Moneda funcional y reportes al grupo",
+    "ancla": "moneda-funcional-y-reportes-al-grupo"
+   },
+   {
+    "t": "p",
+    "texto": "La NIC 21 distingue la moneda funcional, la del entorno económico principal en el que opera la entidad, de la moneda de presentación, en la que se muestran los estados financieros. Una sucursal puede operar en pesos y, aun así, reportar a su casa matriz en otra moneda; la conversión debe quedar documentada. En lo fiscal, las mediciones siguen los marcos contables salvo regla expresa del Estatuto Tributario (art. 21-1 ET). Además, los deberes de negocio en marcha del art. 4 de la Ley 2069 de 2020, como convocar al máximo órgano ante deterioro patrimonial, son exigibles a las sucursales."
+   },
+   {
+    "t": "h2",
+    "texto": "¿La sucursal necesita revisor fiscal? Sí, siempre",
+    "ancla": "la-sucursal-necesita-revisor-fiscal-si-siempre"
+   },
+   {
+    "t": "p",
+    "texto": "Toda sucursal de compañía extranjera debe tener revisor fiscal, sin importar su tamaño ni sus ingresos. Así lo dicen varias normas del Código de Comercio:",
+    "html": "<strong>Toda sucursal de compañía extranjera debe tener revisor fiscal, sin importar su tamaño ni sus ingresos.</strong> Así lo dicen varias normas del Código de Comercio:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Art. 203, num. 2: deberán tener revisor fiscal las sucursales de compañías extranjeras.",
+      "html": "<strong>Art. 203, num. 2:</strong> deberán tener revisor fiscal las sucursales de compañías extranjeras."
+     },
+     {
+      "texto": "Art. 204: en las sucursales lo designa el órgano competente según los estatutos.",
+      "html": "<strong>Art. 204:</strong> en las sucursales lo designa el órgano competente según los estatutos."
+     },
+     {
+      "texto": "Art. 472, num. 6: el acto de establecimiento debe designarlo, y debe ser una persona natural con residencia permanente en Colombia.",
+      "html": "<strong>Art. 472, num. 6:</strong> el acto de establecimiento debe designarlo, y debe ser una persona natural con residencia permanente en Colombia."
+     },
+     {
+      "texto": "Art. 489: se rige por las normas del Código para revisores fiscales y debe informar a la Superintendencia las irregularidades que puedan causar la suspensión o revocación del permiso.",
+      "html": "<strong>Art. 489:</strong> se rige por las normas del Código para revisores fiscales y debe informar a la Superintendencia las irregularidades que puedan causar la suspensión o revocación del permiso."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "En la filial la regla cambia. Si es una SAS, solo está obligada si alcanza los topes de la Ley 43 de 1990 (activos brutos de 5.000 SMMLV o más, o ingresos brutos de 3.000 SMMLV o más al cierre del año anterior), si una ley especial lo exige o si lo dicen sus estatutos, según el Concepto CTCP 385 de 2024. Si es sociedad anónima, siempre. Conozca nuestro servicio de revisoría fiscal para sucursales y sociedades obligadas.",
+    "html": "En la filial la regla cambia. Si es una SAS, solo está obligada si alcanza los topes de la Ley 43 de 1990 (activos brutos de 5.000 SMMLV o más, o ingresos brutos de 3.000 SMMLV o más al cierre del año anterior), si una ley especial lo exige o si lo dicen sus estatutos, según el Concepto CTCP 385 de 2024. Si es sociedad anónima, siempre. Conozca nuestro <a href=\"revisoria-fiscal.html\">servicio de revisoría fiscal</a> para sucursales y sociedades obligadas."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué impuestos paga una sucursal o filial extranjera?",
+    "ancla": "que-impuestos-paga-una-sucursal-o-filial-extranjera"
+   },
+   {
+    "t": "p",
+    "texto": "Las tarifas de esta sección corresponden a la Ley 2277 de 2022, salvo cambios legislativos posteriores."
+   },
+   {
+    "t": "h3",
+    "texto": "Renta: 35 %",
+    "ancla": "renta-35"
+   },
+   {
+    "t": "p",
+    "texto": "La tarifa general de renta es del 35 % para sociedades nacionales, establecimientos permanentes (incluidas las sucursales) y personas jurídicas extranjeras (art. 240 ET). Las instituciones financieras con renta gravable de 120.000 UVT o más ($6.284.880.000) pagan 5 puntos adicionales, es decir 40 %, en los años gravables 2023 a 2027. Si la sociedad extranjera tiene sede efectiva de administración en Colombia y además una sucursal, presenta una sola declaración consolidada por cada tributo (Decreto 2229 de 2023).",
+    "html": "La tarifa general de renta es del <strong>35 %</strong> para sociedades nacionales, establecimientos permanentes (incluidas las sucursales) y personas jurídicas extranjeras (art. 240 ET). Las instituciones financieras con renta gravable de 120.000 UVT o más ($6.284.880.000) pagan 5 puntos adicionales, es decir 40 %, en los años gravables 2023 a 2027. Si la sociedad extranjera tiene sede efectiva de administración en Colombia y además una sucursal, presenta una sola declaración consolidada por cada tributo (Decreto 2229 de 2023)."
+   },
+   {
+    "t": "h3",
+    "texto": "Remesa de utilidades a la casa matriz",
+    "ancla": "remesa-de-utilidades-a-la-casa-matriz"
+   },
+   {
+    "t": "p",
+    "texto": "El art. 30, num. 2, del Estatuto Tributario considera dividendo \"la transferencia de utilidades\" obtenidas a través de establecimientos permanentes o sucursales en Colombia a favor de empresas vinculadas en el exterior. Es decir, la remesa de la sucursal tributa como un dividendo."
+   },
+   {
+    "t": "p",
+    "texto": "La tarifa para sociedades extranjeras sin domicilio en Colombia es del 20 % (art. 245 ET), y se cobra por retención en la fuente. Si las utilidades no pagaron impuesto en cabeza de la sociedad (arts. 48 y 49 ET), primero se aplica el 35 % y después el 20 % sobre el remanente.",
+    "html": "La tarifa para sociedades extranjeras sin domicilio en Colombia es del <strong>20 %</strong> (art. 245 ET), y se cobra por retención en la fuente. Si las utilidades no pagaron impuesto en cabeza de la sociedad (arts. 48 y 49 ET), primero se aplica el 35 % y después el 20 % sobre el remanente."
+   },
+   {
+    "t": "h3",
+    "texto": "Precios de transferencia: topes en UVT y en pesos",
+    "ancla": "precios-de-transferencia-topes-en-uvt-y-en-pesos"
+   },
+   {
+    "t": "p",
+    "texto": "Están obligados los contribuyentes con operaciones con vinculados del exterior que tengan patrimonio bruto de 100.000 UVT o más al último día del año o ingresos brutos de 61.000 UVT o más en el año. Deben presentar la declaración informativa (art. 260-9 ET) y la documentación comprobatoria, con informe maestro e informe local (art. 260-5, num. 1).",
+    "html": "Están obligados los contribuyentes con operaciones con vinculados del exterior que tengan <strong>patrimonio bruto de 100.000 UVT o más</strong> al último día del año o <strong>ingresos brutos de 61.000 UVT o más</strong> en el año. Deben presentar la declaración informativa (art. 260-9 ET) y la documentación comprobatoria, con informe maestro e informe local (art. 260-5, num. 1)."
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Criterio"
+      },
+      {
+       "th": true,
+       "texto": "Tope en UVT"
+      },
+      {
+       "th": true,
+       "texto": "Año gravable 2026 (UVT $52.374)"
+      },
+      {
+       "th": true,
+       "texto": "Año gravable 2025 (UVT $49.799)"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Patrimonio bruto al 31 de diciembre"
+      },
+      {
+       "th": false,
+       "texto": "100.000 UVT"
+      },
+      {
+       "th": false,
+       "texto": "$5.237.400.000"
+      },
+      {
+       "th": false,
+       "texto": "$4.979.900.000"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Ingresos brutos del año"
+      },
+      {
+       "th": false,
+       "texto": "61.000 UVT"
+      },
+      {
+       "th": false,
+       "texto": "$3.194.814.000"
+      },
+      {
+       "th": false,
+       "texto": "$3.037.739.000"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Los grupos con ingresos consolidados de 81.000.000 UVT o más ($4.242.294.000.000) deben presentar, en ciertos supuestos, el informe país por país (art. 260-5, num. 2). En 2026, la declaración informativa y la documentación comprobatoria vencieron en septiembre según el último dígito del NIT; las fechas de 2027 aún no se han publicado."
+   },
+   {
+    "t": "h3",
+    "texto": "Retención en la fuente en pagos al exterior (art. 408 ET)",
+    "ancla": "retencion-en-la-fuente-en-pagos-al-exterior-art-408-et"
+   },
+   {
+    "t": "p",
+    "texto": "Los pagos a la casa matriz o a proveedores del exterior llevan retención. El art. 406 define quién retiene y el art. 408 fija las tarifas:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Pago al exterior"
+      },
+      {
+       "th": true,
+       "texto": "Tarifa"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Intereses, comisiones, honorarios, regalías, arrendamientos, servicios personales, know-how, prestación de servicios y software"
+      },
+      {
+       "th": false,
+       "texto": "20 %"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Consultoría, servicios técnicos y asistencia técnica, prestados en el país o desde el exterior"
+      },
+      {
+       "th": false,
+       "texto": "20 %"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Intereses de créditos a un año o más y leasing con extranjeros"
+      },
+      {
+       "th": false,
+       "texto": "15 %"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Leasing de naves y aeronaves, y reaseguros"
+      },
+      {
+       "th": false,
+       "texto": "1 %"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Créditos a ocho años o más para infraestructura en proyectos APP"
+      },
+      {
+       "th": false,
+       "texto": "5 %"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Servicios de administración o dirección (art. 124 ET)"
+      },
+      {
+       "th": false,
+       "texto": "33 %"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Pagos a no residentes con presencia económica significativa"
+      },
+      {
+       "th": false,
+       "texto": "10 %"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Pagos a jurisdicciones no cooperantes o de baja imposición"
+      },
+      {
+       "th": false,
+       "texto": "35 % (tarifa general)"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Si hay un convenio para evitar la doble imposición con el país del beneficiario, la tarifa puede ser menor; revise el convenio antes de pagar."
+   },
+   {
+    "t": "h3",
+    "texto": "IVA de servicios del exterior",
+    "ancla": "iva-de-servicios-del-exterior"
+   },
+   {
+    "t": "p",
+    "texto": "Los servicios prestados y los intangibles adquiridos desde el exterior se entienden prestados en Colombia, y causan IVA, cuando el usuario tiene residencia, domicilio, establecimiento permanente o sede en el país (art. 420 ET). Si la sucursal o la filial es responsable de IVA, retiene el 100 % del IVA al contratar esos servicios (arts. 437-1 y 437-2 ET), con la tarifa general del 19 %. Los prestadores de servicios digitales desde el exterior declaran el IVA directamente (art. 437, par. 2).",
+    "html": "Los servicios prestados y los intangibles adquiridos desde el exterior se entienden prestados en Colombia, y causan IVA, cuando el usuario tiene residencia, domicilio, establecimiento permanente o sede en el país (art. 420 ET). Si la sucursal o la filial es responsable de IVA, <strong>retiene el 100 % del IVA</strong> al contratar esos servicios (arts. 437-1 y 437-2 ET), con la tarifa general del 19 %. Los prestadores de servicios digitales desde el exterior declaran el IVA directamente (art. 437, par. 2)."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué obligaciones cambiarias tiene ante el Banco de la República?",
+    "ancla": "que-obligaciones-cambiarias-tiene-ante-el-banco-de-la-republ"
+   },
+   {
+    "t": "p",
+    "texto": "El régimen de inversiones internacionales está en el Decreto 1068 de 2015, modificado por el Decreto 119 de 2017 y el Decreto 1044 de 2026; en la Resolución Externa 1 de 2018 de la Junta Directiva, y en la Circular Reglamentaria Externa DCIP-83 (la antigua DCIN-83), capítulo 7. El compendio del capítulo 7 del Banco de la República reúne las reglas vigentes. Lo esencial para una sucursal o filial:",
+    "html": "El régimen de inversiones internacionales está en el Decreto 1068 de 2015, modificado por el Decreto 119 de 2017 y el Decreto 1044 de 2026; en la Resolución Externa 1 de 2018 de la Junta Directiva, y en la Circular Reglamentaria Externa DCIP-83 (la antigua DCIN-83), capítulo 7. El <a href=\"https://www.banrep.gov.co/sites/default/files/reglamentacion/archivos/dcip-83-compendio-capitulo7.pdf\" target=\"_blank\" rel=\"noopener\">compendio del capítulo 7 del Banco de la República</a> reúne las reglas vigentes. Lo esencial para una sucursal o filial:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Registro automático: la inversión extranjera directa en divisas se registra automáticamente con la declaración de cambio cuando las divisas se canalizan por el mercado cambiario, a través de un intermediario o de una cuenta de compensación. La declaración de cambio hace las veces de registro.",
+      "html": "<strong>Registro automático:</strong> la inversión extranjera directa en divisas se registra automáticamente con la declaración de cambio cuando las divisas se canalizan por el mercado cambiario, a través de un intermediario o de una cuenta de compensación. La declaración de cambio hace las veces de registro."
+     },
+     {
+      "texto": "Inversión sin divisas: los aportes en especie, las capitalizaciones y las sustituciones se registran en el Sistema de Información Cambiaria con la Declaración de Registro de Inversiones Internacionales, antes Formulario 11.",
+      "html": "<strong>Inversión sin divisas:</strong> los aportes en especie, las capitalizaciones y las sustituciones se registran en el Sistema de Información Cambiaria con la Declaración de Registro de Inversiones Internacionales, antes Formulario 11."
+     },
+     {
+      "texto": "Capital asignado e ISCA: el capital asignado de una sucursal del régimen general se registra como inversión directa, y también la inversión suplementaria al capital asignado (ISCA).",
+      "html": "<strong>Capital asignado e ISCA:</strong> el capital asignado de una sucursal del régimen general se registra como inversión directa, y también la inversión suplementaria al capital asignado (ISCA)."
+     },
+     {
+      "texto": "Sin préstamos de la matriz a la sucursal: no se permite endeudamiento externo entre la casa matriz y su sucursal. Las divisas para enjugar pérdidas se canalizan como ISCA.",
+      "html": "<strong>Sin préstamos de la matriz a la sucursal:</strong> no se permite endeudamiento externo entre la casa matriz y su sucursal. Las divisas para enjugar pérdidas se canalizan como ISCA."
+     },
+     {
+      "texto": "Filiales: los anticipos para futuras capitalizaciones son endeudamiento externo y se reportan con el Informe de Crédito Externo antes del desembolso.",
+      "html": "<strong>Filiales:</strong> los anticipos para futuras capitalizaciones son endeudamiento externo y se reportan con el Informe de Crédito Externo antes del desembolso."
+     },
+     {
+      "texto": "Apoderado: el inversionista extranjero debe nombrar un apoderado en Colombia.",
+      "html": "<strong>Apoderado:</strong> el inversionista extranjero debe nombrar un apoderado en Colombia."
+     },
+     {
+      "texto": "Formulario 15: la conciliación patrimonial ya no se exige.",
+      "html": "<strong>Formulario 15:</strong> la conciliación patrimonial ya no se exige."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Cambio de 2026: el Decreto 1044 del 5 de agosto de 2026 eliminó el plazo de seis meses para registrar sustituciones (cambio de titular, destino o empresa receptora) y cancelaciones de inversión. Ahora se pueden registrar en cualquier momento. La DCIP-83 del 25 de agosto de 2026 ajustó el capítulo 7 a esa regla.",
+    "html": "<strong>Cambio de 2026:</strong> el Decreto 1044 del 5 de agosto de 2026 eliminó el plazo de seis meses para registrar sustituciones (cambio de titular, destino o empresa receptora) y cancelaciones de inversión. Ahora se pueden registrar en cualquier momento. La DCIP-83 del 25 de agosto de 2026 ajustó el capítulo 7 a esa regla."
+   },
+   {
+    "t": "p",
+    "texto": "Si su sucursal tenía a 10 de agosto de 2026 infracciones cambiarias pendientes, el Decreto Legislativo 1419 de 2026 permite pagar solo el 15 % de la sanción, hasta el 19 de noviembre de 2026. La DIAN interpreta que este alivio aplica en todo el país, aunque el texto del decreto habla de los municipios afectados por el sismo y la Corte Constitucional aún no se ha pronunciado. Lo explicamos en Decreto 1419: alivio de sanciones DIAN.",
+    "html": "Si su sucursal tenía a 10 de agosto de 2026 infracciones cambiarias pendientes, el Decreto Legislativo 1419 de 2026 permite pagar solo el 15 % de la sanción, hasta el 19 de noviembre de 2026. La DIAN interpreta que este alivio aplica en todo el país, aunque el texto del decreto habla de los municipios afectados por el sismo y la Corte Constitucional aún no se ha pronunciado. Lo explicamos en <a href=\"decreto-1419-alivio-sanciones-dian.html\">Decreto 1419: alivio de sanciones DIAN</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Supersociedades: ¿reporte directo o depósito en cámara?",
+    "ancla": "supersociedades-reporte-directo-o-deposito-en-camara"
+   },
+   {
+    "t": "p",
+    "texto": "Además del balance anual que exige el art. 488 del Código de Comercio, la forma de entregar los estados financieros depende de la situación de la sucursal ante la Superintendencia de Sociedades, según el Oficio 220-306219 de 2026 citado por el INCP:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Situación de la sucursal"
+      },
+      {
+       "th": true,
+       "texto": "Qué debe hacer"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "En inspección y no requerida por la Supersociedades"
+      },
+      {
+       "th": false,
+       "texto": "Depositar en la cámara de comercio sus estados financieros de propósito general, con notas y dictamen, dentro del mes siguiente a su aprobación, en español y sin costo (art. 41 de la Ley 222 de 1995)"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Requerida expresamente, vigilada o controlada"
+      },
+      {
+       "th": false,
+       "texto": "Enviar sus estados financieros anuales directamente a la Supersociedades; no aplica el depósito en cámara"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Las fechas de envío de los estados financieros de 2026 aún no se han publicado. La filial, como sociedad colombiana, cumple sus propias obligaciones según su situación ante la Supersociedades; conviene revisarlas caso por caso."
+   },
+   {
+    "t": "h2",
+    "texto": "Reportes a la casa matriz",
+    "ancla": "reportes-a-la-casa-matriz"
+   },
+   {
+    "t": "p",
+    "texto": "La sucursal o la filial también responde a su grupo. El outsourcing debe preparar la información local para que la matriz la consolide sin reprocesos:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Paquete de reporte mensual con los estados financieros y las cifras en el formato que define el grupo.",
+      "html": "<strong>Paquete de reporte mensual</strong> con los estados financieros y las cifras en el formato que define el grupo."
+     },
+     {
+      "texto": "Conciliación de saldos entre compañías, para que las cuentas con la matriz y las demás vinculadas cuadren en ambos lados.",
+      "html": "<strong>Conciliación de saldos entre compañías</strong>, para que las cuentas con la matriz y las demás vinculadas cuadren en ambos lados."
+     },
+     {
+      "texto": "Explicación de diferencias entre las políticas locales y las del grupo, y entre la utilidad contable y la fiscal.",
+      "html": "<strong>Explicación de diferencias</strong> entre las políticas locales y las del grupo, y entre la utilidad contable y la fiscal."
+     },
+     {
+      "texto": "Calendario de cierre alineado con las fechas de consolidación del grupo.",
+      "html": "<strong>Calendario de cierre</strong> alineado con las fechas de consolidación del grupo."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Para el cierre anual, el momento más exigente, conozca nuestra asesoría de cierre contable.",
+    "html": "Para el cierre anual, el momento más exigente, conozca nuestra <a href=\"asesoria-cierre-contable.html\">asesoría de cierre contable</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué debe hacer su empresa?",
+    "ancla": "que-debe-hacer-su-empresa"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Confirme la figura: si opera como sucursal o como filial, y qué obligaciones se derivan de cada una.",
+      "html": "<strong>Confirme la figura:</strong> si opera como sucursal o como filial, y qué obligaciones se derivan de cada una."
+     },
+     {
+      "texto": "Verifique los libros: que estén registrados en la cámara de comercio, en español y bajo el marco NIIF que corresponde.",
+      "html": "<strong>Verifique los libros:</strong> que estén registrados en la cámara de comercio, en español y bajo el marco NIIF que corresponde."
+     },
+     {
+      "texto": "Asegure el revisor fiscal de la sucursal, designado según el acto de establecimiento y los estatutos.",
+      "html": "<strong>Asegure el revisor fiscal</strong> de la sucursal, designado según el acto de establecimiento y los estatutos."
+     },
+     {
+      "texto": "Revise los topes de precios de transferencia con las cifras del año gravable 2026.",
+      "html": "<strong>Revise los topes de precios de transferencia</strong> con las cifras del año gravable 2026."
+     },
+     {
+      "texto": "Documente los pagos al exterior: retención del art. 408, IVA de servicios del exterior y convenios aplicables.",
+      "html": "<strong>Documente los pagos al exterior:</strong> retención del art. 408, IVA de servicios del exterior y convenios aplicables."
+     },
+     {
+      "texto": "Ordene el registro cambiario de la inversión y de sus cambios, ahora sin el plazo de seis meses.",
+      "html": "<strong>Ordene el registro cambiario</strong> de la inversión y de sus cambios, ahora sin el plazo de seis meses."
+     },
+     {
+      "texto": "Defina cómo reporta a la Supersociedades: depósito en cámara o envío directo.",
+      "html": "<strong>Defina cómo reporta a la Supersociedades:</strong> depósito en cámara o envío directo."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "En Marín Ríos Consultores atendemos únicamente empresas en Colombia, incluidas sucursales y filiales de sociedades extranjeras. Trabajamos desde nuestra sede en Medellín, con visitas programadas en Pereira, Armenia y Manizales. Si su sucursal o filial está en la capital, la atendemos de forma 100 % virtual con nuestro outsourcing contable en Bogotá, igual que en el resto del país.",
+    "html": "En Marín Ríos Consultores atendemos únicamente empresas en Colombia, incluidas sucursales y filiales de sociedades extranjeras. Trabajamos desde nuestra sede en Medellín, con visitas programadas en Pereira, Armenia y Manizales. Si su sucursal o filial está en la capital, la atendemos de forma 100 % virtual con nuestro <a href=\"outsourcing-contable-bogota.html\">outsourcing contable en Bogotá</a>, igual que en el resto del país."
+   },
+   {
+    "t": "p",
+    "texto": "Nuestro outsourcing contable va desde 2 SMMLV al mes, que equivalen a $3.501.810 con el salario mínimo 2026 de $1.750.905, hoy sostenido por un decreto transitorio. Ese valor es solo para el outsourcing; la revisoría fiscal se cotiza aparte. Pida su cotización de outsourcing contable o, para el revisor fiscal de la sucursal, su cotización de revisoría fiscal.",
+    "html": "Nuestro <a href=\"outsourcing-contable.html\">outsourcing contable</a> va <strong>desde 2 SMMLV al mes</strong>, que equivalen a $3.501.810 con el salario mínimo 2026 de $1.750.905, hoy sostenido por un decreto transitorio. Ese valor es solo para el outsourcing; la revisoría fiscal se cotiza aparte. Pida su <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a> o, para el revisor fiscal de la sucursal, su <a href=\"cotizacion-revisoria-fiscal.html\">cotización de revisoría fiscal</a>."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Ustedes llevan la contabilidad de la casa matriz en el exterior?",
+    "respuesta": "No. Solo trabajamos con empresas en Colombia: llevamos la contabilidad de la sucursal o la filial colombiana y preparamos la información que la matriz necesita para consolidar."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Una sucursal de sociedad extranjera debe tener revisor fiscal aunque sea pequeña?",
+    "respuesta": "Sí. El art. 203, num. 2, del Código de Comercio obliga a toda sucursal de compañía extranjera a tener revisor fiscal, sin importar sus activos ni sus ingresos."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué tarifa de renta paga una sucursal extranjera en Colombia?",
+    "respuesta": "La tarifa general del 35 % (art. 240 ET), salvo cambios legislativos posteriores. Cuando transfiere utilidades a la casa matriz, esa transferencia se considera dividendo y tiene una tarifa del 20 % para sociedades extranjeras sin domicilio en Colombia."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuándo está obligada una sucursal o filial a precios de transferencia?",
+    "respuesta": "Cuando tiene operaciones con vinculados del exterior y su patrimonio bruto es de 100.000 UVT o más, o sus ingresos brutos son de 61.000 UVT o más. Para el año gravable 2026 equivalen a $5.237.400.000 y $3.194.814.000.",
+    "html": "<p>Cuando tiene operaciones con vinculados del exterior y su patrimonio bruto es de 100.000 UVT o más, o sus ingresos brutos son de 61.000 UVT o más. Para el año gravable 2026 equivalen a <strong>$5.237.400.000</strong> y <strong>$3.194.814.000</strong>.</p>"
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cómo se registra la inversión extranjera ante el Banco de la República?",
+    "respuesta": "Si llega en divisas por el mercado cambiario, el registro es automático con la declaración de cambio. Si no hay divisas, como en aportes en especie, se registra en el Sistema de Información Cambiaria con la Declaración de Registro de Inversiones Internacionales."
+   }
+  ]
+ },
+ {
+  "slug": "outsourcing-contable-empresas-nuevas",
+  "titulo_seo": "Outsourcing contable para empresas nuevas y startups",
+  "h1": "Outsourcing contable para empresas nuevas y startups en Colombia: qué cumplir el primer año",
+  "desc": "Outsourcing contable para empresas nuevas y startups en Colombia: obligaciones del primer año, Régimen Simple, revisor fiscal y cómo elegir proveedor.",
+  "publicado": "2026-10-18",
+  "modificado": "2026-10-18",
+  "seccion": "Outsourcing contable",
+  "portada": "assets/img/blog/marin-rios-blogs-1024x1024.jpg",
+  "toc": true,
+  "palabras": 1976,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "Conviene tercerizar la contabilidad desde el día uno si su empresa va a facturar, contratar personal o pagar proveedores en sus primeros meses. Desde la primera factura necesita estar habilitada en facturación electrónica y, desde el primer pago sujeto a retención, ya es agente de retención. Un outsourcing contable para empresas nuevas pone todo eso en orden desde el inicio, sin montar un área contable propia.",
+    "html": "<strong>Conviene tercerizar la contabilidad desde el día uno si su empresa va a facturar, contratar personal o pagar proveedores en sus primeros meses.</strong> Desde la primera factura necesita estar habilitada en facturación electrónica y, desde el primer pago sujeto a retención, ya es agente de retención. Un outsourcing contable para empresas nuevas pone todo eso en orden desde el inicio, sin montar un área contable propia."
+   },
+   {
+    "t": "p",
+    "texto": "En esta guía de contabilidad para startups en Colombia encontrará las obligaciones del primer año, cómo elegir entre el Régimen Simple y el ordinario, qué beneficios siguen vigentes, cuándo necesita revisor fiscal y cómo elegir proveedor. La información está actualizada al 18 de octubre de 2026."
+   },
+   {
+    "t": "img",
+    "src": "assets/img/blog/marin-rios-blogs-1024x1024.jpg",
+    "alt": "Equipo contable revisando las obligaciones del primer año de una empresa nueva en Colombia"
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué obligaciones tiene una empresa nueva en su primer año?",
+    "ancla": "que-obligaciones-tiene-una-empresa-nueva-en-su-primer-ano"
+   },
+   {
+    "t": "p",
+    "texto": "Toda sociedad comercial es comerciante y, como tal, debe matricularse en el registro mercantil, llevar contabilidad regular y conservar sus documentos (art. 19 del Código de Comercio). A eso se suman las obligaciones tributarias que se activan con la primera venta, el primer pago o el primer empleado. Esta es la lista básica para una SAS constituida en 2026:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Obligación"
+      },
+      {
+       "th": true,
+       "texto": "Cuándo se activa"
+      },
+      {
+       "th": true,
+       "texto": "Qué tener en cuenta"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "RUT"
+      },
+      {
+       "th": false,
+       "texto": "Al constituir la sociedad"
+      },
+      {
+       "th": false,
+       "texto": "Las responsabilidades registradas (IVA, retención, Régimen Simple) definen qué debe declarar."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Matrícula mercantil"
+      },
+      {
+       "th": false,
+       "texto": "Al constituir la sociedad"
+      },
+      {
+       "th": false,
+       "texto": "Se renueva dentro de los tres primeros meses de cada año (art. 33 C.Co.). Para una sociedad de 2026, la primera vence el 31 de marzo de 2027."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Contabilidad"
+      },
+      {
+       "th": false,
+       "texto": "Desde el primer día"
+      },
+      {
+       "th": false,
+       "texto": "Obligatoria para todo comerciante (art. 19 C.Co.), con el marco NIIF que le corresponda por tamaño."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Facturación electrónica"
+      },
+      {
+       "th": false,
+       "texto": "Antes de la primera factura"
+      },
+      {
+       "th": false,
+       "texto": "Debe habilitarse ante la DIAN antes de vender; la fecha de inicio no se puede cambiar."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Nómina electrónica"
+      },
+      {
+       "th": false,
+       "texto": "Con el primer pago de nómina"
+      },
+      {
+       "th": false,
+       "texto": "Se transmite dentro de los 10 primeros días del mes siguiente al pago."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Retención en la fuente"
+      },
+      {
+       "th": false,
+       "texto": "Con el primer pago sujeto a retención"
+      },
+      {
+       "th": false,
+       "texto": "Una persona jurídica es agente sin tope de ingresos (art. 368 ET). Se declara cada mes."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "IVA"
+      },
+      {
+       "th": false,
+       "texto": "Con la primera venta gravada"
+      },
+      {
+       "th": false,
+       "texto": "Una SAS que vende bienes o servicios gravados es responsable. Tarifa general: 19 %."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Información exógena"
+      },
+      {
+       "th": false,
+       "texto": "En 2027, por el año 2026"
+      },
+      {
+       "th": false,
+       "texto": "Obligatoria si practicó retenciones, sin importar sus ingresos."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Primera declaración de renta"
+      },
+      {
+       "th": false,
+       "texto": "Mayo de 2027"
+      },
+      {
+       "th": false,
+       "texto": "Se declara el año gravable 2026 entre el 7.º y el 16.º día hábil de mayo, según el NIT."
+      }
+     ]
+    ]
+   },
+   {
+    "t": "h3",
+    "texto": "Facturación y nómina electrónica: antes de la primera operación",
+    "ancla": "facturacion-y-nomina-electronica-antes-de-la-primera-operaci"
+   },
+   {
+    "t": "p",
+    "texto": "La habilitación como facturador electrónico \"requiere ser realizada previo a la expedición\" de la factura, según la Resolución Única DIAN 227 de 2025, y la fecha de inicio que registre no se puede modificar después. En la práctica, su empresa debe quedar habilitada antes de la primera venta. Están obligados, entre otros, los responsables de IVA y del impuesto al consumo, los comerciantes y los inscritos en el Régimen Simple."
+   },
+   {
+    "t": "p",
+    "texto": "Con la nómina pasa algo parecido: desde el primer pago a empleados, la nómina electrónica se transmite cada mes y es el soporte de costos y deducciones. El paso a paso está en nuestra guía de nómina electrónica para empresas.",
+    "html": "Con la nómina pasa algo parecido: desde el primer pago a empleados, la nómina electrónica se transmite cada mes y es el soporte de costos y deducciones. El paso a paso está en nuestra guía de <a href=\"nomina-electronica-colombia.html\">nómina electrónica para empresas</a>."
+   },
+   {
+    "t": "h3",
+    "texto": "Retención en la fuente desde el primer pago",
+    "ancla": "retencion-en-la-fuente-desde-el-primer-pago"
+   },
+   {
+    "t": "p",
+    "texto": "Una empresa nueva no espera a crecer para retener: el art. 368 del Estatuto Tributario hace agentes de retención a las personas jurídicas, sin tope de ingresos. Si su SAS paga honorarios, servicios o arriendos por encima de las bases mínimas, debe retener, declarar en el formulario 350 y pagar cada mes. Las bases y tarifas vigentes están en la tabla de retención en la fuente 2026.",
+    "html": "Una empresa nueva no espera a crecer para retener: el art. 368 del Estatuto Tributario hace agentes de retención a las personas jurídicas, sin tope de ingresos. Si su SAS paga honorarios, servicios o arriendos por encima de las bases mínimas, debe retener, declarar en el formulario 350 y pagar cada mes. Las bases y tarifas vigentes están en la <a href=\"que-es-la-retencion-en-la-fuente.html\">tabla de retención en la fuente 2026</a>."
+   },
+   {
+    "t": "p",
+    "texto": "Un detalle que sorprende a las startups: si la empresa es responsable de IVA y contrata servicios gravados con un proveedor no residente, también es agente de retención de IVA y debe retener el 100 % del impuesto."
+   },
+   {
+    "t": "h3",
+    "texto": "Primera renta e información exógena",
+    "ancla": "primera-renta-e-informacion-exogena"
+   },
+   {
+    "t": "p",
+    "texto": "La tarifa general de renta para sociedades es del 35 % (art. 240 ET), salvo cambios legislativos posteriores. Para la primera declaración, la DIAN aún no ha publicado el calendario 2027. Con la regla del Decreto 2229 de 2023, que fija los plazos en días hábiles, las fechas estimadas para personas jurídicas son del 12 al 25 de mayo de 2027 para la declaración y la primera cuota, y del 12 al 26 de julio de 2027 para la segunda cuota. Lo que se sabe del calendario está en calendario tributario 2027: qué se sabe.",
+    "html": "La tarifa general de renta para sociedades es del 35 % (art. 240 ET), salvo cambios legislativos posteriores. Para la primera declaración, la DIAN aún no ha publicado el calendario 2027. Con la regla del Decreto 2229 de 2023, que fija los plazos en días hábiles, las fechas estimadas para personas jurídicas son del 12 al 25 de mayo de 2027 para la declaración y la primera cuota, y del 12 al 26 de julio de 2027 para la segunda cuota. Lo que se sabe del calendario está en <a href=\"calendario-tributario-2027.html\">calendario tributario 2027: qué se sabe</a>."
+   },
+   {
+    "t": "p",
+    "texto": "La exógena es la obligación que más se olvida. La presentan todos los que practicaron retenciones en el año, sin importar sus ingresos, y las personas jurídicas con ingresos brutos superiores a 2.400 UVT; una SAS que retuvo en 2026 reporta en 2027. Por la regla permanente de la Resolución 227 de 2025, las personas jurídicas presentan entre el 9.º día hábil de mayo y el 9.º día hábil de junio; las fechas exactas de 2027 están por confirmar."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Régimen Simple o régimen ordinario para una empresa nueva?",
+    "ancla": "regimen-simple-o-regimen-ordinario-para-una-empresa-nueva"
+   },
+   {
+    "t": "p",
+    "texto": "El Régimen Simple de Tributación (SIMPLE) funciona con tarifas consolidadas y anticipos bimestrales, e integra el ICA del municipio como \"ICA consolidado\". Para una empresa nueva puede ser atractivo, pero no todas pueden entrar. Estas son las condiciones principales:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Socios: pueden optar las personas jurídicas cuyos socios sean personas naturales residentes en Colombia (art. 905 ET).",
+      "html": "<strong>Socios:</strong> pueden optar las personas jurídicas cuyos socios sean personas naturales residentes en Colombia (art. 905 ET)."
+     },
+     {
+      "texto": "Tope de ingresos: ingresos brutos del año anterior inferiores a 100.000 UVT, es decir, $5.237.400.000 con la UVT 2026. En una empresa nueva, la inscripción queda condicionada a que los ingresos del año no superen ese tope. Se suman los ingresos de otras empresas del socio y de las que administra.",
+      "html": "<strong>Tope de ingresos:</strong> ingresos brutos del año anterior inferiores a 100.000 UVT, es decir, $5.237.400.000 con la UVT 2026. En una empresa nueva, la inscripción queda condicionada a que los ingresos del año no superen ese tope. Se suman los ingresos de otras empresas del socio y de las que administra."
+     },
+     {
+      "texto": "Requisitos formales: RUT, firma electrónica y factura electrónica.",
+      "html": "<strong>Requisitos formales:</strong> RUT, firma electrónica y factura electrónica."
+     },
+     {
+      "texto": "Exclusiones relevantes para startups: filiales, subsidiarias, agencias y sucursales de sociedades nacionales o extranjeras; sociedades que son socias de otras sociedades; entidades financieras; factoring; asesoría financiera; empresas con ingresos pasivos de 20 % o más, y sociedades que resultan de una escisión en los últimos cinco años (art. 906 ET).",
+      "html": "<strong>Exclusiones relevantes para startups:</strong> filiales, subsidiarias, agencias y sucursales de sociedades nacionales o extranjeras; sociedades que son socias de otras sociedades; entidades financieras; factoring; asesoría financiera; empresas con ingresos pasivos de 20 % o más, y sociedades que resultan de una escisión en los últimos cinco años (art. 906 ET)."
+     },
+     {
+      "texto": "Profesiones liberales: sí pueden inscribirse, con el mismo tope de 100.000 UVT, porque la Sentencia C-540 de 2023 tumbó la restricción de la Ley 2277 de 2022. Sus tarifas consolidadas van del 5,9 % al 14,5 % según los ingresos.",
+      "html": "<strong>Profesiones liberales:</strong> sí pueden inscribirse, con el mismo tope de 100.000 UVT, porque la Sentencia C-540 de 2023 tumbó la restricción de la Ley 2277 de 2022. Sus tarifas consolidadas van del 5,9 % al 14,5 % según los ingresos."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Ojo si su startup recibe inversión: un fondo, una sociedad holding o un socio extranjero no residente dejan a la empresa por fuera del SIMPLE, porque ya no todos sus socios son personas naturales residentes."
+   },
+   {
+    "t": "p",
+    "texto": "Sobre los plazos, la regla es esta. Una empresa nueva se puede inscribir en cualquier momento si marca la opción en la inscripción inicial del RUT. Si ya tiene RUT, para el año gravable 2027 debe inscribirse a más tardar el viernes 26 de febrero de 2027, último día hábil de febrero (art. 909 ET). Quien quiera volver al régimen ordinario puede hacerlo antes del último día hábil de enero del año gravable siguiente. Los anticipos bimestrales se pagan con el recibo electrónico SIMPLE, que discrimina los ingresos por municipio."
+   },
+   {
+    "t": "p",
+    "texto": "La decisión depende de su margen, de sus costos y de quiénes son sus socios. En Régimen Simple o régimen ordinario: cuál le conviene comparamos los dos con ejemplos.",
+    "html": "La decisión depende de su margen, de sus costos y de quiénes son sus socios. En <a href=\"regimen-simple-o-regimen-ordinario.html\">Régimen Simple o régimen ordinario: cuál le conviene</a> comparamos los dos con ejemplos."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué beneficios para emprendedores siguen vigentes en 2026?",
+    "ancla": "que-beneficios-para-emprendedores-siguen-vigentes-en-2026"
+   },
+   {
+    "t": "p",
+    "texto": "Primero, lo que ya no existe. La progresividad de la Ley 1429 de 2010 no está disponible para empresas nuevas. La progresividad en renta (art. 4) fue derogada por el art. 376 de la Ley 1819 de 2016, y la progresividad en parafiscales (art. 5) y en matrícula mercantil (art. 7) solo rigió hasta el 31 de diciembre de 2014. Si alguien le promete esos descuentos, desconfíe.",
+    "html": "Primero, lo que ya no existe. <strong>La progresividad de la Ley 1429 de 2010 no está disponible para empresas nuevas.</strong> La progresividad en renta (art. 4) fue derogada por el art. 376 de la Ley 1819 de 2016, y la progresividad en parafiscales (art. 5) y en matrícula mercantil (art. 7) solo rigió hasta el 31 de diciembre de 2014. Si alguien le promete esos descuentos, desconfíe."
+   },
+   {
+    "t": "p",
+    "texto": "Lo que sí sigue vigente está en la Ley 2069 de 2020:",
+    "html": "Lo que sí sigue vigente está en la <a href=\"https://normograma.dian.gov.co/dian/compilacion/docs/ley_2069_2020.htm\" target=\"_blank\" rel=\"noopener\">Ley 2069 de 2020</a>:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Beneficio (Ley 2069 de 2020)"
+      },
+      {
+       "th": true,
+       "texto": "A quién aplica"
+      },
+      {
+       "th": true,
+       "texto": "Qué significa"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Tarifas INVIMA (art. 2)"
+      },
+      {
+       "th": false,
+       "texto": "Mipymes"
+      },
+      {
+       "th": false,
+       "texto": "Tarifa diferenciada para mipymes. Las microempresas quedan exentas del pago de registros INVIMA, salvo que sean subordinadas de una gran empresa o parte de un grupo empresarial."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Impuesto departamental de registro (art. 3)"
+      },
+      {
+       "th": false,
+       "texto": "Microempresas"
+      },
+      {
+       "th": false,
+       "texto": "Tarifas menores: entre 0,1 % y 0,2 % en la constitución o la prima, y entre 0,3 % y 0,6 % en otros actos con cuantía. Prohíbe sobretasas."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Negocio en marcha (art. 4)"
+      },
+      {
+       "th": false,
+       "texto": "Sociedades y sucursales de sociedad extranjera"
+      },
+      {
+       "th": false,
+       "texto": "Reemplaza la causal de disolución por pérdidas por el deber de vigilar el negocio en marcha."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Convocatoria de reuniones (art. 6)"
+      },
+      {
+       "th": false,
+       "texto": "Socios"
+      },
+      {
+       "th": false,
+       "texto": "Basta el 10 % del capital para la convocatoria; antes se exigía el 25 %."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Compras públicas (arts. 30 a 36)"
+      },
+      {
+       "th": false,
+       "texto": "Mipymes y emprendimientos de mujeres"
+      },
+      {
+       "th": false,
+       "texto": "Procesos de mínima cuantía, criterios diferenciales y factores de desempate a su favor."
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Contabilidad simplificada (art. 8)"
+      },
+      {
+       "th": false,
+       "texto": "Microempresas"
+      },
+      {
+       "th": false,
+       "texto": "Faculta al Gobierno para autorizar contabilidad simplificada o de caja."
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Ninguno reduce la tarifa de renta: su valor está en trámites más baratos, contratación pública y reglas societarias más flexibles."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Necesita revisor fiscal una SAS nueva?",
+    "ancla": "necesita-revisor-fiscal-una-sas-nueva"
+   },
+   {
+    "t": "p",
+    "texto": "Por regla general, no en su arranque. Según el Concepto CTCP 385 de 2024, una SAS solo está obligada a tener revisor fiscal si alcanza los topes de la Ley 43 de 1990, si una ley especial lo exige o si sus estatutos lo prevén."
+   },
+   {
+    "t": "p",
+    "texto": "Los topes del art. 13 de la Ley 43 son activos brutos de 5.000 SMMLV o más, o ingresos brutos de 3.000 SMMLV o más, medidos al 31 de diciembre del año inmediatamente anterior. La obligación de cada año depende solo de las cifras de ese cierre. El concepto no trata expresamente el caso de una SAS recién constituida, pero sin un cierre anterior no hay cifras para medir los topes; revise de todos modos sus estatutos, porque a veces exigen revisor fiscal sin importar el tamaño. Si la sociedad es anónima y no SAS, el Código de Comercio la obliga siempre.",
+    "html": "Los topes del art. 13 de la Ley 43 son <strong>activos brutos de 5.000 SMMLV o más, o ingresos brutos de 3.000 SMMLV o más</strong>, medidos al 31 de diciembre del año inmediatamente anterior. La obligación de cada año depende solo de las cifras de ese cierre. El concepto no trata expresamente el caso de una SAS recién constituida, pero sin un cierre anterior no hay cifras para medir los topes; revise de todos modos sus estatutos, porque a veces exigen revisor fiscal sin importar el tamaño. Si la sociedad es anónima y no SAS, el Código de Comercio la obliga siempre."
+   },
+   {
+    "t": "p",
+    "texto": "Le explicamos cómo medir los topes en revisor fiscal en una SAS: topes 2026 y 2027.",
+    "html": "Le explicamos cómo medir los topes en <a href=\"revisor-fiscal-sas.html\">revisor fiscal en una SAS: topes 2026 y 2027</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué buscar en un proveedor de outsourcing contable para una startup?",
+    "ancla": "que-buscar-en-un-proveedor-de-outsourcing-contable-para-una"
+   },
+   {
+    "t": "p",
+    "texto": "Las empresas de outsourcing contable recomendadas para startups tienen algo en común: conocen las obligaciones de arranque y pueden crecer con la empresa. Antes de elegir, compare los tipos de proveedor:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Tipo de proveedor"
+      },
+      {
+       "th": true,
+       "texto": "Ventaja"
+      },
+      {
+       "th": true,
+       "texto": "Limitación"
+      },
+      {
+       "th": true,
+       "texto": "Cuándo encaja"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Contador independiente"
+      },
+      {
+       "th": false,
+       "texto": "Costo bajo y trato directo"
+      },
+      {
+       "th": false,
+       "texto": "Depende de una sola persona y de su disponibilidad"
+      },
+      {
+       "th": false,
+       "texto": "Operaciones muy pequeñas, sin nómina ni retenciones frecuentes"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Contador interno"
+      },
+      {
+       "th": false,
+       "texto": "Dedicación exclusiva"
+      },
+      {
+       "th": false,
+       "texto": "Salario, prestaciones, software y actualización a cargo de la empresa"
+      },
+      {
+       "th": false,
+       "texto": "Empresas con alto volumen de transacciones"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Solo software contable"
+      },
+      {
+       "th": false,
+       "texto": "Automatiza registros y facturación"
+      },
+      {
+       "th": false,
+       "texto": "Nadie interpreta la norma ni firma las declaraciones"
+      },
+      {
+       "th": false,
+       "texto": "Como herramienta, no como reemplazo del contador"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Firma de outsourcing contable"
+      },
+      {
+       "th": false,
+       "texto": "Equipo con revisión, cobertura de impuestos, nómina y reportes"
+      },
+      {
+       "th": false,
+       "texto": "Exige enviar soportes a tiempo y pactar el alcance por escrito"
+      },
+      {
+       "th": false,
+       "texto": "Startups que facturan, contratan y quieren información para decidir"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Al hablar con cada proveedor, pregunte por estos puntos:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Arranque incluido: si acompaña la habilitación de facturación y nómina electrónica, y la revisión del RUT.",
+      "html": "<strong>Arranque incluido:</strong> si acompaña la habilitación de facturación y nómina electrónica, y la revisión del RUT."
+     },
+     {
+      "texto": "Revisión: quién prepara, quién revisa y quién firma cada declaración.",
+      "html": "<strong>Revisión:</strong> quién prepara, quién revisa y quién firma cada declaración."
+     },
+     {
+      "texto": "Calendario: cómo le avisa de los vencimientos y qué pasa si usted envía tarde los soportes.",
+      "html": "<strong>Calendario:</strong> cómo le avisa de los vencimientos y qué pasa si usted envía tarde los soportes."
+     },
+     {
+      "texto": "Información para socios e inversionistas: estados financieros bajo NIIF, flujo de caja e informes mensuales que pueda mostrar en una ronda de inversión o a un banco.",
+      "html": "<strong>Información para socios e inversionistas:</strong> estados financieros bajo NIIF, flujo de caja e informes mensuales que pueda mostrar en una ronda de inversión o a un banco."
+     },
+     {
+      "texto": "Escalabilidad: si el servicio crece con su volumen sin obligarlo a cambiar de proveedor ni de software.",
+      "html": "<strong>Escalabilidad:</strong> si el servicio crece con su volumen sin obligarlo a cambiar de proveedor ni de software."
+     },
+     {
+      "texto": "Contrato: entregables, fechas, responsabilidades y plan de empalme por escrito.",
+      "html": "<strong>Contrato:</strong> entregables, fechas, responsabilidades y plan de empalme por escrito."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "La guía completa está en cómo contratar un outsourcing contable.",
+    "html": "La guía completa está en <a href=\"como-contratar-un-servicio-de-outsourcing-contable.html\">cómo contratar un outsourcing contable</a>."
+   },
+   {
+    "t": "blockquote",
+    "texto": "Si su empresa está arrancando, en Marín Ríos Consultores revisamos su RUT, sus responsabilidades y su calendario antes de proponerle un alcance. Conozca nuestro servicio de outsourcing contable para empresas.",
+    "html": "Si su empresa está arrancando, en Marín Ríos Consultores revisamos su RUT, sus responsabilidades y su calendario antes de proponerle un alcance. Conozca nuestro servicio de <a href=\"outsourcing-contable.html\">outsourcing contable para empresas</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Errores frecuentes del primer año",
+    "ancla": "errores-frecuentes-del-primer-ano"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Facturar antes de estar habilitado en facturación electrónica, o registrar una fecha de inicio que luego no se puede cambiar.",
+      "html": "<strong>Facturar antes de estar habilitado</strong> en facturación electrónica, o registrar una fecha de inicio que luego no se puede cambiar."
+     },
+     {
+      "texto": "No retener desde el primer pago por creer que la retención es solo para empresas grandes.",
+      "html": "<strong>No retener desde el primer pago</strong> por creer que la retención es solo para empresas grandes."
+     },
+     {
+      "texto": "Suponer que la SAS es no responsable de IVA. Esa figura es solo para personas naturales.",
+      "html": "<strong>Suponer que la SAS es no responsable de IVA.</strong> Esa figura es solo para personas naturales."
+     },
+     {
+      "texto": "Elegir el SIMPLE sin revisar los socios, o recibir inversión de una sociedad y seguir en el SIMPLE.",
+      "html": "<strong>Elegir el SIMPLE sin revisar los socios</strong>, o recibir inversión de una sociedad y seguir en el SIMPLE."
+     },
+     {
+      "texto": "Pagar software o servicios al exterior sin revisar retenciones: la retención de IVA es del 100 % y el pago puede tener retención en renta.",
+      "html": "<strong>Pagar software o servicios al exterior sin revisar retenciones</strong>: la retención de IVA es del 100 % y el pago puede tener retención en renta."
+     },
+     {
+      "texto": "Olvidar la exógena del primer año, aunque los ingresos hayan sido bajos.",
+      "html": "<strong>Olvidar la exógena</strong> del primer año, aunque los ingresos hayan sido bajos."
+     },
+     {
+      "texto": "Dejar pasar la renovación de la matrícula del 31 de marzo de 2027.",
+      "html": "<strong>Dejar pasar la renovación de la matrícula</strong> del 31 de marzo de 2027."
+     },
+     {
+      "texto": "Contar con la progresividad de la Ley 1429, que ya no está disponible.",
+      "html": "<strong>Contar con la progresividad de la Ley 1429</strong>, que ya no está disponible."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué debe hacer su empresa?",
+    "ancla": "que-debe-hacer-su-empresa"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Revise el RUT y confirme que las responsabilidades registradas coinciden con lo que va a hacer la empresa.",
+      "html": "<strong>Revise el RUT</strong> y confirme que las responsabilidades registradas coinciden con lo que va a hacer la empresa."
+     },
+     {
+      "texto": "Habilítese en facturación electrónica antes de la primera venta, con una fecha de inicio realista.",
+      "html": "<strong>Habilítese en facturación electrónica</strong> antes de la primera venta, con una fecha de inicio realista."
+     },
+     {
+      "texto": "Defina el régimen: si cumple los requisitos del SIMPLE y le conviene, márquelo en la inscripción del RUT o inscríbase hasta el 26 de febrero de 2027.",
+      "html": "<strong>Defina el régimen:</strong> si cumple los requisitos del SIMPLE y le conviene, márquelo en la inscripción del RUT o inscríbase hasta el 26 de febrero de 2027."
+     },
+     {
+      "texto": "Prepare la nómina electrónica antes del primer pago a empleados.",
+      "html": "<strong>Prepare la nómina electrónica</strong> antes del primer pago a empleados."
+     },
+     {
+      "texto": "Configure las retenciones en su software desde el primer pago a proveedores.",
+      "html": "<strong>Configure las retenciones</strong> en su software desde el primer pago a proveedores."
+     },
+     {
+      "texto": "Agende los vencimientos de 2027: renovación de la matrícula, exógena y primera renta.",
+      "html": "<strong>Agende los vencimientos de 2027:</strong> renovación de la matrícula, exógena y primera renta."
+     },
+     {
+      "texto": "Delegue lo que no quiere cargar: un outsourcing contable le permite dedicarse al producto y a las ventas.",
+      "html": "<strong>Delegue lo que no quiere cargar:</strong> un outsourcing contable le permite dedicarse al producto y a las ventas."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "En Marín Ríos Consultores trabajamos desde nuestra sede en Medellín, atendemos con visitas programadas a empresas de Pereira, Armenia y Manizales, y acompañamos de forma 100 % virtual a empresas de Bogotá y del resto de Colombia. Nuestros planes de outsourcing contable van desde 2 SMMLV al mes, que equivalen a $3.501.810 con el salario mínimo 2026 de $1.750.905, hoy sostenido por un decreto transitorio. Pida su cotización de outsourcing contable y le enviamos una propuesta por escrito según el tamaño de su operación.",
+    "html": "En Marín Ríos Consultores trabajamos desde nuestra sede en Medellín, atendemos con visitas programadas a empresas de Pereira, Armenia y Manizales, y acompañamos de forma 100 % virtual a empresas de Bogotá y del resto de Colombia. Nuestros planes de outsourcing contable van <strong>desde 2 SMMLV al mes</strong>, que equivalen a $3.501.810 con el salario mínimo 2026 de $1.750.905, hoy sostenido por un decreto transitorio. Pida su <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a> y le enviamos una propuesta por escrito según el tamaño de su operación."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Desde cuándo debe llevar contabilidad una empresa nueva?",
+    "respuesta": "Desde su constitución. El art. 19 del Código de Comercio obliga a todo comerciante a llevar contabilidad regular, y las sociedades comerciales lo son desde el primer día."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Una SAS nueva es responsable de IVA?",
+    "respuesta": "Sí, si vende bienes o servicios gravados. La figura de no responsable de IVA solo aplica a ciertas personas naturales que cumplen todos los requisitos del art. 437 del Estatuto Tributario."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Una startup con socios extranjeros puede estar en el Régimen Simple?",
+    "respuesta": "No, si alguno de sus socios no es persona natural residente en Colombia. Tampoco pueden optar las filiales o subsidiarias de otras sociedades, nacionales o extranjeras."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Siguen vigentes los beneficios de la Ley 1429 para empresas nuevas?",
+    "respuesta": "No. La progresividad en renta fue derogada en 2016 y la de parafiscales y matrícula mercantil solo rigió hasta el 31 de diciembre de 2014. Hoy los beneficios para emprendedores están en la Ley 2069 de 2020."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Cuánto cuesta el outsourcing contable para una empresa nueva?",
+    "respuesta": "En Marín Ríos Consultores los planes van desde 2 SMMLV al mes. El valor final depende del volumen de facturas, empleados y obligaciones; pida una cotización de outsourcing contable para recibir una propuesta por escrito.",
+    "html": "<p>En Marín Ríos Consultores los planes van <strong>desde 2 SMMLV al mes</strong>. El valor final depende del volumen de facturas, empleados y obligaciones; pida una <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a> para recibir una propuesta por escrito.</p>"
+   }
+  ]
  }
 ]

@@ -47,7 +47,8 @@ GUIAS_OUTSOURCING = [
     "que-es-outsourcing-contable", "cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable",
     "como-contratar-un-servicio-de-outsourcing-contable", "cambiar-contador-cuanto-cuesta",
     "calendario-tributario-actualizado", "exogena", "que-es-la-retencion-en-la-fuente",
-    "nomina-electronica-colombia",
+    "nomina-electronica-colombia", "outsourcing-contable-empresas-nuevas",
+    "outsourcing-contable-empresas-extranjeras",
 ]
 GUIAS_FINANZAS = [
     "flujo-caja-pymes-colombia", "presupuesto-empresarial", "fugas-financieras",
