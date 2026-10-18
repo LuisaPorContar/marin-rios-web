@@ -449,6 +449,19 @@ MUNICIPAL = {
                 "28 de diciembre: pago total del predial 2026."],
         enlaces=[("calendario-tributario-armenia-2026", "Calendario tributario de Armenia 2026")],
     ),
+    "bogota": dict(
+        titulo="ICA en Bogotá: lo que viene",
+        texto=("En Bogotá el calendario 2026 lo fija la Resolución SDH-000195 de 2025 de la Secretaría Distrital de "
+               "Hacienda. El ICA es bimestral si el impuesto a cargo del año anterior superó 391 UVT ($19.471.409) y "
+               "anual si no; la retención de ICA es bimestral. Hasta el 21 de diciembre de 2026 hay un alivio del 60 % "
+               "en intereses y sanciones de impuestos distritales, que no aplica a la retención de ICA."),
+        fechas=["20 de noviembre: retención de ICA del 5.º bimestre.",
+                "11 de diciembre: ICA bimestral del 5.º bimestre.",
+                "15 de enero de 2027: retención de ICA del 6.º bimestre.",
+                "26 de febrero de 2027: ICA anual del año gravable 2026."],
+        enlaces=[("calendario-tributario-actualizado", "Calendario tributario nacional 2026"),
+                 ("asesoria-cierre-contable", "Asesoría de cierre contable 2026")],
+    ),
     "manizales": dict(
         texto=("En Manizales el calendario lo fija la Resolución 280 de 2025, que la Resolución 279 de 2026 ajustó por "
                "el sismo. El ICA anual del año gravable 2025 se presentó entre el 4 de mayo y el 1 de junio según los "
