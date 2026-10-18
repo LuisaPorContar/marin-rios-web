@@ -7,6 +7,18 @@
 (function () {
   'use strict';
 
+  /* ---------- Ciudad ya elegida cuando se llega desde la página de una ciudad (?ciudad=pereira) ---------- */
+  (function () {
+    var sel = document.getElementById('lp-ciudad');
+    var q = new URLSearchParams(location.search).get('ciudad');
+    if (!sel || !q) return;
+    q = q.toLowerCase();
+    for (var i = 0; i < sel.options.length; i++) {
+      var v = sel.options[i].value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      if (v && v.indexOf(q) === 0) { sel.selectedIndex = i; break; }
+    }
+  })();
+
   /* ---------- Video con fachada: YouTube solo carga al hacer clic ---------- */
   document.querySelectorAll('.lp-video[data-video]').forEach(function (btn) {
     btn.addEventListener('click', function () {
