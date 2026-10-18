@@ -30330,6 +30330,473 @@
   ]
  },
  {
+  "slug": "que-es-outsourcing-contable",
+  "titulo_seo": "¿Qué es el outsourcing contable? Ventajas y cuándo conviene",
+  "h1": "¿Qué es el outsourcing contable y qué ventajas tiene para una pyme?",
+  "desc": "Qué es el outsourcing contable o tercerización contable, cómo funciona, sus beneficios para pymes, si incluye la nómina y cuándo conviene en Colombia.",
+  "publicado": "2024-02-15",
+  "modificado": "2026-10-18",
+  "seccion": "Outsourcing contable",
+  "portada": "assets/img/blog/marin-rios-blogs-1024x1024.jpg",
+  "toc": true,
+  "palabras": 1698,
+  "bloques": [
+   {
+    "t": "p",
+    "texto": "El outsourcing contable, o tercerización contable, es contratar a una firma externa para que lleve la contabilidad, los impuestos y la nómina de su empresa, en lugar de sostener un departamento contable propio. Para una pyme, su principal ventaja es contar con un equipo especializado y al día con la DIAN sin cargar con salarios, software y actualización permanente.",
+    "html": "<strong>El outsourcing contable, o tercerización contable, es contratar a una firma externa para que lleve la contabilidad, los impuestos y la nómina de su empresa</strong>, en lugar de sostener un departamento contable propio. Para una pyme, su principal ventaja es contar con un equipo especializado y al día con la DIAN sin cargar con salarios, software y actualización permanente."
+   },
+   {
+    "t": "p",
+    "texto": "En esta guía verá cómo funciona mes a mes, en qué se diferencia de un contador independiente o de un revisor fiscal, qué ventajas y qué riesgos tiene, y en qué casos conviene tercerizar la contabilidad."
+   },
+   {
+    "t": "img",
+    "src": "assets/img/blog/marin-rios-blogs-1024x1024.jpg",
+    "alt": "Equipo de outsourcing contable revisando los estados financieros de una pyme"
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué es el outsourcing contable?",
+    "ancla": "que-es-el-outsourcing-contable"
+   },
+   {
+    "t": "p",
+    "texto": "El outsourcing contable, también llamado tercerización contable, contabilidad externa u outsourcing de contabilidad, es un contrato por el cual una firma especializada asume la función contable de su empresa: registra las operaciones, liquida y presenta los impuestos, procesa la nómina y entrega los estados financieros.",
+    "html": "El outsourcing contable, también llamado <strong>tercerización contable</strong>, contabilidad externa u outsourcing de contabilidad, es un contrato por el cual una firma especializada asume la función contable de su empresa: registra las operaciones, liquida y presenta los impuestos, procesa la nómina y entrega los estados financieros."
+   },
+   {
+    "t": "p",
+    "texto": "La diferencia con contratar a \"un contador\" es de estructura. Detrás del servicio hay un equipo de contadores y especialistas tributarios, y alguien que revisa el trabajo antes de que llegue a la DIAN. En la práctica, es como tener un departamento contable completo sin tenerlo en su nómina ni invertir en infraestructura o software propio."
+   },
+   {
+    "t": "p",
+    "texto": "Lo que no cambia es la responsabilidad: las obligaciones tributarias siguen siendo de su empresa y de su representante legal. El proveedor responde ante usted por la calidad y la oportunidad de su trabajo, según lo pactado en el contrato."
+   },
+   {
+    "t": "h3",
+    "texto": "¿De qué se encarga el proveedor de contabilidad externa?",
+    "ancla": "de-que-se-encarga-el-proveedor-de-contabilidad-externa"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Contabilidad: registro (causación) de facturas, gastos y pagos, conciliaciones bancarias y cierre de cada mes.",
+      "html": "<strong>Contabilidad:</strong> registro (causación) de facturas, gastos y pagos, conciliaciones bancarias y cierre de cada mes."
+     },
+     {
+      "texto": "Impuestos: IVA, retención en la fuente, ICA y renta, presentados dentro del calendario tributario.",
+      "html": "<strong>Impuestos:</strong> IVA, retención en la fuente, ICA y renta, presentados dentro del calendario tributario."
+     },
+     {
+      "texto": "Nómina: liquidación de salarios y prestaciones, aportes a seguridad social y transmisión de la nómina electrónica.",
+      "html": "<strong>Nómina:</strong> liquidación de salarios y prestaciones, aportes a seguridad social y transmisión de la nómina electrónica."
+     },
+     {
+      "texto": "Reportes a entidades: información exógena y los demás reportes que le apliquen a su empresa.",
+      "html": "<strong>Reportes a entidades:</strong> información exógena y los demás reportes que le apliquen a su empresa."
+     },
+     {
+      "texto": "Estados financieros: preparados bajo NIIF para pymes, listos para socios, bancos o inversionistas.",
+      "html": "<strong>Estados financieros:</strong> preparados bajo <a href=\"niif-para-pymes-colombia.html\">NIIF para pymes</a>, listos para socios, bancos o inversionistas."
+     },
+     {
+      "texto": "Informes para la gerencia: rentabilidad, flujo de caja y alertas sobre lo que viene.",
+      "html": "<strong>Informes para la gerencia:</strong> rentabilidad, flujo de caja y alertas sobre lo que viene."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "El alcance se ajusta a cada empresa: hay quienes delegan todo y quienes solo tercerizan los impuestos o la nómina."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Cómo funciona el outsourcing contable en la práctica?",
+    "ancla": "como-funciona-el-outsourcing-contable-en-la-practica"
+   },
+   {
+    "t": "p",
+    "texto": "El servicio sigue un ciclo mensual. Así se ve en una pyme típica:"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Envío de soportes: su empresa comparte las facturas electrónicas emitidas y recibidas, los extractos bancarios y las novedades de nómina, por lo general en una carpeta compartida o desde su software.",
+      "html": "<strong>Envío de soportes:</strong> su empresa comparte las facturas electrónicas emitidas y recibidas, los extractos bancarios y las novedades de nómina, por lo general en una carpeta compartida o desde su software."
+     },
+     {
+      "texto": "Registro y conciliación: el equipo contabiliza cada documento y cruza los saldos de bancos, clientes y proveedores.",
+      "html": "<strong>Registro y conciliación:</strong> el equipo contabiliza cada documento y cruza los saldos de bancos, clientes y proveedores."
+     },
+     {
+      "texto": "Impuestos del periodo: se liquidan y presentan las declaraciones que vencen ese mes, con revisión previa.",
+      "html": "<strong>Impuestos del periodo:</strong> se liquidan y presentan las declaraciones que vencen ese mes, con revisión previa."
+     },
+     {
+      "texto": "Nómina: se liquida, se pagan los aportes y se transmite el documento de nómina electrónica a la DIAN.",
+      "html": "<strong>Nómina:</strong> se liquida, se pagan los aportes y se transmite el documento de nómina electrónica a la DIAN."
+     },
+     {
+      "texto": "Cierre y entrega: estados financieros del mes e informe gerencial con lo que cambió y lo que hay que decidir.",
+      "html": "<strong>Cierre y entrega:</strong> estados financieros del mes e informe gerencial con lo que cambió y lo que hay que decidir."
+     },
+     {
+      "texto": "Reunión de seguimiento: una conversación corta para revisar números, dudas y próximos vencimientos.",
+      "html": "<strong>Reunión de seguimiento:</strong> una conversación corta para revisar números, dudas y próximos vencimientos."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "Una vez al año se suman el cierre contable, la declaración de renta y, si su empresa está obligada, la información exógena."
+   },
+   {
+    "t": "p",
+    "texto": "Ese es, en resumen, el ciclo que sigue nuestro servicio de outsourcing contable para empresas.",
+    "html": "Ese es, en resumen, el ciclo que sigue nuestro <a href=\"outsourcing-contable.html\">servicio de outsourcing contable para empresas</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "Outsourcing contable, contador independiente y revisor fiscal: ¿en qué se diferencian?",
+    "ancla": "outsourcing-contable-contador-independiente-y-revisor-fiscal"
+   },
+   {
+    "t": "p",
+    "texto": "Son figuras que se confunden con frecuencia, pero cumplen papeles distintos:"
+   },
+   {
+    "t": "table",
+    "filas": [
+     [
+      {
+       "th": true,
+       "texto": "Figura"
+      },
+      {
+       "th": true,
+       "texto": "Qué hace"
+      },
+      {
+       "th": true,
+       "texto": "Quién revisa su trabajo"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Outsourcing contable"
+      },
+      {
+       "th": false,
+       "texto": "Lleva la función contable, tributaria y de nómina con un equipo"
+      },
+      {
+       "th": false,
+       "texto": "Un supervisor o socio de la misma firma"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Contador independiente"
+      },
+      {
+       "th": false,
+       "texto": "Una persona que lleva la contabilidad o presenta declaraciones, a veces por horas"
+      },
+      {
+       "th": false,
+       "texto": "Por lo general, nadie más"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Revisor fiscal"
+      },
+      {
+       "th": false,
+       "texto": "Examina con independencia la contabilidad y el cumplimiento, y dictamina los estados financieros"
+      },
+      {
+       "th": false,
+       "texto": "Responde ante la asamblea o la junta de socios"
+      }
+     ],
+     [
+      {
+       "th": false,
+       "texto": "Software contable"
+      },
+      {
+       "th": false,
+       "texto": "Herramienta para registrar operaciones y emitir documentos"
+      },
+      {
+       "th": false,
+       "texto": "Usted o quien lo use"
+      }
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "El outsourcing no reemplaza al revisor fiscal: quien lleva los libros no puede ser quien los dictamina. Si no tiene claro qué figura necesita su empresa, revise la diferencia entre contador, auditor y revisor fiscal.",
+    "html": "El outsourcing <strong>no reemplaza</strong> al revisor fiscal: quien lleva los libros no puede ser quien los dictamina. Si no tiene claro qué figura necesita su empresa, revise la <a href=\"contador-auditor-revisor-fiscal-cual-necesita.html\">diferencia entre contador, auditor y revisor fiscal</a>."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué beneficios tiene la tercerización contable para pymes?",
+    "ancla": "que-beneficios-tiene-la-tercerizacion-contable-para-pymes"
+   },
+   {
+    "t": "p",
+    "texto": "Los beneficios de la tercerización contable para pequeñas y medianas empresas van más allá del ahorro: más control, menos riesgo ante la DIAN y más tiempo de la gerencia para el negocio. Estas son las ventajas de delegar la contabilidad y la nómina que más pesan cuando una pyme da el paso."
+   },
+   {
+    "t": "h3",
+    "texto": "1. Un equipo, no una sola persona",
+    "ancla": "1-un-equipo-no-una-sola-persona"
+   },
+   {
+    "t": "p",
+    "texto": "Tiene acceso a contadores, especialistas tributarios y asesores financieros sin contratarlos a todos. Si alguien sale a vacaciones o se retira, el servicio sigue."
+   },
+   {
+    "t": "h3",
+    "texto": "2. Cumplimiento al día",
+    "ancla": "2-cumplimiento-al-dia"
+   },
+   {
+    "t": "p",
+    "texto": "Un proveedor dedicado vive pendiente del calendario tributario y de los cambios normativos. Eso reduce el riesgo de sanciones e intereses por declaraciones tardías o mal presentadas. Lo mismo pasa con la nómina: la liquidación, los aportes a seguridad social y la nómina electrónica salen cada mes con revisión, sin depender de una sola persona."
+   },
+   {
+    "t": "h3",
+    "texto": "3. Costo variable y más fácil de prever",
+    "ancla": "3-costo-variable-y-mas-facil-de-prever"
+   },
+   {
+    "t": "p",
+    "texto": "Paga por el alcance que necesita y no asume prestaciones, aportes, rotación ni liquidaciones de un cargo contable. Si quiere hacer números con su caso, vea cuánto cuesta un outsourcing contable en Colombia y cómo se compara con un contador de planta.",
+    "html": "Paga por el alcance que necesita y no asume prestaciones, aportes, rotación ni liquidaciones de un cargo contable. Si quiere hacer números con su caso, vea <a href=\"cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable.html\">cuánto cuesta un outsourcing contable en Colombia</a> y cómo se compara con un contador de planta."
+   },
+   {
+    "t": "h3",
+    "texto": "4. Información para decidir, a tiempo",
+    "ancla": "4-informacion-para-decidir-a-tiempo"
+   },
+   {
+    "t": "p",
+    "texto": "Con el cierre mensual al día sabe cuánto vendió, cuánto ganó y cuánto debe en impuestos antes de que sea tarde para corregir el rumbo."
+   },
+   {
+    "t": "h3",
+    "texto": "5. Tiempo para su negocio",
+    "ancla": "5-tiempo-para-su-negocio"
+   },
+   {
+    "t": "p",
+    "texto": "La gerencia deja de perseguir facturas y vencimientos, y se concentra en vender, producir y crecer."
+   },
+   {
+    "t": "h3",
+    "texto": "6. Escala con la empresa",
+    "ancla": "6-escala-con-la-empresa"
+   },
+   {
+    "t": "p",
+    "texto": "Si abre una sede, contrata personal o cambia de régimen, el servicio se ajusta sin procesos de selección ni reestructuraciones internas."
+   },
+   {
+    "t": "h3",
+    "texto": "7. Tecnología y controles incluidos",
+    "ancla": "7-tecnologia-y-controles-incluidos"
+   },
+   {
+    "t": "p",
+    "texto": "Las firmas trabajan con software contable, respaldos y procesos de revisión que una pyme difícilmente monta por su cuenta."
+   },
+   {
+    "t": "img",
+    "src": "assets/img/blog/ventajas-de-outsourcing-e1724615298820-1024x963.png",
+    "alt": "Ventajas del outsourcing contable para pymes en Colombia"
+   },
+   {
+    "t": "h3",
+    "texto": "¿Para qué empresas tiene más sentido?",
+    "ancla": "para-que-empresas-tiene-mas-sentido"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Pymes sin área contable: deben cumplir igual que una empresa grande, sin la estructura para hacerlo.",
+      "html": "<strong>Pymes sin área contable:</strong> deben cumplir igual que una empresa grande, sin la estructura para hacerlo."
+     },
+     {
+      "texto": "Empresas en crecimiento: el volumen de operaciones sube más rápido que la capacidad del equipo administrativo.",
+      "html": "<strong>Empresas en crecimiento:</strong> el volumen de operaciones sube más rápido que la capacidad del equipo administrativo."
+     },
+     {
+      "texto": "Empresas nuevas y startups: arrancan con una contabilidad ordenada, algo que pesa cuando llegan los inversionistas o el primer crédito.",
+      "html": "<strong>Empresas nuevas y startups:</strong> arrancan con una contabilidad ordenada, algo que pesa cuando llegan los inversionistas o el primer crédito."
+     },
+     {
+      "texto": "Empresas medianas con equipo interno: delegan los frentes más técnicos, como impuestos o NIIF, y liberan a su personal para tareas de más valor.",
+      "html": "<strong>Empresas medianas con equipo interno:</strong> delegan los frentes más técnicos, como impuestos o NIIF, y liberan a su personal para tareas de más valor."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿El outsourcing contable tiene desventajas?",
+    "ancla": "el-outsourcing-contable-tiene-desventajas"
+   },
+   {
+    "t": "p",
+    "texto": "Sí, y conviene conocerlas antes de decidir:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "Menos presencia diaria. El equipo no está en su oficina todo el tiempo. Se resuelve pactando canales, tiempos de respuesta y visitas cuando hagan falta.",
+      "html": "<strong>Menos presencia diaria.</strong> El equipo no está en su oficina todo el tiempo. Se resuelve pactando canales, tiempos de respuesta y visitas cuando hagan falta."
+     },
+     {
+      "texto": "Depende de que usted entregue a tiempo. Si los soportes llegan tarde, el cierre también. Hace falta una rutina mínima de su lado.",
+      "html": "<strong>Depende de que usted entregue a tiempo.</strong> Si los soportes llegan tarde, el cierre también. Hace falta una rutina mínima de su lado."
+     },
+     {
+      "texto": "Entrega información sensible a un tercero. Exija un acuerdo de confidencialidad y claridad sobre quién accede a sus datos.",
+      "html": "<strong>Entrega información sensible a un tercero.</strong> Exija un acuerdo de confidencialidad y claridad sobre quién accede a sus datos."
+     },
+     {
+      "texto": "Elegir mal sale caro. Un proveedor que solo presenta declaraciones no le da control ni información. Para evitarlo, revise cómo elegir y contratar un outsourcing contable antes de firmar.",
+      "html": "<strong>Elegir mal sale caro.</strong> Un proveedor que solo presenta declaraciones no le da control ni información. Para evitarlo, revise <a href=\"como-contratar-un-servicio-de-outsourcing-contable.html\">cómo elegir y contratar un outsourcing contable</a> antes de firmar."
+     }
+    ]
+   },
+   {
+    "t": "h2",
+    "texto": "¿Cuándo conviene tercerizar la contabilidad?",
+    "ancla": "cuando-conviene-tercerizar-la-contabilidad"
+   },
+   {
+    "t": "p",
+    "texto": "Vale la pena evaluarlo cuando aparece una o varias de estas situaciones:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     {
+      "texto": "No tiene contador de planta y la contabilidad depende de alguien que \"la hace a fin de mes\"."
+     },
+     {
+      "texto": "Pasó al régimen ordinario, empezó a contratar empleados o ya debe emitir nómina electrónica."
+     },
+     {
+      "texto": "Un banco, un socio o un inversionista le pide estados financieros confiables."
+     },
+     {
+      "texto": "Recibió un requerimiento o una sanción de la DIAN por un error que nadie vio a tiempo."
+     },
+     {
+      "texto": "Su contador solo aparece en época de impuestos. Si le pasa, revise estas señales de que llegó el momento de cambiar de contador.",
+      "html": "Su contador solo aparece en época de impuestos. Si le pasa, revise estas <a href=\"cambiar-contador-cuanto-cuesta.html\">señales de que llegó el momento de cambiar de contador</a>."
+     },
+     {
+      "texto": "La gerencia pierde horas cada semana en temas contables en lugar de atender el negocio."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "¿Cuándo puede no convenir? Si su empresa ya tiene un área contable sólida y solo necesita apoyo puntual, por ejemplo para la declaración de renta o una revisión de NIIF, un proyecto específico suele ser mejor opción que un outsourcing completo.",
+    "html": "<strong>¿Cuándo puede no convenir?</strong> Si su empresa ya tiene un área contable sólida y solo necesita apoyo puntual, por ejemplo para la declaración de renta o una revisión de NIIF, un proyecto específico suele ser mejor opción que un outsourcing completo."
+   },
+   {
+    "t": "h2",
+    "texto": "¿Qué debe hacer su empresa si está pensando en tercerizar?",
+    "ancla": "que-debe-hacer-su-empresa-si-esta-pensando-en-tercerizar"
+   },
+   {
+    "t": "ol",
+    "items": [
+     {
+      "texto": "Liste sus obligaciones: el RUT le muestra las nacionales (renta, IVA, retención en la fuente, exógena); el ICA depende de cada municipio donde opere.",
+      "html": "<strong>Liste sus obligaciones:</strong> el RUT le muestra las nacionales (renta, IVA, retención en la fuente, exógena); el ICA depende de cada municipio donde opere."
+     },
+     {
+      "texto": "Defina qué quiere delegar: toda la función contable o solo una parte.",
+      "html": "<strong>Defina qué quiere delegar:</strong> toda la función contable o solo una parte."
+     },
+     {
+      "texto": "Mida lo que hoy le cuesta: salario y prestaciones del contador, software, horas de la gerencia y sanciones de los últimos años.",
+      "html": "<strong>Mida lo que hoy le cuesta:</strong> salario y prestaciones del contador, software, horas de la gerencia y sanciones de los últimos años."
+     },
+     {
+      "texto": "Compare proveedores con criterios claros: experiencia, equipo, forma de trabajo y alcance por escrito.",
+      "html": "<strong>Compare proveedores con criterios claros:</strong> experiencia, equipo, forma de trabajo y alcance por escrito."
+     },
+     {
+      "texto": "Pida una propuesta basada en un diagnóstico de su operación, no un precio a ciegas.",
+      "html": "<strong>Pida una propuesta basada en un diagnóstico</strong> de su operación, no un precio a ciegas."
+     }
+    ]
+   },
+   {
+    "t": "p",
+    "texto": "En Marín Ríos Consultores acompañamos pymes desde nuestra sede en Medellín, atendemos de forma presencial en Pereira, Armenia y Manizales, y trabajamos de forma virtual con empresas de Bogotá y el resto del país. Si su empresa está en Antioquia, conozca nuestro outsourcing contable en Medellín; si está en la capital, nuestro outsourcing contable en Bogotá.",
+    "html": "En <strong>Marín Ríos Consultores</strong> acompañamos pymes desde nuestra sede en Medellín, atendemos de forma presencial en Pereira, Armenia y Manizales, y trabajamos de forma virtual con empresas de Bogotá y el resto del país. Si su empresa está en Antioquia, conozca nuestro <a href=\"outsourcing-contable-medellin.html\">outsourcing contable en Medellín</a>; si está en la capital, nuestro <a href=\"outsourcing-contable-bogota.html\">outsourcing contable en Bogotá</a>."
+   },
+   {
+    "t": "p",
+    "texto": "Cuando tenga claro qué quiere delegar, pida su cotización de outsourcing contable: revisamos su operación sin costo y le enviamos una propuesta por escrito.",
+    "html": "Cuando tenga claro qué quiere delegar, pida su <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a>: revisamos su operación sin costo y le enviamos una propuesta por escrito."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Outsourcing contable y tercerización contable son lo mismo?",
+    "respuesta": "Sí. Tercerización contable, externalización contable, contabilidad externa y outsourcing de contabilidad son nombres distintos para el mismo modelo: una firma externa asume la función contable de su empresa."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Una empresa recién creada puede tercerizar su contabilidad?",
+    "respuesta": "Sí, y es un buen momento: arrancar con la contabilidad, los impuestos y la nómina en orden desde el primer mes evita tener que reconstruir la información después."
+   },
+   {
+    "t": "faq",
+    "pregunta": "Si tercerizo la contabilidad, ¿quién responde ante la DIAN?",
+    "respuesta": "Las obligaciones siguen siendo de su empresa y de su representante legal. El proveedor responde ante usted por la calidad de su trabajo según el contrato, y el contador público que firma responde por su actuación profesional."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿El outsourcing contable incluye la nómina?",
+    "respuesta": "Sí. La liquidación de salarios, los aportes a seguridad social, la nómina electrónica y las prestaciones sociales pueden ir dentro del servicio. Lo que se pacta es quién reporta las novedades del mes y en qué fecha."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Puedo tercerizar solo la nómina o solo los impuestos?",
+    "respuesta": "Sí. El outsourcing puede ser total o parcial; muchas empresas empiezan por los impuestos o la nómina y luego amplían el alcance."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué herramientas digitales usan las empresas de outsourcing contable?",
+    "respuesta": "Por lo general, software contable en la nube, facturación y nómina electrónica, los portales de la DIAN y del municipio para declarar y pagar, conciliación bancaria automática, y documentos y firmas en línea. En Marín Ríos trabajamos sobre el software que ya usa su empresa, sin obligarla a cambiar de sistema."
+   },
+   {
+    "t": "faq",
+    "pregunta": "¿Qué diferencia hay entre outsourcing contable y asesoría contable?",
+    "respuesta": "La asesoría contable orienta y resuelve consultas puntuales; el outsourcing ejecuta el trabajo completo cada mes: registra, liquida, presenta y entrega los estados financieros."
+   }
+  ]
+ },
+ {
   "slug": "cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable",
   "titulo_seo": "¿Cuánto cuesta un outsourcing contable en Colombia? (2026)",
   "h1": "¿Cuánto cuesta un outsourcing contable en Colombia y cómo se compara con un contador de planta?",
@@ -30359,7 +30826,7 @@
    {
     "t": "h2",
     "texto": "Planes de outsourcing contable de Marín Ríos: desde 2 SMMLV al mes",
-    "ancla": "planes-de-outsourcing-contable-de-marin-rios-desde-2-smmlv-a"
+    "ancla": "planes"
    },
    {
     "t": "p",
@@ -30956,473 +31423,6 @@
     "t": "faq",
     "pregunta": "¿Los honorarios del outsourcing contable son deducibles en renta?",
     "respuesta": "En general sí, si tienen relación con su actividad, son necesarios y proporcionados, y están soportados con factura electrónica. Recuerde practicar la retención en la fuente que corresponda al pagarlos."
-   }
-  ]
- },
- {
-  "slug": "que-es-outsourcing-contable",
-  "titulo_seo": "¿Qué es el outsourcing contable? Ventajas y cuándo conviene",
-  "h1": "¿Qué es el outsourcing contable y qué ventajas tiene para una pyme?",
-  "desc": "Qué es el outsourcing contable o tercerización contable, cómo funciona, sus beneficios para pymes, si incluye la nómina y cuándo conviene en Colombia.",
-  "publicado": "2024-02-15",
-  "modificado": "2026-10-18",
-  "seccion": "Outsourcing contable",
-  "portada": "assets/img/blog/marin-rios-blogs-1024x1024.jpg",
-  "toc": true,
-  "palabras": 1698,
-  "bloques": [
-   {
-    "t": "p",
-    "texto": "El outsourcing contable, o tercerización contable, es contratar a una firma externa para que lleve la contabilidad, los impuestos y la nómina de su empresa, en lugar de sostener un departamento contable propio. Para una pyme, su principal ventaja es contar con un equipo especializado y al día con la DIAN sin cargar con salarios, software y actualización permanente.",
-    "html": "<strong>El outsourcing contable, o tercerización contable, es contratar a una firma externa para que lleve la contabilidad, los impuestos y la nómina de su empresa</strong>, en lugar de sostener un departamento contable propio. Para una pyme, su principal ventaja es contar con un equipo especializado y al día con la DIAN sin cargar con salarios, software y actualización permanente."
-   },
-   {
-    "t": "p",
-    "texto": "En esta guía verá cómo funciona mes a mes, en qué se diferencia de un contador independiente o de un revisor fiscal, qué ventajas y qué riesgos tiene, y en qué casos conviene tercerizar la contabilidad."
-   },
-   {
-    "t": "img",
-    "src": "assets/img/blog/marin-rios-blogs-1024x1024.jpg",
-    "alt": "Equipo de outsourcing contable revisando los estados financieros de una pyme"
-   },
-   {
-    "t": "h2",
-    "texto": "¿Qué es el outsourcing contable?",
-    "ancla": "que-es-el-outsourcing-contable"
-   },
-   {
-    "t": "p",
-    "texto": "El outsourcing contable, también llamado tercerización contable, contabilidad externa u outsourcing de contabilidad, es un contrato por el cual una firma especializada asume la función contable de su empresa: registra las operaciones, liquida y presenta los impuestos, procesa la nómina y entrega los estados financieros.",
-    "html": "El outsourcing contable, también llamado <strong>tercerización contable</strong>, contabilidad externa u outsourcing de contabilidad, es un contrato por el cual una firma especializada asume la función contable de su empresa: registra las operaciones, liquida y presenta los impuestos, procesa la nómina y entrega los estados financieros."
-   },
-   {
-    "t": "p",
-    "texto": "La diferencia con contratar a \"un contador\" es de estructura. Detrás del servicio hay un equipo de contadores y especialistas tributarios, y alguien que revisa el trabajo antes de que llegue a la DIAN. En la práctica, es como tener un departamento contable completo sin tenerlo en su nómina ni invertir en infraestructura o software propio."
-   },
-   {
-    "t": "p",
-    "texto": "Lo que no cambia es la responsabilidad: las obligaciones tributarias siguen siendo de su empresa y de su representante legal. El proveedor responde ante usted por la calidad y la oportunidad de su trabajo, según lo pactado en el contrato."
-   },
-   {
-    "t": "h3",
-    "texto": "¿De qué se encarga el proveedor de contabilidad externa?",
-    "ancla": "de-que-se-encarga-el-proveedor-de-contabilidad-externa"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Contabilidad: registro (causación) de facturas, gastos y pagos, conciliaciones bancarias y cierre de cada mes.",
-      "html": "<strong>Contabilidad:</strong> registro (causación) de facturas, gastos y pagos, conciliaciones bancarias y cierre de cada mes."
-     },
-     {
-      "texto": "Impuestos: IVA, retención en la fuente, ICA y renta, presentados dentro del calendario tributario.",
-      "html": "<strong>Impuestos:</strong> IVA, retención en la fuente, ICA y renta, presentados dentro del calendario tributario."
-     },
-     {
-      "texto": "Nómina: liquidación de salarios y prestaciones, aportes a seguridad social y transmisión de la nómina electrónica.",
-      "html": "<strong>Nómina:</strong> liquidación de salarios y prestaciones, aportes a seguridad social y transmisión de la nómina electrónica."
-     },
-     {
-      "texto": "Reportes a entidades: información exógena y los demás reportes que le apliquen a su empresa.",
-      "html": "<strong>Reportes a entidades:</strong> información exógena y los demás reportes que le apliquen a su empresa."
-     },
-     {
-      "texto": "Estados financieros: preparados bajo NIIF para pymes, listos para socios, bancos o inversionistas.",
-      "html": "<strong>Estados financieros:</strong> preparados bajo <a href=\"niif-para-pymes-colombia.html\">NIIF para pymes</a>, listos para socios, bancos o inversionistas."
-     },
-     {
-      "texto": "Informes para la gerencia: rentabilidad, flujo de caja y alertas sobre lo que viene.",
-      "html": "<strong>Informes para la gerencia:</strong> rentabilidad, flujo de caja y alertas sobre lo que viene."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "El alcance se ajusta a cada empresa: hay quienes delegan todo y quienes solo tercerizan los impuestos o la nómina."
-   },
-   {
-    "t": "h2",
-    "texto": "¿Cómo funciona el outsourcing contable en la práctica?",
-    "ancla": "como-funciona-el-outsourcing-contable-en-la-practica"
-   },
-   {
-    "t": "p",
-    "texto": "El servicio sigue un ciclo mensual. Así se ve en una pyme típica:"
-   },
-   {
-    "t": "ol",
-    "items": [
-     {
-      "texto": "Envío de soportes: su empresa comparte las facturas electrónicas emitidas y recibidas, los extractos bancarios y las novedades de nómina, por lo general en una carpeta compartida o desde su software.",
-      "html": "<strong>Envío de soportes:</strong> su empresa comparte las facturas electrónicas emitidas y recibidas, los extractos bancarios y las novedades de nómina, por lo general en una carpeta compartida o desde su software."
-     },
-     {
-      "texto": "Registro y conciliación: el equipo contabiliza cada documento y cruza los saldos de bancos, clientes y proveedores.",
-      "html": "<strong>Registro y conciliación:</strong> el equipo contabiliza cada documento y cruza los saldos de bancos, clientes y proveedores."
-     },
-     {
-      "texto": "Impuestos del periodo: se liquidan y presentan las declaraciones que vencen ese mes, con revisión previa.",
-      "html": "<strong>Impuestos del periodo:</strong> se liquidan y presentan las declaraciones que vencen ese mes, con revisión previa."
-     },
-     {
-      "texto": "Nómina: se liquida, se pagan los aportes y se transmite el documento de nómina electrónica a la DIAN.",
-      "html": "<strong>Nómina:</strong> se liquida, se pagan los aportes y se transmite el documento de nómina electrónica a la DIAN."
-     },
-     {
-      "texto": "Cierre y entrega: estados financieros del mes e informe gerencial con lo que cambió y lo que hay que decidir.",
-      "html": "<strong>Cierre y entrega:</strong> estados financieros del mes e informe gerencial con lo que cambió y lo que hay que decidir."
-     },
-     {
-      "texto": "Reunión de seguimiento: una conversación corta para revisar números, dudas y próximos vencimientos.",
-      "html": "<strong>Reunión de seguimiento:</strong> una conversación corta para revisar números, dudas y próximos vencimientos."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "Una vez al año se suman el cierre contable, la declaración de renta y, si su empresa está obligada, la información exógena."
-   },
-   {
-    "t": "p",
-    "texto": "Ese es, en resumen, el ciclo que sigue nuestro servicio de outsourcing contable para empresas.",
-    "html": "Ese es, en resumen, el ciclo que sigue nuestro <a href=\"outsourcing-contable.html\">servicio de outsourcing contable para empresas</a>."
-   },
-   {
-    "t": "h2",
-    "texto": "Outsourcing contable, contador independiente y revisor fiscal: ¿en qué se diferencian?",
-    "ancla": "outsourcing-contable-contador-independiente-y-revisor-fiscal"
-   },
-   {
-    "t": "p",
-    "texto": "Son figuras que se confunden con frecuencia, pero cumplen papeles distintos:"
-   },
-   {
-    "t": "table",
-    "filas": [
-     [
-      {
-       "th": true,
-       "texto": "Figura"
-      },
-      {
-       "th": true,
-       "texto": "Qué hace"
-      },
-      {
-       "th": true,
-       "texto": "Quién revisa su trabajo"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "Outsourcing contable"
-      },
-      {
-       "th": false,
-       "texto": "Lleva la función contable, tributaria y de nómina con un equipo"
-      },
-      {
-       "th": false,
-       "texto": "Un supervisor o socio de la misma firma"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "Contador independiente"
-      },
-      {
-       "th": false,
-       "texto": "Una persona que lleva la contabilidad o presenta declaraciones, a veces por horas"
-      },
-      {
-       "th": false,
-       "texto": "Por lo general, nadie más"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "Revisor fiscal"
-      },
-      {
-       "th": false,
-       "texto": "Examina con independencia la contabilidad y el cumplimiento, y dictamina los estados financieros"
-      },
-      {
-       "th": false,
-       "texto": "Responde ante la asamblea o la junta de socios"
-      }
-     ],
-     [
-      {
-       "th": false,
-       "texto": "Software contable"
-      },
-      {
-       "th": false,
-       "texto": "Herramienta para registrar operaciones y emitir documentos"
-      },
-      {
-       "th": false,
-       "texto": "Usted o quien lo use"
-      }
-     ]
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "El outsourcing no reemplaza al revisor fiscal: quien lleva los libros no puede ser quien los dictamina. Si no tiene claro qué figura necesita su empresa, revise la diferencia entre contador, auditor y revisor fiscal.",
-    "html": "El outsourcing <strong>no reemplaza</strong> al revisor fiscal: quien lleva los libros no puede ser quien los dictamina. Si no tiene claro qué figura necesita su empresa, revise la <a href=\"contador-auditor-revisor-fiscal-cual-necesita.html\">diferencia entre contador, auditor y revisor fiscal</a>."
-   },
-   {
-    "t": "h2",
-    "texto": "¿Qué beneficios tiene la tercerización contable para pymes?",
-    "ancla": "que-beneficios-tiene-la-tercerizacion-contable-para-pymes"
-   },
-   {
-    "t": "p",
-    "texto": "Los beneficios de la tercerización contable para pequeñas y medianas empresas van más allá del ahorro: más control, menos riesgo ante la DIAN y más tiempo de la gerencia para el negocio. Estas son las ventajas de delegar la contabilidad y la nómina que más pesan cuando una pyme da el paso."
-   },
-   {
-    "t": "h3",
-    "texto": "1. Un equipo, no una sola persona",
-    "ancla": "1-un-equipo-no-una-sola-persona"
-   },
-   {
-    "t": "p",
-    "texto": "Tiene acceso a contadores, especialistas tributarios y asesores financieros sin contratarlos a todos. Si alguien sale a vacaciones o se retira, el servicio sigue."
-   },
-   {
-    "t": "h3",
-    "texto": "2. Cumplimiento al día",
-    "ancla": "2-cumplimiento-al-dia"
-   },
-   {
-    "t": "p",
-    "texto": "Un proveedor dedicado vive pendiente del calendario tributario y de los cambios normativos. Eso reduce el riesgo de sanciones e intereses por declaraciones tardías o mal presentadas. Lo mismo pasa con la nómina: la liquidación, los aportes a seguridad social y la nómina electrónica salen cada mes con revisión, sin depender de una sola persona."
-   },
-   {
-    "t": "h3",
-    "texto": "3. Costo variable y más fácil de prever",
-    "ancla": "3-costo-variable-y-mas-facil-de-prever"
-   },
-   {
-    "t": "p",
-    "texto": "Paga por el alcance que necesita y no asume prestaciones, aportes, rotación ni liquidaciones de un cargo contable. Si quiere hacer números con su caso, vea cuánto cuesta un outsourcing contable en Colombia y cómo se compara con un contador de planta.",
-    "html": "Paga por el alcance que necesita y no asume prestaciones, aportes, rotación ni liquidaciones de un cargo contable. Si quiere hacer números con su caso, vea <a href=\"cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable.html\">cuánto cuesta un outsourcing contable en Colombia</a> y cómo se compara con un contador de planta."
-   },
-   {
-    "t": "h3",
-    "texto": "4. Información para decidir, a tiempo",
-    "ancla": "4-informacion-para-decidir-a-tiempo"
-   },
-   {
-    "t": "p",
-    "texto": "Con el cierre mensual al día sabe cuánto vendió, cuánto ganó y cuánto debe en impuestos antes de que sea tarde para corregir el rumbo."
-   },
-   {
-    "t": "h3",
-    "texto": "5. Tiempo para su negocio",
-    "ancla": "5-tiempo-para-su-negocio"
-   },
-   {
-    "t": "p",
-    "texto": "La gerencia deja de perseguir facturas y vencimientos, y se concentra en vender, producir y crecer."
-   },
-   {
-    "t": "h3",
-    "texto": "6. Escala con la empresa",
-    "ancla": "6-escala-con-la-empresa"
-   },
-   {
-    "t": "p",
-    "texto": "Si abre una sede, contrata personal o cambia de régimen, el servicio se ajusta sin procesos de selección ni reestructuraciones internas."
-   },
-   {
-    "t": "h3",
-    "texto": "7. Tecnología y controles incluidos",
-    "ancla": "7-tecnologia-y-controles-incluidos"
-   },
-   {
-    "t": "p",
-    "texto": "Las firmas trabajan con software contable, respaldos y procesos de revisión que una pyme difícilmente monta por su cuenta."
-   },
-   {
-    "t": "img",
-    "src": "assets/img/blog/ventajas-de-outsourcing-e1724615298820-1024x963.png",
-    "alt": "Ventajas del outsourcing contable para pymes en Colombia"
-   },
-   {
-    "t": "h3",
-    "texto": "¿Para qué empresas tiene más sentido?",
-    "ancla": "para-que-empresas-tiene-mas-sentido"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Pymes sin área contable: deben cumplir igual que una empresa grande, sin la estructura para hacerlo.",
-      "html": "<strong>Pymes sin área contable:</strong> deben cumplir igual que una empresa grande, sin la estructura para hacerlo."
-     },
-     {
-      "texto": "Empresas en crecimiento: el volumen de operaciones sube más rápido que la capacidad del equipo administrativo.",
-      "html": "<strong>Empresas en crecimiento:</strong> el volumen de operaciones sube más rápido que la capacidad del equipo administrativo."
-     },
-     {
-      "texto": "Empresas nuevas y startups: arrancan con una contabilidad ordenada, algo que pesa cuando llegan los inversionistas o el primer crédito.",
-      "html": "<strong>Empresas nuevas y startups:</strong> arrancan con una contabilidad ordenada, algo que pesa cuando llegan los inversionistas o el primer crédito."
-     },
-     {
-      "texto": "Empresas medianas con equipo interno: delegan los frentes más técnicos, como impuestos o NIIF, y liberan a su personal para tareas de más valor.",
-      "html": "<strong>Empresas medianas con equipo interno:</strong> delegan los frentes más técnicos, como impuestos o NIIF, y liberan a su personal para tareas de más valor."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "¿El outsourcing contable tiene desventajas?",
-    "ancla": "el-outsourcing-contable-tiene-desventajas"
-   },
-   {
-    "t": "p",
-    "texto": "Sí, y conviene conocerlas antes de decidir:"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "Menos presencia diaria. El equipo no está en su oficina todo el tiempo. Se resuelve pactando canales, tiempos de respuesta y visitas cuando hagan falta.",
-      "html": "<strong>Menos presencia diaria.</strong> El equipo no está en su oficina todo el tiempo. Se resuelve pactando canales, tiempos de respuesta y visitas cuando hagan falta."
-     },
-     {
-      "texto": "Depende de que usted entregue a tiempo. Si los soportes llegan tarde, el cierre también. Hace falta una rutina mínima de su lado.",
-      "html": "<strong>Depende de que usted entregue a tiempo.</strong> Si los soportes llegan tarde, el cierre también. Hace falta una rutina mínima de su lado."
-     },
-     {
-      "texto": "Entrega información sensible a un tercero. Exija un acuerdo de confidencialidad y claridad sobre quién accede a sus datos.",
-      "html": "<strong>Entrega información sensible a un tercero.</strong> Exija un acuerdo de confidencialidad y claridad sobre quién accede a sus datos."
-     },
-     {
-      "texto": "Elegir mal sale caro. Un proveedor que solo presenta declaraciones no le da control ni información. Para evitarlo, revise cómo elegir y contratar un outsourcing contable antes de firmar.",
-      "html": "<strong>Elegir mal sale caro.</strong> Un proveedor que solo presenta declaraciones no le da control ni información. Para evitarlo, revise <a href=\"como-contratar-un-servicio-de-outsourcing-contable.html\">cómo elegir y contratar un outsourcing contable</a> antes de firmar."
-     }
-    ]
-   },
-   {
-    "t": "h2",
-    "texto": "¿Cuándo conviene tercerizar la contabilidad?",
-    "ancla": "cuando-conviene-tercerizar-la-contabilidad"
-   },
-   {
-    "t": "p",
-    "texto": "Vale la pena evaluarlo cuando aparece una o varias de estas situaciones:"
-   },
-   {
-    "t": "ul",
-    "items": [
-     {
-      "texto": "No tiene contador de planta y la contabilidad depende de alguien que \"la hace a fin de mes\"."
-     },
-     {
-      "texto": "Pasó al régimen ordinario, empezó a contratar empleados o ya debe emitir nómina electrónica."
-     },
-     {
-      "texto": "Un banco, un socio o un inversionista le pide estados financieros confiables."
-     },
-     {
-      "texto": "Recibió un requerimiento o una sanción de la DIAN por un error que nadie vio a tiempo."
-     },
-     {
-      "texto": "Su contador solo aparece en época de impuestos. Si le pasa, revise estas señales de que llegó el momento de cambiar de contador.",
-      "html": "Su contador solo aparece en época de impuestos. Si le pasa, revise estas <a href=\"cambiar-contador-cuanto-cuesta.html\">señales de que llegó el momento de cambiar de contador</a>."
-     },
-     {
-      "texto": "La gerencia pierde horas cada semana en temas contables en lugar de atender el negocio."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "¿Cuándo puede no convenir? Si su empresa ya tiene un área contable sólida y solo necesita apoyo puntual, por ejemplo para la declaración de renta o una revisión de NIIF, un proyecto específico suele ser mejor opción que un outsourcing completo.",
-    "html": "<strong>¿Cuándo puede no convenir?</strong> Si su empresa ya tiene un área contable sólida y solo necesita apoyo puntual, por ejemplo para la declaración de renta o una revisión de NIIF, un proyecto específico suele ser mejor opción que un outsourcing completo."
-   },
-   {
-    "t": "h2",
-    "texto": "¿Qué debe hacer su empresa si está pensando en tercerizar?",
-    "ancla": "que-debe-hacer-su-empresa-si-esta-pensando-en-tercerizar"
-   },
-   {
-    "t": "ol",
-    "items": [
-     {
-      "texto": "Liste sus obligaciones: el RUT le muestra las nacionales (renta, IVA, retención en la fuente, exógena); el ICA depende de cada municipio donde opere.",
-      "html": "<strong>Liste sus obligaciones:</strong> el RUT le muestra las nacionales (renta, IVA, retención en la fuente, exógena); el ICA depende de cada municipio donde opere."
-     },
-     {
-      "texto": "Defina qué quiere delegar: toda la función contable o solo una parte.",
-      "html": "<strong>Defina qué quiere delegar:</strong> toda la función contable o solo una parte."
-     },
-     {
-      "texto": "Mida lo que hoy le cuesta: salario y prestaciones del contador, software, horas de la gerencia y sanciones de los últimos años.",
-      "html": "<strong>Mida lo que hoy le cuesta:</strong> salario y prestaciones del contador, software, horas de la gerencia y sanciones de los últimos años."
-     },
-     {
-      "texto": "Compare proveedores con criterios claros: experiencia, equipo, forma de trabajo y alcance por escrito.",
-      "html": "<strong>Compare proveedores con criterios claros:</strong> experiencia, equipo, forma de trabajo y alcance por escrito."
-     },
-     {
-      "texto": "Pida una propuesta basada en un diagnóstico de su operación, no un precio a ciegas.",
-      "html": "<strong>Pida una propuesta basada en un diagnóstico</strong> de su operación, no un precio a ciegas."
-     }
-    ]
-   },
-   {
-    "t": "p",
-    "texto": "En Marín Ríos Consultores acompañamos pymes desde nuestra sede en Medellín, atendemos de forma presencial en Pereira, Armenia y Manizales, y trabajamos de forma virtual con empresas de Bogotá y el resto del país. Si su empresa está en Antioquia, conozca nuestro outsourcing contable en Medellín; si está en la capital, nuestro outsourcing contable en Bogotá.",
-    "html": "En <strong>Marín Ríos Consultores</strong> acompañamos pymes desde nuestra sede en Medellín, atendemos de forma presencial en Pereira, Armenia y Manizales, y trabajamos de forma virtual con empresas de Bogotá y el resto del país. Si su empresa está en Antioquia, conozca nuestro <a href=\"outsourcing-contable-medellin.html\">outsourcing contable en Medellín</a>; si está en la capital, nuestro <a href=\"outsourcing-contable-bogota.html\">outsourcing contable en Bogotá</a>."
-   },
-   {
-    "t": "p",
-    "texto": "Cuando tenga claro qué quiere delegar, pida su cotización de outsourcing contable: revisamos su operación sin costo y le enviamos una propuesta por escrito.",
-    "html": "Cuando tenga claro qué quiere delegar, pida su <a href=\"cotizacion-outsourcing-contable.html\">cotización de outsourcing contable</a>: revisamos su operación sin costo y le enviamos una propuesta por escrito."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Outsourcing contable y tercerización contable son lo mismo?",
-    "respuesta": "Sí. Tercerización contable, externalización contable, contabilidad externa y outsourcing de contabilidad son nombres distintos para el mismo modelo: una firma externa asume la función contable de su empresa."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Una empresa recién creada puede tercerizar su contabilidad?",
-    "respuesta": "Sí, y es un buen momento: arrancar con la contabilidad, los impuestos y la nómina en orden desde el primer mes evita tener que reconstruir la información después."
-   },
-   {
-    "t": "faq",
-    "pregunta": "Si tercerizo la contabilidad, ¿quién responde ante la DIAN?",
-    "respuesta": "Las obligaciones siguen siendo de su empresa y de su representante legal. El proveedor responde ante usted por la calidad de su trabajo según el contrato, y el contador público que firma responde por su actuación profesional."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿El outsourcing contable incluye la nómina?",
-    "respuesta": "Sí. La liquidación de salarios, los aportes a seguridad social, la nómina electrónica y las prestaciones sociales pueden ir dentro del servicio. Lo que se pacta es quién reporta las novedades del mes y en qué fecha."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Puedo tercerizar solo la nómina o solo los impuestos?",
-    "respuesta": "Sí. El outsourcing puede ser total o parcial; muchas empresas empiezan por los impuestos o la nómina y luego amplían el alcance."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Qué herramientas digitales usan las empresas de outsourcing contable?",
-    "respuesta": "Por lo general, software contable en la nube, facturación y nómina electrónica, los portales de la DIAN y del municipio para declarar y pagar, conciliación bancaria automática, y documentos y firmas en línea. En Marín Ríos trabajamos sobre el software que ya usa su empresa, sin obligarla a cambiar de sistema."
-   },
-   {
-    "t": "faq",
-    "pregunta": "¿Qué diferencia hay entre outsourcing contable y asesoría contable?",
-    "respuesta": "La asesoría contable orienta y resuelve consultas puntuales; el outsourcing ejecuta el trabajo completo cada mes: registra, liquida, presenta y entrega los estados financieros."
    }
   ]
  }
