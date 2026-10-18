@@ -40,6 +40,12 @@ for p in paginas:
             rotos.append((p, r, "ruta relativa: no funciona fuera de la raíz"))
             continue
         if destino in urls_validas:
+            # Si el enlace apunta a una sección (/pagina/#planes), esa sección debe existir
+            frag = r.split("#", 1)[1] if "#" in r else ""
+            if frag and destino.endswith("/"):
+                html_dest = open(archivo_de(destino), encoding="utf-8").read()
+                if f'id="{frag}"' not in html_dest:
+                    rotos.append((p, r, "la sección no existe en esa página"))
             continue
         if not os.path.exists(archivo_de(destino)):
             rotos.append((p, r, "no existe"))
