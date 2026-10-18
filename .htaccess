@@ -10,6 +10,7 @@ Options -Indexes
 
 # ---------- Página de error ----------
 ErrorDocument 404 /404.html
+ErrorDocument 410 /404.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -31,6 +32,8 @@ ErrorDocument 404 /404.html
   # Artículos fusionados para que cada búsqueda tenga una sola página (oct. 2026)
   RewriteRule ^ventajas-outsourcing-contable/?$ /que-es-outsourcing-contable/ [L,R=301]
   RewriteRule ^como-elegir-outsourcing-contable/?$ /como-contratar-un-servicio-de-outsourcing-contable/ [L,R=301]
+  # Página retirada a propósito: 410 le dice a Google que no existe y que la saque del índice
+  RewriteRule ^proyecto-ley-507/?$ - [G,L]
 
   # Páginas del WordPress publicadas en el respaldo de ago. 2026 que no se migraron
   RewriteRule ^home-2/?$ / [L,R=301]
