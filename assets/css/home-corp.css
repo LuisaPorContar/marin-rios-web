@@ -626,3 +626,14 @@
 /* Cabecera: botón verde WhatsApp */
 .corp .cabecera .btn.btn--wa { background: #1EA952; color: #fff; box-shadow: 0 12px 26px -12px rgba(30,169,82,.8); }
 .corp .cabecera .btn.btn--wa:hover { background: #178F44; color: #fff; box-shadow: 0 16px 30px -12px rgba(30,169,82,.9); }
+
+/* ---- Reels de Instagram ---- */
+.insta { background: #fff; }
+.insta__pista { grid-auto-columns: 340px; align-items: start; }
+.insta__item { min-height: 600px; border-radius: 14px; background: #F4F7FC; overflow: hidden; }
+.insta__item .instagram-media { margin: 0 !important; min-width: 0 !important; width: 100% !important; max-width: 100% !important; border-radius: 14px !important; }
+.insta__item blockquote:not(.instagram-media-rendered) { display: grid; place-items: center; min-height: 600px; }
+@media (max-width: 560px) {
+  .insta__pista { grid-auto-columns: 326px; }
+  .insta .recientes__nav { display: none; }
+}
