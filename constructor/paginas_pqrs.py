@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 """PQRS: peticiones, quejas, reclamos y sugerencias.
 
-Sin servidor ni hoja de respaldo: al enviar, se abre el correo de la persona con
-el mensaje ya escrito y dirigido a contacto@marinriosconsultores.com. El correo
-también queda visible para quien prefiera escribir por su cuenta. No es un lead:
-no dispara eventos de Meta ni usa lp-revisoria.js.
+El formulario envía al mismo Apps Script de los leads con tipo_envio=pqrs
+(ver integraciones/google-sheets-leads.gs, recibirPQRS): llega de inmediato a
+contacto@marinriosconsultores.com, se guarda en la pestaña "PQRS" del
+Consolidado y el cliente recibe su número de radicado. No es un lead: no
+dispara eventos de Meta ni usa lp-revisoria.js.
 """
 
 import json
-from base import ICO, heroe
+from base import ICO, heroe, encabezado
 from paginas import PAGINAS
+from paginas_meta import SHEETS_URL
 
 CORREO_PQRS = "contacto@marinriosconsultores.com"
 TIPOS = [("Petición", "Solicitar información, un documento o un trámite"),
@@ -22,7 +24,7 @@ opciones = "".join(f'<option value="{t}">{t}: {d.lower()}</option>' for t, d in 
 cuerpo = f"""
 {heroe(
     "PQRS: peticiones, quejas, reclamos y sugerencias",
-    f"Su mensaje llega directo al equipo de Marín Ríos Consultores, al correo {CORREO_PQRS}. Le respondemos por ese mismo medio.",
+    "Escríbanos y su mensaje llega de inmediato al equipo de Marín Ríos Consultores. Le enviamos un número de radicado a su correo y le respondemos por ese mismo medio.",
     "reunion-cuadro.jpg",
     "Atención de PQRS en Marín Ríos Consultores",
     chip="Atención al cliente · PQRS",
@@ -32,9 +34,9 @@ cuerpo = f"""
 <section class="seccion form-leads" id="radicar">
   <div class="contenedor">
     <div class="lp-form-caja">
-      <form class="lp-form" id="pqrs-form" novalidate>
-        <h2 class="lp-titulo">Envíe su PQRS</h2>
-        <p class="lp-texto">Al enviar se abre su correo con el mensaje listo, dirigido a {CORREO_PQRS}. Solo tiene que darle enviar.</p>
+      <form class="lp-form" id="pqrs-form" novalidate data-sheets="{SHEETS_URL}">
+        <h2 class="lp-titulo">Radique su PQRS</h2>
+        <p class="lp-texto">Los campos marcados con * son obligatorios.</p>
         <div class="lp-form__campos">
           <div class="lp-campo lp-campo--ancho">
             <label for="pqrs-tipo">Tipo de solicitud *</label>
@@ -48,27 +50,36 @@ cuerpo = f"""
             <input id="pqrs-nombre" name="nombre" type="text" autocomplete="name" required maxlength="80">
           </div>
           <div class="lp-campo">
+            <label for="pqrs-correo">Correo *</label>
+            <input id="pqrs-correo" name="correo" type="email" inputmode="email" autocomplete="email" required maxlength="120" placeholder="nombre@empresa.com">
+          </div>
+          <div class="lp-campo">
             <label for="pqrs-telefono">Teléfono</label>
             <input id="pqrs-telefono" name="telefono" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="13" placeholder="3001234567">
           </div>
-          <div class="lp-campo lp-campo--ancho">
+          <div class="lp-campo">
             <label for="pqrs-empresa">Empresa</label>
             <input id="pqrs-empresa" name="empresa" type="text" autocomplete="organization" maxlength="120">
           </div>
           <div class="lp-campo lp-campo--ancho">
             <label for="pqrs-mensaje">Su mensaje *</label>
-            <textarea id="pqrs-mensaje" name="mensaje" rows="6" required maxlength="1500" placeholder="Cuéntenos qué pasó o qué necesita. Si se refiere a un servicio, indique la empresa y el periodo."></textarea>
+            <textarea id="pqrs-mensaje" name="mensaje" rows="6" required maxlength="3000" placeholder="Cuéntenos qué pasó o qué necesita. Si se refiere a un servicio, indique la empresa y el periodo."></textarea>
           </div>
+          <label class="lp-check lp-campo--ancho">
+            <input type="checkbox" name="autoriza" value="Sí" required>
+            <span>Autorizo el tratamiento de mis datos para atender esta solicitud, según la <a href="politica-de-privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+          </label>
         </div>
-        <button class="lp-btn lp-btn--bloque" type="submit">Escribir mi PQRS{ICO['flecha']}</button>
-        <p class="lp-form__error" id="pqrs-error" role="alert" hidden>Revise los campos marcados antes de continuar.</p>
-        <p class="lp-form__legal">Sus datos solo se usan para atender esta solicitud. <a href="politica-de-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.</p>
+        <button class="lp-btn lp-btn--bloque" type="submit">Enviar PQRS{ICO['flecha']}</button>
+        <p class="lp-form__error" id="pqrs-error" role="alert" hidden>Revise los campos marcados antes de enviar.</p>
+        <p class="lp-form__error" id="pqrs-fallo" role="alert" hidden>
+          No pudimos enviar su PQRS en este momento. Escríbanos directamente a
+          <a id="pqrs-mailto" href="mailto:{CORREO_PQRS}">{CORREO_PQRS}</a> y la atendemos igual.
+        </p>
       </form>
       <div class="pqrs-ok" id="pqrs-ok" role="status" hidden tabindex="-1">
-        <h2 class="lp-titulo">Ya casi: revise su correo</h2>
-        <p class="lp-texto">Abrimos su programa de correo con la PQRS lista. Si no se abrió, copie el mensaje y envíelo a
-          <a href="mailto:{CORREO_PQRS}">{CORREO_PQRS}</a>.</p>
-        <p style="margin-top:1rem"><button class="lp-btn" type="button" id="pqrs-copiar">Copiar mensaje</button></p>
+        <h2 class="lp-titulo">Recibimos su PQRS</h2>
+        <p class="lp-texto">Su número de radicado es <b data-radicado></b>. Le enviamos una copia a su correo y le responderemos por ese medio.</p>
       </div>
     </div>
     <p class="centrado revelar" style="margin-top:2rem">¿Prefiere escribirnos directamente? <a href="mailto:{CORREO_PQRS}">{CORREO_PQRS}</a></p>
@@ -79,24 +90,33 @@ cuerpo = f"""
 (function () {{
   var f = document.getElementById('pqrs-form');
   if (!f) return;
-  var ok = document.getElementById('pqrs-ok'), error = document.getElementById('pqrs-error'), texto = '';
+  var ok = document.getElementById('pqrs-ok'), error = document.getElementById('pqrs-error'),
+      fallo = document.getElementById('pqrs-fallo'), boton = f.querySelector('button[type=submit]'),
+      textoBoton = boton.innerHTML;
   f.addEventListener('submit', function (e) {{
     e.preventDefault();
-    error.hidden = true;
+    error.hidden = true; fallo.hidden = true;
     if (!f.checkValidity()) {{ error.hidden = false; f.reportValidity(); return; }}
-    var d = new FormData(f), v = function (k) {{ return String(d.get(k) || '').trim(); }};
-    var asunto = 'PQRS · ' + v('tipo') + ' · ' + v('nombre') + (v('empresa') ? ' (' + v('empresa') + ')' : '');
-    texto = 'Tipo: ' + v('tipo') + '\\nNombre: ' + v('nombre') +
-            (v('empresa') ? '\\nEmpresa: ' + v('empresa') : '') +
-            (v('telefono') ? '\\nTeléfono: ' + v('telefono') : '') +
-            '\\n\\nMensaje:\\n' + v('mensaje');
-    location.href = 'mailto:{CORREO_PQRS}?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(texto);
-    f.hidden = true; ok.hidden = false; ok.focus();
-    if (window.dataLayer) window.dataLayer.push({{ event: 'pqrs_correo', pqrs_tipo: v('tipo') }});
-  }});
-  document.getElementById('pqrs-copiar').addEventListener('click', function () {{
-    var b = this;
-    navigator.clipboard.writeText('Para: {CORREO_PQRS}\\n\\n' + texto).then(function () {{ b.textContent = 'Mensaje copiado'; }});
+    boton.disabled = true; boton.textContent = 'Enviando…';
+    var datos = new URLSearchParams(new FormData(f));
+    datos.set('tipo_envio', 'pqrs');
+    datos.set('pagina', location.href);
+    datos.set('event_id', 'pqrs-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8));
+    // Si el envío falla, el enlace de correo ya lleva el mensaje escrito
+    document.getElementById('pqrs-mailto').href = 'mailto:{CORREO_PQRS}?subject=' +
+      encodeURIComponent('PQRS · ' + (datos.get('tipo') || '') + ' · ' + (datos.get('nombre') || '')) +
+      '&body=' + encodeURIComponent(datos.get('mensaje') || '');
+    fetch(f.getAttribute('data-sheets'), {{ method: 'POST', body: datos }})
+      .then(function (r) {{ return r.json(); }})
+      .then(function (j) {{
+        if (!j || !j.ok) throw new Error('no ok');
+        ok.querySelector('[data-radicado]').textContent = j.radicado || '';
+        f.hidden = true; ok.hidden = false; ok.focus();
+        if (window.dataLayer) window.dataLayer.push({{ event: 'pqrs_enviada', pqrs_tipo: datos.get('tipo') }});
+      }})
+      .catch(function () {{
+        fallo.hidden = false; boton.disabled = false; boton.innerHTML = textoBoton;
+      }});
   }});
 }})();
 </script>
@@ -105,7 +125,7 @@ cuerpo = f"""
 PAGINAS.append(dict(
     archivo="pqrs.html",
     titulo="PQRS: Peticiones, Quejas, Reclamos y Sugerencias | Marín Ríos",
-    descripcion="Envíe su petición, queja, reclamo o sugerencia a Marín Ríos Consultores. Llega directo a contacto@marinriosconsultores.com y le respondemos por correo.",
+    descripcion="Radique su petición, queja, reclamo o sugerencia ante Marín Ríos Consultores. Llega de inmediato a nuestro equipo y recibe un número de radicado por correo.",
     activo="pqrs",
     og_img="reunion-cuadro.jpg",
     schema=json.dumps({

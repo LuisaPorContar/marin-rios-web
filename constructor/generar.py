@@ -15,7 +15,7 @@ import paginas_meta       # landings de pauta en Meta (revisoría fiscal)
 import paginas_rf_ciudades  # revisoría fiscal en Medellín y el Eje Cafetero
 import paginas_cotizacion   # cotización de outsourcing contable y de revisoría fiscal
 import paginas_cierre       # asesoría de cierre contable y fiscal
-import paginas_pqrs         # PQRS: abre el correo de la persona dirigido a contacto@
+import paginas_pqrs         # PQRS: llegan a contacto@ y a la pestaña PQRS del Consolidado
 from paginas import PAGINAS
 
 SALIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
