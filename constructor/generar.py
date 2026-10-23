@@ -15,6 +15,7 @@ import paginas_meta       # landings de pauta en Meta (revisoría fiscal)
 import paginas_rf_ciudades  # revisoría fiscal en Medellín y el Eje Cafetero
 import paginas_cotizacion   # cotización de outsourcing contable y de revisoría fiscal
 import paginas_cierre       # asesoría de cierre contable y fiscal
+import paginas_pqrs         # PQRS: llegan a contacto@ y a la pestaña PQRS del Consolidado
 from paginas import PAGINAS
 
 SALIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sitio")
@@ -70,7 +71,7 @@ def recientes_para(p):
     en las de revisoría fiscal, que ya traen su carrusel de guías en el cuerpo.
     Devuelve None si no aplica, el slug a excluir (últimas publicaciones) o los
     argumentos de ultimas_publicaciones()."""
-    if p.get("landing") is not None or "noindex" in p.get("robots", "") or p["archivo"] == "blog.html":
+    if p.get("landing") is not None or "noindex" in p.get("robots", "") or p["archivo"] in ("blog.html", "pqrs.html"):
         return None
     slug = p["archivo"][:-len(".html")]
     if slug == "revisoria-fiscal" or slug.startswith("revisoria-fiscal-"):

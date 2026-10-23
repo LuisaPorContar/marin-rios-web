@@ -133,6 +133,7 @@ def cabecera(activo=""):
         </li>
         <li><a class="nav__enlace" href="/cuanto-cuesta-contratar-un-servicio-de-outsourcing-contable/#planes">Planes</a></li>
         <li><a class="nav__enlace" href="blog.html"{act('blog')}>Blog</a></li>
+        <li><a class="nav__enlace" href="pqrs.html"{act('pqrs')}>PQRS</a></li>
       </ul>
       <a class="btn btn--primario btn--wa" href="{wa('Hola, vengo de su sitio web y quiero agendar una asesoría contable')}">{ICO['wa']}Agenda Asesoría</a>
     </nav>
@@ -189,13 +190,14 @@ PIE = f"""<footer class="pie">
           <li>{ICO['tel']}<a href="tel:{TEL_URI}">{TEL}</a></li>
           <li>{ICO['correo']}<a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li>{ICO['gente']}<a href="contactenos.html">Contáctanos</a></li>
+          <li>{ICO['documento']}<a href="pqrs.html">PQRS: peticiones, quejas y reclamos</a></li>
         </ul>
       </div>
     </div>
 
     <div class="pie__legal">
       <span>© <span data-anio>2026</span> Marín Ríos Consultores. Todos los derechos reservados.</span>
-      <span><a href="politica-de-privacidad.html">Política de privacidad</a></span>
+      <span><a href="politica-de-privacidad.html">Política de privacidad</a> · <a href="pqrs.html">PQRS</a></span>
       <span>No hacemos declaración de renta ni de ingresos para personas naturales.</span>
     </div>
   </div>
@@ -235,7 +237,7 @@ PIE_LANDING = f"""<footer class="pie pie--landing">
   <div class="contenedor">
     <div class="pie__legal">
       <span>© <span data-anio>2026</span> Marín Ríos Consultores · {DIR}, Medellín</span>
-      <span><a href="politica-de-privacidad.html">Política de privacidad</a></span>
+      <span><a href="politica-de-privacidad.html">Política de privacidad</a> · <a href="pqrs.html">PQRS</a></span>
     </div>
   </div>
 </footer>

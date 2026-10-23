@@ -17,6 +17,12 @@
  *   3. Le envía al cliente un correo de bienvenida (SIEMPRE, califique o no).
  *   4. Si califica, avisa a Meta por la API de conversiones.
  *
+ * Las PQRS de la página /pqrs/ (campo tipo_envio = "pqrs") siguen otro camino:
+ * llegan de inmediato a contacto@marinriosconsultores.com, se guardan en la
+ * pestaña "PQRS" de esta hoja y del Consolidado, y el cliente recibe la
+ * confirmación con su número de radicado. No son leads: no tocan la pestaña
+ * "Leads" ni van a Meta.
+ *
  * DE DÓNDE SALEN LOS CORREOS: de marketingmarinrios@gmail.com (ver REMITENTE).
  * Para que eso se cumpla, el script debe publicarse con la sesión de esa
  * cuenta iniciada ("Ejecutar como: Yo"). Ejecuta `verRemitente` para comprobarlo.
@@ -75,6 +81,12 @@ var FIRMA_CARGO = 'Directora Administrativa';
 var META_PIXEL = '4029344540722147';
 var META_API = 'v25.0';   // cada versión dura unos 2 años; revisar cuando Meta avise
 
+// PQRS: a quién llegan y en qué pestaña se guardan (esta hoja y el Consolidado)
+var PQRS_A = 'contacto@marinriosconsultores.com';
+var PESTANA_PQRS = 'PQRS';
+var COLUMNAS_PQRS = ['Mes', 'Fecha', 'Radicado', 'Tipo', 'Nombre', 'Correo', 'Teléfono',
+                     'Empresa', 'Mensaje', 'Página', 'Estado', 'Respuesta'];
+
 var MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
              'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
@@ -84,6 +96,9 @@ var MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
 // ==================================================================
 function doPost(e) {
   var p = (e && e.parameter) || {};
+
+  // Las PQRS no son leads: van al correo de contacto y a su propia pestaña
+  if (p.tipo_envio === 'pqrs') return recibirPQRS(p);
 
   // Filtro mínimo contra bots y envíos vacíos
   if (p.web) return respuesta({ ok: true });
@@ -117,6 +132,87 @@ function doPost(e) {
     try { enviarAMeta(p, ahora); } catch (err) { console.error('Meta CAPI: ' + err); }
   }
   return respuesta({ ok: true });
+}
+
+// ==================================================================
+// PQRS (peticiones, quejas, reclamos y sugerencias)
+// ==================================================================
+function recibirPQRS(p) {
+  if (!p.nombre || !correoValido(p.correo) || !p.mensaje) return respuesta({ ok: false, error: 'faltan datos' });
+
+  var memoria = CacheService.getScriptCache();
+  if (p.event_id) {
+    var previo = memoria.get('pqrs_' + p.event_id);
+    if (previo) return respuesta({ ok: true, radicado: previo, repetido: true });
+  }
+
+  var ahora = new Date();
+  var radicado = 'PQRS-' + Utilities.formatDate(ahora, ZONA, 'yyyyMMdd-HHmmss');
+  var tipo = String(p.tipo || 'Petición');
+  var fila = {
+    'Mes': MESES[Number(Utilities.formatDate(ahora, ZONA, 'M')) - 1] + ' ' + Utilities.formatDate(ahora, ZONA, 'yyyy'),
+    'Fecha': Utilities.formatDate(ahora, ZONA, 'yyyy-MM-dd HH:mm'),
+    'Radicado': radicado, 'Tipo': tipo, 'Nombre': p.nombre, 'Correo': p.correo,
+    'Teléfono': p.telefono || '', 'Empresa': p.empresa || '', 'Mensaje': p.mensaje,
+    'Página': p.pagina || '', 'Estado': 'Recibida', 'Respuesta': ''
+  };
+  if (p.event_id) memoria.put('pqrs_' + p.event_id, radicado, 21600);
+
+  // 1. Guardar: respaldo en esta hoja y copia en el Consolidado
+  try { anotarPQRS(SpreadsheetApp.getActiveSpreadsheet(), fila); } catch (err) { console.error('PQRS respaldo: ' + err); }
+  if (ID_CONSOLIDADO) {
+    try { anotarPQRS(SpreadsheetApp.openById(ID_CONSOLIDADO), fila); } catch (err) { console.error('PQRS Consolidado: ' + err); }
+  }
+
+  // 2. Aviso inmediato a contacto@ (si falla, la web le muestra al cliente el correo directo)
+  try {
+    var filas = COLUMNAS_PQRS.filter(function (c) { return c !== 'Mes' && c !== 'Estado' && c !== 'Respuesta' && fila[c]; })
+      .map(function (c) {
+        return '<tr><td style="padding:6px 10px;color:#5a6b7d;vertical-align:top">' + c + '</td>' +
+               '<td style="padding:6px 10px;white-space:pre-wrap">' + html(fila[c]) + '</td></tr>';
+      }).join('');
+    enviarCorreo({
+      to: PQRS_A,
+      replyTo: String(p.correo).trim(),
+      name: 'Web Marín Ríos',
+      subject: 'PQRS · ' + tipo + ' · ' + p.nombre + (p.empresa ? ' (' + p.empresa + ')' : '') + ' · ' + radicado,
+      htmlBody: '<p>Entró una <b>' + html(tipo) + '</b> desde marinriosconsultores.com. Responda a este correo para contestarle directamente al cliente.</p>' +
+                '<table style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">' + filas + '</table>'
+    });
+  } catch (err) {
+    console.error('PQRS aviso: ' + err);
+    return respuesta({ ok: false, error: 'aviso' });
+  }
+
+  // 3. Confirmación al cliente con su radicado
+  try {
+    var primerNombre = String(p.nombre).trim().split(/\s+/)[0];
+    enviarCorreo({
+      to: String(p.correo).trim(),
+      replyTo: PQRS_A,
+      name: 'Marín Ríos Consultores',
+      subject: 'Recibimos su ' + tipo.toLowerCase() + ' · Radicado ' + radicado,
+      htmlBody: '<p>Hola ' + html(primerNombre) + ',</p>' +
+                '<p>Recibimos su <b>' + html(tipo.toLowerCase()) + '</b> con el radicado <b>' + radicado + '</b>. ' +
+                'Nuestro equipo la revisará y le responderá a este correo.</p>' +
+                '<p style="color:#5a6b7d;font-size:13px">Su mensaje:<br>' + html(p.mensaje).replace(/\n/g, '<br>') + '</p>' +
+                '<p>Marín Ríos Consultores<br><a href="mailto:' + PQRS_A + '">' + PQRS_A + '</a></p>'
+    });
+  } catch (err) { console.error('PQRS confirmación: ' + err); }
+
+  return respuesta({ ok: true, radicado: radicado });
+}
+
+// Agrega la fila en la pestaña PQRS del libro dado; si está vacía, primero pone los encabezados.
+// Escribe por nombre de columna: si alguien agrega columnas a mano, no se descuadra.
+function anotarPQRS(libro, fila) {
+  var hoja = libro.getSheetByName(PESTANA_PQRS) || libro.insertSheet(PESTANA_PQRS);
+  if (hoja.getLastRow() === 0) {
+    hoja.getRange(1, 1, 1, COLUMNAS_PQRS.length).setValues([COLUMNAS_PQRS]).setFontWeight('bold');
+    hoja.setFrozenRows(1);
+  }
+  var encabezados = hoja.getRange(1, 1, 1, hoja.getLastColumn()).getValues()[0];
+  hoja.appendRow(encabezados.map(function (c) { return fila.hasOwnProperty(c) ? fila[c] : ''; }));
 }
 
 // Para comprobar en el navegador que la aplicación web está publicada
