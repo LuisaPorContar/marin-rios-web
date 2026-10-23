@@ -1213,3 +1213,16 @@
 .cot-paso__num { flex: none; font-family: var(--mono); font-weight: 700; color: var(--cian-500); font-size: 1.1rem; padding-top: .15rem; }
 .cot-paso h3 { font-size: 1.15rem; margin: 0 0 .25rem; }
 .cot-paso p { margin: 0; color: var(--texto-suave); }
+
+/* ---- PQRS: campos de ancho completo, área de texto y casilla de autorización ---- */
+.form-leads .lp-campo--ancho { grid-column: 1 / -1; }
+.form-leads .lp-campo textarea {
+  width: 100%; font: inherit; color: var(--texto); background: #fff;
+  border: 1.5px solid #D5DCE8; border-radius: 10px; padding: .8rem .9rem; resize: vertical; min-height: 9rem;
+}
+.form-leads .lp-campo textarea:focus { outline: none; border-color: var(--cian-500); box-shadow: 0 0 0 3px rgba(43,179,239,.2); }
+.form-leads .lp-campo textarea:user-invalid { border-color: #D64545; }
+.form-leads .lp-check { display: flex; gap: .6rem; align-items: flex-start; font-size: .9rem; color: var(--texto-suave); text-align: left; }
+.form-leads .lp-check input { margin-top: .2rem; width: 1.05rem; height: 1.05rem; flex: none; accent-color: var(--cian-500); }
+.form-leads .pqrs-ok { text-align: center; padding: 2rem 1rem; }
+.form-leads .pqrs-ok:focus { outline: none; }
