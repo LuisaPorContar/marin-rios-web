@@ -1,0 +1,46 @@
+/* ============================================================
+   Landings de Google Ads (paginas_google.py)
+   Capa encima de lp-revisoria.css: héroe con el formulario a la
+   derecha en escritorio y debajo del texto en celular.
+   ============================================================ */
+.lp-heroe--form .lp-form-caja { max-width: 600px; width: 100%; margin-inline: auto; }
+/* Campos en dos columnas; en celulares angostos, una sola */
+.lp-heroe--form .lp-form__campos { grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: var(--sp-3); }
+@media (max-width: 480px) { .lp-heroe--form .lp-form__campos { grid-template-columns: 1fr; } }
+.lp-heroe--form .lp-form-caja .lp-titulo { font-size: clamp(1.35rem, 1.1rem + .9vw, 1.7rem); }
+.lp-heroe--form .lp-chips { justify-content: center; }
+
+@media (min-width: 900px) {
+  .lp-heroe--form .lp-heroe__rejilla {
+    grid-template-columns: minmax(0, 1fr) minmax(460px, 560px);
+    align-items: start;
+  }
+  .lp-heroe--form .lp-chips { justify-content: flex-start; }
+  .lp-heroe--form .lp-form-caja { margin: 0; justify-self: end; }
+}
+
+/* Lista de dos columnas para "qué incluye" en escritorio */
+@media (min-width: 900px) {
+  .lp-oferta__lista--dos { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--sp-4); }
+}
+
+/* Tarjetas de topes (revisoría) */
+.lp-topes { display: grid; gap: var(--sp-3); margin-top: var(--sp-4); text-align: left; }
+@media (min-width: 900px) { .lp-topes { grid-template-columns: repeat(3, 1fr); } }
+.lp-topes li {
+  padding: var(--sp-4); border-radius: 14px;
+  background: var(--l-tarjeta); border: 1px solid rgba(43,179,239,.2);
+}
+.lp-topes strong { display: block; font-family: var(--display); font-size: 1.5rem; color: #fff; }
+.lp-topes span { color: #CFCFD5; font-size: .95rem; }
+
+.lp-oferta--ancha { max-width: 880px; }
+
+/* Botón del héroe que baja al formulario: solo en celular */
+.lp-heroe--form .lp-solo-movil { margin-top: var(--sp-3); }
+@media (min-width: 900px) { .lp-heroe--form .lp-solo-movil { display: none; } }
+@media (max-width: 600px) {
+  .lp-heroe--form .lp-chips li { font-size: .68rem; padding: .35rem .7rem; }
+  .lp-heroe--form .lp-heroe__logo { height: 52px; margin-bottom: var(--sp-3); }
+}
+#lp-form { scroll-margin-top: 1rem; }
