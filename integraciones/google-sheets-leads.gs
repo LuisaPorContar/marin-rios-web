@@ -15,7 +15,13 @@
  *          a Juan David, con copia a Maribel.
  *        - Cualquier otro lead: a Maribel.
  *   3. Le envía al cliente un correo de bienvenida (SIEMPRE, califique o no).
- *   4. Si califica, avisa a Meta por la API de conversiones.
+ *   4. Si califica, avisa a Meta por la API de conversiones (solo leads que
+ *      NO vienen de Google Ads: esos se miden en Google Ads, no en Meta).
+ *
+ * Leads de Google Ads (landings /lp-outsourcing-contable/ y /lp-revisoria-fiscal/,
+ * o cualquier visita con utm_source=google): en la columna "Conjunto de
+ * anuncios" quedan como campaña de Google y en "Notas" va la palabra clave
+ * que buscó la persona (utm_term).
  *
  * Las PQRS de la página /pqrs/ (campo tipo_envio = "pqrs") siguen otro camino:
  * llegan de inmediato a contacto@marinriosconsultores.com, se guardan en la
@@ -127,8 +133,8 @@ function doPost(e) {
   if (CORREO_ACTIVO && correoValido(p.correo)) {
     try { enviarBienvenida(p); } catch (err) { console.error('Correo de bienvenida: ' + err); }
   }
-  // Meta solo recibe los leads que califican.
-  if (p.calificado === 'Sí') {
+  // Meta solo recibe los leads que califican y que no vienen de Google Ads.
+  if (p.calificado === 'Sí' && !esDeGoogle(p)) {
     try { enviarAMeta(p, ahora); } catch (err) { console.error('Meta CAPI: ' + err); }
   }
   return respuesta({ ok: true });
@@ -238,7 +244,7 @@ function guardarLead(p, ahora) {
     p.ciudad ? 'Ciudad: ' + p.ciudad : '',
     'Califica: ' + (p.calificado || ''),
     p.utm_content ? 'Anuncio: ' + p.utm_content : '',
-    p.utm_term ? 'Campaña: ' + p.utm_term : ''
+    p.utm_term ? (esDeGoogle(p) ? 'Palabra clave: ' : 'Campaña: ') + p.utm_term : ''
   ].filter(String).join(' · ');
 
   var valores = {
@@ -296,10 +302,18 @@ function hojaLocal() {
 // De dónde vino el lead. Con los parámetros UTM del anuncio sale el nombre del
 // conjunto de anuncios; si llegó de un anuncio de Meta sin UTM, se avisa.
 function origen(p) {
+  if (esDeGoogle(p)) return 'Google Ads' + (p.utm_campaign ? ' · ' + p.utm_campaign : ' · Búsqueda');
   if (p.utm_campaign) return p.utm_campaign;
   if (p.utm_source) return p.utm_source;
   if (p.fbclid || p.fbc) return 'Anuncio de Meta (sin UTM)';
   return 'Directo / orgánico';
+}
+
+// El lead viene de Google Ads: por los UTM, por el clic de Google o por el
+// formulario de las landings de Google ("Google Ads · ...").
+function esDeGoogle(p) {
+  return sinTildes(p.utm_source || '') === 'google' || !!p.gclid ||
+         /^google ads/i.test(String(p.formulario || '').trim());
 }
 
 // "Persona jurídica (empresa)" si el lead trae empresa; "Persona natural" si no.
@@ -337,7 +351,7 @@ function avisarAlEquipo(p, ahora) {
 
   var califica = p.calificado === 'Sí';
   var digitos = String(p.whatsapp || '').replace(/\D/g, '');
-  var fuente = [origen(p), p.utm_content ? 'anuncio: ' + p.utm_content : '', p.utm_term ? 'campaña: ' + p.utm_term : ''].filter(Boolean).join(' · ');
+  var fuente = [origen(p), p.utm_content ? 'anuncio: ' + p.utm_content : '', p.utm_term ? (esDeGoogle(p) ? 'palabra clave: ' : 'campaña: ') + p.utm_term : ''].filter(Boolean).join(' · ');
   var primerNombre = String(p.nombre || '').trim().split(/\s+/)[0];
   var enlaceWa = 'https://wa.me/' + digitos + '?text=' + encodeURIComponent(
     'Hola ' + primerNombre + ', te escribe ' + FIRMA_NOMBRE + ' de Marín Ríos Consultores. Recibimos tu solicitud ' +
@@ -606,6 +620,16 @@ function probarAviso() {
 // Envía un Lead de prueba a Meta. Debe verse en "Probar eventos" como Servidor.
 function probarMeta() {
   Logger.log(enviarAMeta(LEAD_DE_PRUEBA, new Date()) || 'No hay META_TOKEN en las propiedades del script');
+}
+
+// Comprueba (sin enviar nada) cómo se clasifica un lead de Google Ads.
+function probarGoogle() {
+  var lead = JSON.parse(JSON.stringify(LEAD_DE_PRUEBA));
+  lead.formulario = 'Google Ads · Revisoría fiscal';
+  lead.utm_source = 'google'; lead.utm_campaign = 'busqueda-med-pei-axm'; lead.utm_term = 'revisor fiscal medellin';
+  Logger.log('¿De Google? ' + esDeGoogle(lead) + ' · Origen: ' + origen(lead) +
+             ' · ¿Se envía a Meta? ' + (lead.calificado === 'Sí' && !esDeGoogle(lead) ? 'Sí' : 'No'));
+  Logger.log('Lead de Meta de control → ¿De Google? ' + esDeGoogle(LEAD_DE_PRUEBA) + ' · Origen: ' + origen(LEAD_DE_PRUEBA));
 }
 
 // Envía el correo de bienvenida a tu propia cuenta para ver cómo queda.
