@@ -119,6 +119,7 @@ def main():
             fuentes_extra=p.get("fuentes_extra", ""),
             clase_body=p.get("clase_body", ""),
             landing=p.get("landing"),
+            cerrada=p.get("cerrada"),
             recientes=recientes_para(p),
         )
         with open(destino(p["archivo"]), "w", encoding="utf-8") as f:

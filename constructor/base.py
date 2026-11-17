@@ -254,6 +254,26 @@ PIE_LANDING = f"""<footer class="pie pie--landing">
 <script src="assets/js/main.js"></script>"""
 
 
+def pie_landing_cerrado(boton="Pedir mi cotización", ancla="#cotizar"):
+    """Pie de las landings de Google Ads: sin WhatsApp, sin PQRS ni enlaces que saquen
+    a la persona de la página. La única salida es el formulario (la política de
+    privacidad abre en otra pestaña, por ley tiene que estar)."""
+    return f"""<footer class="pie pie--landing">
+  <div class="contenedor">
+    <div class="pie__legal">
+      <span>© <span data-anio>2026</span> Marín Ríos Consultores · Medellín</span>
+      <span><a href="politica-de-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="barra-movil barra-movil--landing" aria-label="Acción rápida">
+  <a class="barra-movil__cta" href="{ancla}"><span>{boton}</span></a>
+</nav>
+
+<script src="assets/js/main.js"></script>"""
+
+
 # ---------------------------------------------------------------- reseñas de Google
 # Reseñas reales del perfil de Google de la firma, copiadas tal cual.
 # estrellas: número de 1 a 5, o None si no se ha confirmado (no se inventan).
@@ -280,7 +300,7 @@ _AVATAR = ["#1A73E8", "#0F9D58", "#DB4437", "#7B1FA2", "#F4B400", "#00897B"]
 
 
 def resenas_google(titulo="Lo que dicen las empresas que acompañamos",
-                   kicker="Opiniones de Marín Ríos en Google", variante=""):
+                   kicker="Opiniones de Marín Ríos en Google", variante="", enlace=True):
     """Carrusel de reseñas de Google, al estilo del de PorContar.
     Usa el carrusel genérico de main.js (.carrusel). variante="oscuro" para
     fondos negros (landing de Meta)."""
@@ -313,7 +333,7 @@ def resenas_google(titulo="Lo que dicen las empresas que acompañamos",
     <div class="resenas__cabecera revelar">
       <p class="eyebrow">{kicker}</p>
       <h2>{titulo}</h2>
-      <div class="resenas__resumen">{G_LOGO}{"".join(resumen)}<a href="{GOOGLE_URL}" target="_blank" rel="noopener">Ver en Google →</a></div>
+      <div class="resenas__resumen">{G_LOGO}{"".join(resumen)}{f'<a href="{GOOGLE_URL}" target="_blank" rel="noopener">Ver en Google →</a>' if enlace else ""}</div>
     </div>
     <div class="carrusel resenas__carrusel revelar">
       <button class="carrusel__btn resenas__nav resenas__nav--i" data-dir="anterior" aria-label="Reseña anterior">{flecha_i}</button>
@@ -510,7 +530,7 @@ def imagenes_webp(html):
 def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img="equipo-ancho.jpg",
               robots="index, follow, max-snippet:-1, max-image-preview:large",
               css_extra=(), fuentes_extra="", clase_body="", landing=None,
-              recientes=None):
+              recientes=None, cerrada=None):
     """Envuelve el contenido de una página con head, cabecera y pie.
 
     css_extra / fuentes_extra / clase_body permiten que una página cargue una
@@ -525,7 +545,8 @@ def plantilla(archivo, titulo, descripcion, cuerpo, activo="", schema="", og_img
     FUENTES = "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
     if landing is not None:
         bloque_cabecera = cabecera_landing(*landing) if landing else ""
-        bloque_pie = PIE_LANDING
+        # cerrada = (texto_boton, ancla): landing de Google Ads sin ninguna salida
+        bloque_pie = pie_landing_cerrado(*cerrada) if cerrada else PIE_LANDING
     else:
         bloque_cabecera, bloque_pie = cabecera(activo), PIE
     # Carga rápida: los estilos van compactos e incrustados (nada bloquea el

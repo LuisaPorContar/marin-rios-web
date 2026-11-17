@@ -207,7 +207,7 @@ cuerpo_out = f"""
 
 {_persona()}
 
-{resenas_google(variante="oscuro")}
+{resenas_google(variante="oscuro", enlace=False)}
 
 {_faq(FAQ_OUT, "gout")}
 
@@ -219,7 +219,6 @@ cuerpo_out = f"""
   </div>
 </section>
 
-{_whatsapp("Hola, vengo del anuncio de Google y quiero una cotización de outsourcing contable")}
 
 <script src="assets/js/lp-revisoria.js" defer></script>
 """
@@ -229,7 +228,7 @@ PAGINAS.append(dict(
     titulo="Outsourcing contable en Medellín y Eje Cafetero | Marín Ríos",
     descripcion="Contabilidad, impuestos, nómina y reportes con un contador público a cargo. Revisión inicial sin costo y cotización por escrito en 24 horas.",
     activo="", og_img="reunion-ancho.jpg", robots=NOINDEX, schema="",
-    cuerpo=cuerpo_out, clase_body="lp", css_extra=CSS, landing=(),
+    cuerpo=cuerpo_out, clase_body="lp", css_extra=CSS, landing=(), cerrada=("Pedir mi cotización", ANCLA),
 ))
 
 
@@ -327,7 +326,7 @@ cuerpo_rf = f"""
   </div>
 </section>
 
-{resenas_google(variante="oscuro")}
+{resenas_google(variante="oscuro", enlace=False)}
 
 {_faq(FAQ_RF, "grf")}
 
@@ -339,7 +338,6 @@ cuerpo_rf = f"""
   </div>
 </section>
 
-{_whatsapp("Hola, vengo del anuncio de Google y quiero una evaluación de revisoría fiscal")}
 
 <script src="assets/js/lp-revisoria.js" defer></script>
 """
@@ -349,7 +347,7 @@ PAGINAS.append(dict(
     titulo="Revisoría fiscal en Medellín y Eje Cafetero | Marín Ríos",
     descripcion="Revisor fiscal presente todo el año para SAS, LTDA y S.A. Evaluación inicial sin costo y propuesta por escrito, lista para tu asamblea.",
     activo="", og_img="reunion-duotono.jpg", robots=NOINDEX, schema="",
-    cuerpo=cuerpo_rf, clase_body="lp", css_extra=CSS, landing=(),
+    cuerpo=cuerpo_rf, clase_body="lp", css_extra=CSS, landing=(), cerrada=("Pedir mi evaluación", ANCLA),
 ))
 
 
